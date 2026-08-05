@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lists — Security+ Tutor</title>
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg">
+
+<div class="wrap wide">
+  <div class="panel noprint" id="controls">
+    <h2>Every list worth writing out</h2>
+    <p class="hint" style="margin:0 0 12px">
+      Generated from <span class="mono">content/objectives.md</span>, so it cannot drift
+      from what the app grades. Counts in brackets are what you should be able to produce
+      from memory.
+    </p>
+    <div class="listctl">
+      <label><input type="checkbox" id="hide"> <b>Hide the terms</b> — numbered blanks to write into<kbd>H</kbd></label>
+      <label><input type="checkbox" id="verbatim"> Only the lists graded by blank paper</label>
+      <label><input type="checkbox" id="marks" checked> Mark terms you have dropped</label>
+      <span class="spacer"></span>
+      <button id="print">Print<kbd>P</kbd></button>
+      <a class="btn" href="/api/lists.md" target="_blank">Plain text</a>
+    </div>
+    <p class="hint" id="tally" style="margin:12px 0 0"></p>
+  </div>
+
+  <div class="learnlayout">
+    <aside class="panel learnnav noprint">
+      <h2>Jump to</h2>
+      <nav id="toc"></nav>
+    </aside>
+    <main id="main">
+      <div class="panel"><p class="empty">Loading…</p></div>
+    </main>
+  </div>
+</div>
+
+<script type="module" src="/js/lists.js"></script>

@@ -1,0 +1,56 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drill — Security+ Tutor</title>
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg">
+
+<div class="wrap">
+  <div id="setup" class="panel">
+    <h2>Drill</h2>
+    <div class="grid" style="gap:12px">
+      <div>
+        <p class="rowlabel">Scope</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <select id="scope"></select>
+          <select id="count">
+            <option value="10">10 questions</option>
+            <option value="20" selected>20 questions</option>
+            <option value="40">40 questions</option>
+          </select>
+          <button class="primary" id="go">Start &nbsp;<kbd>Enter</kbd></button>
+        </div>
+      </div>
+      <p class="hint" id="setuphint"></p>
+    </div>
+  </div>
+
+  <div id="run" hidden>
+    <div class="progressbar"><i id="prog" style="width:0"></i></div>
+    <div class="panel">
+      <div class="qmeta" id="qmeta"></div>
+      <p class="stem" id="stem"></p>
+      <div class="options" id="options"></div>
+
+      <div id="reveal" hidden style="margin-top:18px">
+        <p class="verdict" id="verdict"></p>
+        <div class="explanation" id="explanation"></div>
+        <div id="ruleref"></div>
+        <p class="hint" style="margin-top:18px" id="advance"></p>
+      </div>
+
+      <p class="hint" id="keys" style="margin-top:18px"></p>
+    </div>
+  </div>
+
+  <div id="done" hidden class="panel">
+    <h2>Set complete</h2>
+    <div class="stat" id="summary"></div>
+    <div id="missedlist" style="margin-top:18px"></div>
+    <p style="margin-top:18px;display:flex;gap:8px">
+      <button class="primary" id="again">Another set</button>
+      <a class="btn" href="/">Dashboard</a>
+    </p>
+  </div>
+</div>
+
+<script type="module" src="/js/drill.js"></script>

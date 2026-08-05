@@ -1,0 +1,392 @@
+[
+  {
+    "id": "q1",
+    "objective": "QUESTION 1 OF 30 · Objective 1.1",
+    "question": "A security administrator configures a firewall to block all traffic from known malicious IP addresses. Which type of security control is the firewall acting as in this scenario?",
+    "options": {
+      "A": "Detective, Technical",
+      "B": "Preventive, Technical",
+      "C": "Preventive, Operational",
+      "D": "Corrective, Technical"
+    },
+    "correct": "B",
+    "explanation": "A firewall actively BLOCKS traffic — it prevents the threat from reaching the network. That makes it Preventive. It operates through software/hardware technology, making it Technical. Detective controls identify incidents after or during occurrence (like IDS logs). Corrective controls restore systems after an incident. Operational controls involve human procedures, not automated technology. The combination of Preventive + Technical is the classic firewall classification on the Security+ exam."
+  },
+  {
+    "id": "q2",
+    "objective": "QUESTION 2 OF 30 · Objective 1.1",
+    "question": "A company places \"Warning: This system is monitored\" banners on all login screens. What type of security control is this?",
+    "options": {
+      "A": "Preventive",
+      "B": "Detective",
+      "C": "Deterrent",
+      "D": "Directive"
+    },
+    "correct": "C",
+    "explanation": "Warning banners do NOT technically prevent access — a determined attacker can still attempt to log in after seeing the warning. They are designed to DISCOURAGE unauthorized access by making it clear that the system is monitored and that legal consequences may follow. This is the definition of a Deterrent control. Directive controls mandate specific actions (like a policy requiring password changes). Preventive controls actually block the action. Detective controls identify incidents after they occur."
+  },
+  {
+    "id": "q3",
+    "objective": "QUESTION 3 OF 30 · Objective 1.1",
+    "question": "After a malware infection, a security team uses antivirus software to remove the malware and restores systems to a known-good state using backups. Which control type BEST describes these actions?",
+    "options": {
+      "A": "Preventive",
+      "B": "Corrective",
+      "C": "Compensating",
+      "D": "Detective"
+    },
+    "correct": "B",
+    "explanation": "Corrective controls act AFTER an incident has been detected to fix the damage and restore normal operations. Removing malware and restoring from backup are the textbook examples of corrective actions. Preventive controls stop incidents before they happen. Compensating controls substitute for a primary control that can't be implemented. Detective controls identify incidents as they occur or after. The incident already happened — corrective is the right answer here."
+  },
+  {
+    "id": "q4",
+    "objective": "QUESTION 4 OF 30 · Objective 1.1",
+    "question": "A hospital cannot implement biometric authentication at all nursing stations due to budget constraints. Instead, they require nurses to use a PIN plus a proximity badge for access. What type of control is the PIN + badge combination in this context?",
+    "options": {
+      "A": "Corrective",
+      "B": "Preventive",
+      "C": "Detective",
+      "D": "Compensating"
+    },
+    "correct": "D",
+    "explanation": "A compensating control is specifically used when the INTENDED primary control (biometrics) cannot be implemented for business, technical, or financial reasons. The PIN + badge serves as an alternative to achieve a similar security objective. This is the defining characteristic of compensating controls — they are substitutes, not enhancements. Note: if the biometrics were working and the PIN+badge were added ON TOP as extra security, that would be Preventive. But the scenario explicitly states biometrics can't be implemented, making this compensating."
+  },
+  {
+    "id": "q5",
+    "objective": "QUESTION 5 OF 30 · Objective 1.1",
+    "question": "A company's security policy states: \"All employees must complete annual security awareness training.\" What category AND type of control is this policy?",
+    "options": {
+      "A": "Managerial, Directive",
+      "B": "Operational, Preventive",
+      "C": "Technical, Directive",
+      "D": "Managerial, Preventive"
+    },
+    "correct": "A",
+    "explanation": "The CATEGORY is Managerial because this is a policy — it oversees and manages behavior rather than being implemented through technology or physical means. The TYPE is Directive because the policy mandates (directs) specific behavior — annual training is required. It's not Preventive because the policy itself doesn't technically prevent an attack; it directs behavior. Note: the TRAINING itself, when delivered, becomes an Operational Preventive control. But the POLICY mandating the training is Managerial Directive."
+  },
+  {
+    "id": "q6",
+    "objective": "QUESTION 6 OF 30 · Objective 1.2",
+    "question": "A ransomware attack encrypts all of an organization's files, making them inaccessible to employees. Which component of the CIA Triad is PRIMARILY violated?",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Integrity",
+      "C": "Availability",
+      "D": "Non-repudiation"
+    },
+    "correct": "C",
+    "explanation": "Ransomware ENCRYPTS files so authorized users CANNOT ACCESS them — this is a direct violation of Availability. Availability ensures that authorized users can access data when needed. Confidentiality would be violated if the attacker READ or EXFILTRATED the data — but encryption doesn't expose data, it locks it. Integrity would be violated if the data was MODIFIED without authorization. Non-repudiation involves proving who performed an action. This is one of the most commonly tested CIA Triad distinctions on the Security+ exam — ransomware = Availability, not Confidentiality."
+  },
+  {
+    "id": "q7",
+    "objective": "QUESTION 7 OF 30 · Objective 1.2",
+    "question": "An employee sends a digitally signed contract to a vendor. Three weeks later, the employee claims they never sent the contract. Which security property prevents the employee from making this denial?",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Non-repudiation",
+      "C": "Integrity",
+      "D": "Authentication"
+    },
+    "correct": "B",
+    "explanation": "Non-repudiation is the security property that prevents a party from denying they performed an action. The digital signature was created with the employee's private key — only they have access to it. This proves beyond reasonable doubt that they signed and sent the document. Integrity (C) ensures the document wasn't altered, but doesn't prove who sent it. Authentication (D) verifies identity at login time but doesn't provide ongoing proof of actions. Confidentiality protects data from unauthorized access. Non-repudiation is specifically about proving authorship and preventing denial after the fact."
+  },
+  {
+    "id": "q8",
+    "objective": "QUESTION 8 OF 30 · Objective 1.2",
+    "question": "In the Zero Trust architecture, which component is responsible for making the actual access decision — evaluating whether a user's request meets policy requirements?",
+    "options": {
+      "A": "Policy Enforcement Point",
+      "B": "Policy Administrator",
+      "C": "Policy Engine",
+      "D": "Adaptive Identity"
+    },
+    "correct": "C",
+    "explanation": "In Zero Trust, the Policy Engine is the component that evaluates access requests against defined policies in real time and makes the grant/deny DECISION. The Policy Administrator (B) manages and distributes policies but doesn't make individual decisions. The Policy Enforcement Point (A) ENFORCES the decision made by the engine — it's the actual checkpoint (firewall, proxy, etc.) where access is granted or blocked. Adaptive Identity (D) allows dynamic permission changes based on context but is an attribute fed INTO the engine, not the decision-maker itself. Think: Engine = decides, Administrator = manages policies, Enforcement Point = acts on decisions."
+  },
+  {
+    "id": "q9",
+    "objective": "QUESTION 9 OF 30 · Objective 1.2",
+    "question": "A security team sets up a system with fake vulnerable services, open ports, and fake data on an isolated network segment to study attacker behavior. What technology are they using?",
+    "options": {
+      "A": "Honeytoken",
+      "B": "Honeyfile",
+      "C": "Honeynet",
+      "D": "Honeypot"
+    },
+    "correct": "C",
+    "explanation": "A Honeynet is a network of multiple interconnected decoy systems — not just a single fake server. The key indicators in this question: \"multiple services,\" \"open ports,\" \"fake data,\" and \"isolated network segment\" together describe a full network environment. A Honeypot (D) would be a SINGLE decoy system. A Honeyfile is a fake file that triggers alerts when accessed. A Honeytoken is a fake credential or API key. The network scope is the distinguishing factor here — if it mentions multiple systems, fake infrastructure, or network segments, think Honeynet."
+  },
+  {
+    "id": "q10",
+    "objective": "QUESTION 10 OF 30 · Objective 1.2",
+    "question": "Which of the following physical security controls is BEST described as both a Preventive AND a Deterrent control depending on context?",
+    "options": {
+      "A": "Pressure sensor",
+      "B": "Security fence",
+      "C": "Audit log",
+      "D": "Ultrasonic sensor"
+    },
+    "correct": "B",
+    "explanation": "A security fence can serve dual roles: it PREVENTS entry by creating a physical barrier that most people cannot easily cross (Preventive), AND it DETERS potential intruders who see the fence and decide not to attempt entry (Deterrent). Pressure sensors and ultrasonic sensors are purely Detective — they identify intrusion after the perimeter is crossed. Audit logs are Detective — they record what happened. The fence is the classic example of a dual-role physical control. Note: a camera is similarly both Detective and Deterrent. These dual-role controls frequently appear on the exam."
+  },
+  {
+    "id": "q11",
+    "objective": "QUESTION 11 OF 30 · Objective 1.2",
+    "question": "A user authenticates with a username and password and is then granted access only to the files their job role requires. Which AAA components are demonstrated?",
+    "options": {
+      "A": "Accounting and Authorization only",
+      "B": "Authentication only",
+      "C": "Authentication and Accounting",
+      "D": "Authentication and Authorization"
+    },
+    "correct": "D",
+    "explanation": "Authentication: The username and password verify the user's identity (\"Who are you?\"). Authorization: Access only to files their job role requires demonstrates permissions based on role — this is RBAC in action (\"What can you do?\"). Accounting (audit logging) is not mentioned in this scenario — there's no reference to tracking or logging activity. The question specifically asks what is DEMONSTRATED in the scenario, not what should exist. Authentication + Authorization = the two explicitly shown AAA components here."
+  },
+  {
+    "id": "q12",
+    "objective": "QUESTION 12 OF 30 · Objective 1.2",
+    "question": "A security consultant performs a gap analysis for a retail company preparing for PCI DSS compliance. The FIRST step in this process is to:",
+    "options": {
+      "A": "Assess the current security posture and existing controls",
+      "B": "Implement compensating controls for identified gaps",
+      "C": "Define the PCI DSS requirements as the target state",
+      "D": "Develop an action plan to close identified gaps"
+    },
+    "correct": "A",
+    "explanation": "Gap analysis follows this sequence: (1) Current State Assessment — understand what you HAVE now. (2) Define target/future state — what does PCI DSS/HIPAA/NIST require? (3) Identify gaps — differences between current and target. (4) Create action plan — how to close gaps. You MUST know where you are before you can determine where you need to go. Implementing controls (B) and developing action plans (D) come after gaps are identified. Defining the target (C) is step 2, not step 1. Understanding your current state is always the starting point in any gap analysis."
+  },
+  {
+    "id": "q13",
+    "objective": "QUESTION 13 OF 30 · Objective 1.3",
+    "question": "Before deploying a major firewall rule update in a production environment, the security team creates a plan that details how to undo all changes if the update causes problems. This plan is BEST described as:",
+    "options": {
+      "A": "Standard operating procedure",
+      "B": "Impact analysis",
+      "C": "Backout plan",
+      "D": "Maintenance window"
+    },
+    "correct": "C",
+    "explanation": "A backout plan (also called a rollback plan) is the predefined procedure to REVERSE a change if it causes issues. It must be created BEFORE implementing the change, not during or after a problem occurs. Impact analysis (B) assesses the potential effects of a change before implementation — but it doesn't describe how to undo it. An SOP (A) documents how to perform a task correctly. A maintenance window (D) is a scheduled time period for making changes. The critical distinguisher is \"undo all changes if problems occur\" — that's the backout plan definition."
+  },
+  {
+    "id": "q14",
+    "objective": "QUESTION 14 OF 30 · Objective 1.3",
+    "question": "A company's development team needs to test their new application using realistic data patterns, but regulations prohibit using real customer data in test environments. Which technique BEST addresses this requirement?",
+    "options": {
+      "A": "Tokenization",
+      "B": "Encryption",
+      "C": "Hashing",
+      "D": "Data masking"
+    },
+    "correct": "D",
+    "explanation": "Data masking replaces sensitive data with realistic but FAKE data that preserves the same format and structure. This is specifically designed for development/testing environments where teams need data with realistic patterns (correct format, appropriate length, valid structure) without exposing actual sensitive values. Tokenization (A) replaces data with random tokens that have no structural resemblance — good for payment processing but not for testing that requires realistic data patterns. Encryption (B) makes data unreadable and requires a key to decrypt — not useful for testing. Hashing (C) is one-way and irreversible — can't test with hashed data. Masking preserves usability while protecting privacy."
+  },
+  {
+    "id": "q15",
+    "objective": "QUESTION 15 OF 30 · Objective 1.3",
+    "question": "An organization runs a critical business system on software that has not received security updates in three years because the vendor no longer supports it. What is this MOST accurately described as?",
+    "options": {
+      "A": "An unsupported application dependency",
+      "B": "A legacy application",
+      "C": "A restricted activity",
+      "D": "A compensating control"
+    },
+    "correct": "B",
+    "explanation": "A legacy application is one that is outdated, often no longer supported by its vendor, and may not comply with modern security standards. The defining characteristics: old software, no longer receiving patches/updates, vendor support has ended. This creates significant security risk because known vulnerabilities will never be patched. The recommended response is isolation, migration, or decommissioning. Option A (dependency) refers to reliance between systems — not the status of an unsupported system. Option C (restricted activity) refers to limiting what users can do. Option D (compensating control) is a substitute control used when a primary control can't be implemented."
+  },
+  {
+    "id": "q16",
+    "objective": "QUESTION 16 OF 30 · Objective 1.3",
+    "question": "A network administrator updates a firewall's access control list to allow a new application. They fail to update the network architecture diagram afterward. What is the SECURITY risk of this omission?",
+    "options": {
+      "A": "Future security reviews may miss the new rule, leaving a misconfiguration undetected",
+      "B": "The ACL change will be automatically reverted without documentation",
+      "C": "The application will lose connectivity due to missing documentation",
+      "D": "Compliance audits cannot occur without updated diagrams"
+    },
+    "correct": "A",
+    "explanation": "When network diagrams are not updated after changes, the documentation no longer reflects the actual security architecture. Future security reviews, penetration tests, or compliance audits work from the documentation — if the diagram is wrong, they won't know to check the new ACL rule, leaving potential misconfigurations undetected. The firewall rule still exists and the application still works (C and B are wrong). While audits may flag documentation gaps (D), the PRIMARY security risk is that accurate security assessments become impossible when the documented architecture doesn't match reality. This is why documentation updates are a formal requirement in change management."
+  },
+  {
+    "id": "q17",
+    "objective": "QUESTION 17 OF 30 · Objective 1.4",
+    "question": "Which of the following BEST explains why asymmetric encryption is used to establish a TLS session instead of using asymmetric encryption for the entire session?",
+    "options": {
+      "A": "Asymmetric encryption does not provide confidentiality",
+      "B": "Asymmetric keys cannot be used for bulk data encryption",
+      "C": "Asymmetric encryption is slower; symmetric is used for performance once keys are exchanged",
+      "D": "Symmetric encryption provides stronger security than asymmetric"
+    },
+    "correct": "C",
+    "explanation": "Asymmetric encryption is computationally SLOW because of the mathematical complexity of public/private key operations. It's excellent for securely exchanging a symmetric key (the TLS handshake) but impractical for encrypting large amounts of session data. Once both parties share the symmetric session key (established via asymmetric), they switch to symmetric (like AES) for all data transfer — which is orders of magnitude faster. This hybrid approach gives you the security of asymmetric key exchange with the performance of symmetric encryption. Option D is wrong — asymmetric isn't \"stronger,\" it solves a different problem (key distribution). Option A is wrong — asymmetric absolutely provides confidentiality."
+  },
+  {
+    "id": "q18",
+    "objective": "QUESTION 18 OF 30 · Objective 1.4",
+    "question": "A password stored as: $2b$12$salted-hash-value-here uses bcrypt. What TWO cryptographic techniques are being used here?",
+    "options": {
+      "A": "Encryption and tokenization",
+      "B": "Hashing, salting, and key stretching",
+      "C": "Symmetric encryption and hashing",
+      "D": "Asymmetric encryption and salting"
+    },
+    "correct": "B",
+    "explanation": "bcrypt uses ALL THREE techniques simultaneously: (1) Hashing — the password is converted to a one-way hash. (2) Salting — a random salt is added before hashing, preventing rainbow table attacks. (3) Key stretching — bcrypt applies the hash function thousands of times (the \"12\" in $2b$12$ is the cost factor, meaning 2^12 iterations). This makes brute-force attacks extremely slow. The stored format includes the salt and cost factor, allowing the same hash to be reproduced for verification. bcrypt does NOT use encryption (reversible) or asymmetric keys. This is the most secure common approach for password storage."
+  },
+  {
+    "id": "q19",
+    "objective": "QUESTION 19 OF 30 · Objective 1.4",
+    "question": "A web developer installs a certificate on their local development server to test HTTPS. The certificate was created using their own server's private key without involving any Certificate Authority. Users see a browser warning when visiting the site. What type of certificate is this?",
+    "options": {
+      "A": "Self-signed certificate",
+      "B": "Wildcard certificate",
+      "C": "Third-party certificate",
+      "D": "Root certificate"
+    },
+    "correct": "A",
+    "explanation": "A self-signed certificate is created and signed by the same entity that will use it — no Certificate Authority validates or signs it. The defining indicators: created with own server's key, no CA involvement, browser shows security warning (browsers don't trust self-signed certs because there's no trusted third party verifying the identity). Self-signed certs are acceptable for internal testing and development but should NEVER be used in production. A wildcard cert (B) would still be issued by a CA but covers multiple subdomains. A third-party cert (C) comes from a trusted CA. A root cert (D) is the CA's own certificate at the top of the trust chain."
+  },
+  {
+    "id": "q20",
+    "objective": "QUESTION 20 OF 30 · Objective 1.4",
+    "question": "A Certificate Authority discovers that one of its issued certificates was obtained fraudulently. What is the IMMEDIATE action the CA should take?",
+    "options": {
+      "A": "Wait for the certificate to expire naturally",
+      "B": "Revoke the certificate and publish it to the CRL/OCSP",
+      "C": "Issue a new certificate to the legitimate owner",
+      "D": "Notify the certificate holder and remove it from the honeynet"
+    },
+    "correct": "B",
+    "explanation": "When a certificate is fraudulent or compromised, the CA must REVOKE it immediately — not wait for expiration (which could be years away). Revocation means adding the certificate's serial number to the Certificate Revocation List (CRL) and/or updating the OCSP responder status to \"revoked.\" This tells all clients (browsers, applications) to reject the certificate immediately. Waiting for expiration (A) would leave the fraudulent certificate trusted for potentially years. Issuing a new certificate (C) to the legitimate owner may also be needed, but doesn't fix the fraudulent one. Honeynets (D) have nothing to do with certificate management."
+  },
+  {
+    "id": "q21",
+    "objective": "QUESTION 21 OF 30 · Objective 1.4",
+    "question": "An organization wants to secure their HTTPS communications across www.example.com, mail.example.com, shop.example.com, and api.example.com using a SINGLE certificate. Which certificate type should they use?",
+    "options": {
+      "A": "Self-signed certificate",
+      "B": "Root certificate",
+      "C": "Third-party certificate for each subdomain",
+      "D": "Wildcard certificate for *.example.com"
+    },
+    "correct": "D",
+    "explanation": "A wildcard certificate uses an asterisk (*) as a placeholder for subdomains. A certificate for *.example.com automatically covers www.example.com, mail.example.com, shop.example.com, api.example.com — any subdomain one level deep. One certificate manages all subdomains, reducing administrative overhead and cost. Option C would require purchasing and managing separate certificates for each subdomain. Important limitation: wildcard certs cover ONE level of subdomains only — *.example.com does NOT cover sub.www.example.com (two levels). For multiple levels, you'd need a SAN (Subject Alternative Name) certificate or multiple wildcards."
+  },
+  {
+    "id": "q22",
+    "objective": "QUESTION 22 OF 30 · Objective 1.4",
+    "question": "A developer hides a secret message inside a JPEG photo by modifying the least significant bits of the image data. The image appears normal to viewers. What technique is being used?",
+    "options": {
+      "A": "Steganography",
+      "B": "Data masking",
+      "C": "Tokenization",
+      "D": "Encryption"
+    },
+    "correct": "A",
+    "explanation": "Steganography is the practice of HIDING the existence of a message within another, innocent-looking medium. The key distinction from encryption: encryption scrambles data so it's unreadable but VISIBLE as encrypted data. Steganography hides the data so its EXISTENCE is concealed — the image looks completely normal to anyone viewing it. Modifying least significant bits is the classic steganographic technique for images. Data masking (B) substitutes fake data in databases. Tokenization (C) replaces sensitive data with random tokens. Encryption (D) makes data unreadable but doesn't hide that data exists. \"Hidden inside an image with no visible change\" = steganography every time."
+  },
+  {
+    "id": "q23",
+    "objective": "QUESTION 23 OF 30 · Objective 1.4",
+    "question": "A company's laptop contains sensitive data. They want to ensure that if the laptop is stolen and the hard drive removed and connected to another machine, the data remains unreadable. What is the MOST appropriate solution?",
+    "options": {
+      "A": "File-level encryption on sensitive documents",
+      "B": "Strong Windows login password",
+      "C": "Full-disk encryption with TPM",
+      "D": "Database encryption for structured data"
+    },
+    "correct": "C",
+    "explanation": "Full-disk encryption (FDE) like BitLocker with TPM encrypts the ENTIRE disk including OS, temp files, swap space, and all data. When the drive is removed and connected to another machine, all data is unreadable without the encryption key stored in the TPM of the original machine. File-level encryption (A) only protects specifically encrypted files — temp files, swap files, and unencrypted system files remain readable. A strong password (B) only protects the OS login — removing the drive bypasses the OS entirely. Database encryption (D) only protects structured database data, not everything on the drive. FDE + TPM is specifically designed for the \"stolen laptop / removed drive\" threat scenario."
+  },
+  {
+    "id": "q24",
+    "objective": "QUESTION 24 OF 30 · Objective 1.4",
+    "question": "A financial institution needs to accept credit card numbers but wants to ensure that merchants never store, process, or transmit actual card numbers. Which technique BEST achieves this while still allowing the merchant to reference the transaction?",
+    "options": {
+      "A": "Data masking",
+      "B": "Tokenization",
+      "C": "Hashing",
+      "D": "Steganography"
+    },
+    "correct": "B",
+    "explanation": "Tokenization replaces the credit card number with a random TOKEN that the merchant stores and uses for future reference. The actual card number is stored only in the secure token vault, not at the merchant. If the merchant's database is breached, attackers only get tokens — worthless without the vault. This is precisely how PCI DSS compliance works in practice. Data masking (A) creates fake but realistic data for testing — it doesn't allow referencing back to the original. Hashing (C) is one-way irreversible — you can't reverse it to charge the card later. Steganography (D) hides data within other data, not relevant here. Tokenization is specifically designed for payment card security."
+  },
+  {
+    "id": "q25",
+    "objective": "QUESTION 25 OF 30 · Objective 1.4",
+    "question": "During a TLS handshake, an organization wants to ensure that even if their long-term private key is later compromised, past session data cannot be decrypted. Which feature provides this protection?",
+    "options": {
+      "A": "Key escrow",
+      "B": "Digital signatures",
+      "C": "Certificate pinning",
+      "D": "Perfect Forward Secrecy (PFS)"
+    },
+    "correct": "D",
+    "explanation": "Perfect Forward Secrecy (PFS) generates a unique, temporary session key for EACH TLS session using ephemeral Diffie-Hellman key exchange (DHE or ECDHE). These session keys are never stored — they exist only for the duration of the session. Even if an attacker records encrypted traffic now and later obtains the server's private key, they CANNOT decrypt past sessions because each session used a unique ephemeral key that was never saved. Key escrow (A) stores keys for recovery — the opposite of what we want here. Digital signatures (B) provide authentication and non-repudiation. Certificate pinning (C) prevents certificate substitution attacks. PFS is specifically about protecting historical sessions from future key compromise."
+  },
+  {
+    "id": "q26",
+    "objective": "QUESTION 26 OF 30 · Objective 1.2",
+    "question": "An attacker intercepts network traffic and modifies a financial transaction, changing the amount from $100 to $10,000 before the packet reaches the bank. Which aspect of the CIA Triad is violated?",
+    "options": {
+      "A": "Availability",
+      "B": "Integrity",
+      "C": "Confidentiality",
+      "D": "Both Integrity and Confidentiality"
+    },
+    "correct": "B",
+    "explanation": "Integrity ensures data remains ACCURATE and UNALTERED during transmission. The attacker modified the transaction value — this is a direct integrity violation. The data is no longer what the sender intended. Confidentiality would be violated if the attacker READ the transaction details (the scenario doesn't mention this). Availability would be violated if the transaction was prevented from reaching the bank. While an on-path (man-in-the-middle) attack CAN violate both Integrity AND Confidentiality, the scenario specifically describes only modification (not reading), so Integrity is the primary violation described. When the exam specifies a single action, answer based on that specific action."
+  },
+  {
+    "id": "q27",
+    "objective": "QUESTION 27 OF 30 · Objective 1.4",
+    "question": "A security administrator needs to verify that a critical configuration file has not been modified since it was deployed. Which technique provides the BEST method to detect unauthorized changes?",
+    "options": {
+      "A": "Encrypt the configuration file with AES-256",
+      "B": "Store the file in a read-only directory",
+      "C": "Generate a cryptographic hash of the file and compare periodically",
+      "D": "Create a digital signature using the admin's private key"
+    },
+    "correct": "C",
+    "explanation": "Hashing is specifically designed for integrity verification. Generate a SHA-256 hash of the file when it's deployed (known-good state). Periodically rehash the file and compare. If the hash values differ, even by one character, the hashes will be completely different, immediately detecting any modification. Encryption (A) protects confidentiality but doesn't detect changes once decrypted — an attacker could modify the decrypted file. Read-only directory (B) is a preventive control that tries to block changes, but can be bypassed by attackers with sufficient privileges and doesn't DETECT changes that occurred. Digital signatures (D) could work but are designed for authentication of the signer, not periodic integrity monitoring. Hashing is the standard for File Integrity Monitoring (FIM)."
+  },
+  {
+    "id": "q28",
+    "objective": "QUESTION 28 OF 30 · Objective 1.3",
+    "question": "A company's security team uses a version control system like Git for all configuration files. An unauthorized configuration change is discovered. What does version control MOST directly enable in this situation?",
+    "options": {
+      "A": "Identifying who made the change, when, and reverting to the known-good version",
+      "B": "Automatically blocking unauthorized configuration changes",
+      "C": "Encrypting configuration files to prevent unauthorized access",
+      "D": "Alerting the SIEM when changes occur"
+    },
+    "correct": "A",
+    "explanation": "Version control systems like Git maintain a complete history of all changes: who made each change (commit author), when it was made (timestamp), what was changed (diff), and the ability to revert to any previous version. When an unauthorized change is discovered, version control enables immediate forensic investigation (who? when? what?) AND rapid remediation (revert to the last known-good version). Version control does NOT automatically block changes (B) — it records them. It doesn't encrypt files (C) — that's a separate concern. While some CI/CD pipelines integrate with SIEM (D), that's not a core Git function. The audit trail + revert capability is the direct value of version control in security."
+  },
+  {
+    "id": "q29",
+    "objective": "QUESTION 29 OF 30 · Objective 1.4",
+    "question": "Which of the following BEST describes the difference between a CRL and OCSP for certificate validation?",
+    "options": {
+      "A": "CRL checks single certificates; OCSP downloads a full list",
+      "B": "OCSP is used for internal certificates; CRL for public certificates",
+      "C": "CRL is a downloadable list checked periodically; OCSP provides real-time single-certificate status",
+      "D": "CRL and OCSP perform identical functions using different protocols"
+    },
+    "correct": "C",
+    "explanation": "CRL (Certificate Revocation List): The CA publishes a list of ALL revoked certificate serial numbers. Clients periodically DOWNLOAD this full list and check locally. Issues: large file size, can be stale between updates. OCSP (Online Certificate Status Protocol): Client sends a query for ONE specific certificate's status to the OCSP responder. Responds immediately with \"good,\" \"revoked,\" or \"unknown.\" Issues: requires responder to be online, adds latency. OCSP Stapling improves this by having the server attach a recent OCSP response to the TLS handshake. Option A has it backwards. Option B is incorrect — both work for public and internal certificates. Option D is wrong — they have different mechanisms and trade-offs."
+  },
+  {
+    "id": "q30",
+    "objective": "QUESTION 30 OF 30 · Mixed Objectives",
+    "question": "SCENARIO: A security auditor reviews the following situation — \"An employee shared their access badge with a contractor to avoid the approval process for temporary access. The contractor used the badge to access the data center, where they connected an unauthorized USB device to a server.\"Identify the CORRECT mapping: Which THREE control failures does this scenario demonstrate?",
+    "options": {
+      "A": "Preventive (badge sharing policy violated), Technical (no USB blocking), Detective (no camera caught it)",
+      "B": "Deterrent (no visible cameras), Corrective (no incident response), Compensating (no alternative access)",
+      "C": "Managerial (no policy enforced), Physical (badge shared circumventing access control), Technical (USB port not disabled)",
+      "D": "Directive (insufficient policy), Operational (badge sharing allowed), Technical (server not encrypted)"
+    },
+    "correct": "C",
+    "explanation": "This scenario reveals three distinct control failures across categories: (1) Managerial control failure — there was no enforced policy preventing badge sharing, OR the policy existed but wasn't managed/monitored effectively. The approval process was bypassed with no consequence. (2) Physical control failure — access badges are physical controls. The badge was shared, circumventing the physical access control system. The system assumed one badge = one person but didn't enforce it. (3) Technical control failure — USB ports on servers were not disabled or blocked. Technical controls like endpoint protection or port blocking should prevent unauthorized USB devices. Option A mixes types and categories incorrectly. Option B is wrong about cameras and corrective. Option D incorrectly frames encryption as the USB issue — it's about port access, not encryption."
+  }
+]

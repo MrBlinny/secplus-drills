@@ -1,0 +1,392 @@
+[
+  {
+    "id": "t3q1",
+    "objective": "QUESTION 01 / 30",
+    "question": "In the Shared Responsibility Model for IaaS, which of the following is the CUSTOMER's responsibility?",
+    "options": {
+      "A": "Physical security of the data centers",
+      "B": "Hypervisor patching and updates",
+      "C": "Operating system and application security",
+      "D": "Network hardware maintenance"
+    },
+    "correct": "C",
+    "explanation": "In IaaS, the cloud provider secures the hardware, hypervisor, and physical facilities. The customer is responsible for everything they deploy on top — OS, applications, data, and identity management. Physical security and hardware are always the provider's domain in all cloud models."
+  },
+  {
+    "id": "t3q2",
+    "objective": "QUESTION 02 / 30",
+    "question": "Which of the following BEST describes Infrastructure as Code (IaC)?",
+    "options": {
+      "A": "Writing code to simulate network attacks for penetration testing",
+      "B": "Using code to automate infrastructure provisioning and management",
+      "C": "A method of encrypting data using code-based algorithms",
+      "D": "A programming framework specifically designed for IoT devices"
+    },
+    "correct": "B",
+    "explanation": "IaC automates infrastructure management by defining configurations and resource provisioning in code. This enables repeatable, consistent deployments. The key security risk is that misconfigurations written into IaC can be deployed at scale across an entire environment."
+  },
+  {
+    "id": "t3q3",
+    "objective": "QUESTION 03 / 30",
+    "question": "An organization uses an air-gapped network for its most sensitive systems. What is the PRIMARY security benefit?",
+    "options": {
+      "A": "Reduced cost of network management",
+      "B": "Faster data transfer speeds between systems",
+      "C": "Prevention of remote attacks from external networks",
+      "D": "Simplified patch management processes"
+    },
+    "correct": "C",
+    "explanation": "Air-gapping physically isolates a network from the outside world, making remote attacks from the internet impossible. The challenges are operational inefficiency and difficulty of data exchange — you can't easily transfer data to or from the isolated network. Cost and patch management are not primary benefits."
+  },
+  {
+    "id": "t3q4",
+    "objective": "QUESTION 04 / 30",
+    "question": "A firewall fails and automatically allows all traffic through. This is an example of which failure mode?",
+    "options": {
+      "A": "Fail-closed",
+      "B": "Active/passive clustering",
+      "C": "Fail-open",
+      "D": "Load balancing failover"
+    },
+    "correct": "C",
+    "explanation": "Fail-open means when a device fails, it allows all traffic through — maintaining availability but sacrificing security. Fail-closed is the opposite: failure results in blocking all traffic. Fail-closed is generally preferred for security devices because it ensures no unauthorized access occurs during a failure."
+  },
+  {
+    "id": "t3q5",
+    "objective": "QUESTION 05 / 30",
+    "question": "Which device passively monitors network traffic without interfering with the traffic flow?",
+    "options": {
+      "A": "Intrusion Prevention System (IPS)",
+      "B": "Next-Generation Firewall (NGFW)",
+      "C": "Intrusion Detection System (IDS)",
+      "D": "Unified Threat Management (UTM)"
+    },
+    "correct": "C",
+    "explanation": "IDS (Intrusion Detection System) is a passive/tap device — it monitors and alerts but does NOT interfere with traffic. IPS (Intrusion Prevention System) is inline and actively blocks threats. NGFWs and UTMs are also inline devices that actively filter traffic."
+  },
+  {
+    "id": "t3q6",
+    "objective": "QUESTION 06 / 30",
+    "question": "802.1X is BEST described as:",
+    "options": {
+      "A": "A wireless encryption standard",
+      "B": "A port-based network access control protocol",
+      "C": "A VPN tunneling protocol",
+      "D": "A certificate management standard"
+    },
+    "correct": "B",
+    "explanation": "802.1X is a network access control protocol that uses port-based authentication. Only authenticated and authorized devices can access the network. It validates credentials before granting port access. EAP (Extensible Authentication Protocol) is commonly used alongside 802.1X to provide the actual authentication mechanism."
+  },
+  {
+    "id": "t3q7",
+    "objective": "QUESTION 07 / 30",
+    "question": "Which firewall type is specifically designed to protect against SQL injection and cross-site scripting (XSS) attacks?",
+    "options": {
+      "A": "Layer 4 Firewall",
+      "B": "Next-Generation Firewall (NGFW)",
+      "C": "Web Application Firewall (WAF)",
+      "D": "Unified Threat Management (UTM)"
+    },
+    "correct": "C",
+    "explanation": "A WAF (Web Application Firewall) specifically protects web applications from attacks like SQL injection, XSS, and other HTTP-based exploits. It is positioned in front of web servers. An NGFW has deep packet inspection but is more general-purpose. A Layer 4 firewall only filters based on IP/port and cannot inspect application-layer content."
+  },
+  {
+    "id": "t3q8",
+    "objective": "QUESTION 08 / 30",
+    "question": "In IPSec, which mode encrypts BOTH the payload AND the IP header?",
+    "options": {
+      "A": "Transport Mode",
+      "B": "Tunnel Mode",
+      "C": "Gateway Mode",
+      "D": "Hybrid Mode"
+    },
+    "correct": "B",
+    "explanation": "IPSec Tunnel Mode encrypts the entire original IP packet (both payload and header), then wraps it in a new IP packet. This is used for site-to-site VPNs where entire packets travel through a secure tunnel. Transport Mode only encrypts the payload (data), leaving the original header intact — used for end-to-end communication between hosts."
+  },
+  {
+    "id": "t3q9",
+    "objective": "QUESTION 09 / 30",
+    "question": "Which technology combines WAN connectivity with cloud-delivered network security services (SWG, CASB, FWaaS) into a single framework?",
+    "options": {
+      "A": "SD-WAN",
+      "B": "SASE",
+      "C": "Zero Trust Network Access (ZTNA)",
+      "D": "MPLS"
+    },
+    "correct": "B",
+    "explanation": "SASE (Secure Access Service Edge) combines WAN capabilities with network security services into a single cloud-delivered service. SD-WAN is just the networking component (without the full security stack). SASE enforces Zero Trust, includes CASB, SWG, firewall-as-a-service, and provides global coverage for remote workforces."
+  },
+  {
+    "id": "t3q10",
+    "objective": "QUESTION 10 / 30",
+    "question": "Which VPN type is used to connect entire networks — such as a corporate headquarters to a remote branch office?",
+    "options": {
+      "A": "Remote Access VPN",
+      "B": "Split-Tunnel VPN",
+      "C": "Site-to-Site VPN",
+      "D": "SSL VPN"
+    },
+    "correct": "C",
+    "explanation": "Site-to-Site VPN connects two or more entire networks over the internet — for example, a corporate HQ to a remote office. Remote Access VPN connects individual users to a corporate network. The key distinction: site-to-site = network-to-network; remote access = user-to-network."
+  },
+  {
+    "id": "t3q11",
+    "objective": "QUESTION 11 / 30",
+    "question": "Which type of security control is an IDS an example of?",
+    "options": {
+      "A": "Preventive Control",
+      "B": "Corrective Control",
+      "C": "Detective Control",
+      "D": "Compensating Control"
+    },
+    "correct": "C",
+    "explanation": "Detective controls identify and detect security incidents as they occur. IDS detects and alerts on suspicious activity. Preventive controls (like firewalls) stop incidents before they happen. Corrective controls (like backups) fix the effects after an incident. Compensating controls are alternatives when primary controls can't be applied."
+  },
+  {
+    "id": "t3q12",
+    "objective": "QUESTION 12 / 30",
+    "question": "Health records protected under HIPAA are classified as which type of data?",
+    "options": {
+      "A": "Trade Secret",
+      "B": "Public Data",
+      "C": "Regulated Data",
+      "D": "Critical Data"
+    },
+    "correct": "C",
+    "explanation": "Regulated data is subject to strict compliance regulations imposed by law. HIPAA regulates health information (PHI). Other examples: PCI DSS for payment card data, GDPR for EU personal data. These regulations mandate specific handling, storage, access controls, and breach notification procedures."
+  },
+  {
+    "id": "t3q13",
+    "objective": "QUESTION 13 / 30",
+    "question": "Which data classification applies to government national defense secrets with the most restricted access?",
+    "options": {
+      "A": "Confidential",
+      "B": "Private",
+      "C": "Sensitive",
+      "D": "Restricted"
+    },
+    "correct": "D",
+    "explanation": "Restricted data is the highest sensitivity classification with very limited access. Unauthorized disclosure can have severe national security or financial consequences. Examples include government classified information and national defense secrets. Confidential is typically for internal business information. Private relates to individual data protected under privacy laws."
+  },
+  {
+    "id": "t3q14",
+    "objective": "QUESTION 14 / 30",
+    "question": "Data that is actively being processed in memory by an application is in which state?",
+    "options": {
+      "A": "Data at Rest",
+      "B": "Data in Transit",
+      "C": "Data in Use",
+      "D": "Data in Motion"
+    },
+    "correct": "C",
+    "explanation": "Data in Use refers to data actively being processed, accessed, or modified by applications or users — residing in memory (RAM) or being processed by a CPU. Security controls: memory encryption, access controls, and data masking. Data at Rest = stored on disk. Data in Transit = moving across a network."
+  },
+  {
+    "id": "t3q15",
+    "objective": "QUESTION 15 / 30",
+    "question": "Which data security method replaces sensitive data with a non-sensitive equivalent that CANNOT be reverse-engineered to reveal the original data?",
+    "options": {
+      "A": "Masking",
+      "B": "Hashing",
+      "C": "Tokenization",
+      "D": "Obfuscation"
+    },
+    "correct": "C",
+    "explanation": "Tokenization replaces sensitive data (like a credit card number) with a non-sensitive token. The token can be used for processing but cannot be reverse-engineered to reveal the original. Masking hides portions of real data (shows last 4 digits). Hashing is one-way but produces a hash of the original — used for integrity, not substitution. Obfuscation makes data harder to understand."
+  },
+  {
+    "id": "t3q16",
+    "objective": "QUESTION 16 / 30",
+    "question": "An organization must ensure data stored in Germany complies with EU laws. This requirement relates to which concept?",
+    "options": {
+      "A": "Data Masking",
+      "B": "Data Sovereignty",
+      "C": "Data at Rest",
+      "D": "Geofencing"
+    },
+    "correct": "B",
+    "explanation": "Data Sovereignty is the concept that data is subject to the laws and regulations of the country where it is stored. Storing data in Germany means it must comply with GDPR and German law. Cross-border data transfers require safeguards like Standard Contractual Clauses (SCCs). Geofencing restricts access by geographic boundaries but is not the same as the legal compliance concept."
+  },
+  {
+    "id": "t3q17",
+    "objective": "QUESTION 17 / 30",
+    "question": "Which backup type copies ONLY data that has changed since the last backup of ANY type (full or incremental)?",
+    "options": {
+      "A": "Full Backup",
+      "B": "Differential Backup",
+      "C": "Snapshot",
+      "D": "Incremental Backup"
+    },
+    "correct": "D",
+    "explanation": "Incremental backup copies only data changed since the last backup — whether that was a full or incremental backup. This makes each backup small and fast but requires all previous backups to restore. Differential backup copies everything changed since the last FULL backup (grows larger over time but simpler to restore). Know this distinction cold for the exam."
+  },
+  {
+    "id": "t3q18",
+    "objective": "QUESTION 18 / 30",
+    "question": "RTO (Recovery Time Objective) is BEST defined as:",
+    "options": {
+      "A": "The maximum amount of data loss acceptable, measured in time",
+      "B": "The number of backup copies that must be maintained offsite",
+      "C": "The maximum time a system can be down before it must be restored",
+      "D": "The cost of restoring systems after a failure event"
+    },
+    "correct": "C",
+    "explanation": "RTO = how long the system can be DOWN (downtime tolerance). RPO = how much DATA can be lost (data loss tolerance). Memory trick: RTO = Time to Operate again. RPO = Recovery Point (how far back you go). A 4-hour RTO means you must restore within 4 hours. A 1-hour RPO means you can't lose more than 1 hour of data."
+  },
+  {
+    "id": "t3q19",
+    "objective": "QUESTION 19 / 30",
+    "question": "A warm site is BEST described as:",
+    "options": {
+      "A": "A fully operational backup site with real-time data replication and immediate failover capability",
+      "B": "A basic facility with power and cooling but no active equipment or data",
+      "C": "A partially equipped backup site requiring some setup time before it becomes operational",
+      "D": "A mobile recovery unit that can be deployed anywhere on short notice"
+    },
+    "correct": "C",
+    "explanation": "Warm site = partially equipped, moderate recovery time, moderate cost. Hot site = fully operational, immediate failover (highest cost). Cold site = bare facility, longest recovery time (lowest cost). Warm sites have some pre-configured hardware but lack real-time data replication — they need time to become fully operational but recover faster than cold sites."
+  },
+  {
+    "id": "t3q20",
+    "objective": "QUESTION 20 / 30",
+    "question": "Which type of clustering has ALL nodes active simultaneously, sharing the workload?",
+    "options": {
+      "A": "Active/Passive Clustering",
+      "B": "Round Robin Load Balancing",
+      "C": "Cold Standby",
+      "D": "Active/Active Clustering"
+    },
+    "correct": "D",
+    "explanation": "Active/Active clustering has all nodes active simultaneously, sharing the workload — maximizing throughput and resource usage. If one node fails, the others continue without interruption. Active/Passive has one active node with the others in standby — they only take over when the active node fails. Active/Active provides better performance; Active/Passive is simpler to manage."
+  },
+  {
+    "id": "t3q21",
+    "objective": "QUESTION 21 / 30",
+    "question": "A tabletop exercise is BEST described as:",
+    "options": {
+      "A": "Live failover testing where backup systems are actually switched over",
+      "B": "A discussion-based simulation to evaluate disaster response procedures without interrupting systems",
+      "C": "Automated penetration testing of backup and recovery systems",
+      "D": "Physical relocation of staff to a backup site during a drill"
+    },
+    "correct": "B",
+    "explanation": "Tabletop exercises are discussion-based — stakeholders walk through a hypothetical disaster scenario verbally. No actual system interruption occurs. They identify gaps in procedures and clarify roles at low cost. Simulations go further with actual system involvement. Failover testing physically tests the switchover. Parallel processing runs both systems simultaneously."
+  },
+  {
+    "id": "t3q22",
+    "objective": "QUESTION 22 / 30",
+    "question": "Which type of UPS provides the HIGHEST level of power protection by continuously converting incoming AC power to DC, then back to AC?",
+    "options": {
+      "A": "Standby UPS",
+      "B": "Line-Interactive UPS",
+      "C": "Double Conversion UPS",
+      "D": "Generator"
+    },
+    "correct": "C",
+    "explanation": "Double Conversion UPS is the most protective — it continuously converts AC to DC and back to AC, meaning equipment always runs on clean, regulated power. There is no transfer time when switching to battery. Standby UPS only activates when main power fails. Line-Interactive handles voltage fluctuations. Generators provide longer-term backup but have a startup delay."
+  },
+  {
+    "id": "t3q23",
+    "objective": "QUESTION 23 / 30",
+    "question": "Hashing is described as a one-way process. What is the PRIMARY use case for hashing in security?",
+    "options": {
+      "A": "Encrypting data for confidential storage",
+      "B": "Verifying data integrity and secure password storage",
+      "C": "Replacing sensitive data with non-sensitive equivalents",
+      "D": "Hiding partial data fields from unauthorized users"
+    },
+    "correct": "B",
+    "explanation": "Hashing converts data to a fixed-size hash value that cannot be reversed. It's used to verify data integrity (file hasn't changed) and to securely store passwords (using algorithms like SHA-256 or bcrypt with salt). Encryption (A) is two-way. Tokenization (C) replaces data with tokens. Masking (D) hides partial data. Hashing = integrity + password storage."
+  },
+  {
+    "id": "t3q24",
+    "objective": "QUESTION 24 / 30",
+    "question": "An organization uses AWS, Azure, and Google Cloud simultaneously to avoid relying on a single vendor. This strategy is called:",
+    "options": {
+      "A": "Platform Diversity",
+      "B": "Multi-Cloud",
+      "C": "Geographic Dispersion",
+      "D": "Hybrid Cloud"
+    },
+    "correct": "B",
+    "explanation": "Multi-cloud uses multiple cloud providers to avoid vendor lock-in, improve availability, and optimize costs. Platform diversity is broader — it includes different hardware and software platforms, not just cloud providers. Geographic dispersion spreads data centers across physical locations. Hybrid cloud combines on-premises with cloud (doesn't require multiple cloud providers)."
+  },
+  {
+    "id": "t3q25",
+    "objective": "QUESTION 25 / 30",
+    "question": "A Jump Server is BEST described as:",
+    "options": {
+      "A": "A server that distributes incoming traffic across multiple back-end servers",
+      "B": "A secure intermediary server used to access devices in restricted network zones",
+      "C": "A proxy server that caches and filters web content for users",
+      "D": "A passive server that monitors network traffic for intrusions"
+    },
+    "correct": "B",
+    "explanation": "A Jump Server (also called a bastion host or jump box) is a hardened server used as a gateway to access devices in highly restricted or privileged network zones. Administrators must connect to the jump server first, then hop to target devices. This creates an auditable, controlled access point. Load balancers (A) distribute traffic. Proxy servers (C) cache/filter web content. IDS (D) passively monitors."
+  },
+  {
+    "id": "t3q26",
+    "objective": "QUESTION 26 / 30",
+    "question": "Which container security risk involves an attacker breaking out of an isolated container to access the host OS or other containers?",
+    "options": {
+      "A": "Hypervisor escape",
+      "B": "Container escape",
+      "C": "VM sprawl",
+      "D": "Side-channel attack"
+    },
+    "correct": "B",
+    "explanation": "Container escape is the containerization security risk where an attacker exploits a vulnerability to break out of the isolated container and access the host OS or other containers. Hypervisor escape is the equivalent for virtualization (breaking out of a VM to access the hypervisor or other VMs). Both are critical security risks in their respective environments."
+  },
+  {
+    "id": "t3q27",
+    "objective": "QUESTION 27 / 30",
+    "question": "A differential backup copies all data changed since:",
+    "options": {
+      "A": "The last backup of any type (full or incremental)",
+      "B": "The system was last rebooted",
+      "C": "The last FULL backup",
+      "D": "The previous week's snapshot"
+    },
+    "correct": "C",
+    "explanation": "Differential backup copies everything changed since the LAST FULL backup. Each differential backup gets larger over time since it accumulates all changes since the last full. Incremental copies only what changed since the LAST BACKUP (any type) — each is small but you need all incrementals to restore. Restore differential: need last full + latest differential. Restore incremental: need last full + ALL incrementals."
+  },
+  {
+    "id": "t3q28",
+    "objective": "QUESTION 28 / 30",
+    "question": "Which security zone acts as a buffer between external-facing systems (e.g., web servers) and the internal network?",
+    "options": {
+      "A": "Privileged Zone",
+      "B": "Internal Network",
+      "C": "DMZ (Demilitarized Zone)",
+      "D": "Air-gapped segment"
+    },
+    "correct": "C",
+    "explanation": "The DMZ (Demilitarized Zone) is a subnet that separates external-facing systems from the internal network. Web servers, email servers, and other public-facing systems live here. It acts as a buffer — attackers who compromise a DMZ system can't directly reach internal systems. The privileged zone contains the most sensitive internal systems (databases, admin servers)."
+  },
+  {
+    "id": "t3q29",
+    "objective": "QUESTION 29 / 30",
+    "question": "RPO (Recovery Point Objective) is BEST defined as:",
+    "options": {
+      "A": "The maximum time allowed to restore a system after failure",
+      "B": "The maximum acceptable data loss measured in time",
+      "C": "The number of backup copies that must be maintained",
+      "D": "The cost threshold for disaster recovery operations"
+    },
+    "correct": "B",
+    "explanation": "RPO = Recovery Point Objective = how much data can be lost (measured in time). Example: 4-hour RPO means you can lose up to 4 hours of data — so backups must run at least every 4 hours. RTO = Recovery Time Objective = how long the system can be down. RPO drives backup frequency; RTO drives recovery infrastructure investment."
+  },
+  {
+    "id": "t3q30",
+    "objective": "QUESTION 30 / 30",
+    "question": "A UTM (Unified Threat Management) device is BEST described as:",
+    "options": {
+      "A": "An advanced firewall with application awareness and deep packet inspection for large enterprises",
+      "B": "A comprehensive all-in-one security appliance combining firewall, IPS, antivirus, and content filtering",
+      "C": "A web application firewall designed specifically to block SQLi and XSS attacks",
+      "D": "A passive network monitoring device that detects intrusions without blocking traffic"
+    },
+    "correct": "B",
+    "explanation": "UTM combines multiple security functions (firewall + IPS + antivirus + content filtering + more) into a single device — a one-stop security solution. It's designed primarily for SMBs that want comprehensive protection without managing many separate devices. NGFW (A) is more advanced with application awareness — typically for enterprises. WAF (C) is specifically for web applications. IDS (D) is passive monitoring."
+  }
+]

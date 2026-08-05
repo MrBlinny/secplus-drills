@@ -1,0 +1,392 @@
+[
+  {
+    "id": "t3bq1",
+    "objective": "QUESTION 1 OF 30 · Objective 3.1",
+    "question": "A company uses AWS for compute resources but manages its own operating systems, applications, and data. Which cloud service model is this?",
+    "options": {
+      "A": "SaaS (Software as a Service)",
+      "B": "IaaS (Infrastructure as a Service)",
+      "C": "PaaS (Platform as a Service)",
+      "D": "FaaS (Function as a Service)"
+    },
+    "correct": "B",
+    "explanation": "IaaS: provider manages hardware, networking, hypervisor (physical layer). Customer manages OS, middleware, runtime, applications, data. Examples: AWS EC2, Azure VMs, Google Compute Engine. PaaS: provider manages through the runtime — customer only manages applications and data (e.g., AWS Elastic Beanstalk, Heroku). SaaS: provider manages everything — customer just uses the software (e.g., Office 365, Salesforce). The key indicator: \"manages its own operating systems\" = IaaS (not managed by provider)."
+  },
+  {
+    "id": "t3bq2",
+    "objective": "QUESTION 2 OF 30 · Objective 3.1",
+    "question": "A hospital must meet strict regulatory requirements for data residency and cannot allow patient data to leave its country. Which cloud deployment model should they choose?",
+    "options": {
+      "A": "Public cloud",
+      "B": "Community cloud",
+      "C": "Private cloud",
+      "D": "Hybrid cloud"
+    },
+    "correct": "C",
+    "explanation": "Private cloud: infrastructure dedicated to one organization — full control over data location, security, and compliance. Required for data residency rules, highly sensitive data, and strict regulatory environments (HIPAA, government). Public cloud = shared infrastructure (AWS/Azure/GCP) — data location may span regions/countries. Hybrid cloud = both public + private. Community cloud = shared among organizations with similar requirements (e.g., government agencies). For maximum data sovereignty and residency control, private cloud is correct."
+  },
+  {
+    "id": "t3bq3",
+    "objective": "QUESTION 3 OF 30 · Objective 3.2",
+    "question": "A security team finds that an employee has set up an unapproved Dropbox account and is storing company files there. What security concern does this PRIMARILY represent?",
+    "options": {
+      "A": "Shadow IT — unsanctioned cloud usage outside IT governance",
+      "B": "Insider threat — deliberate data theft",
+      "C": "Supply chain attack",
+      "D": "Ransomware delivery mechanism"
+    },
+    "correct": "A",
+    "explanation": "Shadow IT = employees using unauthorized applications, devices, or cloud services without IT approval. Usually NOT malicious (employee wants to work efficiently) but creates serious security risks: data outside DLP controls, no encryption guarantees, potential data breach notification obligations, compliance violations (GDPR/HIPAA). CASB (Cloud Access Security Broker) is the primary tool to detect and control shadow IT. CASB sits between users and cloud services, providing visibility and policy enforcement for unsanctioned cloud usage."
+  },
+  {
+    "id": "t3bq4",
+    "objective": "QUESTION 4 OF 30 · Objective 3.3",
+    "question": "In the shared responsibility model for cloud security, which component is the cloud provider ALWAYS responsible for, regardless of service model (IaaS/PaaS/SaaS)?",
+    "options": {
+      "A": "Application security",
+      "B": "Data encryption",
+      "C": "Identity and access management",
+      "D": "Physical security of the data center"
+    },
+    "correct": "D",
+    "explanation": "In ALL cloud service models, the provider is always responsible for physical security — the building, hardware, power, cooling, and physical access controls. In SaaS, the provider takes on much more (OS, middleware, applications). In IaaS, the customer takes on much more. But the physical layer is ALWAYS the provider's responsibility — you never get physical access to AWS data centers. Everything above the physical layer shifts based on service model. This is why \"physical security\" is the correct anchor answer."
+  },
+  {
+    "id": "t3bq5",
+    "objective": "QUESTION 5 OF 30 · Objective 3.4",
+    "question": "A network architect places web servers in a zone accessible from the internet, separate from internal database servers. What network architecture concept is being implemented?",
+    "options": {
+      "A": "Zero trust",
+      "B": "DMZ (Demilitarized Zone)",
+      "C": "VLAN segmentation",
+      "D": "Air gap"
+    },
+    "correct": "B",
+    "explanation": "DMZ = a network segment between the public internet and the internal network, hosting public-facing servers (web, email, DNS). If an attacker compromises the web server in the DMZ, they still face another firewall before reaching internal databases. The DMZ provides a \"buffer zone.\" VLAN segmentation divides internal networks but doesn't specifically describe the internet-facing buffer. Air gap = complete physical isolation (no network connection). Zero trust = authentication model. DMZ = classic two-firewall or screened subnet architecture."
+  },
+  {
+    "id": "t3bq6",
+    "objective": "QUESTION 6 OF 30 · Objective 3.4",
+    "question": "Which firewall type examines the full content of network packets including the application-layer payload and can detect threats hidden within allowed protocols like HTTP or DNS?",
+    "options": {
+      "A": "Packet filtering firewall",
+      "B": "Stateful inspection firewall",
+      "C": "Next-Generation Firewall (NGFW)",
+      "D": "Circuit-level gateway"
+    },
+    "correct": "C",
+    "explanation": "NGFW performs deep packet inspection (DPI) — examines payload content, not just headers. Can identify applications (Facebook vs. general HTTP), block specific app features, integrate IPS signatures, and apply user/identity-based policies. Packet filtering = Layer 3/4 only (IP, port). Stateful = tracks connection state (Layer 4). Circuit-level gateway = validates TCP handshakes (Layer 5). NGFW = Layer 7 application awareness + IPS + user identity + SSL inspection. The ability to detect threats \"hidden within allowed protocols\" requires application-layer visibility = NGFW."
+  },
+  {
+    "id": "t3bq7",
+    "objective": "QUESTION 7 OF 30 · Objective 3.4",
+    "question": "A security device is positioned inline on the network and can automatically DROP malicious traffic when an attack signature is detected — not just alert. What is this device?",
+    "options": {
+      "A": "IDS (Intrusion Detection System)",
+      "B": "IPS (Intrusion Prevention System)",
+      "C": "SIEM",
+      "D": "Proxy server"
+    },
+    "correct": "B",
+    "explanation": "Key distinction: IDS = DETECTS and ALERTS (passive, out-of-band — traffic copy). IPS = DETECTS and BLOCKS (active, inline — real traffic flows through it). IPS can drop packets, reset connections, block IP addresses. Because IPS is inline, false positives can block legitimate traffic — tune carefully. SIEM = log aggregation and correlation. Proxy = intermediary for web traffic. The keywords \"inline\" and \"DROP malicious traffic automatically\" = IPS. \"Detects and alerts only\" = IDS. Most modern NGFWs include integrated IPS functionality."
+  },
+  {
+    "id": "t3bq8",
+    "objective": "QUESTION 8 OF 30 · Objective 3.4",
+    "question": "An organization wants to prevent employees from accessing social media during work hours and block malicious websites before they can load. Which solution should they deploy?",
+    "options": {
+      "A": "VPN concentrator",
+      "B": "SIEM",
+      "C": "Network-based IPS",
+      "D": "Web proxy / Secure Web Gateway (SWG)"
+    },
+    "correct": "D",
+    "explanation": "A web proxy (Secure Web Gateway) sits between users and the internet, filtering HTTP/HTTPS traffic based on URL categories (social media, gambling, malware), content inspection, and reputation feeds. Features: URL filtering, SSL inspection, malware scanning, bandwidth control. Forward proxy = client-side proxy filtering outbound web traffic. Organizations use solutions like Zscaler, Cisco Umbrella, Palo Alto Prisma. IPS detects attacks but doesn't URL-filter. SIEM aggregates logs. VPN secures tunnels. Web filter = content control = proxy/SWG."
+  },
+  {
+    "id": "t3bq9",
+    "objective": "QUESTION 9 OF 30 · Objective 3.2",
+    "question": "What does \"infrastructure as code\" (IaC) security mean in a cloud context?",
+    "options": {
+      "A": "Scanning and version-controlling cloud configuration templates to prevent misconfigurations before deployment",
+      "B": "Writing custom firewall rules in programming languages",
+      "C": "Replacing physical hardware with software-defined networking",
+      "D": "Encrypting all infrastructure management traffic"
+    },
+    "correct": "A",
+    "explanation": "Infrastructure as Code (IaC) defines cloud infrastructure in configuration files (Terraform, CloudFormation, ARM templates). IaC security means: applying security scanning to these templates BEFORE deployment to catch misconfigurations (open S3 buckets, unrestricted security groups). Tools: Checkov, tfsec, Terraform Sentinel. Benefits: version control creates audit trail, peer review of changes, prevent \"drift\" from approved configuration. Misconfigurations in IaC templates are one of the top cloud security risks (Capital One breach was an IaC misconfiguration)."
+  },
+  {
+    "id": "t3bq10",
+    "objective": "QUESTION 10 OF 30 · Objective 3.5",
+    "question": "An organization needs to protect sensitive data stored in a database so that even if the storage media is stolen, the data cannot be read without the correct key. What control addresses this?",
+    "options": {
+      "A": "Data masking",
+      "B": "Data tokenization",
+      "C": "Encryption at rest",
+      "D": "Data anonymization"
+    },
+    "correct": "C",
+    "explanation": "Encryption at rest protects stored data — if storage media is physically stolen, the data is unreadable without the decryption key. Three data states: at rest (stored), in transit (moving over network — TLS/HTTPS), in use (being processed — memory encryption like AMD SEV). Data masking = replaces data with realistic but fake data (dev/test environments). Tokenization = replaces sensitive data with a non-sensitive token (PCI DSS for credit cards). Anonymization = removes all identifying information permanently. For \"stolen storage media\" = encryption at rest."
+  },
+  {
+    "id": "t3bq11",
+    "objective": "QUESTION 11 OF 30 · Objective 3.5",
+    "question": "A company replaces actual credit card numbers in its database with randomized tokens. The real card numbers are stored in a separate, highly secured vault system. What data protection technique is this?",
+    "options": {
+      "A": "Data masking",
+      "B": "Tokenization",
+      "C": "Encryption",
+      "D": "Hashing"
+    },
+    "correct": "B",
+    "explanation": "Tokenization substitutes sensitive data (credit card number) with a non-sensitive placeholder (token). The mapping between token and real data is stored in a secure token vault. Even if the main database is breached, attackers only get tokens — useless without the vault. Unlike encryption, tokens have no mathematical relationship to the original data — you can't \"decrypt\" a token. PCI DSS strongly recommends tokenization for cardholder data. Difference from hashing: hashing is one-way (no recovery), tokenization is reversible (through the vault)."
+  },
+  {
+    "id": "t3bq12",
+    "objective": "QUESTION 12 OF 30 · Objective 3.6",
+    "question": "A company has a critical database server. They implement a secondary server that continuously receives real-time copies of all transactions. If the primary fails, the secondary takes over automatically within seconds. What HA concept is this?",
+    "options": {
+      "A": "Cold site",
+      "B": "Warm standby",
+      "C": "Load balancing",
+      "D": "High availability clustering / Active-passive failover"
+    },
+    "correct": "D",
+    "explanation": "Active-passive HA: primary (active) handles all traffic; secondary (passive) receives real-time data sync and sits ready. Automatic failover within seconds — near-zero downtime. This is different from: Load balancing (active-active — both servers share traffic simultaneously). Warm standby = partially provisioned, manual or slow failover. Cold site = empty facility, must provision from scratch (hours/days). The combination of \"real-time copies\" + \"automatic failover\" + \"seconds\" = active-passive HA clustering (near-zero RTO)."
+  },
+  {
+    "id": "t3bq13",
+    "objective": "QUESTION 13 OF 30 · Objective 3.6",
+    "question": "After a disaster destroys the primary data center, the organization needs to resume operations at an alternate site within 4 hours. The alternate site has pre-configured servers and network equipment but no live data. What type of DR site is this?",
+    "options": {
+      "A": "Hot site",
+      "B": "Warm site",
+      "C": "Cold site",
+      "D": "Mobile site"
+    },
+    "correct": "B",
+    "explanation": "DR site comparison: Hot site = fully operational mirror (real-time data sync, immediate failover, minutes RTO). Warm site = pre-configured hardware, no live data — need to restore from backup before operations resume (hours RTO). Cold site = empty space/power/cooling, must bring in hardware (days/weeks RTO). The scenario: \"pre-configured servers/network\" (not cold) + \"no live data\" (not hot) + 4-hour RTO = warm site. Warm sites balance cost (cheaper than hot) with reasonable recovery time."
+  },
+  {
+    "id": "t3bq14",
+    "objective": "QUESTION 14 OF 30 · Objective 3.6",
+    "question": "What does RPO (Recovery Point Objective) measure?",
+    "options": {
+      "A": "The maximum acceptable amount of data loss measured in time — how far back in time the last backup can be",
+      "B": "The maximum time a system can be down before business impact becomes unacceptable",
+      "C": "The amount of money a company can spend on disaster recovery",
+      "D": "The time required to complete a full system backup"
+    },
+    "correct": "A",
+    "explanation": "RPO = Recovery Point Objective = how much data loss is acceptable? If RPO = 4 hours, you must have backups no older than 4 hours. Lower RPO = more frequent backups = higher cost. RTO = Recovery Time Objective = how long until systems are back online? If RTO = 2 hours, you must restore operations within 2 hours of failure. Memory: RPO = data loss (going backward in time to last backup). RTO = downtime (time to get back up). Both are defined in the BIA (Business Impact Analysis) and drive BC/DR architecture decisions."
+  },
+  {
+    "id": "t3bq15",
+    "objective": "QUESTION 15 OF 30 · Objective 3.4",
+    "question": "A company wants to inspect encrypted HTTPS traffic for malware without the user receiving certificate errors. Which technique allows this?",
+    "options": {
+      "A": "Port mirroring",
+      "B": "Network packet capture",
+      "C": "TLS/SSL inspection (interception) with trusted enterprise CA",
+      "D": "Deep packet inspection without decryption"
+    },
+    "correct": "C",
+    "explanation": "SSL inspection (TLS interception) performs a man-in-the-middle by the proxy: the proxy terminates the client's TLS session, inspects the plaintext, re-encrypts and forwards. To avoid certificate errors, the enterprise deploys its own CA certificate as trusted on all managed endpoints. The proxy presents dynamically generated certificates signed by this CA. Privacy concern: employees should be notified. Legal consideration: may require acceptable use policy. Enables inspection of C2 traffic hiding in HTTPS and malware in encrypted downloads."
+  },
+  {
+    "id": "t3bq16",
+    "objective": "QUESTION 16 OF 30 · Objective 3.2",
+    "question": "A company deploys sensors throughout its OT (Operational Technology) environment that cannot be patched due to legacy compatibility issues. Which security approach is BEST for protecting these systems?",
+    "options": {
+      "A": "Replace all legacy OT equipment immediately",
+      "B": "Apply compensating controls: network isolation, monitoring, and strict access control",
+      "C": "Connect OT systems to the corporate network for centralized patching",
+      "D": "Both B is correct — compensating controls are the realistic approach"
+    },
+    "correct": "B",
+    "explanation": "OT/ICS/SCADA systems (industrial control systems) are often unpatched because vendors don't provide patches, or because patches require downtime that would shut down manufacturing/utilities. Best practices: air-gap or network segmentation (separate OT from IT), strict access control, anomaly detection for OT protocols (Modbus, DNP3), compensating controls. Connecting to corporate network (C) creates massive attack surface. Immediate replacement (A) is costly and unrealistic. Compensating controls = acceptable security when preferred controls aren't feasible."
+  },
+  {
+    "id": "t3bq17",
+    "objective": "QUESTION 17 OF 30 · Objective 3.3",
+    "question": "A company sets up a decoy server on their network that appears to be a real production server but contains no legitimate data. Its purpose is to detect and study attacker behavior. What is this?",
+    "options": {
+      "A": "Honeypot",
+      "B": "Honeynet",
+      "C": "Sandbox",
+      "D": "Canary token"
+    },
+    "correct": "A",
+    "explanation": "Honeypot = a single decoy system designed to attract attackers and monitor their behavior. Any access to the honeypot is inherently suspicious (no legitimate users should access it). Honeynet = multiple honeypots forming a network — simulates a whole environment. Sandbox = isolated environment for safely executing and analyzing potentially malicious files. Canary token = a digital tripwire (fake document, link, credential) that alerts when accessed. Honeypots/honeynets help: early detection, attacker TTP (Tactics, Techniques, Procedures) research, slow down attackers."
+  },
+  {
+    "id": "t3bq18",
+    "objective": "QUESTION 18 OF 30 · Objective 3.6",
+    "question": "A backup strategy creates a full backup every Sunday, a differential backup every other day. If the system fails Thursday, which backups must be restored?",
+    "options": {
+      "A": "Sunday full + Monday diff + Tuesday diff + Wednesday diff",
+      "B": "Sunday full + Wednesday differential only",
+      "C": "Sunday full only",
+      "D": "Wednesday differential only"
+    },
+    "correct": "B",
+    "explanation": "Key difference: Differential backup = ALL changes since the last FULL backup. Each day's diff grows larger but contains everything. Restore = 2 steps: full + latest diff. Incremental backup = ONLY changes since last backup (any type). Restore = full + every incremental in order. With differential: Thursday restore = Sunday full + Wednesday diff (which contains ALL changes since Sunday, including Mon/Tue). With incremental: Thursday restore = Sunday + Monday + Tuesday + Wednesday (4 tapes). Differential: faster restore, larger backups. Incremental: slower restore, smaller backups."
+  },
+  {
+    "id": "t3bq19",
+    "objective": "QUESTION 19 OF 30 · Objective 3.1",
+    "question": "Which cloud computing characteristic allows resources (compute, storage, bandwidth) to automatically scale up during peak demand and scale down during off-peak times?",
+    "options": {
+      "A": "Measured service",
+      "B": "Broad network access",
+      "C": "Rapid elasticity",
+      "D": "Resource pooling"
+    },
+    "correct": "C",
+    "explanation": "NIST defines 5 essential cloud characteristics: (1) On-demand self-service, (2) Broad network access, (3) Resource pooling, (4) Rapid elasticity, (5) Measured service. Rapid elasticity = capabilities can be provisioned and released on demand, quickly scaling with demand. Example: auto-scaling groups that add servers during Black Friday traffic spikes. Resource pooling = provider serves multiple customers from shared resources. Measured service = pay for what you use (metered). Broad network access = accessible via any device/network."
+  },
+  {
+    "id": "t3bq20",
+    "objective": "QUESTION 20 OF 30 · Objective 3.4",
+    "question": "A company wants to prevent sensitive data from traversing outside of specific VLANs without passing through a security inspection point. Which architectural approach achieves this?",
+    "options": {
+      "A": "Port security on switches",
+      "B": "Deploying endpoint antivirus",
+      "C": "Implementing WPA3 on wireless networks",
+      "D": "East-west traffic inspection via micro-segmentation and internal firewalls"
+    },
+    "correct": "D",
+    "explanation": "Traditional security focused on north-south traffic (in/out of the perimeter). Modern attacks move LATERALLY — east-west traffic (server to server within the network). Micro-segmentation creates fine-grained security zones with policies between them. Internal firewalls or software-defined security force all inter-VLAN traffic through inspection. Zero-trust architecture requires this. Prevents an attacker who compromises one segment from freely moving to others. NSX, Cisco ACI, and cloud security groups implement micro-segmentation. Port security controls which devices connect to switch ports, not traffic between VLANs."
+  },
+  {
+    "id": "t3bq21",
+    "objective": "QUESTION 21 OF 30 · Objective 3.5",
+    "question": "A security analyst needs to securely delete files from a solid-state drive (SSD) that will be decommissioned. Which method is MOST effective for SSDs?",
+    "options": {
+      "A": "Overwriting with DoD 5220.22-M 7-pass wipe",
+      "B": "Standard delete and empty recycle bin",
+      "C": "Cryptographic erasure (encrypting then discarding keys) or physical destruction",
+      "D": "Low-level format"
+    },
+    "correct": "C",
+    "explanation": "SSDs use wear leveling — data is written to different cells each time, so overwrite methods (DoD 7-pass) may not reach all copies. For SSDs: (1) Cryptographic erasure = if drive was encrypted, delete the key (data becomes permanently unreadable). (2) Physical destruction = shredding. (3) Secure Erase command (ATA Secure Erase) supported by some SSDs. Traditional overwrite methods designed for HDDs are unreliable on SSDs due to wear leveling and overprovisioning. NIST SP 800-88 provides guidance on media sanitization by storage type."
+  },
+  {
+    "id": "t3bq22",
+    "objective": "QUESTION 22 OF 30 · Objective 3.3",
+    "question": "Which solution provides centralized visibility and control over cloud applications — including unsanctioned apps — and enforces security policies between users and cloud services?",
+    "options": {
+      "A": "SIEM",
+      "B": "CASB (Cloud Access Security Broker)",
+      "C": "WAF (Web Application Firewall)",
+      "D": "VPN"
+    },
+    "correct": "B",
+    "explanation": "CASB (Cloud Access Security Broker) sits between users and cloud services, providing: (1) Visibility — what cloud apps are being used (shadow IT discovery). (2) Data security — DLP for cloud apps. (3) Threat protection — malware scanning. (4) Compliance — enforce policies. CASB can be proxy-based (inline) or API-based (direct integration). Examples: Microsoft Defender for Cloud Apps, Netskope, Zscaler. WAF protects web applications. SIEM correlates logs. VPN encrypts tunnels. CASB = cloud governance + shadow IT + data protection in the cloud."
+  },
+  {
+    "id": "t3bq23",
+    "objective": "QUESTION 23 OF 30 · Objective 3.6",
+    "question": "A company follows the 3-2-1 backup rule. Which of the following CORRECTLY describes this rule?",
+    "options": {
+      "A": "3 copies of data, on 2 different media types, with 1 copy offsite",
+      "B": "3 backups per day, 2 full backups per week, 1 offsite rotation per month",
+      "C": "3-hour RPO, 2-hour RTO, 1-day backup retention",
+      "D": "3 data centers, 2 are active, 1 is cold standby"
+    },
+    "correct": "A",
+    "explanation": "3-2-1 backup rule: 3 = three total copies of your data (1 primary + 2 backups). 2 = stored on two different media types (e.g., local disk + tape, or local disk + cloud). 1 = at least one copy stored offsite (protects against site disasters — fire, flood, theft). Why different media? Protects against media-specific failures. Why offsite? Protects against site-wide disasters. Extended: 3-2-1-1-0 adds: 1 copy immutable (offline/air-gapped, ransomware-proof) + 0 backup errors (test restores). Most important exam rule for backup strategy."
+  },
+  {
+    "id": "t3bq24",
+    "objective": "QUESTION 24 OF 30 · Objective 3.4",
+    "question": "A security team deploys a system that monitors the behavior of users and entities across the environment, using machine learning to establish baselines and alert on anomalous activity. What type of system is this?",
+    "options": {
+      "A": "SIEM",
+      "B": "IPS",
+      "C": "UEBA (User and Entity Behavior Analytics)",
+      "D": "DLP"
+    },
+    "correct": "C",
+    "explanation": "UEBA = User and Entity Behavior Analytics. Uses ML/AI to build behavioral baselines for users and devices, then flags deviations. Detects: impossible travel, unusual data access volumes, off-hours logins, lateral movement, privilege abuse. SIEM collects and correlates logs from many sources — often integrates UEBA. IPS blocks signature-based network attacks. DLP prevents data exfiltration. UEBA specifically focuses on behavioral anomalies vs. signatures — effective against insider threats and APTs that don't trigger traditional signatures."
+  },
+  {
+    "id": "t3bq25",
+    "objective": "QUESTION 25 OF 30 · Objective 3.2",
+    "question": "A smart building controller manages HVAC and lighting systems and connects to the corporate network for management. What security risk does this IoT device PRIMARILY introduce?",
+    "options": {
+      "A": "Data exfiltration of HVAC data",
+      "B": "Expanded attack surface — a compromised IoT device can pivot to the corporate network",
+      "C": "Physical destruction of HVAC equipment",
+      "D": "The device will overheat servers"
+    },
+    "correct": "B",
+    "explanation": "IoT devices connected to corporate networks create attack surfaces. They often have: default credentials, unpatched firmware, no endpoint protection, no encryption. A compromised IoT device can be used as a pivot point to attack higher-value systems. Famous real example: Target 2013 breach — attackers entered via an HVAC vendor's credentials and pivoted to the payment network. Mitigations: IoT in separate VLAN, firmware updates, change default credentials, network monitoring, disable unnecessary services. The Target breach made \"HVAC as attack vector\" a classic exam reference."
+  },
+  {
+    "id": "t3bq26",
+    "objective": "QUESTION 26 OF 30 · Objective 3.5",
+    "question": "A company classifies its data into four categories: Public, Internal, Confidential, and Restricted. Restricted data requires encryption at rest and in transit, MFA, and logging of all access. What is this classification activity part of?",
+    "options": {
+      "A": "Vulnerability management",
+      "B": "Incident response planning",
+      "C": "Data governance and classification policy",
+      "D": "Network segmentation design"
+    },
+    "correct": "C",
+    "explanation": "Data classification assigns sensitivity levels to data and defines handling requirements for each level. This is foundational to data governance — you can't protect data you haven't categorized. Classification drives encryption requirements, access controls, retention policies, and disposal procedures. Government: Top Secret/Secret/Confidential/Unclassified. Private sector: Restricted/Confidential/Internal/Public. The Data Owner defines classification; the Data Custodian implements controls; users are responsible for following policy. Classification = foundation of all other data protection measures."
+  },
+  {
+    "id": "t3bq27",
+    "objective": "QUESTION 27 OF 30 · Objective 3.3",
+    "question": "A company's on-premises application authenticates users against Active Directory, while its cloud applications authenticate through Azure AD. What technology allows users to use a single set of credentials across both environments?",
+    "options": {
+      "A": "RADIUS",
+      "B": "LDAP",
+      "C": "Kerberos",
+      "D": "Identity federation / SSO"
+    },
+    "correct": "D",
+    "explanation": "Identity federation = linking identity systems across different domains/organizations so users can use one identity across multiple systems. SSO (Single Sign-On) = one login grants access to multiple applications. Technologies: SAML (Security Assertion Markup Language) for web apps, OAuth 2.0 for authorization, OpenID Connect for authentication. Azure AD Connect federates on-premises AD with cloud Azure AD. Benefits: fewer passwords, better user experience, centralized access control. RADIUS = network access authentication. LDAP = directory query protocol. Kerberos = enterprise ticket-based auth (on-premises only)."
+  },
+  {
+    "id": "t3bq28",
+    "objective": "QUESTION 28 OF 30 · Objective 3.2",
+    "question": "Which embedded security chip on a laptop motherboard stores encryption keys, digital certificates, and can attest to the integrity of the boot process?",
+    "options": {
+      "A": "TPM (Trusted Platform Module)",
+      "B": "HSM",
+      "C": "Secure Enclave",
+      "D": "Smart card"
+    },
+    "correct": "A",
+    "explanation": "TPM is a hardware chip on the motherboard that: stores cryptographic keys (BitLocker uses TPM for full disk encryption keys), provides a hardware root of trust, enables measured boot (hashes each boot component to detect tampering), supports remote attestation (proves to a remote server that the system is in a trusted state). BitLocker requires TPM 2.0 (Windows 11 requirement). HSM = enterprise-grade, separate device for high-security key management. Secure Enclave = Apple's equivalent in iPhone/Mac processors. Smart card = portable token for authentication."
+  },
+  {
+    "id": "t3bq29",
+    "objective": "QUESTION 29 OF 30 · Objective 3.6",
+    "question": "An organization's BCP states that the order fulfillment system must never experience more than 2 hours of downtime. What BIA metric defines this requirement?",
+    "options": {
+      "A": "RPO",
+      "B": "RTO",
+      "C": "MTTR",
+      "D": "MTBF"
+    },
+    "correct": "B",
+    "explanation": "RTO (Recovery Time Objective) = maximum acceptable downtime before business impact becomes unacceptable. \"Must not experience more than 2 hours of downtime\" = RTO of 2 hours. RPO = max acceptable data loss (how old can backups be?). MTTR (Mean Time To Repair) = average time to repair a COMPONENT (reactive/operational metric). MTBF (Mean Time Between Failures) = average time between failures (reliability metric). RTO and RPO are forward-looking planning metrics set during BIA. MTTR and MTBF are historical operational metrics used to evaluate system reliability."
+  },
+  {
+    "id": "t3bq30",
+    "objective": "QUESTION 30 OF 30 · Objective 3.4",
+    "question": "A company implements NAC (Network Access Control). What is the PRIMARY function of NAC?",
+    "options": {
+      "A": "Encrypt all network traffic",
+      "B": "Block external threats at the firewall",
+      "C": "Monitor network performance",
+      "D": "Verify device compliance (patches, AV, configuration) before allowing network access"
+    },
+    "correct": "D",
+    "explanation": "NAC (Network Access Control) evaluates connecting devices against security policies before granting network access. Checks: Is the OS patched? Is AV installed and updated? Is the firewall enabled? Is disk encryption on? Non-compliant devices are quarantined to a remediation VLAN until they meet requirements. Example: 802.1X uses NAC for port-based access control. Cisco ISE is a popular NAC solution. NAC enforces \"health checks\" — you must be healthy to join the network. Prevents BYOD devices with outdated software from being attack vectors on the corporate network."
+  }
+]

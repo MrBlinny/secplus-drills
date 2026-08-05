@@ -1,0 +1,24 @@
+{
+  "name": "secplus-tutor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local study app for CompTIA Security+ SY0-701. Every answer is logged to data/attempts.jsonl.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "report": "node server/report.js",
+    "rebuild-db": "node server/rebuild-db.js",
+    "import-harvest": "node tools/import-harvest.mjs",
+    "build-bank": "node tools/build-bank.mjs && node tools/build-bank.mjs --coverage",
+    "coverage": "node tools/coverage-audit.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^12.2.0"
+  }
+}

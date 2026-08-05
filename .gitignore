@@ -1,0 +1,39 @@
+node_modules/
+
+# ---------------------------------------------------------------------------
+# Your study data. Personal, and never useful to anyone else.
+#
+# All of these are created on first run, so a fresh clone works without them.
+# attempts.jsonl is the one that matters: it is append-only and the source of
+# truth for everything the app reports. Back it up; do not commit it.
+# ---------------------------------------------------------------------------
+data/attempts.jsonl
+data/review-queue.json
+data/PROGRESS.md
+
+# SQLite index — rebuildable from data/attempts.jsonl via `npm run rebuild-db`,
+# and entirely optional (see the header of server/db.js).
+data/tutor.db
+data/tutor.db-wal
+data/tutor.db-shm
+
+# Personal notes for Claude: your own profile, weak areas, session history.
+# CLAUDE.md is the shared generic version and IS committed.
+CLAUDE.local.md
+
+# CompTIA's published objectives PDF. Kept locally to verify content/objectives.md
+# against, but not redistributed here: it is CompTIA's copyright, the app does not
+# read it, and CompTIA gives it away free from their own site anyway. Download it
+# from https://www.comptia.org/en-us/certifications/security/ if you want to check
+# the transcription yourself.
+content/SY0-701-objectives-official.pdf
+
+# ---------------------------------------------------------------------------
+# Deliberately NOT ignored
+#
+# harvest/   the raw third-party downloads, kept as the audit trail for
+#            data/item-bank-practice.json, which is generated from it.
+# data/item-bank*.json, data/pbq-bank.json
+#            generated from tools/, but committed so the app runs straight
+#            after clone with no build step.
+# ---------------------------------------------------------------------------

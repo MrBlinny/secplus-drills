@@ -1,0 +1,1302 @@
+[
+  {
+    "id": "feq1",
+    "objective": "Question 1 of 50 — Domain 1.0",
+    "question": "Which component of the CIA Triad ensures that data has not been modified by unauthorized parties and remains accurate and complete?",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Integrity",
+      "C": "Availability",
+      "D": "Non-repudiation"
+    },
+    "correct": "",
+    "explanation": "Integrity ensures data is accurate, complete, and has not been altered by unauthorized parties. Controls: hashing (MD5, SHA-256), digital signatures, checksums, version control, write protections. Confidentiality (A) ensures data is only accessible to authorized parties — controlled by encryption and access controls. Availability (C) ensures systems are accessible when needed. Non-repudiation (D) ensures actions can be attributed to a specific entity and cannot be denied — achieved through digital signatures and audit logs."
+  },
+  {
+    "id": "feq2",
+    "objective": "Question 2 of 50 — Domain 1.0",
+    "question": "The AAA security framework consists of three functions. Which option correctly identifies all three?",
+    "options": {
+      "A": "Authentication, Authorization, Accounting",
+      "B": "Authentication, Auditing, Access Control",
+      "C": "Availability, Authorization, Accounting",
+      "D": "Authentication, Authorization, Auditing"
+    },
+    "correct": "",
+    "explanation": "AAA = Authentication (verify identity), Authorization (determine what the authenticated user can access), Accounting (log what they did). RADIUS and TACACS+ are AAA protocols. The three work sequentially: first prove WHO you are, then determine WHAT you can do, then RECORD what you did. Option D (Auditing) is sometimes confused with Accounting — accounting is the real-time logging, auditing is reviewing those logs later."
+  },
+  {
+    "id": "feq3",
+    "objective": "Question 3 of 50 — Domain 1.0",
+    "question": "A firewall rule blocks all traffic from a known malicious IP range before any attack occurs. This is an example of which type of security control?",
+    "options": {
+      "A": "Detective",
+      "B": "Corrective",
+      "C": "Preventive",
+      "D": "Deterrent"
+    },
+    "correct": "",
+    "explanation": "Preventive controls stop an attack BEFORE it succeeds. A firewall blocking malicious traffic prevents the attack from ever reaching the target — it never gets through. Detective controls (A) identify attacks that are occurring or have occurred (IDS, log monitoring, security cameras). Corrective controls (B) fix the damage after an attack (reimaging a system, restoring backups). Deterrent controls (D) discourage attack attempts through visible warnings or consequences (security signs, legal notices) but don't technically block them."
+  },
+  {
+    "id": "feq4",
+    "objective": "Question 4 of 50 — Domain 1.0",
+    "question": "AES-256 uses the same key for both encryption and decryption. Which encryption category is this?",
+    "options": {
+      "A": "Asymmetric encryption",
+      "B": "Symmetric encryption",
+      "C": "Hashing",
+      "D": "Elliptic curve cryptography"
+    },
+    "correct": "",
+    "explanation": "Symmetric encryption uses the SAME key for both encryption and decryption. AES (Advanced Encryption Standard) is the primary symmetric algorithm — fast, efficient, widely used for bulk data encryption. Challenge: how do you share the key securely? This is the key distribution problem. Asymmetric (A) uses a key pair (public + private) — different keys for encrypt/decrypt. Examples: RSA, ECC. Hashing (C) is one-way — not reversible, not encryption. ECC (D) is a TYPE of asymmetric algorithm, not a category."
+  },
+  {
+    "id": "feq5",
+    "objective": "Question 5 of 50 — Domain 1.0",
+    "question": "Two parties need to establish a shared secret key over an insecure channel without ever having communicated before. Which protocol enables this?",
+    "options": {
+      "A": "AES-256",
+      "B": "SHA-256",
+      "C": "RSA",
+      "D": "Diffie-Hellman"
+    },
+    "correct": "",
+    "explanation": "Diffie-Hellman (DH) is a key exchange protocol that allows two parties to establish a shared secret over a public, insecure channel without prior communication. The shared secret can then be used as a symmetric key. DH is used in TLS to establish session keys. Modern variants: DHE (ephemeral) and ECDHE (elliptic curve ephemeral) — these provide forward secrecy. AES-256 (A) is for encryption, not key exchange. SHA-256 (B) is a hashing algorithm. RSA (C) can also exchange keys but through a different mechanism — encrypting a key with the recipient's public key."
+  },
+  {
+    "id": "feq6",
+    "objective": "Question 6 of 50 — Domain 1.0",
+    "question": "A company implements a policy requiring that all access requests go through a central identity broker with continuous verification, regardless of whether the user is on-campus or remote. This architecture is called:",
+    "options": {
+      "A": "Zero Trust",
+      "B": "Defense in Depth",
+      "C": "Network Segmentation",
+      "D": "Perimeter Security"
+    },
+    "correct": "",
+    "explanation": "Zero Trust operates on \"never trust, always verify\" — no user or device is inherently trusted based on network location. Even users inside the corporate network must continuously authenticate and be authorized. Zero Trust has two planes: Control Plane (identity decisions) and Data Plane (policy enforcement). Defense in Depth (B) layers multiple controls — complementary to Zero Trust but a different concept. Network Segmentation (C) divides networks — a tool Zero Trust uses, but not Zero Trust itself. Perimeter Security (D) is the old castle-and-moat model that Zero Trust replaces."
+  },
+  {
+    "id": "feq7",
+    "objective": "Question 7 of 50 — Domain 2.0",
+    "question": "An attacker sends a carefully crafted email to the CFO of a company, pretending to be the CEO and requesting an urgent $250,000 wire transfer. Which attack type BEST describes this?",
+    "options": {
+      "A": "Phishing",
+      "B": "Whaling",
+      "C": "Business Email Compromise (BEC) / Spear Phishing",
+      "D": "Vishing"
+    },
+    "correct": "",
+    "explanation": "Business Email Compromise (BEC) targets specific employees (typically in finance) with targeted emails that impersonate executives requesting wire transfers or sensitive data. This is also spear phishing — highly targeted, researched attacks rather than mass campaigns. Regular phishing (A) is mass, untargeted email. Whaling (B) is specifically targeting C-suite executives as the victims, not just impersonating them. Vishing (D) is phone-based (voice phishing), not email."
+  },
+  {
+    "id": "feq8",
+    "objective": "Question 8 of 50 — Domain 2.0",
+    "question": "An attacker positions themselves between a user and their bank's website, intercepting and potentially modifying all communications in both directions while both parties believe they're communicating directly. This is called:",
+    "options": {
+      "A": "SQL Injection",
+      "B": "Man-in-the-Middle (MitM)",
+      "C": "Session Hijacking",
+      "D": "DNS Poisoning"
+    },
+    "correct": "",
+    "explanation": "A Man-in-the-Middle (MitM) attack intercepts communications between two parties. The attacker can read, modify, and inject messages while both parties believe they're communicating directly. Common MitM methods: ARP spoofing, SSL stripping, evil twin Wi-Fi. Defense: mutual TLS authentication, certificate pinning, HSTS, HTTPS. SQL injection (A) targets databases via input fields. Session hijacking (C) steals an already-authenticated session token — not necessarily intercepting all communications. DNS poisoning (D) redirects DNS queries to malicious IPs — could be a step in a MitM attack but is a different technique."
+  },
+  {
+    "id": "feq9",
+    "objective": "Question 9 of 50 — Domain 2.0",
+    "question": "Malware encrypts all files on a user's workstation and displays a message demanding $5,000 in cryptocurrency to restore access. What type of malware is this?",
+    "options": {
+      "A": "Ransomware",
+      "B": "Spyware",
+      "C": "Rootkit",
+      "D": "Trojan"
+    },
+    "correct": "",
+    "explanation": "Ransomware encrypts victim files and demands payment for the decryption key. It has become the dominant monetization malware type. Defenses: offline backups (3-2-1 backup strategy), EDR, network segmentation to limit spread, user training. Spyware (B) secretly monitors and exfiltrates user data. Rootkit (C) hides malware presence from the OS, often at kernel level. Trojan (D) disguises itself as legitimate software — it doesn't necessarily encrypt files. Ransomware often arrives via phishing emails or by exploiting unpatched vulnerabilities."
+  },
+  {
+    "id": "feq10",
+    "objective": "Question 10 of 50 — Domain 2.0",
+    "question": "An attacker sends millions of UDP packets from multiple compromised systems to overwhelm a gaming company's servers, making them unavailable to players. This attack is:",
+    "options": {
+      "A": "Smurf attack",
+      "B": "ARP spoofing",
+      "C": "Replay attack",
+      "D": "Distributed Denial of Service (DDoS)"
+    },
+    "correct": "",
+    "explanation": "A DDoS (Distributed Denial of Service) attack uses multiple compromised systems (botnet) to flood a target, overwhelming its capacity. The \"distributed\" aspect is key — attacks from a single system are DoS. Defenses: ISP-level scrubbing, CDN (Cloudflare, Akamai), rate limiting, anycast. Smurf attack (A) is a specific amplification attack using ICMP — a type of DDoS, but the generic description fits DDoS better. ARP spoofing (B) is a LAN-based MitM technique. Replay attack (C) involves reusing captured authentication tokens."
+  },
+  {
+    "id": "feq11",
+    "objective": "Question 11 of 50 — Domain 2.0",
+    "question": "A user downloads what appears to be a free game, but it secretly installs a backdoor that gives an attacker remote access. What type of malware is this?",
+    "options": {
+      "A": "Worm",
+      "B": "Virus",
+      "C": "Trojan",
+      "D": "Adware"
+    },
+    "correct": "",
+    "explanation": "A Trojan appears to be legitimate software but contains hidden malicious functionality. The user willingly installs it, thinking it's benign. Key distinguisher: requires USER ACTION to install — the user downloads and runs it. Worm (A) self-replicates and spreads across networks WITHOUT user action. Virus (B) attaches to files and requires USER ACTION to execute, but spreads differently — it infects existing files. Adware (D) displays unwanted advertisements. The \"free game with hidden backdoor\" is the textbook Trojan scenario."
+  },
+  {
+    "id": "feq12",
+    "objective": "Question 12 of 50 — Domain 2.0",
+    "question": "A vulnerability scanner connects to systems WITHOUT any credentials and attempts to identify vulnerabilities from an unauthenticated perspective. This scan type is called:",
+    "options": {
+      "A": "Active scan",
+      "B": "Non-credentialed scan",
+      "C": "Passive scan",
+      "D": "Credentialed scan"
+    },
+    "correct": "",
+    "explanation": "A non-credentialed (unauthenticated) scan tests systems from an external perspective without logging in — similar to what an attacker would see. It finds externally exposed vulnerabilities but misses internal weaknesses. A credentialed scan (D) logs into the system and can identify OS-level vulnerabilities, missing patches, misconfigurations — much more thorough. A passive scan (C) monitors traffic without sending probe packets. Active scan (A) describes sending probe packets actively — but this applies to both credentialed and non-credentialed scans."
+  },
+  {
+    "id": "feq13",
+    "objective": "Question 13 of 50 — Domain 2.0",
+    "question": "Malware on a compromised server hides its processes from the operating system and antivirus tools by modifying the OS kernel. This malware type is a:",
+    "options": {
+      "A": "Rootkit",
+      "B": "Spyware",
+      "C": "RAT",
+      "D": "Logic bomb"
+    },
+    "correct": "",
+    "explanation": "A rootkit operates at the deepest OS levels (kernel mode) to hide the presence of malware from security tools and the OS itself. It can hide files, processes, network connections, and registry entries. Detection requires offline scanning, integrity checking tools, or memory forensics. Spyware (B) monitors/exfiltrates data but doesn't hide at kernel level. RAT (C) = Remote Access Trojan — provides remote control but doesn't define the stealth mechanism. Logic bomb (D) executes malicious code when a trigger condition is met — a different malware behavior."
+  },
+  {
+    "id": "feq14",
+    "objective": "Question 14 of 50 — Domain 2.0",
+    "question": "A user receives a call from someone claiming to be from the IT help desk, asking the user to provide their password to resolve an account issue. This is an example of:",
+    "options": {
+      "A": "Smishing",
+      "B": "Phishing",
+      "C": "Vishing",
+      "D": "Pretexting"
+    },
+    "correct": "",
+    "explanation": "Vishing (Voice phishing) uses phone calls to trick victims into revealing sensitive information or taking harmful actions. Key signal: \"phone call,\" \"voice.\" Smishing (A) uses SMS/text messages. Phishing (B) uses email. Pretexting (D) is the TECHNIQUE used — fabricating a scenario (\"I'm from IT\") to make the request credible. Pretexting is the backstory; vishing is the channel. The question asks which attack type — vishing is the most specific and correct answer. The pretexting (impersonating IT) is the social engineering technique used within the vishing attack."
+  },
+  {
+    "id": "feq15",
+    "objective": "Question 15 of 50 — Domain 2.0",
+    "question": "An attacker enters \"' OR '1'='1\" into a login form's username field, bypassing authentication and gaining access to all user accounts. What attack is this?",
+    "options": {
+      "A": "Cross-Site Scripting (XSS)",
+      "B": "Buffer Overflow",
+      "C": "CSRF",
+      "D": "SQL Injection"
+    },
+    "correct": "",
+    "explanation": "SQL Injection inserts SQL commands into user input fields that are passed directly to a database query. \"' OR '1'='1\" modifies the SQL query to always evaluate as true, bypassing password verification. Defense: parameterized queries/prepared statements, input validation (whitelisting), stored procedures, WAF. XSS (A) injects JavaScript into web pages rendered in other users' browsers. Buffer overflow (B) overwrites adjacent memory by sending more data than a field can handle. CSRF (C) tricks an authenticated user's browser into making unauthorized requests to a trusted site."
+  },
+  {
+    "id": "feq16",
+    "objective": "Question 16 of 50 — Domain 2.0",
+    "question": "A piece of malware spreads across a corporate network to all reachable systems without any user interaction, exploiting an unpatched vulnerability in the network service. This is a:",
+    "options": {
+      "A": "Virus",
+      "B": "Worm",
+      "C": "Trojan",
+      "D": "Spyware"
+    },
+    "correct": "",
+    "explanation": "Worms self-replicate and spread across networks WITHOUT user interaction. They exploit network vulnerabilities to propagate autonomously. Famous examples: WannaCry (exploited EternalBlue/MS17-010), Morris Worm, Conficker. Defense: patch management, network segmentation (limits lateral spread), disable unnecessary network services. Virus (A) attaches to files and requires user execution to spread — unlike a worm which is self-propagating. Trojan (C) requires user installation. Spyware (D) monitors user activity without replicating."
+  },
+  {
+    "id": "feq17",
+    "objective": "Question 17 of 50 — Domain 2.0",
+    "question": "An attacker leaves several USB drives labeled \"Q3 Salary Data\" in a company's parking lot and break room. This attack is called:",
+    "options": {
+      "A": "Baiting",
+      "B": "Tailgating",
+      "C": "Pretexting",
+      "D": "Watering hole"
+    },
+    "correct": "",
+    "explanation": "Baiting uses enticing lures — physical media (USB drives) or digital offers — to trick victims into compromising themselves. Labeled USB drives exploit human curiosity; the victim plugs them in and executes malware. Tailgating (B) is physically following someone through a secure door. Pretexting (C) involves fabricating a story to manipulate someone verbally. A watering hole attack (D) compromises a website that the target group frequently visits — not physical media. USB baiting is a classic physical social engineering tactic tested on Security+."
+  },
+  {
+    "id": "feq18",
+    "objective": "Question 18 of 50 — Domain 3.0",
+    "question": "A company separates its web servers, application servers, and database servers into different network segments with firewalls between each layer. Untrusted public-facing servers are placed in an intermediate zone accessible from both the internet and internal networks. This intermediate zone is called:",
+    "options": {
+      "A": "VLAN",
+      "B": "Extranet",
+      "C": "DMZ",
+      "D": "Air gap"
+    },
+    "correct": "",
+    "explanation": "A DMZ (Demilitarized Zone) is a network segment between the internet and the internal network. Public-facing servers (web, email, DNS) go in the DMZ — they're accessible to the internet but isolated from the trusted internal network. If a DMZ server is compromised, the attacker still can't directly access internal systems. VLAN (A) provides logical segmentation within a network but doesn't describe the public-facing intermediate zone. Extranet (B) is a portion of an intranet extended to trusted external partners. Air gap (D) means no network connection at all — completely isolated."
+  },
+  {
+    "id": "feq19",
+    "objective": "Question 19 of 50 — Domain 3.0",
+    "question": "A company maintains an off-site data center that mirrors production systems in real time. In the event of a disaster, operations can be switched over to this facility within minutes. This is a:",
+    "options": {
+      "A": "Cold site",
+      "B": "Hot site",
+      "C": "Warm site",
+      "D": "Cloud backup"
+    },
+    "correct": "",
+    "explanation": "A hot site is a fully operational duplicate facility with live data replication. Failover can occur in minutes. Most expensive option, but lowest RTO. Hot = ready NOW. Warm site (C) has hardware and some software pre-installed but data must be restored from backup — failover takes hours to days. Cold site (A) is just a space with power and connectivity — everything must be installed from scratch, failover takes days to weeks. Lowest cost, highest RTO. The exam always tests: Hot = fastest/most expensive, Cold = slowest/cheapest."
+  },
+  {
+    "id": "feq20",
+    "objective": "Question 20 of 50 — Domain 3.0",
+    "question": "A development team uses a cloud platform that provides a runtime environment, development frameworks, databases, and middleware, but they manage only their application code. Which cloud service model is this?",
+    "options": {
+      "A": "IaaS",
+      "B": "SaaS",
+      "C": "FaaS",
+      "D": "PaaS"
+    },
+    "correct": "",
+    "explanation": "PaaS (Platform as a Service) provides a platform for developing, testing, and deploying applications. The provider manages OS, runtime, middleware, databases — the customer manages their code and data. Examples: Heroku, Google App Engine, Azure App Service. IaaS (A) provides virtualized infrastructure (VMs, networks, storage) — customer manages everything from OS up. SaaS (B) delivers complete applications — customer manages only their data and user access (Office 365, Salesforce). FaaS (C) = Function as a Service (serverless computing), a subset of PaaS."
+  },
+  {
+    "id": "feq21",
+    "objective": "Question 21 of 50 — Domain 3.0",
+    "question": "A network administrator needs to manage a remote Linux server securely. Which protocol provides an encrypted command-line session?",
+    "options": {
+      "A": "SSH",
+      "B": "Telnet",
+      "C": "FTP",
+      "D": "HTTP"
+    },
+    "correct": "",
+    "explanation": "SSH (Secure Shell) provides an encrypted, authenticated remote terminal session over port 22. It replaced Telnet (B), which sends all traffic including credentials in cleartext and is completely insecure. FTP (C) transfers files but lacks encryption (SFTP or FTPS are the secure versions). HTTP (D) is web traffic (HTTPS is the encrypted version). The rule: whenever a protocol question offers an encrypted vs unencrypted option for the same function, the encrypted version is always correct for security contexts. Telnet vs SSH is the most common exam comparison."
+  },
+  {
+    "id": "feq22",
+    "objective": "Question 22 of 50 — Domain 3.0",
+    "question": "A firewall that inspects HTTP headers, validates input against OWASP Top 10 threats, and blocks malicious web requests before they reach the application is a:",
+    "options": {
+      "A": "Packet filter firewall",
+      "B": "Stateful inspection firewall",
+      "C": "Web Application Firewall (WAF)",
+      "D": "NGFW"
+    },
+    "correct": "",
+    "explanation": "A WAF (Web Application Firewall) specifically protects web applications by inspecting HTTP/HTTPS traffic for OWASP threats: SQL injection, XSS, CSRF, path traversal, etc. It operates at Layer 7 (application layer). Key signal: \"web application,\" \"OWASP,\" \"HTTP inspection.\" Packet filter (A) operates at Layer 3/4 — just IP/port rules, no application awareness. Stateful inspection (B) tracks connection state but still doesn't understand application content. NGFW (D) combines stateful inspection with deep packet inspection and app awareness — it's comprehensive but WAF is the most specific answer for HTTP/web app protection."
+  },
+  {
+    "id": "feq23",
+    "objective": "Question 23 of 50 — Domain 3.0",
+    "question": "Remote employees need secure access to corporate resources from home. Which technology creates an encrypted tunnel over the internet to the corporate network?",
+    "options": {
+      "A": "VLAN",
+      "B": "VPN",
+      "C": "DMZ",
+      "D": "NAC"
+    },
+    "correct": "",
+    "explanation": "A VPN (Virtual Private Network) creates an encrypted tunnel over a public network (internet), allowing remote users to securely access corporate resources as if they were on the internal network. Protocols: IPsec, SSL/TLS (for clientless VPN), OpenVPN. VLAN (A) provides logical network segmentation within a LAN — doesn't help remote users. DMZ (C) is a network zone for public-facing servers. NAC (D) = Network Access Control — enforces policy compliance before granting network access, but doesn't create the remote connectivity tunnel itself."
+  },
+  {
+    "id": "feq24",
+    "objective": "Question 24 of 50 — Domain 3.0",
+    "question": "A server has three hard drives configured so that all data is written simultaneously to two drives. If one drive fails, the system continues operating without data loss. This is:",
+    "options": {
+      "A": "RAID 0",
+      "B": "RAID 5",
+      "C": "Full backup",
+      "D": "RAID 1"
+    },
+    "correct": "",
+    "explanation": "RAID 1 (mirroring) writes identical data to two drives simultaneously. If one fails, the other contains a complete copy — zero data loss, immediate failover. Uses 50% of total capacity (half the drives are mirrors). RAID 0 (A) stripes data across drives for performance but provides NO redundancy — one drive failure loses everything. RAID 5 (B) uses distributed parity across 3+ drives, can survive one drive failure — different mechanism from simple mirroring. The question says \"written simultaneously to two drives\" = mirroring = RAID 1."
+  },
+  {
+    "id": "feq25",
+    "objective": "Question 25 of 50 — Domain 3.0",
+    "question": "Users across multiple applications and cloud services authenticate once and gain access to all connected systems without re-entering credentials. This capability is:",
+    "options": {
+      "A": "Single Sign-On (SSO)",
+      "B": "MFA",
+      "C": "RBAC",
+      "D": "Federated Identity"
+    },
+    "correct": "",
+    "explanation": "SSO allows users to authenticate once and access multiple applications without re-authenticating. Implemented via SAML, OAuth 2.0, or OpenID Connect. MFA (B) adds multiple authentication factors — orthogonal to SSO (you can have SSO WITH MFA). RBAC (C) is a permission model (Role-Based Access Control) that defines what you can do after authentication. Federated Identity (D) extends SSO across organizational boundaries — enabling a user from Company A to authenticate to Company B's system using their Company A credentials. SSO is the more specific answer for \"one login, many applications within an org.\""
+  },
+  {
+    "id": "feq26",
+    "objective": "Question 26 of 50 — Domain 4.0",
+    "question": "A newly deployed server is configured with CIS Benchmark settings — unnecessary services disabled, default accounts removed, passwords changed, and filesystem permissions tightened. This process is:",
+    "options": {
+      "A": "Patching",
+      "B": "Vulnerability scanning",
+      "C": "Hardening",
+      "D": "Baselining"
+    },
+    "correct": "",
+    "explanation": "Hardening reduces the attack surface by removing unnecessary features, disabling unneeded services, changing defaults, and applying minimal privilege. CIS Benchmarks are the go-to hardening guides for most OS/application types. Patching (A) applies security fixes for known vulnerabilities — different from the broad configuration lockdown of hardening. Vulnerability scanning (B) identifies vulnerabilities after the fact. Baselining (D) establishes a documented standard configuration — related to hardening but baselining is the documentation/standard, hardening is the active process of achieving that standard."
+  },
+  {
+    "id": "feq27",
+    "objective": "Question 27 of 50 — Domain 4.0",
+    "question": "A security platform collects log data from firewalls, servers, endpoints, and cloud services, correlates events using rules and AI, and generates alerts when suspicious patterns emerge. This is a:",
+    "options": {
+      "A": "SIEM",
+      "B": "IDS",
+      "C": "EDR",
+      "D": "SOAR"
+    },
+    "correct": "",
+    "explanation": "SIEM (Security Information and Event Management) aggregates logs from across the environment, correlates events, and generates alerts. Key features: log aggregation, event correlation, alerting, reporting, dashboards. IDS (B) monitors specific network/host traffic for intrusion signatures — more narrowly scoped than SIEM. EDR (C) focuses on endpoint telemetry — one device type, not the whole environment. SOAR (D) extends SIEM by automating responses to SIEM alerts — ingests SIEM alerts and runs playbooks. The key signal for SIEM: \"collects from multiple sources,\" \"correlates,\" \"generates alerts.\""
+  },
+  {
+    "id": "feq28",
+    "objective": "Question 28 of 50 — Domain 4.0",
+    "question": "During incident response, after containing the threat, the team determines that malware was delivered via a phishing email, removed all traces, and restored systems from clean backups. What phase comes AFTER restoration?",
+    "options": {
+      "A": "Lessons Learned",
+      "B": "Eradication",
+      "C": "Identification",
+      "D": "Containment"
+    },
+    "correct": "",
+    "explanation": "The NIST incident response lifecycle: Preparation → Detection/Identification → Containment → Eradication → Recovery → Lessons Learned. After systems are restored (Recovery), the final phase is Lessons Learned — documenting what happened, what worked, what didn't, and how to improve. Eradication (B) comes before recovery — it's where malware is removed. Identification (C) is where the incident is detected and analyzed. Containment (D) comes before eradication. The exam frequently tests IR phase order — memorize: Prepare → Identify → Contain → Eradicate → Recover → Lessons Learned."
+  },
+  {
+    "id": "feq29",
+    "objective": "Question 29 of 50 — Domain 4.0",
+    "question": "A security analyst uses SIEM to correlate firewall logs, DNS queries, and endpoint telemetry and identifies a pattern of outbound connections to a known C2 server. This is an example of:",
+    "options": {
+      "A": "Vulnerability assessment",
+      "B": "Penetration testing",
+      "C": "Threat hunting",
+      "D": "Risk assessment"
+    },
+    "correct": "",
+    "explanation": "Threat hunting is the proactive, analyst-driven process of searching for threats that may have evaded automated detection. The analyst forms a hypothesis (\"are we already compromised?\") and investigates data sources to confirm or deny it. Key signal: \"proactive,\" \"correlating data sources,\" \"analyst-driven investigation.\" Vulnerability assessment (A) identifies weaknesses in systems — it doesn't correlate logs to find active threats. Penetration testing (B) simulates attacks. Risk assessment (D) evaluates potential risks, not active threat indicators."
+  },
+  {
+    "id": "feq30",
+    "objective": "Question 30 of 50 — Domain 4.0",
+    "question": "An employee requires special access to a financial system for a one-time audit. The access is granted for exactly 48 hours and automatically revoked when the window expires. This practice implements which IAM principle?",
+    "options": {
+      "A": "Separation of Duties",
+      "B": "Need to Know",
+      "C": "Least Privilege",
+      "D": "Just-in-Time Access"
+    },
+    "correct": "",
+    "explanation": "Just-in-Time (JIT) access grants elevated permissions only when needed, for only as long as needed, then automatically revokes them. This dramatically reduces the attack surface — privileged access isn't sitting around waiting to be stolen. It's the modern evolution of least privilege for privileged access management (PAM). Least privilege (C) is the principle — access only to what's needed. JIT is the implementation mechanism. Separation of duties (A) requires two people for sensitive tasks. Need to Know (B) restricts information access to those who need it for their job — applies to information, not time-bounded access."
+  },
+  {
+    "id": "feq31",
+    "objective": "Question 31 of 50 — Domain 4.0",
+    "question": "A user logs in with their username/password and is prompted for a 6-digit code generated by an authenticator app. After entering the code, access is granted. How many authentication FACTORS were used?",
+    "options": {
+      "A": "One factor — the code is a second password",
+      "B": "Two factors — something you know + something you have",
+      "C": "Three factors — username, password, and code",
+      "D": "Two factors — something you know + something you know"
+    },
+    "correct": "",
+    "explanation": "MFA factors are categories: something you KNOW (password), something you HAVE (authenticator app/phone), something you ARE (biometric). Username + password = ONE factor (both are \"something you know\"). The authenticator app code = \"something you HAVE\" (you have the device with the app). Total: 2 factors. Username is not a factor — it's an identifier. Option C incorrectly counts three pieces of data as three factors. Option D is wrong because the code from an authenticator app is \"something you have\" (possession), not something you know."
+  },
+  {
+    "id": "feq32",
+    "objective": "Question 32 of 50 — Domain 4.0",
+    "question": "A security team redirects all DNS queries from a known malware-infected host to an internal monitoring server instead of blocking it. This allows the team to study the malware's behavior without it spreading. This technique is:",
+    "options": {
+      "A": "DNS sinkhole",
+      "B": "Port mirroring",
+      "C": "Honeypot",
+      "D": "Network tap"
+    },
+    "correct": "",
+    "explanation": "A DNS sinkhole redirects DNS queries for malicious domains to a controlled server instead of returning the real C2 IP. This prevents malware from phoning home while allowing the team to monitor which hosts are infected (any host querying the sinkholed domain is infected). Port mirroring (B) copies switch traffic to a monitoring port — not DNS-specific. Honeypot (C) is a decoy system designed to attract attackers — different from redirecting existing traffic. Network tap (D) is a physical device that captures network traffic for analysis."
+  },
+  {
+    "id": "feq33",
+    "objective": "Question 33 of 50 — Domain 4.0",
+    "question": "The military uses a classification system where a Top Secret user can read Top Secret files but a Secret user cannot read Top Secret files — access is determined by the data's security label and the user's clearance level. This is:",
+    "options": {
+      "A": "DAC",
+      "B": "RBAC",
+      "C": "MAC",
+      "D": "ABAC"
+    },
+    "correct": "",
+    "explanation": "MAC (Mandatory Access Control) assigns access based on security labels on data and security clearances on users. The system enforces access — users cannot override it. Classic in military/government. Key signals: \"classification labels,\" \"clearance levels,\" \"system-enforced,\" \"Top Secret/Secret/Confidential.\" DAC (A) = owner controls access to their files — like Linux file permissions where the owner sets who can read/write. RBAC (B) = access based on job role, not classification labels. ABAC (D) = access based on multiple attributes (time, location, department) — more granular than role."
+  },
+  {
+    "id": "feq34",
+    "objective": "Question 34 of 50 — Domain 4.0",
+    "question": "Attackers compromise a popular software vendor and insert malicious code into a legitimate software update package. Before the vendor discovers the breach, thousands of customers install the compromised update. This is:",
+    "options": {
+      "A": "Zero-day exploit",
+      "B": "Watering hole attack",
+      "C": "Insider threat",
+      "D": "Supply chain attack"
+    },
+    "correct": "",
+    "explanation": "A supply chain attack compromises a trusted vendor/supplier to reach downstream customers. Customers trust the vendor's software and install the update — the trust relationship is weaponized. Famous example: SolarWinds (2020) — attackers inserted malware into the Orion software update, compromising 18,000+ customers including US government agencies. Zero-day (A) exploits an unknown vulnerability — supply chain attacks don't require zero-days. Watering hole (B) compromises websites the target visits. Insider threat (C) involves someone within the targeted organization."
+  },
+  {
+    "id": "feq35",
+    "objective": "Question 35 of 50 — Domain 4.0",
+    "question": "When a SIEM generates a critical alert, a security platform automatically blocks the source IP at the firewall, isolates the affected endpoint, creates a ticket, and notifies the SOC analyst — all without human intervention. This automation is provided by:",
+    "options": {
+      "A": "EDR",
+      "B": "SOAR",
+      "C": "SIEM",
+      "D": "XDR"
+    },
+    "correct": "",
+    "explanation": "SOAR (Security Orchestration, Automation, and Response) automates incident response playbooks by integrating multiple security tools. It ingests alerts from SIEM and other tools, then executes automated actions (block IP, isolate endpoint, create ticket, notify analyst). Key distinction from SIEM: SIEM detects and alerts; SOAR responds and automates. EDR (A) handles endpoint-level detection and response — one device type. SIEM (C) aggregates and correlates logs — it generates the alert that SOAR acts on. XDR (D) extends EDR across multiple control points (network, email, cloud) with some automation but is more of a detection platform than a workflow automation platform."
+  },
+  {
+    "id": "feq36",
+    "objective": "Question 36 of 50 — Domain 4.0",
+    "question": "Before any incident occurs, a SOC team develops contact lists, establishes communication procedures, acquires tools, trains analysts, and tests response procedures. This activity belongs to which IR phase?",
+    "options": {
+      "A": "Preparation",
+      "B": "Detection",
+      "C": "Containment",
+      "D": "Eradication"
+    },
+    "correct": "",
+    "explanation": "Preparation is the FIRST phase of incident response and the ONLY phase that happens BEFORE an incident. It includes: developing playbooks, training staff, acquiring tools, setting up communication procedures, establishing contact lists, conducting tabletop exercises. Everything described in the question happens before any incident — that's preparation. Detection (B) is identifying that an incident is occurring. Containment (C) stops the incident from spreading. Eradication (D) removes the threat. The exam frequently tests: Preparation is the only pre-incident phase."
+  },
+  {
+    "id": "feq37",
+    "objective": "Question 37 of 50 — Domain 4.0",
+    "question": "A digital file contains metadata proving it was created by a specific person, at a specific time, and has not been modified since. The user cannot deny having created it. Which cryptographic mechanism provides this assurance?",
+    "options": {
+      "A": "Symmetric encryption",
+      "B": "Hashing",
+      "C": "Digital signature",
+      "D": "Certificate pinning"
+    },
+    "correct": "",
+    "explanation": "Digital signatures provide authentication (confirms who signed), integrity (confirms the document hasn't changed), and non-repudiation (the signer can't deny signing). A digital signature is created by hashing the document and encrypting the hash with the signer's PRIVATE key. Anyone with the public key can verify the signature. Symmetric encryption (A) protects confidentiality but doesn't prove authorship — both parties share the same key. Hashing (B) verifies integrity but doesn't prove WHO created the document. Certificate pinning (D) associates a specific TLS certificate with a host to prevent MitM — not about file authorship."
+  },
+  {
+    "id": "feq38",
+    "objective": "Question 38 of 50 — Domain 4.0",
+    "question": "Routers, firewalls, and servers are configured to forward event logs to a centralized server using UDP port 514. Which protocol are they using?",
+    "options": {
+      "A": "SNMP",
+      "B": "NetFlow",
+      "C": "RADIUS",
+      "D": "Syslog"
+    },
+    "correct": "",
+    "explanation": "Syslog is the standard protocol for sending log/event messages from network devices to a central log server. Uses UDP port 514 (or TCP 514 / TLS 6514 for secure). The centralized log server is called a syslog server or SIEM. SNMP (A) monitors network device health and status — collects metrics, not logs. NetFlow (B) captures network flow data — source/destination IPs, ports, bytes — not event logs. RADIUS (C) is an authentication, authorization, and accounting protocol for network access — not for log forwarding."
+  },
+  {
+    "id": "feq39",
+    "objective": "Question 39 of 50 — Domain 4.0",
+    "question": "A forensic investigator arrives at an incident scene and must collect evidence from a running server. The CORRECT sequence starts by collecting which data source first?",
+    "options": {
+      "A": "Hard drive image",
+      "B": "RAM / Memory dump",
+      "C": "Network traffic captures",
+      "D": "Log files"
+    },
+    "correct": "",
+    "explanation": "The Order of Volatility principle states that evidence must be collected from MOST VOLATILE to LEAST VOLATILE, because highly volatile data disappears when power is lost. RAM is the most volatile — entirely lost when the system powers off or restarts. It contains running processes, decryption keys, network connections, fileless malware, credentials in memory. Collection order: CPU cache → RAM → Swap/page files → Network traffic → Running processes → Disk → Backups → Paper records. Always capture RAM FIRST on a running system. Disk (A) and logs (D) persist after power-off."
+  },
+  {
+    "id": "feq40",
+    "objective": "Question 40 of 50 — Domain 4.0",
+    "question": "An endpoint security agent detects malware executing on a laptop, immediately terminates the malicious process, quarantines the file, and blocks the C2 IP address — all automatically. This capability is provided by:",
+    "options": {
+      "A": "EDR",
+      "B": "Antivirus (AV)",
+      "C": "DLP",
+      "D": "IPS"
+    },
+    "correct": "",
+    "explanation": "EDR (Endpoint Detection and Response) provides real-time monitoring, threat detection, and automated response on endpoints. It goes beyond traditional AV by detecting behavioral indicators, not just signatures, and can automatically respond: kill processes, quarantine files, block IPs, isolate the endpoint. Traditional AV (B) uses signatures to detect known malware — it doesn't provide the behavioral detection and automated response capabilities of EDR. DLP (C) prevents sensitive data from leaving the organization — different purpose. IPS (D) protects the network by blocking malicious traffic — not endpoint-focused."
+  },
+  {
+    "id": "feq41",
+    "objective": "Question 41 of 50 — Domain 5.0",
+    "question": "After a risk assessment, a company determines that fixing a low-risk vulnerability would cost $200,000 but the expected annual loss is only $5,000. Leadership formally documents the decision to not remediate. This is:",
+    "options": {
+      "A": "Risk transfer",
+      "B": "Risk avoidance",
+      "C": "Risk acceptance",
+      "D": "Risk mitigation"
+    },
+    "correct": "",
+    "explanation": "Risk acceptance means acknowledging a risk exists and deciding not to act because the cost of remediation exceeds the expected loss. The formal documentation of this decision is a risk acceptance record (exception or exemption). Key signals: \"formally documents,\" \"decides not to fix,\" \"cost exceeds benefit.\" Risk transfer (A) = insurance or outsourcing. Risk avoidance (B) = eliminating the activity that creates the risk. Risk mitigation (D) = implementing controls to reduce the risk. This scenario clearly shows a cost-benefit analysis leading to a documented decision not to remediate."
+  },
+  {
+    "id": "feq42",
+    "objective": "Question 42 of 50 — Domain 5.0",
+    "question": "A hospital's BIA states that the EMR system must be restored within 2 hours of a disruption to avoid patient safety risks. This 2-hour requirement is the:",
+    "options": {
+      "A": "RPO",
+      "B": "RTO",
+      "C": "MTBF",
+      "D": "MTTR"
+    },
+    "correct": "",
+    "explanation": "RTO (Recovery Time Objective) is the maximum acceptable time to restore a system after disruption. \"Must be restored within 2 hours\" = RTO of 2 hours. The system defines the TARGET, not the actual recovery time. RPO (A) would define maximum data loss — \"cannot lose more than X hours of patient records.\" MTTR (D) is the ACTUAL average repair time — a descriptive metric, not a requirement. MTBF (C) is average time between failures — a reliability metric."
+  },
+  {
+    "id": "feq43",
+    "objective": "Question 43 of 50 — Domain 5.0",
+    "question": "A company engages a consulting firm to build a new security operations center. The contract specifies deliverables, timelines, resources, acceptance criteria, and payment terms for this specific project. This agreement is a:",
+    "options": {
+      "A": "SLA",
+      "B": "MOU",
+      "C": "NDA",
+      "D": "SOW"
+    },
+    "correct": "",
+    "explanation": "A SOW (Statement of Work) defines the scope, deliverables, timeline, acceptance criteria, and payment for a specific project. Key signals: \"deliverables,\" \"timelines,\" \"specific project,\" \"acceptance criteria.\" It answers: what will be built, by when, for how much, and what counts as done. SLA (A) covers ongoing service performance levels, not one-time project scope. MOU (B) is non-binding intent. NDA (C) covers confidentiality, not project scope. SOWs are typically executed under an MSA (Master Service Agreement) that defines the broader relationship terms."
+  },
+  {
+    "id": "feq44",
+    "objective": "Question 44 of 50 — Domain 5.0",
+    "question": "Before awarding a contract, a company sends a 150-question security survey to all prospective vendors asking about their access controls, patch management, incident response, and encryption practices. This is:",
+    "options": {
+      "A": "Vendor security questionnaire assessment",
+      "B": "Penetration test",
+      "C": "SOC 2 audit",
+      "D": "Right-to-audit exercise"
+    },
+    "correct": "",
+    "explanation": "Vendor security questionnaires (like the SIG - Standardized Information Gathering questionnaire, or CAIQ) are surveys sent to vendors to assess their security posture before engagement. They cover all major control domains. The weakness: vendors self-report, so they can misrepresent their controls. Independent assessments (SOC 2 reports, audits) provide stronger verification. Pen test (B) actively tests vendor systems. SOC 2 (C) is a formal third-party audit, not a questionnaire. Right-to-audit (D) is a contractual clause allowing inspection — not a questionnaire process."
+  },
+  {
+    "id": "feq45",
+    "objective": "Question 45 of 50 — Domain 5.0",
+    "question": "A European data protection authority fines a US company €18 million for GDPR violations related to unlawful processing of EU citizens' data. What is the MAXIMUM possible fine GDPR can impose?",
+    "options": {
+      "A": "€10 million or 2% of annual global turnover",
+      "B": "€10 million flat",
+      "C": "€20 million or 4% of annual global turnover — whichever is higher",
+      "D": "€50 million or 10% of annual global turnover"
+    },
+    "correct": "",
+    "explanation": "GDPR has a two-tier fine structure: Tier 1 (less serious violations): up to €10M or 2% of annual global turnover, whichever is higher. Tier 2 (most serious violations — unlawful processing, violating data subject rights): up to €20M or 4% of annual global turnover, whichever is higher. The \"whichever is higher\" clause means large companies face proportionally larger fines. €18M (the scenario) falls within the Tier 2 maximum. The 4%/€20M combination is one of the most frequently tested regulatory details in Security+."
+  },
+  {
+    "id": "feq46",
+    "objective": "Question 46 of 50 — Domain 5.0",
+    "question": "A pen tester is given a standard user account and told the number of servers on the network but not given network diagrams or documentation. Which test environment is this?",
+    "options": {
+      "A": "White-box",
+      "B": "Gray-box",
+      "C": "Black-box",
+      "D": "Red team"
+    },
+    "correct": "",
+    "explanation": "Gray-box (partially known) testing gives the tester some knowledge — in this case, a valid user account and general scope info, but not full documentation. This simulates a malicious insider or an attacker who has obtained limited credentials. White-box (A) would provide full documentation, network diagrams, source code, admin credentials. Black-box (C) would provide NOTHING — tester starts cold. Red team (D) describes the attacker team role — it can operate in any box color environment. The partial knowledge (some credential + limited info) is the gray-box signature."
+  },
+  {
+    "id": "feq47",
+    "objective": "Question 47 of 50 — Domain 5.0",
+    "question": "All new employees must sign a document before receiving access to company systems that outlines what uses of IT resources are permitted, prohibited, and the consequences of policy violations. This document is the:",
+    "options": {
+      "A": "NDA",
+      "B": "SOW",
+      "C": "SLA",
+      "D": "AUP"
+    },
+    "correct": "",
+    "explanation": "The Acceptable Use Policy (AUP) defines permitted and prohibited use of IT resources, signed by employees before access is granted. It establishes the rules of engagement for IT resource use and defines consequences for violations. Key signals: \"permitted/prohibited uses,\" \"IT resources,\" \"signed before access,\" \"new employees.\" NDA (A) covers confidentiality of information — not IT resource usage rules. SOW (B) is a project scope document for vendors. SLA (C) is a vendor performance agreement."
+  },
+  {
+    "id": "feq48",
+    "objective": "Question 48 of 50 — Domain 5.0",
+    "question": "A marketing company processes customer data on behalf of an e-commerce retailer, following the retailer's instructions for how the data should be used. Under GDPR, what is the marketing company's role?",
+    "options": {
+      "A": "Data processor",
+      "B": "Data controller",
+      "C": "Data subject",
+      "D": "Data custodian"
+    },
+    "correct": "",
+    "explanation": "A data processor processes personal data ON BEHALF of a controller and following the controller's instructions. The marketing company doesn't decide how the data is used — the retailer does. The retailer is the data controller (decides purpose and means). The marketing company is the processor (performs the processing for the controller). Key signal: \"on behalf of,\" \"following instructions.\" Data controller (B) determines WHY and HOW data is processed. Data subject (C) is the individual whose data is being processed. Data custodian (D) is an internal operational role for managing/protecting data."
+  },
+  {
+    "id": "feq49",
+    "objective": "Question 49 of 50 — Domain 5.0",
+    "question": "A security team patches vulnerabilities, deploys MFA, adds network segmentation, and runs phishing training — all to reduce the probability and impact of a potential breach. Which risk strategy are they implementing?",
+    "options": {
+      "A": "Transfer",
+      "B": "Avoid",
+      "C": "Mitigate",
+      "D": "Accept"
+    },
+    "correct": "",
+    "explanation": "Risk mitigation involves implementing controls to reduce either the LIKELIHOOD or the IMPACT (or both) of a risk. Patching reduces exploitability (likelihood), segmentation limits breach scope (impact), MFA reduces unauthorized access risk (likelihood), training reduces phishing success (likelihood). All of these are active risk reduction measures. Transfer (A) = insurance/outsourcing — shifts financial impact to third party. Avoid (B) = eliminate the activity creating the risk. Accept (D) = document and do nothing. Mitigation is the most common risk strategy and always involves doing something to reduce the risk."
+  },
+  {
+    "id": "feq50",
+    "objective": "Question 50 of 50 — Domain 5.0",
+    "question": "A security awareness manager tracks the monthly percentage of employees who click simulated phishing links and uses this metric to measure program effectiveness and justify training investments to leadership. This metric is called a:",
+    "options": {
+      "A": "KPI — Key Performance Indicator",
+      "B": "KRI — Key Risk Indicator",
+      "C": "SLE",
+      "D": "ARO"
+    },
+    "correct": "",
+    "explanation": "A KRI (Key Risk Indicator) is a metric that signals the current level of a specific risk. Phishing click rates are a KRI for human-factor/social engineering risk — high click rates signal elevated risk of successful phishing attacks. KRIs help organizations monitor whether their risk exposure is changing. KPI (A) measures performance toward an objective — like \"95% of employees completed security training this quarter\" (measuring training completion, not risk level). SLE (C) is a risk calculation (Single Loss Expectancy). ARO (D) is Annual Rate of Occurrence. The distinction: KRI measures RISK LEVEL; KPI measures PROGRAM PERFORMANCE."
+  },
+  {
+    "id": "feq51",
+    "objective": "Question 51 of 100 — Domain 1.0",
+    "question": "A sender signs a document by hashing it and encrypting the hash with their private key. This proves the message came from them and has not been altered. The recipient cannot be convinced otherwise. Which security property does this provide?",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Availability",
+      "C": "Non-repudiation",
+      "D": "Authorization"
+    },
+    "correct": "",
+    "explanation": "Non-repudiation ensures a sender cannot later deny having sent or created something. Digital signatures achieve this — the private key is unique to the sender, and only they could have produced the signature. Confidentiality (A) protects data from unauthorized access. Availability (B) ensures systems remain accessible. Authorization (D) controls what an authenticated user can access. Digital signatures provide authentication + integrity + non-repudiation — but the \"cannot deny\" clue points to non-repudiation specifically."
+  },
+  {
+    "id": "feq52",
+    "objective": "Question 52 of 100 — Domain 1.0",
+    "question": "Security cameras, fencing, security guards, badge readers, and mantraps all belong to which security control category?",
+    "options": {
+      "A": "Technical",
+      "B": "Managerial",
+      "C": "Operational",
+      "D": "Physical"
+    },
+    "correct": "",
+    "explanation": "Physical controls protect the physical environment — cameras, guards, fencing, locks, mantraps, bollards. Technical controls (A) use technology: firewalls, IDS, encryption, access control lists. Managerial controls (B) are administrative/policy-based: risk assessments, security policies, background checks. Operational controls (C) are process-based and executed by people: security awareness training, incident response procedures. The four categories (Technical/Managerial/Operational/Physical) are heavily tested — each applies to a different dimension of security."
+  },
+  {
+    "id": "feq53",
+    "objective": "Question 53 of 100 — Domain 1.0",
+    "question": "A password storage system appends a unique random value to each password before hashing it, ensuring that two users with the same password produce different hash values. This technique is called:",
+    "options": {
+      "A": "Key stretching",
+      "B": "Salting",
+      "C": "Pepper",
+      "D": "IV (Initialization Vector)"
+    },
+    "correct": "",
+    "explanation": "A salt is a unique random value added to each password BEFORE hashing. It ensures identical passwords produce different hashes, defeating rainbow tables (precomputed hash lookup tables). Key stretching (A) uses algorithms like bcrypt/PBKDF2 to make hashing deliberately slow — also a defense but different mechanism. Pepper (C) is a secret value added globally (not per-password) that is stored separately from the hash. IV (D) is used in block ciphers to ensure identical plaintexts produce different ciphertexts — same concept, different application."
+  },
+  {
+    "id": "feq54",
+    "objective": "Question 54 of 100 — Domain 1.0",
+    "question": "An employee's certificate was compromised. The CA publishes an updated document listing certificates that are no longer valid before their expiration date. This document is a:",
+    "options": {
+      "A": "CSR — Certificate Signing Request",
+      "B": "CRL — Certificate Revocation List",
+      "C": "OCSP — Online Certificate Status Protocol",
+      "D": "CA — Certificate Authority"
+    },
+    "correct": "",
+    "explanation": "A CRL (Certificate Revocation List) is a published list of certificates that have been revoked before their expiration date. Clients download the CRL periodically and check if a certificate is on it. CSR (A) is the request submitted to a CA to obtain a certificate — it's an input, not a revocation document. OCSP (C) is the modern alternative to CRL — instead of downloading the whole list, clients query a real-time OCSP responder for a single certificate's status. CA (D) is the issuing authority. Exam: CRL = the published list; OCSP = the real-time check protocol."
+  },
+  {
+    "id": "feq55",
+    "objective": "Question 55 of 100 — Domain 1.0",
+    "question": "A company deploys firewalls, IDS, access control, encryption, AND security awareness training. The idea is that if one layer fails, others remain. This strategy is called:",
+    "options": {
+      "A": "Zero Trust",
+      "B": "Least Privilege",
+      "C": "Defense in Depth",
+      "D": "Compensating Controls"
+    },
+    "correct": "",
+    "explanation": "Defense in Depth (also called layered security) deploys multiple overlapping security controls across different layers so that defeating one layer does not compromise the whole system. Borrowed from military strategy (castle with moats, walls, guards). Zero Trust (A) is a network architecture philosophy (never trust, always verify) — a component of a defense-in-depth strategy, not the same thing. Least Privilege (B) limits access rights — one specific control, not a layered strategy. Compensating Controls (D) substitute for a required control that cannot be implemented — not the layering concept."
+  },
+  {
+    "id": "feq56",
+    "objective": "Question 56 of 100 — Domain 1.0",
+    "question": "A bank requires that one employee initiates a wire transfer and a DIFFERENT employee must approve it before it executes. Neither alone can complete the transaction. This implements which principle?",
+    "options": {
+      "A": "Least Privilege",
+      "B": "Separation of Duties",
+      "C": "Need to Know",
+      "D": "Dual Control"
+    },
+    "correct": "",
+    "explanation": "Separation of Duties (SoD) divides a sensitive task so no single person can complete it alone — reducing fraud and error risk. The classic examples: one person initiates a payment, another approves it. Developers cannot deploy to production without change management approval. Least Privilege (A) limits what each person can access, not how tasks are divided. Need to Know (C) restricts information access to those who require it for their job. Dual Control (D) specifically requires simultaneous action by two people (like two keys needed to launch a missile) — SoD is the broader principle; dual control is a specific implementation."
+  },
+  {
+    "id": "feq57",
+    "objective": "Question 57 of 100 — Domain 2.0",
+    "question": "An attacker injects malicious JavaScript into a website's comment section. When other users view that page, the script runs in their browsers and steals their session cookies. This attack is:",
+    "options": {
+      "A": "SQL Injection",
+      "B": "CSRF",
+      "C": "Cross-Site Scripting (XSS)",
+      "D": "Clickjacking"
+    },
+    "correct": "",
+    "explanation": "Cross-Site Scripting (XSS) injects malicious scripts into web pages viewed by other users. Stored XSS persists in the database (comment sections, profiles); Reflected XSS is delivered via crafted URLs. When victims visit the page, their browser executes the attacker's script — stealing cookies, redirecting, keylogging. Defense: output encoding, Content Security Policy (CSP), input validation. SQL Injection (A) targets databases. CSRF (B) tricks an authenticated user's browser into making unwanted requests to a site — the user doesn't need to visit a malicious page. Clickjacking (D) overlays invisible iframes to trick users into clicking things they don't intend to."
+  },
+  {
+    "id": "feq58",
+    "objective": "Question 58 of 100 — Domain 2.0",
+    "question": "A user is authenticated on their bank's website. An attacker tricks them into clicking a link in a different tab that sends a hidden, unauthorized fund transfer request to the bank — authenticated with the user's active session. This is:",
+    "options": {
+      "A": "XSS",
+      "B": "Session hijacking",
+      "C": "CSRF — Cross-Site Request Forgery",
+      "D": "Clickjacking"
+    },
+    "correct": "",
+    "explanation": "CSRF (Cross-Site Request Forgery) exploits the browser's automatic inclusion of session cookies — the victim's authenticated session is used to make unauthorized requests. The attacker doesn't steal the cookie; they just trick the victim's browser into making a request that includes it automatically. Defense: anti-CSRF tokens (unique unpredictable tokens per form), SameSite cookie attribute, re-authentication for sensitive actions. XSS (A) injects script into a page — different mechanism. Session hijacking (B) involves stealing the session token itself. Clickjacking (D) overlays invisible UI elements to trick users into unintended clicks."
+  },
+  {
+    "id": "feq59",
+    "objective": "Question 59 of 100 — Domain 2.0",
+    "question": "A disgruntled developer embeds code in the payroll system that will delete all salary records if their employee account is ever deleted from the directory. This is a:",
+    "options": {
+      "A": "Trojan",
+      "B": "Logic bomb",
+      "C": "Ransomware",
+      "D": "Rootkit"
+    },
+    "correct": "",
+    "explanation": "A logic bomb is malicious code that lies dormant until a specific TRIGGER CONDITION is met — a date, an event (like an account deletion), a counter. Key signals: \"triggers when,\" \"activates if,\" \"unless condition.\" This one triggers when the developer's account is deleted. Trojan (A) disguises itself as legitimate software but doesn't require a trigger condition. Ransomware (C) encrypts files and demands payment. Rootkit (D) hides malware presence in the OS. Logic bombs are an insider threat weapon — often planted by departing employees as a \"dead man's switch.\""
+  },
+  {
+    "id": "feq60",
+    "objective": "Question 60 of 100 — Domain 2.0",
+    "question": "An attacker sends 10,000 bytes to a program field that can only hold 100 bytes, overwriting adjacent memory and potentially gaining control of the execution flow. This is a:",
+    "options": {
+      "A": "Integer overflow",
+      "B": "Race condition",
+      "C": "Buffer overflow",
+      "D": "Format string attack"
+    },
+    "correct": "",
+    "explanation": "Buffer overflow occurs when a program writes more data to a fixed-size memory buffer than it can hold, overflowing into adjacent memory. Attackers exploit this to overwrite the return address and redirect execution to malicious shellcode. Defenses: input validation, bounds checking, ASLR (Address Space Layout Randomization), DEP/NX (Data Execution Prevention), stack canaries. Integer overflow (A) occurs when arithmetic produces a value outside the representable range, wrapping around. Race condition (B) involves timing between concurrent operations. Format string attack (D) exploits poorly sanitized format string functions like printf()."
+  },
+  {
+    "id": "feq61",
+    "objective": "Question 61 of 100 — Domain 2.0",
+    "question": "A pen tester sends TCP SYN packets to a target and waits for SYN-ACK responses but deliberately never completes the handshake. This technique avoids creating full connections and leaves fewer log entries. This is a:",
+    "options": {
+      "A": "UDP scan",
+      "B": "XMAS scan",
+      "C": "SYN scan (half-open scan)",
+      "D": "FIN scan"
+    },
+    "correct": "",
+    "explanation": "A SYN scan (also called a half-open or stealth scan) sends SYN packets but RSTs instead of completing the handshake. Because no full connection is established, many older systems and some application-layer logs don't record it. Nmap's default scan type. UDP scan (A) tests UDP ports — different protocol, much slower. XMAS scan (B) sets FIN, PSH, and URG flags — used to probe RFC-compliant systems, often bypasses basic firewalls. FIN scan (D) sends only FIN flags — another stealthy technique but different flag set. SYN scan is the most common and most-tested stealth scan type."
+  },
+  {
+    "id": "feq62",
+    "objective": "Question 62 of 100 — Domain 2.0",
+    "question": "An investigation reveals that attackers compromised a defense contractor's network 8 months ago and have been silently collecting emails, engineering documents, and personnel files while evading all detection. This describes:",
+    "options": {
+      "A": "Ransomware campaign",
+      "B": "APT — Advanced Persistent Threat",
+      "C": "Insider threat",
+      "D": "Zero-day exploit"
+    },
+    "correct": "",
+    "explanation": "An APT (Advanced Persistent Threat) is a long-duration, stealthy attack — typically by nation-states or sophisticated criminal groups — targeting specific high-value organizations. Key characteristics: Advanced (uses sophisticated tools and TTPs), Persistent (months/years of access, low-and-slow to avoid detection), Threat (intentional, motivated actors). APTs prioritize data exfiltration and intelligence gathering over noisy attacks. Ransomware (A) is loud and disruptive — the opposite of APT stealth. Insider threat (C) comes from within the org. Zero-day (D) exploits an unknown vulnerability — could be a tool in an APT's arsenal but isn't the overall attack category."
+  },
+  {
+    "id": "feq63",
+    "objective": "Question 63 of 100 — Domain 2.0",
+    "question": "An attacker waits near a secure door and walks in behind an authorized employee before the door closes. To BEST prevent this attack, the company should install:",
+    "options": {
+      "A": "Security cameras",
+      "B": "Mantrap / Airlock",
+      "C": "Perimeter fencing",
+      "D": "Motion sensors"
+    },
+    "correct": "",
+    "explanation": "A mantrap (airlock) is a small room with two locked doors — the first door must close and verify one person before the second door opens. It physically prevents tailgating because only one person can pass through at a time. Security cameras (A) deter and detect tailgating but don't physically prevent it — someone can still enter, the camera just records it. Perimeter fencing (C) secures the building exterior, not internal access points. Motion sensors (D) detect presence but don't block unauthorized entry. The mantrap is the only control that physically prevents the attack, not just detects it."
+  },
+  {
+    "id": "feq64",
+    "objective": "Question 64 of 100 — Domain 2.0",
+    "question": "Two threads in an application simultaneously check whether a file exists, then both attempt to create it — leading to unpredictable results that an attacker can exploit by manipulating the timing between the check and the action. This is a:",
+    "options": {
+      "A": "Buffer overflow",
+      "B": "Integer overflow",
+      "C": "Race condition (TOCTOU)",
+      "D": "Heap spray"
+    },
+    "correct": "",
+    "explanation": "A race condition occurs when two concurrent processes access shared resources and the outcome depends on timing. TOCTOU (Time-of-Check to Time-of-Use) is the classic form: a program checks a condition, then uses a resource — an attacker exploits the gap between check and use. Defenses: file locking, atomic operations, proper use of mutexes/semaphores. Buffer overflow (A) involves memory overwriting. Integer overflow (B) involves arithmetic bounds. Heap spray (D) is a memory corruption technique to make shellcode execution more reliable."
+  },
+  {
+    "id": "feq65",
+    "objective": "Question 65 of 100 — Domain 2.0",
+    "question": "An attacker repeatedly requests DHCP IP addresses using fake MAC addresses until the DHCP pool is exhausted, preventing legitimate clients from receiving addresses. This attack is called:",
+    "options": {
+      "A": "ARP spoofing",
+      "B": "DHCP starvation",
+      "C": "DNS poisoning",
+      "D": "IP spoofing"
+    },
+    "correct": "",
+    "explanation": "DHCP starvation exhausts a DHCP server's IP pool by sending repeated DHCP DISCOVER messages with spoofed MAC addresses. Once the pool is empty, legitimate clients can't get IP addresses (DoS). Often followed by deploying a rogue DHCP server to perform MitM. Defense: DHCP snooping on switches (validates DHCP messages), port security (limits MAC addresses per port). ARP spoofing (A) poisons ARP caches to redirect traffic. DNS poisoning (C) injects false DNS entries. IP spoofing (D) fakes the source IP in packets."
+  },
+  {
+    "id": "feq66",
+    "objective": "Question 66 of 100 — Domain 2.0",
+    "question": "Attackers use stolen credential lists (from previous data breaches) and try them against banks, email services, and shopping sites, knowing many users reuse passwords. This attack is called:",
+    "options": {
+      "A": "Brute force",
+      "B": "Password spraying",
+      "C": "Dictionary attack",
+      "D": "Credential stuffing"
+    },
+    "correct": "",
+    "explanation": "Credential stuffing uses stolen username/password pairs from breached sites and tries them against other sites, exploiting password reuse. Very effective because ~65% of users reuse passwords. Defense: MFA (makes credentials alone useless), breach monitoring (Have I Been Pwned), require password changes after known breaches. Brute force (A) tries all possible combinations — computationally expensive. Password spraying (B) tries common passwords against many accounts — avoids lockout. Dictionary attack (C) tries words from a wordlist against one account. Credential stuffing is specifically about reusing KNOWN leaked credentials."
+  },
+  {
+    "id": "feq67",
+    "objective": "Question 67 of 100 — Domain 2.0",
+    "question": "A web developer builds a search function that directly inserts user-typed text into a database query string without any filtering or parameterization. This code flaw represents:",
+    "options": {
+      "A": "Improper input validation",
+      "B": "Broken authentication",
+      "C": "Insecure direct object reference",
+      "D": "Security misconfiguration"
+    },
+    "correct": "",
+    "explanation": "Improper input validation is the root cause of SQL injection, XSS, buffer overflows, and many other vulnerabilities. Accepting and processing unvalidated user input directly is the fundamental coding error. The fix: validate all inputs (whitelist acceptable formats), use parameterized queries, encode output. Broken authentication (B) refers to flaws in session management, credentials, or authentication flows. Insecure direct object reference (C) exposes internal implementation objects (like /user/12345) without access control. Security misconfiguration (D) involves improper settings in servers, databases, or cloud services — not a code logic flaw."
+  },
+  {
+    "id": "feq68",
+    "objective": "Question 68 of 100 — Domain 3.0",
+    "question": "A company migrates to a new wireless standard that uses SAE (Simultaneous Authentication of Equals) handshake, providing stronger resistance against offline dictionary attacks compared to WPA2's PSK mode. This standard is:",
+    "options": {
+      "A": "WEP",
+      "B": "WPA2-Personal",
+      "C": "WPA3",
+      "D": "WPA-TKIP"
+    },
+    "correct": "",
+    "explanation": "WPA3 introduced SAE (Simultaneous Authentication of Equals, also called Dragonfly handshake) which replaces WPA2's PSK. SAE prevents offline dictionary attacks — even if an attacker captures the 4-way handshake, they can't crack it offline because SAE requires interaction per guess. WPA3 also provides forward secrecy. WEP (A) is broken — uses RC4 with flawed IV implementation, crackers in minutes. WPA2 (B) uses CCMP/AES but the PSK mode is vulnerable to offline dictionary attacks after capturing the handshake. WPA-TKIP (D) was a temporary fix for WEP-era hardware — now deprecated."
+  },
+  {
+    "id": "feq69",
+    "objective": "Question 69 of 100 — Domain 3.0",
+    "question": "A company uses AWS for web hosting, Azure for business analytics, and Google Cloud for ML workloads — simultaneously, to avoid vendor lock-in and optimize for each provider's strengths. This is a:",
+    "options": {
+      "A": "Hybrid cloud",
+      "B": "Multi-cloud",
+      "C": "Community cloud",
+      "D": "Private cloud"
+    },
+    "correct": "",
+    "explanation": "Multi-cloud uses multiple public cloud providers simultaneously. Benefits: no vendor lock-in, optimizes for each provider's strengths, improves resilience. Challenge: complexity, consistency of security controls across providers. Hybrid cloud (A) combines private cloud (or on-premises) with one or more public clouds — it's about private+public, not multiple public providers. Community cloud (C) is a shared cloud for organizations with common interests (healthcare, government). Private cloud (D) is dedicated infrastructure, not shared with other tenants."
+  },
+  {
+    "id": "feq70",
+    "objective": "Question 70 of 100 — Domain 3.0",
+    "question": "A company issues a single SSL/TLS certificate that secures both \"example.com\" and every subdomain (mail.example.com, vpn.example.com, shop.example.com). What certificate type is this?",
+    "options": {
+      "A": "Extended Validation (EV)",
+      "B": "Domain Validated (DV)",
+      "C": "Multi-domain (SAN)",
+      "D": "Wildcard"
+    },
+    "correct": "",
+    "explanation": "A wildcard certificate uses *.example.com to cover the apex domain and all first-level subdomains with a single certificate. Efficient for organizations with many subdomains. Limitation: only covers one subdomain level (not sub.sub.example.com). EV (A) provides the highest identity validation — requires rigorous CA verification, shows green bar/org name in older browsers; doesn't define subdomain scope. DV (B) only verifies domain ownership — minimal validation. Multi-domain/SAN (C) lists specific different domains (example.com, example.net, app.example.com) — covers named domains, not the wildcard pattern."
+  },
+  {
+    "id": "feq71",
+    "objective": "Question 71 of 100 — Domain 3.0",
+    "question": "Full backups run every Sunday. Differential backups run Monday–Saturday. A server crashes on Friday afternoon. Which backup sets must be restored?",
+    "options": {
+      "A": "Sunday full backup only",
+      "B": "Sunday full + Thursday differential",
+      "C": "Sunday full + Monday through Thursday differentials",
+      "D": "Thursday differential only"
+    },
+    "correct": "",
+    "explanation": "Differential backups capture ALL changes since the last FULL backup (not since the last differential). By Thursday, the differential contains Mon+Tue+Wed+Thu's changes in one set. To restore: Sunday's full backup PLUS Thursday's differential = 2 sets. This is why differential restores are faster than incremental (only 2 tapes needed). Incremental backups capture only changes since the LAST BACKUP of ANY kind — restoring would require Sunday + Mon + Tue + Wed + Thu = 5 sets. The exam frequently tests this distinction: differential = one set per restore; incremental = many sets per restore."
+  },
+  {
+    "id": "feq72",
+    "objective": "Question 72 of 100 — Domain 3.0",
+    "question": "A network switch logically separates the accounting department from the engineering department on the same physical switch infrastructure — preventing them from communicating directly. This is implemented using:",
+    "options": {
+      "A": "VPN",
+      "B": "VLAN",
+      "C": "NAT",
+      "D": "ACL"
+    },
+    "correct": "",
+    "explanation": "VLANs (Virtual LANs) logically segment a physical network — devices on the same physical switch are placed in separate broadcast domains. Devices in different VLANs cannot communicate without routing through a Layer 3 device (router or Layer 3 switch), where access control lists can be applied. Key signal: \"same physical infrastructure,\" \"logically isolated.\" VPN (A) creates encrypted tunnels for remote access — not LAN segmentation. NAT (C) translates private to public IP addresses. ACL (D) is a rule set applied at a router/firewall — it enforces access between segments but doesn't create the segments themselves."
+  },
+  {
+    "id": "feq73",
+    "objective": "Question 73 of 100 — Domain 3.0",
+    "question": "All employee web traffic is routed through a centralized company server that inspects requests for malware and enforces content filtering policies before forwarding them to the internet. This server is a:",
+    "options": {
+      "A": "Reverse proxy",
+      "B": "Forward proxy",
+      "C": "Load balancer",
+      "D": "WAF"
+    },
+    "correct": "",
+    "explanation": "A forward proxy sits between INTERNAL clients and the EXTERNAL internet — it intercepts outbound requests on behalf of users. Uses: content filtering, malware inspection, caching, anonymizing client IPs from external servers. A reverse proxy (A) sits in front of SERVERS — it intercepts INBOUND requests from the internet on behalf of servers. Uses: load balancing, SSL termination, WAF. Load balancer (C) distributes traffic across multiple servers. WAF (D) protects web applications specifically. The direction matters: forward = clients going out; reverse = requests coming in to servers."
+  },
+  {
+    "id": "feq74",
+    "objective": "Question 74 of 100 — Domain 3.0",
+    "question": "A company wants to ensure that before a device can connect to the corporate network, it must have its antivirus updated, OS patched to the current version, and firewall enabled. What technology enforces these pre-connection checks?",
+    "options": {
+      "A": "802.1X",
+      "B": "EDR",
+      "C": "NAC — Network Access Control",
+      "D": "MDM"
+    },
+    "correct": "",
+    "explanation": "NAC (Network Access Control) enforces policy-based access — devices must meet health requirements (patched, AV updated, firewall enabled) before being granted network access. Non-compliant devices are quarantined to a remediation VLAN. 802.1X (A) is the authentication protocol that NAC often uses to authenticate devices at the port level — it handles identity, not health checks. EDR (B) is endpoint detection and response — monitors for threats but doesn't gate network access based on health posture. MDM (D) manages mobile devices — can enforce policies but doesn't gate network access for all device types."
+  },
+  {
+    "id": "feq75",
+    "objective": "Question 75 of 100 — Domain 3.0",
+    "question": "A backup strategy copies ALL files that have changed since the last FULL backup each night. By Thursday, Thursday's backup contains Monday through Thursday's changes in a single file. Wednesday's backup is no longer needed for restore. This is a:",
+    "options": {
+      "A": "Full backup",
+      "B": "Incremental backup",
+      "C": "Differential backup",
+      "D": "Snapshot"
+    },
+    "correct": "",
+    "explanation": "Differential backup copies ALL changes since the last FULL backup — each day's backup grows larger as it accumulates all changes since Sunday. By Thursday, you only need 2 sets: Sunday full + Thursday differential. Incremental (B) copies only changes since the LAST BACKUP (any type) — Monday's incremental has Mon only, Tuesday's has Tue only — faster to back up, slower to restore (need all incrementals). Full backup (A) copies everything — maximum storage, maximum restore speed. Snapshot (D) captures the state of a system or VM at a point in time — used in virtualization."
+  },
+  {
+    "id": "feq76",
+    "objective": "Question 76 of 100 — Domain 4.0",
+    "question": "Security testing is integrated into every stage of the development pipeline — threat modeling during design, SAST in CI, DAST before release. Developers receive security training. This practice is called:",
+    "options": {
+      "A": "Agile development",
+      "B": "Waterfall SDLC",
+      "C": "DevSecOps",
+      "D": "Continuous Delivery"
+    },
+    "correct": "",
+    "explanation": "DevSecOps integrates security into every stage of the DevOps pipeline — \"shift left\" (move security earlier in development). Key practices: threat modeling, SAST (Static Application Security Testing) in CI/CD, DAST (Dynamic Application Security Testing), dependency scanning, security training for developers, automated policy-as-code. Agile (A) is an iterative development methodology — not security-specific. Waterfall SDLC (B) is sequential development — security is typically an afterthought at the end. Continuous Delivery (D) is a CI/CD practice for frequent reliable releases — one component of DevSecOps."
+  },
+  {
+    "id": "feq77",
+    "objective": "Question 77 of 100 — Domain 4.0",
+    "question": "A CVSS score has three parts: Base Score (intrinsic characteristics), Temporal Score (current exploit availability), and Environmental Score (organization-specific context). Which component reflects ONLY the vulnerability's inherent technical characteristics, independent of time or environment?",
+    "options": {
+      "A": "Environmental Score",
+      "B": "Temporal Score",
+      "C": "Base Score",
+      "D": "Impact Score"
+    },
+    "correct": "",
+    "explanation": "The CVSS Base Score reflects the intrinsic characteristics of a vulnerability: attack vector, attack complexity, privileges required, user interaction required, scope, and impact (confidentiality/integrity/availability). It doesn't change over time and doesn't account for your environment. Temporal Score (B) adjusts for current factors like exploit code availability, remediation maturity, and report confidence — changes over time. Environmental Score (A) modifies the base based on your specific context — criticality of the affected asset, existing compensating controls. For prioritization purposes, the Environmental Score is most actionable but the Base Score is what you see published in CVE databases."
+  },
+  {
+    "id": "feq78",
+    "objective": "Question 78 of 100 — Domain 4.0",
+    "question": "An attacker captures a valid Kerberos TGT (Ticket Granting Ticket) from memory using Mimikatz and uses it to authenticate to other services in the domain without knowing the user's password. This attack is called:",
+    "options": {
+      "A": "Brute force",
+      "B": "Pass-the-ticket",
+      "C": "Replay attack",
+      "D": "Pass-the-hash"
+    },
+    "correct": "",
+    "explanation": "Pass-the-ticket steals Kerberos tickets from memory and reuses them to impersonate the victim — no password required. Pass-the-hash (D) is similar but steals NTLM password hashes (not Kerberos tickets) and uses them for authentication. Both attacks are lateral movement techniques in Windows environments. Mimikatz is the tool associated with both. Brute force (A) tries passwords systematically. Replay attack (C) reuses captured authentication packets — but pass-the-ticket is the specific name for the Kerberos ticket version. Defense: credential guard, protected users group, short ticket lifetimes, EDR detecting Mimikatz-like behavior."
+  },
+  {
+    "id": "feq79",
+    "objective": "Question 79 of 100 — Domain 4.0",
+    "question": "A security analyst notices that the same user account logged in from New York at 8:00 AM and from Singapore at 8:15 AM — physically impossible travel. Which detection method identified this anomaly?",
+    "options": {
+      "A": "Signature-based detection",
+      "B": "Behavior-based / Anomaly detection",
+      "C": "Heuristic analysis",
+      "D": "File integrity monitoring"
+    },
+    "correct": "",
+    "explanation": "Anomaly-based detection establishes a baseline of normal behavior and alerts on deviations. \"Impossible travel\" — logging in from two geographically distant locations in minutes — is a classic anomaly. No signature for \"impossible travel\" exists because it's not a known attack pattern; it's a deviation from expected behavior. Signature-based detection (A) matches known attack patterns/IOCs — can't detect novel or behavioral anomalies. Heuristic analysis (C) uses rules or AI to approximate suspicious behavior but is distinct from behavioral baseline deviation. File integrity monitoring (D) detects unauthorized changes to files — not applicable here."
+  },
+  {
+    "id": "feq80",
+    "objective": "Question 80 of 100 — Domain 4.0",
+    "question": "A hash value is calculated for a disk image at the time of acquisition. Before presenting evidence in court, the analyst calculates the hash again. The values match. What does this prove?",
+    "options": {
+      "A": "The evidence is authentic and trustworthy",
+      "B": "The evidence has not been tampered with since acquisition",
+      "C": "The chain of custody is unbroken",
+      "D": "The evidence is free from malware"
+    },
+    "correct": "",
+    "explanation": "Matching hash values prove INTEGRITY — the file/image has not been modified since the hash was first calculated. It proves bit-for-bit identical content. It does NOT prove authenticity (A) — that someone trustworthy collected it properly. Chain of custody (C) is the documented handling record, not the hash comparison. The hash says nothing about malware (D) — malware could be inside and the hash would still match. In digital forensics, hash verification is done before and after acquisition, after transfer, and before court presentation to prove the evidence wasn't altered."
+  },
+  {
+    "id": "feq81",
+    "objective": "Question 81 of 100 — Domain 4.0",
+    "question": "Wireshark is running on a network segment and captures all packets passing through for protocol analysis and security review. Wireshark is an example of a:",
+    "options": {
+      "A": "IDS",
+      "B": "SIEM",
+      "C": "Protocol analyzer / Packet sniffer",
+      "D": "NetFlow analyzer"
+    },
+    "correct": "",
+    "explanation": "Wireshark is a protocol analyzer (packet sniffer) — it captures raw network packets and decodes them, allowing inspection of every byte in every frame. Used for network troubleshooting and forensics. IDS (A) monitors traffic and generates alerts based on signatures or anomalies — it doesn't show you raw packets. SIEM (B) aggregates logs from multiple sources for correlation and alerting — not a packet capture tool. NetFlow analyzer (D) works with flow metadata (source/dest IP, port, bytes, duration) — summarized traffic data, not raw packets. When a question mentions \"raw packet capture\" or \"protocol analysis\" → packet sniffer/Wireshark."
+  },
+  {
+    "id": "feq82",
+    "objective": "Question 82 of 100 — Domain 4.0",
+    "question": "A UEBA system alerts when an executive's account downloads 50 GB of files at 2 AM — behavior far outside their normal pattern. The investigation confirms it's legitimate (the executive was catching up on work while traveling). This alert is a:",
+    "options": {
+      "A": "True positive",
+      "B": "False positive",
+      "C": "True negative",
+      "D": "False negative"
+    },
+    "correct": "",
+    "explanation": "A false positive is an alert that fires but represents no actual threat — the system incorrectly identified benign behavior as malicious. Here, the alert fired (positive = alert generated) but there was no actual threat (false = no real incident). True positive (A) = alert fires AND there is a real threat — correct detection. True negative (C) = no alert AND no real threat — correct non-detection. False negative (D) = no alert BUT there was a real threat — missed detection (the dangerous one). False positives waste analyst time and can cause alert fatigue; false negatives let real attacks go undetected."
+  },
+  {
+    "id": "feq83",
+    "objective": "Question 83 of 100 — Domain 4.0",
+    "question": "In a Windows Active Directory environment, each user's access is determined by their department membership and job title, not by the data owner's discretion or security labels. This access control model is:",
+    "options": {
+      "A": "DAC",
+      "B": "RBAC",
+      "C": "MAC",
+      "D": "ABAC"
+    },
+    "correct": "",
+    "explanation": "RBAC (Role-Based Access Control) grants permissions based on the user's ROLE (job function, department). Users in the \"Finance\" role get finance system access; \"HR\" gets HR systems. This is the most common enterprise model — Active Directory groups/roles are RBAC. DAC (A) lets data OWNERS control access to their files — Linux file permissions. MAC (C) uses mandatory security labels and clearances — government/military. ABAC (D) uses multiple attributes (role + location + time + device type) — most granular, common in cloud IAM policies. RBAC signal: \"department,\" \"job title,\" \"role determines access.\""
+  },
+  {
+    "id": "feq84",
+    "objective": "Question 84 of 100 — Domain 4.0",
+    "question": "After five failed login attempts, a user's account is automatically locked for 15 minutes. This control is MOST effective at mitigating which attack type?",
+    "options": {
+      "A": "Credential stuffing",
+      "B": "Brute force",
+      "C": "Pass-the-hash",
+      "D": "Rainbow table attack"
+    },
+    "correct": "",
+    "explanation": "Account lockout directly counters brute force attacks by limiting the number of guesses per account — the attacker is locked out after 5 attempts, making exhaustive enumeration impractical. Credential stuffing (A) uses known credential pairs — each attempt might succeed immediately with a real password; lockout slows but doesn't stop it (the valid credentials work on the first try). Pass-the-hash (C) uses captured hashes directly — doesn't go through the login UI. Rainbow table attacks (D) crack hashes offline — don't interact with the login mechanism at all."
+  },
+  {
+    "id": "feq85",
+    "objective": "Question 85 of 100 — Domain 4.0",
+    "question": "A security tool sits between users and cloud SaaS applications (Office 365, Salesforce, Box), enforcing DLP policies, blocking unauthorized apps, encrypting data at rest in cloud storage, and providing visibility into shadow IT. This tool is a:",
+    "options": {
+      "A": "WAF",
+      "B": "CASB — Cloud Access Security Broker",
+      "C": "SIEM",
+      "D": "Forward proxy"
+    },
+    "correct": "",
+    "explanation": "A CASB (Cloud Access Security Broker) is an intermediary security layer between users and cloud services. It provides: visibility (discovers shadow IT), data security (DLP, encryption), compliance enforcement, and threat protection for cloud apps. Key signal: \"between users and cloud applications,\" \"DLP for cloud,\" \"shadow IT.\" WAF (A) protects web applications from attacks — specifically web application security, not cloud app governance. SIEM (C) aggregates logs. Forward proxy (D) controls outbound web traffic broadly but lacks cloud-specific governance capabilities (DLP in cloud storage, cloud app policies, OAuth token inspection)."
+  },
+  {
+    "id": "feq86",
+    "objective": "Question 86 of 100 — Domain 4.0",
+    "question": "A forensic examiner receives a hard drive and must document every person who handled it, when, why, and any transfers of custody — from seizure to courtroom. This documentation is called the:",
+    "options": {
+      "A": "Evidence log",
+      "B": "Chain of custody",
+      "C": "Legal hold",
+      "D": "Forensic report"
+    },
+    "correct": "",
+    "explanation": "Chain of custody documents every person who handled evidence, when, and why — creating an unbroken record from seizure to court. If the chain is broken (gaps in documentation, uncontrolled access), evidence can be challenged as tampered or contaminated and ruled inadmissible. It's a legal requirement for digital forensic evidence. Evidence log (A) is a more generic term — chain of custody is the specific legal concept. Legal hold (C) is a directive to preserve evidence for litigation — it initiates evidence preservation but is not the handling record. Forensic report (D) documents findings and methodology — the output of analysis, not the custody trail."
+  },
+  {
+    "id": "feq87",
+    "objective": "Question 87 of 100 — Domain 4.0",
+    "question": "A decoy server is placed on a network with no legitimate business purpose. Any access to it is inherently suspicious. It generates detailed logs of attacker tools and techniques. This is a:",
+    "options": {
+      "A": "DNS sinkhole",
+      "B": "Honeypot",
+      "C": "DMZ",
+      "D": "Jump server"
+    },
+    "correct": "",
+    "explanation": "A honeypot is a decoy system with no legitimate users — any access to it is by definition suspicious or hostile. It lures attackers in and lets defenders observe their TTPs (tactics, techniques, procedures). A honeynet is a network of honeypots. Canary tokens are lightweight versions. DNS sinkhole (A) redirects malicious DNS queries to a monitoring server — different mechanism. DMZ (C) is a network zone for public-facing servers — legitimate servers, not decoys. Jump server/bastion host (D) is a hardened server used as a single access point to reach secure internal systems — serves legitimate users."
+  },
+  {
+    "id": "feq88",
+    "objective": "Question 88 of 100 — Domain 4.0",
+    "question": "Corporate Wi-Fi requires all devices to present a valid machine certificate before connecting. Authentication is handled by a RADIUS server and the switch port is only activated after successful verification. The 802.1X protocol is being used. What is the RADIUS server's role?",
+    "options": {
+      "A": "Supplicant",
+      "B": "Authenticator",
+      "C": "Authentication Server",
+      "D": "Certificate Authority"
+    },
+    "correct": "",
+    "explanation": "802.1X has three roles: Supplicant (the device seeking access), Authenticator (the network device — switch or AP — that enforces access), and Authentication Server (the RADIUS server that validates credentials). The RADIUS server checks the certificate against the directory and tells the authenticator (switch) whether to grant or deny access. In this scenario: Supplicant = the corporate device, Authenticator = the AP/switch, Authentication Server = RADIUS. CA (D) issues the certificates — it doesn't perform runtime authentication decisions."
+  },
+  {
+    "id": "feq89",
+    "objective": "Question 89 of 100 — Domain 4.0",
+    "question": "An attacker gains a foothold on a web server in the DMZ and uses it as a launch point to attack internal database servers, pivoting deeper into the network. The attacker moves from the compromised web server to internal systems. This technique is called:",
+    "options": {
+      "A": "Privilege escalation",
+      "B": "Lateral movement",
+      "C": "Persistence",
+      "D": "Exfiltration"
+    },
+    "correct": "",
+    "explanation": "Lateral movement is the technique attackers use to progressively move through a network after initial access — compromising additional systems to reach their target. Tools: pass-the-hash, pass-the-ticket, RDP, PsExec, WMI. Defense: network segmentation (limits blast radius), least privilege (reduces what each compromised account can reach), EDR (detects abnormal movement). Privilege escalation (A) is gaining higher permissions on a SINGLE system — moving from user to admin. Persistence (C) is maintaining access despite reboots/password changes. Exfiltration (D) is removing data from the network."
+  },
+  {
+    "id": "feq90",
+    "objective": "Question 90 of 100 — Domain 4.0",
+    "question": "An organization stores credit card numbers and must ensure they cannot be read if the database is breached. They hash the card numbers. Why is hashing INSUFFICIENT for protecting credit card numbers?",
+    "options": {
+      "A": "Hashing is too slow for credit card processing",
+      "B": "Hashing is one-way — the merchant can't retrieve the original number for transactions",
+      "C": "Credit card numbers have limited entropy and can be brute-forced against the hash",
+      "D": "Hashing doesn't comply with PCI DSS requirements"
+    },
+    "correct": "",
+    "explanation": "Credit card numbers have a known format (16 digits, starting with specific digits by network, Luhn algorithm checksum) — there are only ~10^16 possibilities but in practice far fewer valid numbers. An attacker who steals the hash can compute hashes for all plausible card numbers and find matches. This is why PCI DSS recommends tokenization (replacing the number with a random token) or encryption with strong key management — not hashing. Option B is true but is the limitation of hashing generally (one-way), not why it specifically fails for card numbers. The primary attack vector is the finite, predictable space of valid card numbers."
+  },
+  {
+    "id": "feq91",
+    "objective": "Question 91 of 100 — Domain 5.0",
+    "question": "An employee handbook states \"Company computers may not be used for personal activities, streaming, gaming, or cryptocurrency mining.\" Which policy type is this?",
+    "options": {
+      "A": "AUP — Acceptable Use Policy",
+      "B": "Data Classification Policy",
+      "C": "Change Management Policy",
+      "D": "Information Security Policy"
+    },
+    "correct": "",
+    "explanation": "The Acceptable Use Policy (AUP) defines what activities are permitted and prohibited on company IT resources. \"May not be used for gaming, streaming, cryptocurrency mining\" is exactly AUP content. Data Classification Policy (B) defines how data is categorized (Public/Internal/Confidential/Restricted) and handled at each level. Change Management Policy (C) governs how system changes are approved and implemented. Information Security Policy (D) is the high-level master document that establishes the overall security program — it references the AUP but is broader and more strategic."
+  },
+  {
+    "id": "feq92",
+    "objective": "Question 92 of 100 — Domain 5.0",
+    "question": "A CISO wants to independently verify that a cloud provider's security controls actually work — not just take their word for it. The contract includes a specific clause enabling this. The CISO exercises:",
+    "options": {
+      "A": "A security questionnaire review",
+      "B": "A SOC 2 Type I review",
+      "C": "The right-to-audit clause",
+      "D": "An SLA review"
+    },
+    "correct": "",
+    "explanation": "A right-to-audit clause contractually allows an organization to directly inspect a vendor's security controls, logs, and practices — going beyond what the vendor voluntarily discloses. It enables independent verification. Security questionnaire (A) relies on vendor self-reporting — unverified. SOC 2 Type I (B) is a point-in-time audit by an independent third party — stronger than questionnaires but still uses an external auditor, not the customer's own team. SLA review (D) evaluates service performance metrics — not security control effectiveness. The right-to-audit gives the customer direct inspection rights."
+  },
+  {
+    "id": "feq93",
+    "objective": "Question 93 of 100 — Domain 5.0",
+    "question": "A California-based tech company with over $25M in annual revenue collects data on California residents. Which state law governs their privacy obligations to those residents?",
+    "options": {
+      "A": "GDPR",
+      "B": "HIPAA",
+      "C": "CCPA",
+      "D": "SOX"
+    },
+    "correct": "",
+    "explanation": "CCPA (California Consumer Privacy Act) governs how businesses collect and handle personal data of California residents. It applies to businesses meeting thresholds: $25M+ annual revenue, OR processes 100K+ consumer records, OR derives 50%+ of revenue from selling data. Rights: know, delete, opt-out of sale, non-discrimination. GDPR (A) applies to EU citizen data — a California company dealing only with California residents would fall under CCPA, not GDPR (unless they also handle EU data). HIPAA (B) is healthcare-specific. SOX (D) covers financial reporting for publicly traded companies."
+  },
+  {
+    "id": "feq94",
+    "objective": "Question 94 of 100 — Domain 5.0",
+    "question": "A financial company decides to discontinue its cryptocurrency trading desk because the regulatory and security risks are deemed unacceptable and too difficult to manage. Which risk strategy does this represent?",
+    "options": {
+      "A": "Transfer",
+      "B": "Mitigate",
+      "C": "Accept",
+      "D": "Avoid"
+    },
+    "correct": "",
+    "explanation": "Risk avoidance eliminates the activity that creates the risk. By shutting down the crypto trading desk entirely, the company removes the source of risk — it no longer exists. This is the most complete risk reduction possible, but often impractical (you can't avoid all risk and stay in business). Key signal: \"discontinue,\" \"stop doing,\" \"exit,\" \"close down.\" Transfer (A) = insurance/outsourcing. Mitigate (B) = add controls to reduce likelihood/impact. Accept (C) = document and do nothing. Avoid is the only strategy that eliminates the risk at its source by eliminating the activity."
+  },
+  {
+    "id": "feq95",
+    "objective": "Question 95 of 100 — Domain 5.0",
+    "question": "An asset is valued at $1,000,000 with an exposure factor of 60%. The ALE is calculated as $120,000. What is the ARO?",
+    "options": {
+      "A": "0.1 (once every 10 years)",
+      "B": "0.2 (once every 5 years)",
+      "C": "0.5 (once every 2 years)",
+      "D": "2.0 (twice per year)"
+    },
+    "correct": "",
+    "explanation": "Work backwards: SLE = AV × EF = $1,000,000 × 0.60 = $600,000. ALE = SLE × ARO → $120,000 = $600,000 × ARO → ARO = $120,000 ÷ $600,000 = 0.2. ARO of 0.2 = once every 5 years (1 ÷ 0.2 = 5). This tests whether you can rearrange the formula. The exam sometimes provides ALE and asks for a missing variable. Always check: SLE = AV × EF, then ALE = SLE × ARO. Solving for ARO: ARO = ALE ÷ SLE."
+  },
+  {
+    "id": "feq96",
+    "objective": "Question 96 of 100 — Domain 5.0",
+    "question": "A compliance framework for organizations that store cardholder data requires quarterly vulnerability scans by an Approved Scanning Vendor (ASV), annual penetration testing, and immediate patching of critical vulnerabilities. This framework is:",
+    "options": {
+      "A": "ISO 27001",
+      "B": "HIPAA",
+      "C": "PCI DSS",
+      "D": "GDPR"
+    },
+    "correct": "",
+    "explanation": "PCI DSS Requirement 11 specifically mandates: quarterly external vulnerability scans by an ASV (Approved Scanning Vendor), quarterly internal scans, annual penetration testing, and patching timelines. These are among the most prescriptive technical requirements of any compliance framework. Key signal: \"cardholder data,\" \"quarterly scans,\" \"ASV,\" \"annual pen test.\" ISO 27001 (A) is a framework but doesn't prescribe specific technical frequencies. HIPAA (B) requires technical safeguards but no specific scan/pen test schedules. GDPR (D) focuses on privacy rights and data governance, not specific security testing frequencies."
+  },
+  {
+    "id": "feq97",
+    "objective": "Question 97 of 100 — Domain 5.0",
+    "question": "An EU citizen submits a formal Subject Access Request to a company, asking for all personal data the company holds about them. Under GDPR, within what timeframe must the company respond?",
+    "options": {
+      "A": "24 hours",
+      "B": "30 days (1 month)",
+      "C": "72 hours",
+      "D": "6 months"
+    },
+    "correct": "",
+    "explanation": "GDPR Article 12 requires organizations to respond to data subject requests (access, erasure, portability, etc.) within ONE MONTH (approximately 30 days). This can be extended by two additional months for complex or numerous requests, but the requester must be notified of the extension within the first month. Note: the 72-hour requirement (C) applies to DATA BREACH NOTIFICATION to supervisory authorities — not to subject access requests. 24 hours (A) has no specific GDPR basis. 6 months (D) is far too long."
+  },
+  {
+    "id": "feq98",
+    "objective": "Question 98 of 100 — Domain 5.0",
+    "question": "Before beginning a penetration test, a tester searches LinkedIn for employee names and roles, checks WHOIS for domain registration details, searches Shodan for internet-exposed services, and reviews the company's job postings for technology stack clues — all without sending any packets to the company's systems. This activity is:",
+    "options": {
+      "A": "Active reconnaissance",
+      "B": "Gray-box reconnaissance",
+      "C": "Vulnerability scanning",
+      "D": "Passive reconnaissance (OSINT)"
+    },
+    "correct": "",
+    "explanation": "Passive reconnaissance (OSINT — Open Source Intelligence) gathers information without directly interacting with the target's systems. LinkedIn, WHOIS, Shodan queries against public data, job postings — none of these send traffic to the target. The target cannot detect this activity. Key distinction: Shodan is queried from Shodan's own database (not by scanning the target directly), so it counts as passive. Active reconnaissance (A) involves sending packets to the target — port scanning, banner grabbing. Gray-box (B) is a pen test knowledge level, not a recon type. Vulnerability scanning (C) is active — sends probe packets to the target."
+  },
+  {
+    "id": "feq99",
+    "objective": "Question 99 of 100 — Domain 5.0",
+    "question": "A sysadmin needs elevated privileges to restart a critical service. A PAM system grants a temporary admin credential that expires in 30 minutes and logs all actions taken during that window. This is:",
+    "options": {
+      "A": "Separation of duties",
+      "B": "Role-based access control",
+      "C": "Least privilege",
+      "D": "Just-in-Time (JIT) provisioning"
+    },
+    "correct": "",
+    "explanation": "JIT provisioning grants elevated access only when needed and only for the duration needed — then automatically revokes it. This eliminates standing privileged access (an always-available admin account that's a target 24/7). PAM (Privileged Access Management) systems implement JIT. JIT is the modern, dynamic implementation of least privilege. Least privilege (C) is the principle — JIT is the mechanism that enforces it dynamically. RBAC (B) assigns roles persistently. Separation of duties (A) requires multiple people for sensitive tasks. The \"30-minute expiry\" and \"temporary credential\" are the JIT signals."
+  },
+  {
+    "id": "feq100",
+    "objective": "Question 100 of 100 — Domain 5.0",
+    "question": "A security team creates a comprehensive list of all data the organization holds — including what type it is, where it's stored, how it's classified, who owns it, how long it's retained, and which regulations apply to it. This structured catalog is called:",
+    "options": {
+      "A": "Data loss prevention policy",
+      "B": "Data retention schedule",
+      "C": "Data inventory",
+      "D": "Data classification policy"
+    },
+    "correct": "",
+    "explanation": "A data inventory (also called a data map or data register) catalogs all data assets: type, location, classification, owner, retention period, applicable regulations. It's foundational for privacy compliance (GDPR requires it), risk management, and DLP programs. DLP policy (A) defines rules for preventing data leakage — it uses the inventory as input but isn't the catalog itself. Data retention schedule (B) specifies how long each data type is kept — a subset/output of the inventory. Data classification policy (D) defines the classification levels (Public/Internal/Confidential/Restricted) and rules — but doesn't list actual data assets. The inventory is the CATALOG; the policy is the RULES."
+  }
+]

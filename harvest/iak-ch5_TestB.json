@@ -1,0 +1,392 @@
+[
+  {
+    "id": "t5bq1",
+    "objective": "QUESTION 1 OF 30 · Objective 5.1",
+    "question": "A company's board of directors adopts a document that states the organization will \"protect customer data from unauthorized access and ensure availability of critical services.\" This is an example of which governance document?",
+    "options": {
+      "A": "Information Security Policy",
+      "B": "Security Standard",
+      "C": "Security Procedure",
+      "D": "Security Guideline"
+    },
+    "correct": "A",
+    "explanation": "Policy hierarchy: Policy (WHY/WHAT) → Standard (SPECIFIC REQUIREMENTS) → Procedure (HOW, step-by-step) → Guideline (RECOMMENDATIONS, not mandatory). Policies are high-level strategic statements approved by leadership, stating WHAT will be done and WHY. Standards define specific measurable requirements (e.g., \"all passwords must be 12+ characters\"). Procedures provide step-by-step implementation instructions. Guidelines are optional best practice recommendations. Board-level adoption + strategic language (\"protect customer data\") = policy, not a standard or procedure."
+  },
+  {
+    "id": "t5bq2",
+    "objective": "QUESTION 2 OF 30 · Objective 5.1",
+    "question": "An organization's security standard requires all passwords to be at least 12 characters and contain uppercase, lowercase, numbers, and symbols. This is BEST described as a:",
+    "options": {
+      "A": "Security policy",
+      "B": "Security standard",
+      "C": "Security guideline",
+      "D": "Security framework"
+    },
+    "correct": "B",
+    "explanation": "Standards define specific, measurable, mandatory requirements derived from policies. \"12 characters, uppercase, lowercase, numbers, symbols\" is specific and measurable — a standard. Policy = \"we will ensure accounts are secured with strong authentication.\" Standard = \"passwords must be 12+ characters with complexity requirements.\" Procedure = \"to set your password, go to Settings → Security → Change Password, enter current password, enter new password meeting [standard].\" Guideline = \"consider using a password manager for easier compliance.\" Standards are mandatory; guidelines are optional."
+  },
+  {
+    "id": "t5bq3",
+    "objective": "QUESTION 3 OF 30 · Objective 5.2",
+    "question": "A company is evaluating a new data center project. The risk analyst calculates that a server room fire has a 5% annual probability (ARO=0.05) and would cause $400,000 in damage (SLE). What is the ALE?",
+    "options": {
+      "A": "$400,000",
+      "B": "$8,000,000",
+      "C": "$20,000",
+      "D": "$2,000,000"
+    },
+    "correct": "C",
+    "explanation": "ALE = SLE × ARO = $400,000 × 0.05 = $20,000. This means the company should expect $20,000 in annual losses from this risk on average. Cost-benefit: if a fire suppression system costs $15,000/year, it makes financial sense (saves $5,000/year). If it costs $25,000/year, it does not make financial sense (costs more than the risk). This is the foundation of risk-based security spending decisions. ALE is used to compare control costs against risk reduction value."
+  },
+  {
+    "id": "t5bq4",
+    "objective": "QUESTION 4 OF 30 · Objective 5.2",
+    "question": "A company decides not to pursue a new mobile payment feature because the cost of securing it and the residual risk are too high. What risk response strategy is this?",
+    "options": {
+      "A": "Risk mitigation",
+      "B": "Risk transfer",
+      "C": "Risk acceptance",
+      "D": "Risk avoidance"
+    },
+    "correct": "D",
+    "explanation": "Risk responses: Avoidance = don't do the activity (eliminate the risk entirely by not pursuing it). Mitigation = reduce likelihood or impact with controls. Transfer = shift financial impact to another party (insurance, contracts). Acceptance = acknowledge the risk, document it, do nothing further (appropriate for low-risk items or when cost of mitigation exceeds benefit). The key indicator here: the company is NOT PURSUING the feature — they're avoiding the risk entirely by deciding not to engage in the risky activity."
+  },
+  {
+    "id": "t5bq5",
+    "objective": "QUESTION 5 OF 30 · Objective 5.2",
+    "question": "Which document formally records identified risks, their likelihood, potential impact, current controls, risk owners, and planned remediation actions?",
+    "options": {
+      "A": "Business Impact Analysis (BIA)",
+      "B": "Risk register",
+      "C": "Incident response plan",
+      "D": "Business continuity plan"
+    },
+    "correct": "B",
+    "explanation": "Risk register = living document tracking all identified risks: risk description, likelihood score, impact score, risk score (L×I), current controls, residual risk, risk owner (responsible person), treatment plan, status. It's the central repository for risk management activities. BIA = identifies critical business functions and their recovery requirements. IRP = procedures for responding to incidents. BCP = maintains business operations during disruption. Risk register = inventory and status tracker for ALL organizational risks. Updated continuously as risks are identified, treated, or change in probability/impact."
+  },
+  {
+    "id": "t5bq6",
+    "objective": "QUESTION 6 OF 30 · Objective 5.3",
+    "question": "A company hires a cloud storage vendor to process customer data. The vendor has a data breach. Under GDPR, who bears primary responsibility to the affected customers?",
+    "options": {
+      "A": "The cloud vendor (data processor)",
+      "B": "The customers themselves",
+      "C": "The company (data controller)",
+      "D": "The regulatory authority"
+    },
+    "correct": "C",
+    "explanation": "GDPR data roles: Data Subject = the individual whose data is processed. Data Controller = organization that determines purposes and means of processing (the company). Data Processor = processes data on behalf of the controller (the cloud vendor). Under GDPR, the Data Controller bears primary accountability to data subjects — even when a processor causes the breach. The controller must: notify supervisory authority within 72 hours, notify affected individuals without undue delay, ensure processors have adequate data processing agreements (DPA) in place. Risk doesn't transfer to the processor; responsibility remains with the controller."
+  },
+  {
+    "id": "t5bq7",
+    "objective": "QUESTION 7 OF 30 · Objective 5.3",
+    "question": "Before onboarding a new SaaS vendor that will process employee data, the security team reviews the vendor's SOC 2 Type II report. What does this report verify?",
+    "options": {
+      "A": "The vendor's pricing model",
+      "B": "The vendor's financial stability",
+      "C": "The vendor's marketing claims",
+      "D": "The vendor's security controls were effective over a period of time (tested by independent auditor)"
+    },
+    "correct": "D",
+    "explanation": "SOC (System and Organization Controls) reports are independent auditor assessments. SOC 1 = financial reporting controls. SOC 2 = security, availability, processing integrity, confidentiality, privacy. Type I = \"controls are designed correctly\" (point in time). Type II = \"controls were OPERATING EFFECTIVELY over a period (typically 6-12 months)\" — much stronger. SOC 2 Type II is the gold standard for vendor security assurance. It shows the vendor's controls weren't just documented (Type I) but actually worked consistently over time. Third-party vendor assessment is critical before sharing sensitive data."
+  },
+  {
+    "id": "t5bq8",
+    "objective": "QUESTION 8 OF 30 · Objective 5.3",
+    "question": "A vendor agreement states that they can only use customer data for the specific purposes defined in the contract and must delete all data within 30 days of contract termination. What type of agreement is this?",
+    "options": {
+      "A": "SLA (Service Level Agreement)",
+      "B": "DPA (Data Processing Agreement)",
+      "C": "NDA (Non-Disclosure Agreement)",
+      "D": "MOU (Memorandum of Understanding)"
+    },
+    "correct": "B",
+    "explanation": "DPA = legally binding contract required when a controller uses a processor (required by GDPR Article 28). Specifies: what data is processed, for what purpose, how long it's retained, security requirements, data subject rights support, breach notification obligations, deletion upon termination. SLA = service performance metrics (uptime, response time). NDA = confidentiality of business information. MOU = non-binding understanding between parties. BPA = Business Partners Agreement. MSA = Master Services Agreement. The specific mention of \"purposes defined in contract\" + \"delete data upon termination\" = DPA language."
+  },
+  {
+    "id": "t5bq9",
+    "objective": "QUESTION 9 OF 30 · Objective 5.4",
+    "question": "A healthcare organization must protect electronic Protected Health Information (ePHI) and ensure only authorized workforce members can access it. Which regulation mandates this?",
+    "options": {
+      "A": "GDPR",
+      "B": "PCI DSS",
+      "C": "HIPAA",
+      "D": "SOX"
+    },
+    "correct": "C",
+    "explanation": "HIPAA (Health Insurance Portability and Accountability Act) — US healthcare law. Protects PHI (Protected Health Information) and ePHI. Three rules: Privacy Rule (how PHI is used/disclosed), Security Rule (safeguards for ePHI — administrative, physical, technical), Breach Notification Rule (notify HHS and patients within 60 days). Key terms: \"healthcare,\" \"ePHI,\" \"workforce\" = HIPAA. GDPR = EU privacy regulation (any personal data). PCI DSS = payment card data. SOX = financial reporting controls for public companies. FERPA = student educational records. Match the data type to the regulation."
+  },
+  {
+    "id": "t5bq10",
+    "objective": "QUESTION 10 OF 30 · Objective 5.4",
+    "question": "A retail company processes credit card transactions and must comply with specific security requirements to protect cardholder data. Which compliance framework applies?",
+    "options": {
+      "A": "HIPAA",
+      "B": "PCI DSS",
+      "C": "SOX",
+      "D": "GLBA"
+    },
+    "correct": "B",
+    "explanation": "PCI DSS (Payment Card Industry Data Security Standard) — required for ALL organizations that store, process, or transmit cardholder data (credit/debit cards). Not a government law — a contractual requirement imposed by card brands (Visa, Mastercard, Amex). 12 requirements covering network security, encryption, access control, monitoring, vulnerability management. Violations can result in fines and loss of card processing privileges. HIPAA = healthcare. SOX = public company financial controls. GLBA = financial institution consumer data. The keywords \"credit card\" and \"cardholder data\" = PCI DSS."
+  },
+  {
+    "id": "t5bq11",
+    "objective": "QUESTION 11 OF 30 · Objective 5.5",
+    "question": "A penetration tester is given no information about the target organization's network, systems, or architecture before beginning the test. What type of penetration test is this?",
+    "options": {
+      "A": "White box",
+      "B": "Gray box",
+      "C": "Black box",
+      "D": "Crystal box"
+    },
+    "correct": "C",
+    "explanation": "Penetration test knowledge levels: Black box = no prior knowledge (simulates external attacker with no insider information). Gray box = partial knowledge (simulates insider or attacker with some recon already done — e.g., knows IP ranges, some architecture). White box (crystal box) = full knowledge (source code, architecture, credentials — most thorough, efficient use of testing time). Black box = most realistic simulation of an external attacker. White box = most comprehensive coverage. Gray box = balance of realism and efficiency. Most enterprise pen tests are gray box for efficiency."
+  },
+  {
+    "id": "t5bq12",
+    "objective": "QUESTION 12 OF 30 · Objective 5.5",
+    "question": "During a red team exercise, the team successfully gains physical access to a restricted server room by tailgating an employee through a badge-controlled door. What does this demonstrate?",
+    "options": {
+      "A": "A technical vulnerability in the badge system",
+      "B": "A misconfiguration in the access control software",
+      "C": "A cryptographic weakness",
+      "D": "A physical security and human behavior weakness (social engineering)"
+    },
+    "correct": "D",
+    "explanation": "Tailgating (piggybacking) = following an authorized person through a controlled door without using your own credentials. The badge system worked correctly — an authorized person used their badge. The failure is HUMAN: the employee allowed a stranger to follow without challenging them. Remediation: security awareness training (challenge unknown persons), mantraps/airlocks (physical enforcement), visitor escort policies. Red team exercises test the FULL attack surface — technical, physical, and human. Physical and social engineering attacks are often easier and more effective than technical hacks."
+  },
+  {
+    "id": "t5bq13",
+    "objective": "QUESTION 13 OF 30 · Objective 5.5",
+    "question": "What is the KEY difference between a vulnerability assessment and a penetration test?",
+    "options": {
+      "A": "Vulnerability assessment identifies weaknesses; penetration test actively exploits them to demonstrate real impact",
+      "B": "Penetration tests are automated; vulnerability assessments are manual",
+      "C": "Vulnerability assessments require legal authorization; penetration tests do not",
+      "D": "They are the same thing with different names"
+    },
+    "correct": "A",
+    "explanation": "Vulnerability assessment: scans for and identifies potential vulnerabilities — creates a report of what MIGHT be exploitable. Non-invasive. Penetration test: attempts to ACTUALLY EXPLOIT vulnerabilities to prove they're real and demonstrate real-world impact. More invasive, higher skill required. Both require written authorization (Rules of Engagement). Vulnerability assessment = \"here are the holes.\" Penetration test = \"here are the holes we could walk through, and here's where we got.\" Both are part of a mature security program — VA more frequently, pen test less often (annually or after major changes)."
+  },
+  {
+    "id": "t5bq14",
+    "objective": "QUESTION 14 OF 30 · Objective 5.6",
+    "question": "A company notices that employees still click phishing links despite quarterly security awareness training. What approach would MOST effectively improve phishing awareness?",
+    "options": {
+      "A": "Increase training frequency to monthly",
+      "B": "Make training longer",
+      "C": "Conduct simulated phishing campaigns with immediate feedback and targeted training for those who click",
+      "D": "Deploy new email filtering technology"
+    },
+    "correct": "C",
+    "explanation": "Simulation-based training is vastly more effective than passive training videos. When someone clicks a simulated phishing link, they immediately receive: \"You clicked a phishing email! Here's what gave it away...\" This creates a teachable moment at the exact point of failure. Targeted follow-up training for clickers reinforces the lesson. Metrics: track click rates, report rates, repeat offenders. This approach is the gold standard — platforms like KnowBe4, Proofpoint Security Awareness, and Cofense run simulated campaigns. Technology (D) is also important but doesn't build human judgment. More training time (B) without changing the method doesn't improve results."
+  },
+  {
+    "id": "t5bq15",
+    "objective": "QUESTION 15 OF 30 · Objective 5.6",
+    "question": "A user receives a call from someone claiming to be IT support and is asked to share their password for \"emergency system maintenance.\" What should the user do?",
+    "options": {
+      "A": "Provide the password since it's an emergency",
+      "B": "Ask the caller to verify their employee ID",
+      "C": "Ask a colleague if IT really needs passwords for maintenance",
+      "D": "Refuse — IT staff should never request user passwords — report the call to the security team"
+    },
+    "correct": "D",
+    "explanation": "This is a classic vishing + pretexting attack. Legitimate IT staff NEVER need your password — they have admin tools to perform maintenance without your credentials. Security awareness training must reinforce: never share passwords with ANYONE, including IT, over the phone, email, or in person. Report suspicious requests immediately. \"Urgency\" and \"authority\" are social engineering pressure tactics. Report to the security team so they can investigate if others received similar calls. The security policy should be clear: no legitimate employee will ever ask for your password."
+  },
+  {
+    "id": "t5bq16",
+    "objective": "QUESTION 16 OF 30 · Objective 5.1",
+    "question": "What is the role of the CISO (Chief Information Security Officer) in an organization's security governance structure?",
+    "options": {
+      "A": "Implement technical security controls on all systems",
+      "B": "Provide strategic leadership for the security program, report risk to the board, and align security with business objectives",
+      "C": "Conduct penetration testing annually",
+      "D": "Manage the IT helpdesk and desktop support team"
+    },
+    "correct": "B",
+    "explanation": "CISO = executive-level role responsible for the overall security PROGRAM, not day-to-day technical implementation. Responsibilities: developing security strategy, managing security budget, reporting risk to C-suite and board, ensuring regulatory compliance, aligning security investments with business risk tolerance. A CISO doesn't personally implement controls or conduct pen tests — they lead the team that does. Reporting structure matters: CISO should report directly to CEO or board (not CTO/CIO) to avoid IT operational priorities overriding security. Security is a business risk function, not just a technical one."
+  },
+  {
+    "id": "t5bq17",
+    "objective": "QUESTION 17 OF 30 · Objective 5.2",
+    "question": "A risk analysis assigns numerical scores to likelihood and impact. What type of risk assessment is this?",
+    "options": {
+      "A": "Qualitative risk assessment",
+      "B": "Threat modeling",
+      "C": "Quantitative risk assessment",
+      "D": "Business Impact Analysis"
+    },
+    "correct": "C",
+    "explanation": "Risk assessment approaches: Quantitative = assigns specific dollar values and numerical probabilities (SLE, ALE, ARO). Objective, measurable, supports ROI calculations. Qualitative = uses descriptive scales (high/medium/low, red/yellow/green). Faster, easier when hard financial data isn't available. Semi-quantitative = numeric scale (1-5) without actual dollar values. Quantitative is more precise but requires good historical data. Qualitative is practical for most organizations. Threat modeling = systematic analysis of attack vectors and mitigations during design phase. BIA = business impact of disruptions (RTO, RPO)."
+  },
+  {
+    "id": "t5bq18",
+    "objective": "QUESTION 18 OF 30 · Objective 5.3",
+    "question": "Before deploying a new vendor's IoT sensors throughout its factory, a manufacturer reviews the vendor's software development practices, source code, and security testing processes. What risk assessment activity is this?",
+    "options": {
+      "A": "Supply chain risk assessment / vendor due diligence",
+      "B": "Penetration testing",
+      "C": "Compliance audit",
+      "D": "Business continuity planning"
+    },
+    "correct": "A",
+    "explanation": "Supply chain risk includes: hardware tampering, compromised software in vendor products, poor vendor security practices that could affect your systems. This scenario shows vendor due diligence — evaluating a vendor's security before deploying their products. Key supply chain risks: malicious code inserted in firmware/software, counterfeit hardware, vendor bankruptcy, vendor misuse of data. Mitigations: vendor security assessments, contractual security requirements, SBOM (Software Bill of Materials), hardware attestation. SolarWinds attack = classic supply chain compromise via a trusted vendor's software update mechanism."
+  },
+  {
+    "id": "t5bq19",
+    "objective": "QUESTION 19 OF 30 · Objective 5.4",
+    "question": "GDPR requires organizations to notify the appropriate supervisory authority of a personal data breach within what timeframe?",
+    "options": {
+      "A": "24 hours",
+      "B": "72 hours",
+      "C": "30 days",
+      "D": "7 days"
+    },
+    "correct": "B",
+    "explanation": "GDPR Article 33: Controllers must notify the supervisory authority (e.g., ICO in UK, DPA in Germany) within 72 hours of becoming aware of a breach — unless it's unlikely to result in risk to individuals. Article 34: If the breach poses HIGH risk to individuals, they must also be notified \"without undue delay\" (no specific timeframe). Compare: HIPAA = notify HHS and patients within 60 days. PCI DSS = immediately notify card brands. State laws vary (many US states have 30/45/60 days). GDPR 72 hours is a critical number to memorize for the exam."
+  },
+  {
+    "id": "t5bq20",
+    "objective": "QUESTION 20 OF 30 · Objective 5.5",
+    "question": "An external audit team reviews an organization's security controls against NIST SP 800-53 requirements. They identify gaps and issue findings. What type of activity is this?",
+    "options": {
+      "A": "Penetration test",
+      "B": "Vulnerability scan",
+      "C": "Risk acceptance",
+      "D": "Compliance audit / security assessment"
+    },
+    "correct": "D",
+    "explanation": "A compliance audit reviews controls against a framework or regulation and issues findings for gaps. External = independent third party (more credibility, required for some compliance). Internal = company's own audit team. Common frameworks audited against: NIST SP 800-53 (federal systems), ISO 27001 (international), PCI DSS, HIPAA, SOC 2. Audit types: process-only (review documentation), process + testing (verify controls work). Findings → remediation plans → follow-up audit. Penetration testing actively exploits vulnerabilities. Vulnerability scanning identifies technical weaknesses. Auditing reviews policy and control compliance."
+  },
+  {
+    "id": "t5bq21",
+    "objective": "QUESTION 21 OF 30 · Objective 5.1",
+    "question": "Which framework provides a set of voluntary cybersecurity standards, guidelines, and practices for critical infrastructure organizations to manage and reduce cybersecurity risk?",
+    "options": {
+      "A": "ISO 27001",
+      "B": "PCI DSS",
+      "C": "NIST Cybersecurity Framework (CSF)",
+      "D": "COBIT"
+    },
+    "correct": "C",
+    "explanation": "NIST CSF = voluntary framework for critical infrastructure (originally Executive Order 13636, 2014). Five core functions: Identify → Protect → Detect → Respond → Recover (plus Govern in CSF 2.0). Not a law — voluntary best practice framework widely adopted. ISO 27001 = international standard for ISMS (Information Security Management System) — can certify to it. PCI DSS = mandatory for payment card processors. COBIT = IT governance framework (Identify, Direct, Control). \"Voluntary\" + \"critical infrastructure\" + five functions = NIST CSF. Most comprehensive and widely used framework in the US."
+  },
+  {
+    "id": "t5bq22",
+    "objective": "QUESTION 22 OF 30 · Objective 5.2",
+    "question": "After accepting a residual risk that cannot be fully mitigated, a CISO documents the decision with the risk owner's signature and tracks it in the risk register. What document formally records this accepted risk?",
+    "options": {
+      "A": "Security policy exception form",
+      "B": "Risk acceptance form / Risk register entry",
+      "C": "Change management ticket",
+      "D": "Incident report"
+    },
+    "correct": "B",
+    "explanation": "Risk acceptance must be formally documented — it's not just \"ignore it.\" The documentation includes: description of the risk, why it's being accepted, who is accepting it (risk owner's signature), review date (accepted risks should be reviewed periodically). This is recorded in the risk register. Exception forms cover temporary deviations from security standards. Change management tickets cover system changes. Incident reports cover security events. Formal documentation of risk acceptance is important because: (1) Creates accountability, (2) Ensures it's a conscious decision, not an oversight, (3) Provides audit trail, (4) Triggers review when conditions change."
+  },
+  {
+    "id": "t5bq23",
+    "objective": "QUESTION 23 OF 30 · Objective 5.3",
+    "question": "A company uses a managed security service provider (MSSP) to monitor its SOC 24/7. What type of agreement should govern the security deliverables, response times, and escalation procedures?",
+    "options": {
+      "A": "SLA (Service Level Agreement)",
+      "B": "NDA (Non-Disclosure Agreement)",
+      "C": "MOU (Memorandum of Understanding)",
+      "D": "BPA (Business Partnership Agreement)"
+    },
+    "correct": "A",
+    "explanation": "SLA (Service Level Agreement) = formal contract defining measurable service performance metrics: uptime guarantees, response times, resolution times, escalation procedures, reporting cadence. For an MSSP: initial alert triage time, P1 incident response SLA (e.g., 15 minutes), escalation contacts. NDA = protects confidential information. MOU = non-binding letter of intent between parties (less formal than SLA). BPA = partnership structure and responsibilities. ISA (Interconnection Security Agreement) = governs systems connecting between organizations. For \"response times, deliverables, performance metrics\" → SLA."
+  },
+  {
+    "id": "t5bq24",
+    "objective": "QUESTION 24 OF 30 · Objective 5.4",
+    "question": "The EU's General Data Protection Regulation (GDPR) grants individuals the right to request that their personal data be permanently deleted. What is this right called?",
+    "options": {
+      "A": "Right of portability",
+      "B": "Right of access",
+      "C": "Right to erasure (Right to be forgotten)",
+      "D": "Right to object"
+    },
+    "correct": "C",
+    "explanation": "GDPR data subject rights: Right to Access = request a copy of your data. Right to Rectification = correct inaccurate data. Right to Erasure (Right to be Forgotten) = request deletion of personal data. Right to Portability = receive data in machine-readable format. Right to Object = object to processing (e.g., marketing). Right to Restriction = limit how data is processed. Right not to be subject to automated decision-making. Organizations must respond to erasure requests within one month. Note: right to erasure isn't absolute — can be overridden by legal obligations to retain records."
+  },
+  {
+    "id": "t5bq25",
+    "objective": "QUESTION 25 OF 30 · Objective 5.6",
+    "question": "A company implements a security awareness training program that includes role-specific training for developers, IT staff, and executives. What best practice does this demonstrate?",
+    "options": {
+      "A": "One-size-fits-all training",
+      "B": "Tailored/role-based security training",
+      "C": "Compliance-only training",
+      "D": "Technical-only training"
+    },
+    "correct": "B",
+    "explanation": "Role-based training is more effective because different roles face different risks: Developers need: secure coding (OWASP), input validation, dependency management. IT staff need: hardening, patch management, incident response. Executives need: social engineering, BEC (Business Email Compromise), decision-making under attack. General staff: phishing, password hygiene, physical security. Finance: wire transfer fraud, BEC. Tailored training is more relevant and engaging than generic compliance training. NIST SP 800-50 provides guidance on security awareness and training programs. KPIs: completion rates, phishing click rates, incident reports from trained staff."
+  },
+  {
+    "id": "t5bq26",
+    "objective": "QUESTION 26 OF 30 · Objective 5.5",
+    "question": "A security assessment team uses automated scanning tools AND manual testing techniques to find vulnerabilities. They also review configurations against benchmarks. What type of assessment is this?",
+    "options": {
+      "A": "Penetration test",
+      "B": "Red team engagement",
+      "C": "Bug bounty program",
+      "D": "Security assessment (technical review)"
+    },
+    "correct": "D",
+    "explanation": "Security assessment = comprehensive review using multiple methods: automated scanning, manual testing, configuration review, policy review, architecture review. Broader than a pen test (which focuses on exploitation). More technical than an audit (which reviews documentation). Bug bounty = crowdsourced program where external researchers report vulnerabilities for rewards. Red team = full adversarial simulation with no limits on attack vectors. Security assessment scope is defined by the customer — can focus on specific systems or the full environment. Output: assessment report with findings, risk ratings, and remediation recommendations."
+  },
+  {
+    "id": "t5bq27",
+    "objective": "QUESTION 27 OF 30 · Objective 5.2",
+    "question": "When calculating risk, what formula represents the Single Loss Expectancy (SLE)?",
+    "options": {
+      "A": "SLE = Asset Value (AV) × Exposure Factor (EF)",
+      "B": "SLE = ALE × ARO",
+      "C": "SLE = Likelihood × Impact",
+      "D": "SLE = ARO ÷ AV"
+    },
+    "correct": "A",
+    "explanation": "Quantitative risk formulas: SLE (Single Loss Expectancy) = AV × EF = what you lose in ONE incident. Asset Value (AV) = $1,000,000 server. Exposure Factor (EF) = 40% of server destroyed in a fire = 0.40. SLE = $1,000,000 × 0.40 = $400,000. ALE (Annual Loss Expectancy) = SLE × ARO = expected annual loss. ARO (Annual Rate of Occurrence) = how often per year (0.05 = once every 20 years). ALE = $400,000 × 0.05 = $20,000/year. These three formulas are guaranteed exam questions. Memorize: SLE=AV×EF, ALE=SLE×ARO."
+  },
+  {
+    "id": "t5bq28",
+    "objective": "QUESTION 28 OF 30 · Objective 5.3",
+    "question": "An organization's contract with a cloud provider includes a right-to-audit clause. What does this clause allow?",
+    "options": {
+      "A": "The provider can audit the customer's systems",
+      "B": "The provider can change terms with 30-day notice",
+      "C": "The customer can audit the provider's security controls, processes, and compliance",
+      "D": "The customer can access the provider's source code"
+    },
+    "correct": "C",
+    "explanation": "Right-to-audit clause = contractual right for the customer to inspect the vendor's security controls, compliance posture, and processes. Critical for high-risk vendors. Large cloud providers (AWS, Azure) rarely grant actual on-site audits — instead they offer third-party audit reports (SOC 2, ISO 27001) as a substitute. Smaller or more specialized vendors may allow direct audit. Without this clause, you're relying entirely on the vendor's self-attestation. Include in: contracts with vendors handling sensitive data, critical SaaS providers, any vendor required for regulatory compliance. This is a key third-party risk management tool."
+  },
+  {
+    "id": "t5bq29",
+    "objective": "QUESTION 29 OF 30 · Objective 5.6",
+    "question": "An organization's security awareness program measures the percentage of employees who report suspicious emails to the security team. What security metric is being tracked?",
+    "options": {
+      "A": "Patch compliance rate",
+      "B": "Security incident reporting rate / Security culture metric",
+      "C": "Mean Time to Detect (MTTD)",
+      "D": "Vulnerability remediation SLA compliance"
+    },
+    "correct": "B",
+    "explanation": "A healthy security culture is measured partly by how many employees actively REPORT suspicious activity. High reporting rate = employees are engaged and trust the security team. Low reporting rate = employees either aren't aware, don't care, or fear blame. Good security awareness KPIs: phishing simulation click rate (lower = better), phishing simulation report rate (higher = better), training completion rate, number of employee-reported incidents. Employees who report are the \"human sensor network.\" Encouraging reporting without penalizing people for clicking/reporting mistakes builds a positive security culture."
+  },
+  {
+    "id": "t5bq30",
+    "objective": "QUESTION 30 OF 30 · Objective 5.4",
+    "question": "A publicly traded company's finance team discovers that an IT administrator has unauthorized access to financial reporting systems. The auditors flag this as a control deficiency. Which regulation is MOST directly relevant to this issue?",
+    "options": {
+      "A": "HIPAA",
+      "B": "PCI DSS",
+      "C": "GDPR",
+      "D": "SOX (Sarbanes-Oxley Act)"
+    },
+    "correct": "D",
+    "explanation": "SOX (Sarbanes-Oxley Act, 2002) = US law requiring publicly traded companies to implement internal controls over financial reporting. Section 404: management must assess and report on effectiveness of internal controls. Auditors must attest to this assessment. SOX requires strict separation of duties for financial systems — an IT admin should not have unauthorized access to financial reporting. SOX controls include: access controls, audit logs, change management, and segregation of duties in financial systems. Non-compliance = criminal liability for executives (CEO, CFO certify controls). HIPAA = health data. PCI DSS = payment cards. GDPR = EU privacy. SOX = publicly traded company financial controls."
+  }
+]

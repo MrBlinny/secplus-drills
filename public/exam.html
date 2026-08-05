@@ -1,0 +1,92 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam sim — Security+ Tutor</title>
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg">
+
+<div class="wrap">
+  <div id="setup" class="panel">
+    <h2>Exam simulation</h2>
+    <p style="margin-top:-4px">
+      60 questions drawn to the real blueprint weights, 90 minutes, no feedback until you submit.
+    </p>
+    <div id="quota" class="hint" style="margin:14px 0"></div>
+    <div id="shortfall"></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px">
+      <button class="primary" id="go">Begin — the clock starts</button>
+      <a class="btn" href="/">Not yet</a>
+    </div>
+    <p class="hint" style="margin-top:14px">
+      <kbd>1</kbd>–<kbd>4</kbd> answer &nbsp; <kbd>Enter</kbd> / <kbd>N</kbd> next &nbsp;
+      <kbd>P</kbd> previous &nbsp; <kbd>F</kbd> flag &nbsp; the grid at the bottom jumps anywhere.
+    </p>
+  </div>
+
+  <div id="run" hidden>
+    <div class="progressbar"><i id="prog" style="width:0"></i></div>
+    <div class="panel">
+      <div class="qmeta" id="qmeta"></div>
+      <p class="stem" id="stem"></p>
+      <div class="options" id="options"></div>
+      <p style="margin:18px 0 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <button id="prev">&larr; Previous</button>
+        <button id="next">Next &rarr;</button>
+        <button id="flag"><kbd>F</kbd> Flag</button>
+        <span style="flex:1"></span>
+        <button class="primary" id="submit">Submit paper</button>
+      </p>
+    </div>
+    <div class="panel">
+      <h2>Question grid</h2>
+      <div id="grid" style="display:flex;flex-wrap:wrap;gap:5px"></div>
+      <p class="hint" id="gridlegend" style="margin-top:12px"></p>
+    </div>
+  </div>
+
+  <div id="results" hidden>
+    <div class="panel">
+      <h2>Result</h2>
+      <div class="headline">
+        <div>
+          <div class="num" id="rweighted">—</div>
+          <div class="side" id="rsub"></div>
+        </div>
+        <div class="side">
+          <div>raw <b id="rraw">—</b></div>
+          <div id="rbasebox">baseline <b id="rbase">—</b> <span class="dim">pre-study</span></div>
+          <div id="rdelta"></div>
+        </div>
+        <div class="side">
+          <div>time</div>
+          <div><b id="rtime">—</b></div>
+        </div>
+      </div>
+      <div id="rtrack" style="margin-top:18px"></div>
+    </div>
+
+    <div class="panel">
+      <h2>By domain</h2>
+      <div id="rdomains"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Full review</h2>
+      <p class="hint" style="margin-top:-8px">
+        <label><input type="checkbox" id="onlywrong" checked> show only what you got wrong</label>
+        &nbsp;·&nbsp;
+        <label><input type="checkbox" id="onlyflagged"> only what you flagged</label>
+        &nbsp;·&nbsp; <span class="hint" id="flagcount"></span>
+      </p>
+      <div id="review"></div>
+    </div>
+
+    <div class="panel">
+      <p style="margin:0;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn" href="/">Dashboard</a>
+        <a class="btn" href="/exam.html">Another paper</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/js/exam.js"></script>

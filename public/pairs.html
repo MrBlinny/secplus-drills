@@ -1,0 +1,81 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confusion pairs — Security+ Tutor</title>
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg">
+
+<div class="wrap">
+  <div id="setup" class="panel">
+    <h2>Confusion pairs — free recall</h2>
+    <p class="hint" style="margin-top:-6px">
+      The cue appears, you type the exact objective-list term, then you grade yourself.
+      This is the main weapon against picking the adjacent word.
+    </p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px">
+      <select id="scope"></select>
+      <select id="count">
+        <option value="10">10 cards</option>
+        <option value="20" selected>20 cards</option>
+        <option value="58">everything</option>
+      </select>
+      <button class="primary" id="go">Start &nbsp;<kbd>Enter</kbd></button>
+    </div>
+  </div>
+
+  <div id="run" hidden>
+    <div class="progressbar"><i id="prog" style="width:0"></i></div>
+    <div class="panel">
+      <div class="qmeta" id="cmeta"></div>
+      <p class="rowlabel">Cue</p>
+      <p class="stem" id="cue"></p>
+
+      <div id="answerbox">
+        <p class="rowlabel">The objective-list term is…</p>
+        <input type="text" id="typed" autocomplete="off" autocapitalize="off"
+               spellcheck="false" style="width:100%;font-size:17px;padding:11px 13px">
+        <p class="hint" style="margin-top:9px">
+          Type it, then <kbd>Enter</kbd> to reveal. Blank is fine — <kbd>Enter</kbd> anyway.
+        </p>
+      </div>
+
+      <div id="reveal" hidden style="margin-top:20px">
+        <div class="grid" style="gap:10px">
+          <div>
+            <p class="rowlabel">Correct term</p>
+            <p style="margin:0;font-size:21px;font-weight:600" class="good" id="term"></p>
+          </div>
+          <div>
+            <p class="rowlabel">Common trap</p>
+            <p style="margin:0;font-size:16px" class="bad" id="trap"></p>
+          </div>
+          <div>
+            <p class="rowlabel">Discriminator</p>
+            <p style="margin:0;font-size:16px" id="disc"></p>
+          </div>
+        </div>
+
+        <div id="yourswas" class="hint" style="margin-top:14px"></div>
+        <div id="learnlink"></div>
+
+        <p class="rowlabel" style="margin-top:18px">Did you get it?</p>
+        <div class="choices">
+          <button id="got"><kbd>Y</kbd> Got it</button>
+          <button id="miss"><kbd>N</kbd> Missed it</button>
+        </div>
+      </div>
+
+      <p class="hint" id="keys" style="margin-top:18px"></p>
+    </div>
+  </div>
+
+  <div id="done" hidden class="panel">
+    <h2>Deck complete</h2>
+    <div class="stat" id="summary"></div>
+    <p style="margin-top:18px;display:flex;gap:8px">
+      <button class="primary" id="again">Another deck</button>
+      <a class="btn" href="/">Dashboard</a>
+    </p>
+  </div>
+</div>
+
+<script type="module" src="/js/pairs.js"></script>

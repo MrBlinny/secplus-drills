@@ -1,0 +1,623 @@
+{
+ "schema_version": 2,
+ "note": "Authored performance-based questions for SY0-701. The real exam opens with a small number of these and they carry more weight than a multiple-choice item, so an unrehearsed PBQ costs multiple-choice time as well as its own marks. Three types: `assign` matches each row to a term from a pool, `order` sequences a process, `select` picks a set. Partial credit per cell. Every cell explanation names the discriminator, not the definition.",
+ "items": [
+  {
+   "id": "PBQ-001",
+   "type": "assign",
+   "objective": "1.1 Compare and contrast various types of security controls.",
+   "title": "Classify the control types",
+   "minutes": 5,
+   "brief": "An auditor has listed eight controls found during a walkthrough of your head office and asks you to classify each one.",
+   "instruction": "Assign each control its CONTROL TYPE — not its category. Terms may be used more than once.",
+   "pool": [
+    "Preventive",
+    "Deterrent",
+    "Detective",
+    "Corrective",
+    "Compensating",
+    "Directive"
+   ],
+   "cells": [
+    {
+     "prompt": "A sign at the perimeter reading \"Trespassers will be prosecuted\", not linked to any system.",
+     "answer": "Deterrent",
+     "explanation": "The binary test is whether it can actually stop anyone. A sign cannot. Preventive blocks; deterrent only discourages."
+    },
+    {
+     "prompt": "A door lock requiring a badge to open.",
+     "answer": "Preventive",
+     "explanation": "It physically blocks entry. Contrast with the camera above it, which only records — that would be detective."
+    },
+    {
+     "prompt": "A camera recording the loading bay for later review.",
+     "answer": "Detective",
+     "explanation": "It notices and records but does not intervene. Recording after the fact is the definition of detective."
+    },
+    {
+     "prompt": "Restoring a file server from backup after a ransomware incident.",
+     "answer": "Corrective",
+     "explanation": "Corrective repairs damage after an event. \"Recovery\" feels right but is an incident response PHASE, not one of the six control types."
+    },
+    {
+     "prompt": "An acceptable use policy stating staff must not install unapproved software.",
+     "answer": "Directive",
+     "explanation": "Directive controls instruct people what to do. Note this asks for the TYPE — its category would be managerial."
+    },
+    {
+     "prompt": "A legacy application cannot support MFA, so access is restricted to one logged jump host instead.",
+     "answer": "Compensating",
+     "explanation": "Compensating is specifically the substitute for a control you cannot deploy. Nothing has gone wrong yet, so it is not corrective."
+    },
+    {
+     "prompt": "A host-based firewall dropping inbound connections on a workstation.",
+     "answer": "Preventive",
+     "explanation": "It blocks the traffic. An IDS in the same position would be detective — whether the device acts is the discriminator."
+    },
+    {
+     "prompt": "A monthly report listing accounts whose privileges exceed their role.",
+     "answer": "Detective",
+     "explanation": "It identifies a problem that already exists without fixing it. Revoking the privileges would be the corrective step."
+    }
+   ]
+  },
+  {
+   "id": "PBQ-002",
+   "type": "order",
+   "objective": "4.8 Explain appropriate incident response activities.",
+   "title": "Sequence the incident response process",
+   "minutes": 3,
+   "brief": "Ransomware has been detected encrypting a file share. Your incident response plan lists the phases below, shuffled.",
+   "instruction": "Put the incident response process into the order the objectives document gives.",
+   "pool": [
+    "Preparation",
+    "Detection",
+    "Analysis",
+    "Containment",
+    "Eradication",
+    "Recovery",
+    "Lessons learned"
+   ],
+   "explanation": "Analysis sits between detection and containment — you scope it before you act, or you contain the wrong things. Containment precedes eradication because you stop the spread before removing the threat, and 'patch the vulnerability' is the wrong move while a session is still live. Preparation is first and happens before any incident exists.",
+   "steps": [
+    "Preparation",
+    "Detection",
+    "Analysis",
+    "Containment",
+    "Eradication",
+    "Recovery",
+    "Lessons learned"
+   ]
+  },
+  {
+   "id": "PBQ-003",
+   "type": "assign",
+   "objective": "2.4 Given a scenario, analyze indicators of malicious activity.",
+   "title": "Triage the SOC alert queue",
+   "minutes": 6,
+   "brief": "Eight observations came out of last night's monitoring. Each describes what was seen, not what happened.",
+   "instruction": "Match each observation to the indicator or attack the objectives document names for it.",
+   "pool": [
+    "Impossible travel",
+    "Concurrent session usage",
+    "Account lockout",
+    "Out-of-cycle logging",
+    "Missing logs",
+    "Resource consumption",
+    "Resource inaccessibility",
+    "Blocked content",
+    "Spraying",
+    "Brute force",
+    "On-path",
+    "Downgrade"
+   ],
+   "cells": [
+    {
+     "prompt": "One account authenticated from Dublin at 08:02 and from Singapore at 08:26.",
+     "answer": "Impossible travel",
+     "explanation": "Geography versus elapsed time. Concurrent session usage would apply to two live sessions in the same city."
+    },
+    {
+     "prompt": "The security event log on a domain controller is empty for the 48 hours around the intrusion.",
+     "answer": "Missing logs",
+     "explanation": "Absence is the indicator. Out-of-cycle logging means the entries exist but at the wrong time."
+    },
+    {
+     "prompt": "A nightly job that always logs at 23:00 also produced entries at 04:15.",
+     "answer": "Out-of-cycle logging",
+     "explanation": "The log exists, at the wrong time. That is the whole difference from missing logs."
+    },
+    {
+     "prompt": "The password 'Spring2026!' was attempted once against 4,000 accounts.",
+     "answer": "Spraying",
+     "explanation": "One password, many accounts, deliberately under the lockout threshold. Brute force is many passwords against one account."
+    },
+    {
+     "prompt": "A build server is at 100% CPU overnight with no scheduled job to explain it.",
+     "answer": "Resource consumption",
+     "explanation": "Abnormal USE of resources — cryptomining is the classic cause. Resource inaccessibility is the opposite: users cannot reach what they need."
+    },
+    {
+     "prompt": "Staff report a departmental file share is unreachable and its files appear renamed.",
+     "answer": "Resource inaccessibility",
+     "explanation": "Legitimate users cannot reach what they should. Combined with renamed files this is an early ransomware indicator."
+    },
+    {
+     "prompt": "A workstation's web proxy repeatedly stops connections to a known command-and-control domain.",
+     "answer": "Blocked content",
+     "explanation": "The control worked, but repeated attempts mean something resident on the host keeps trying — the block is the indicator, not the resolution."
+    },
+    {
+     "prompt": "An attacker between client and server strips the TLS 1.3 offer so an obsolete cipher is negotiated.",
+     "answer": "Downgrade",
+     "explanation": "On-path is the POSITION the attacker holds; downgrade is what they do from it. The question asks what was done."
+    }
+   ]
+  },
+  {
+   "id": "PBQ-004",
+   "type": "assign",
+   "objective": "5.3 Explain the processes associated with third-party risk assessment and management.",
+   "title": "Choose the right agreement",
+   "minutes": 5,
+   "brief": "Procurement has six situations open and needs to know which document governs each.",
+   "instruction": "Assign the agreement type the objectives document names for each situation.",
+   "pool": [
+    "Service-level agreement (SLA)",
+    "Memorandum of agreement (MOA)",
+    "Memorandum of understanding (MOU)",
+    "Master service agreement (MSA)",
+    "Work order (WO)/statement of work (SOW)",
+    "Non-disclosure agreement (NDA)",
+    "Business partners agreement (BPA)"
+   ],
+   "cells": [
+    {
+     "prompt": "A hosting provider commits to 99.95% uptime, with service credits if it is missed.",
+     "answer": "Service-level agreement (SLA)",
+     "explanation": "Measurable performance commitments with consequences. Uptime figures are the SLA's signature content."
+    },
+    {
+     "prompt": "Standard commercial and legal terms are agreed once and will govern every future project with this consultancy.",
+     "answer": "Master service agreement (MSA)",
+     "explanation": "The umbrella covering many future engagements. Individual jobs are issued beneath it."
+    },
+    {
+     "prompt": "The deliverables, milestones and acceptance criteria for one specific migration project.",
+     "answer": "Work order (WO)/statement of work (SOW)",
+     "explanation": "One engagement, under the MSA. 'One specific project' is the discriminator against the master terms."
+    },
+    {
+     "prompt": "Two universities record a shared, non-binding intention to collaborate on research security.",
+     "answer": "Memorandum of understanding (MOU)",
+     "explanation": "MOU expresses intent and is generally non-binding. MOA sets out agreed responsibilities and is closer to binding."
+    },
+    {
+     "prompt": "Before any technical discussion, both parties restrict disclosure of what they learn.",
+     "answer": "Non-disclosure agreement (NDA)",
+     "explanation": "Confidentiality specifically. It is usually signed first, because it must exist before anything sensitive is said."
+    },
+    {
+     "prompt": "Two firms forming a joint venture define contributions, responsibilities and profit share.",
+     "answer": "Business partners agreement (BPA)",
+     "explanation": "Governs a partnership between businesses rather than a customer-supplier relationship. Profit sharing is the tell."
+    }
+   ]
+  },
+  {
+   "id": "PBQ-005",
+   "type": "assign",
+   "objective": "4.6 Given a scenario, implement and maintain identity and access management.",
+   "title": "Match the access control model",
+   "minutes": 5,
+   "brief": "Six systems each grant access differently. Identify the model each one implements.",
+   "instruction": "Assign the access control model the objectives document names for each system.",
+   "pool": [
+    "Mandatory",
+    "Discretionary",
+    "Role-based",
+    "Rule-based",
+    "Attribute-based",
+    "Time-of-day restrictions",
+    "Least privilege"
+   ],
+   "cells": [
+    {
+     "prompt": "The system compares a file's classification label to the user's clearance. Neither the user nor the file owner can override the decision.",
+     "answer": "Mandatory",
+     "explanation": "The SYSTEM decides by label and nobody can override. 'Cannot override' is the tell."
+    },
+    {
+     "prompt": "The creator of a shared folder can grant any colleague access at their own discretion.",
+     "answer": "Discretionary",
+     "explanation": "The DATA OWNER decides and can delegate. Who holds the decision separates this from mandatory."
+    },
+    {
+     "prompt": "Permissions attach to the job function 'AP Clerk'; users inherit them by holding that function.",
+     "answer": "Role-based",
+     "explanation": "Decided by WHO the person is — their job. Contrast with rule-based, which ignores identity."
+    },
+    {
+     "prompt": "The firewall permits any request originating from the management subnet during business hours.",
+     "answer": "Rule-based",
+     "explanation": "A condition evaluated regardless of who the requester is. Identity-independent is the discriminator against role-based."
+    },
+    {
+     "prompt": "Access is granted only if the user is in Finance, on a managed device, and on a corporate network.",
+     "answer": "Attribute-based",
+     "explanation": "Several properties of subject, object and environment combined. A single blanket condition would be rule-based."
+    },
+    {
+     "prompt": "Contractor accounts may authenticate only between 08:00 and 18:00 on weekdays.",
+     "answer": "Time-of-day restrictions",
+     "explanation": "Named explicitly in the 4.6 list as a control in its own right, sitting alongside the five models rather than inside them."
+    }
+   ]
+  },
+  {
+   "id": "PBQ-006",
+   "type": "assign",
+   "objective": "1.2 Summarize fundamental security concepts.",
+   "title": "Place the Zero Trust components",
+   "minutes": 4,
+   "brief": "A Zero Trust design review needs each component placed on the correct plane and named correctly.",
+   "instruction": "Assign each description its Zero Trust term.",
+   "pool": [
+    "Policy Engine",
+    "Policy Administrator",
+    "Policy Enforcement Point",
+    "Adaptive identity",
+    "Threat scope reduction",
+    "Policy-driven access control",
+    "Implicit trust zones",
+    "Subject/System"
+   ],
+   "cells": [
+    {
+     "prompt": "Evaluates policy and reaches the grant or deny decision.",
+     "answer": "Policy Engine",
+     "explanation": "The Engine decides. The Administrator carries the decision out — both are Control Plane, which is why they are swapped so often."
+    },
+    {
+     "prompt": "Communicates the decision and establishes or tears down the session.",
+     "answer": "Policy Administrator",
+     "explanation": "Executes what the Engine decided. Still Control Plane — it does not sit in the traffic path."
+    },
+    {
+     "prompt": "Sits in the traffic path and actually allows or blocks the connection.",
+     "answer": "Policy Enforcement Point",
+     "explanation": "The only one of the three on the DATA plane. This is the most-tested Zero Trust distinction in Domain 1."
+    },
+    {
+     "prompt": "Raises the authentication requirement when the request comes from an unusual device or location.",
+     "answer": "Adaptive identity",
+     "explanation": "Varies assurance by context and risk. Policy-driven access control is the broader principle it serves."
+    },
+    {
+     "prompt": "Limits what a single compromised credential can reach.",
+     "answer": "Threat scope reduction",
+     "explanation": "Least privilege and segmentation mean the same thing in plain English but belong to 2.5 and 4.6. Inside Zero Trust the word is threat scope reduction."
+    },
+    {
+     "prompt": "A region where traffic is trusted purely because of where it originates.",
+     "answer": "Implicit trust zones",
+     "explanation": "Exactly what Zero Trust exists to eliminate. A Data Plane term."
+    },
+    {
+     "prompt": "The user or machine making the request.",
+     "answer": "Subject/System",
+     "explanation": "The requester, on the Data Plane. It is the thing the Enforcement Point stands between and the resource."
+    }
+   ]
+  },
+  {
+   "id": "PBQ-007",
+   "type": "assign",
+   "objective": "4.5 Given a scenario, modify enterprise capabilities to enhance security.",
+   "title": "Select the enterprise capability",
+   "minutes": 5,
+   "brief": "Six requirements have come out of a security improvement programme. Choose the capability that meets each.",
+   "instruction": "Assign the capability the objectives document names for each requirement.",
+   "pool": [
+    "DNS filtering",
+    "Web filter",
+    "File integrity monitoring",
+    "Data loss prevention (DLP)",
+    "Network access control (NAC)",
+    "Endpoint detection and response (EDR)/extended detection and response (XDR)",
+    "User behavior analytics",
+    "Sender Policy Framework (SPF)",
+    "DomainKeys Identified Mail (DKIM)",
+    "Domain-based Message Authentication Reporting and Conformance (DMARC)"
+   ],
+   "cells": [
+    {
+     "prompt": "Stop clients resolving names for known malicious domains, before any connection is attempted.",
+     "answer": "DNS filtering",
+     "explanation": "Blocks the LOOKUP. A web filter needs the connection to exist before it can inspect the request."
+    },
+    {
+     "prompt": "Alert when a system binary's hash changes unexpectedly.",
+     "answer": "File integrity monitoring",
+     "explanation": "Watches specific files for CHANGE. EDR watches behaviour — the stem describes hashing and comparison."
+    },
+    {
+     "prompt": "Prevent an email carrying a spreadsheet of customer card numbers from leaving the organisation.",
+     "answer": "Data loss prevention (DLP)",
+     "explanation": "Acts on the CONTENT of the data. That content-awareness is what makes it DLP rather than a mail rule."
+    },
+    {
+     "prompt": "Deny network access to a laptop until it proves its antivirus and patch level are current.",
+     "answer": "Network access control (NAC)",
+     "explanation": "Adds POSTURE assessment. 802.1X authenticates the device; NAC decides based on its health."
+    },
+    {
+     "prompt": "Flag an accountant who begins browsing engineering shares at 03:00, unlike their own history.",
+     "answer": "User behavior analytics",
+     "explanation": "Baselines an individual against THEIR OWN past. A SIEM correlates across sources but does not model one person's normal."
+    },
+    {
+     "prompt": "Publish a policy telling receiving mail servers to quarantine anything failing authentication, and report back.",
+     "answer": "Domain-based Message Authentication Reporting and Conformance (DMARC)",
+     "explanation": "Only DMARC carries a POLICY and a reporting address. SPF authorises the sending server, DKIM signs the message."
+    }
+   ]
+  },
+  {
+   "id": "PBQ-008",
+   "type": "select",
+   "objective": "2.5 Explain the purpose of mitigation techniques used to secure the enterprise.",
+   "title": "Harden the new server build",
+   "minutes": 4,
+   "brief": "A standard server image is being prepared. The build team proposes ten changes; only some are hardening techniques the objectives document names.",
+   "instruction": "Select every option that is a HARDENING TECHNIQUE as objective 2.5 lists it.",
+   "pool": [
+    "Installation of endpoint protection",
+    "Host-based firewall",
+    "Host-based intrusion prevention system (HIPS)",
+    "Disabling ports/protocols",
+    "Default password changes",
+    "Removal of unnecessary software",
+    "Encryption",
+    "Segmentation",
+    "Least privilege",
+    "Decommissioning"
+   ],
+   "answer": [
+    "Installation of endpoint protection",
+    "Host-based firewall",
+    "Host-based intrusion prevention system (HIPS)",
+    "Disabling ports/protocols",
+    "Default password changes",
+    "Removal of unnecessary software",
+    "Encryption"
+   ],
+   "explanation": "The 2.5 hardening list has exactly seven entries and encryption is one of them. Segmentation, least privilege and decommissioning are all real 2.5 mitigation techniques but sit in the general mitigation list, not under hardening — the objectives keep the two lists separate and questions trade on it.",
+   "choose": 7,
+   "explanations": {
+    "Installation of endpoint protection": "Named hardening technique - antimalware on the host.",
+    "Host-based firewall": "Named hardening technique - filters connections on that one machine.",
+    "Host-based intrusion prevention system (HIPS)": "Named hardening technique - blocks malicious behaviour on the host.",
+    "Disabling ports/protocols": "Named hardening technique - stops the service listening.",
+    "Default password changes": "Named hardening technique - answers the 2.2 'default credentials' attack surface.",
+    "Removal of unnecessary software": "Named hardening technique - takes the package off the machine entirely.",
+    "Encryption": "Named hardening technique. It is easy to leave out because it also appears in the general mitigation list, in 1.4 and in 3.3.",
+    "Segmentation": "A real 2.5 mitigation technique, but it sits in the general mitigation list, not under hardening.",
+    "Least privilege": "A real 2.5 mitigation technique, but in the general mitigation list rather than the hardening list.",
+    "Decommissioning": "A real 2.5 mitigation technique - retiring a system. Not a hardening technique for a build you are about to deploy."
+   }
+  },
+  {
+   "id": "PBQ-009",
+   "type": "assign",
+   "objective": "1.4 Explain the importance of using appropriate cryptographic solutions.",
+   "title": "Choose the cryptographic solution",
+   "minutes": 5,
+   "brief": "Six requirements have arrived from an application team. Pick the right primitive for each.",
+   "instruction": "Assign the cryptographic term the objectives document names for each requirement.",
+   "pool": [
+    "Hashing",
+    "Salting",
+    "Key stretching",
+    "Digital signatures",
+    "Tokenization",
+    "Data masking",
+    "Steganography",
+    "Key escrow",
+    "Key exchange",
+    "Trusted Platform Module (TPM)",
+    "Hardware security module (HSM)"
+   ],
+   "cells": [
+    {
+     "prompt": "Prove a specific person authorised a transaction so they cannot later deny it.",
+     "answer": "Digital signatures",
+     "explanation": "Non-repudiation binds an identity to an act. Encryption protects contents; hashing proves integrity; only a signature binds who."
+    },
+    {
+     "prompt": "Ensure two users with the same password do not produce the same stored hash.",
+     "answer": "Salting",
+     "explanation": "Defeats precomputed rainbow tables. Key stretching is the different defence of making each guess slow."
+    },
+    {
+     "prompt": "Make each individual password-guessing attempt computationally expensive.",
+     "answer": "Key stretching",
+     "explanation": "Attacks the attacker's TIME. Salting attacks their PRECOMPUTATION — the two solve different halves of the problem."
+    },
+    {
+     "prompt": "Remove real card numbers from the order system, keeping them in a separate vault.",
+     "answer": "Tokenization",
+     "explanation": "The original LEAVES the system, replaced by a meaningless reference. Masking would leave the real value in place."
+    },
+    {
+     "prompt": "Show support staff only the last four digits, with the real value still stored underneath.",
+     "answer": "Data masking",
+     "explanation": "A display control. The real value never left, which is the whole difference from tokenization."
+    },
+    {
+     "prompt": "Give the organisation a recoverable copy of each employee's private key for when they leave.",
+     "answer": "Key escrow",
+     "explanation": "About who ELSE holds the key. A key management system is the tooling that would implement it, not the concept."
+    }
+   ]
+  },
+  {
+   "id": "PBQ-010",
+   "type": "assign",
+   "objective": "3.4 Explain the importance of resilience and recovery in security architecture.",
+   "title": "Design the recovery strategy",
+   "minutes": 5,
+   "brief": "A business continuity workshop has produced six requirements. Match each to the term the objectives document uses.",
+   "instruction": "Assign the resilience or recovery term for each requirement.",
+   "pool": [
+    "Hot",
+    "Warm",
+    "Cold",
+    "Geographic dispersion",
+    "Platform diversity",
+    "Multi-cloud systems",
+    "Snapshots",
+    "Replication",
+    "Journaling",
+    "Tabletop exercises",
+    "Fail over",
+    "Parallel processing",
+    "Generators",
+    "Uninterruptible power supply (UPS)"
+   ],
+   "cells": [
+    {
+     "prompt": "A site with hardware installed but which needs data restored before it can serve traffic.",
+     "answer": "Warm",
+     "explanation": "Between hot and cold. Hot is current and running; cold is space and power only. Time-to-service is the discriminator."
+    },
+    {
+     "prompt": "Recovery sites placed hundreds of miles apart so one regional event cannot affect both.",
+     "answer": "Geographic dispersion",
+     "explanation": "About DISTANCE. Platform diversity is about using different technology so a shared flaw cannot hit everything."
+    },
+    {
+     "prompt": "Firewalls from two different vendors, so one vulnerability cannot compromise every device.",
+     "answer": "Platform diversity",
+     "explanation": "Different TECHNOLOGY. Multi-cloud means different PROVIDERS — the discriminator is what is being varied."
+    },
+    {
+     "prompt": "A continuous record of every database change, so it can be rebuilt to any chosen moment.",
+     "answer": "Journaling",
+     "explanation": "Logs the CHANGES. A snapshot captures STATE at one moment; replication copies continuously but cannot rewind."
+    },
+    {
+     "prompt": "A test that brings up the secondary site and actually moves production traffic to it.",
+     "answer": "Fail over",
+     "explanation": "Actually cuts over. Parallel processing runs both and compares without switching — the real cutover is the tell."
+    },
+    {
+     "prompt": "Keeps servers running for the few minutes until the standby power plant reaches full output.",
+     "answer": "Uninterruptible power supply (UPS)",
+     "explanation": "Covers the gap using stored energy. A generator sustains for hours but takes time to start."
+    }
+   ]
+  },
+  {
+   "id": "PBQ-011",
+   "type": "assign",
+   "objective": "2.2 Explain common threat vectors and attack surfaces.",
+   "title": "Classify the social engineering campaign",
+   "minutes": 5,
+   "brief": "Six incidents were reported to the security awareness team this month.",
+   "instruction": "Match each incident to the human vector the objectives document names.",
+   "pool": [
+    "Phishing",
+    "Vishing",
+    "Smishing",
+    "Misinformation/disinformation",
+    "Impersonation",
+    "Business email compromise",
+    "Pretexting",
+    "Watering hole",
+    "Brand impersonation",
+    "Typosquatting"
+   ],
+   "cells": [
+    {
+     "prompt": "Accounts payable pays a fake invoice after a message from the CFO's apparently genuine address.",
+     "answer": "Business email compromise",
+     "explanation": "Targets a specific business process using a trusted internal identity. Plain phishing is the broad untargeted net."
+    },
+    {
+     "prompt": "An attacker registers 'exarnple.com' with an rn in place of the m.",
+     "answer": "Typosquatting",
+     "explanation": "About the DOMAIN NAME. Brand impersonation is about the content looking like the company."
+    },
+    {
+     "prompt": "A caller claims to be the new regional auditor and needs a reset before a board meeting in ten minutes.",
+     "answer": "Pretexting",
+     "explanation": "The invented STORY that makes the ask plausible. Impersonation is claiming to be a specific real person."
+    },
+    {
+     "prompt": "Attackers compromise an industry association site that the target's engineers read daily.",
+     "answer": "Watering hole",
+     "explanation": "Compromises a site the victim VISITS. Supply chain compromises what they buy or install."
+    },
+    {
+     "prompt": "Fabricated claims about the company are seeded across social media to move its share price.",
+     "answer": "Misinformation/disinformation",
+     "explanation": "The false content IS the attack, rather than a lure toward something else."
+    },
+    {
+     "prompt": "An employee receives a text about a held parcel linking to a payment page.",
+     "answer": "Smishing",
+     "explanation": "S for SMS, V for voice. 2.2 also lists SMS itself as a message-based vector — this asks for the technique."
+    }
+   ]
+  },
+  {
+   "id": "PBQ-012",
+   "type": "assign",
+   "objective": "5.2 Explain elements of the risk management process.",
+   "title": "Complete the quantitative risk assessment",
+   "minutes": 5,
+   "brief": "A data centre asset is valued at £200,000. A flood would destroy 40% of it, and flooding is expected once every ten years.",
+   "instruction": "Assign the correct value or term to each row.",
+   "pool": [
+    "£80,000",
+    "£8,000",
+    "£20,000",
+    "0.1",
+    "10",
+    "0.4",
+    "Exposure factor",
+    "Single loss expectancy (SLE)",
+    "Annualized loss expectancy (ALE)",
+    "Annualized rate of occurrence (ARO)"
+   ],
+   "cells": [
+    {
+     "prompt": "The exposure factor for this scenario.",
+     "answer": "0.4",
+     "explanation": "The PROPORTION of asset value lost per event — 40% expressed as a decimal, ready to multiply."
+    },
+    {
+     "prompt": "The annualized rate of occurrence.",
+     "answer": "0.1",
+     "explanation": "Occurrences per YEAR. Once in ten years is 1/10 = 0.1. Entering 10 here inflates the ALE a hundredfold."
+    },
+    {
+     "prompt": "The single loss expectancy.",
+     "answer": "£80,000",
+     "explanation": "SLE = asset value x exposure factor = 200,000 x 0.4. This is per EVENT, not per year."
+    },
+    {
+     "prompt": "The annualized loss expectancy.",
+     "answer": "£8,000",
+     "explanation": "ALE = SLE x ARO = 80,000 x 0.1. Stopping at the SLE is the single most common error on this calculation."
+    },
+    {
+     "prompt": "The figure you compare against the annual cost of a proposed flood defence.",
+     "answer": "Annualized loss expectancy (ALE)",
+     "explanation": "Only the annualized figure is comparable with an annual control cost. If the control costs more than the ALE, the numbers do not justify it."
+    }
+   ]
+  }
+ ]
+}

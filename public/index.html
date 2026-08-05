@@ -1,0 +1,71 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security+ Tutor</title>
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg">
+
+<div class="wrap wide">
+  <div class="panel" id="headlinepanel">
+    <h2>Blueprint-weighted projection</h2>
+    <div class="headline">
+      <div>
+        <div class="num" id="weighted">—</div>
+        <div class="side" id="weightedsub">loading…</div>
+      </div>
+      <div class="side">
+        <div>raw accuracy <b id="raw">—</b></div>
+        <div id="baselinebox">baseline <b id="baseline">—</b> <span class="dim">pre-study</span></div>
+        <div id="deltaline"></div>
+      </div>
+      <div class="side" id="rollingbox"></div>
+    </div>
+    <div id="projchart" style="margin-top:18px"></div>
+    <p class="hint" style="margin-top:12px">
+      <label><input type="checkbox" id="incbase"> include imported baseline answers</label>
+      &nbsp;·&nbsp; <span id="scopenote"></span>
+    </p>
+  </div>
+
+  <div class="panel">
+    <h2>Per-domain accuracy <span class="dim" style="text-transform:none;letter-spacing:0">— bar width is blueprint weight</span></h2>
+    <div id="domains"></div>
+  </div>
+
+  <div class="grid two">
+    <div class="panel" id="covpanel">
+      <h2>Coverage <span class="dim" style="text-transform:none;letter-spacing:0">— proven means answered right at least once</span></h2>
+      <div class="headline" style="margin-bottom:14px">
+        <div>
+          <div class="num" id="covnum">—</div>
+          <div class="side" id="covsub">loading…</div>
+        </div>
+      </div>
+      <table class="tbl" id="covtable"></table>
+      <p class="hint" style="margin-top:12px" id="covhint"></p>
+    </div>
+    <div class="panel">
+      <h2>Today</h2>
+      <div class="stat" id="activity"></div>
+      <h2 style="margin-top:22px">Due for review now</h2>
+      <div id="due"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Weakest five objectives</h2>
+    <table class="tbl" id="weakest"></table>
+  </div>
+
+  <div class="panel">
+    <h2>Performance-based questions <span class="dim" style="text-transform:none;letter-spacing:0">— the exam opens with two to six of these</span></h2>
+    <div class="taxpick" id="quickpbq"></div>
+    <p class="hint" id="pbqnote" style="margin:12px 0 0"></p>
+  </div>
+
+  <div class="panel">
+    <h2>Blank paper — start here</h2>
+    <div class="taxpick" id="quickblank"></div>
+  </div>
+</div>
+
+<script type="module" src="/js/dashboard.js"></script>

@@ -1,0 +1,61 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blank paper — Security+ Tutor</title>
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg">
+
+<div class="wrap">
+  <div class="panel">
+    <h2>Blank paper</h2>
+    <p class="rowlabel">Which list? <span class="dim">press <kbd>1</kbd>–<kbd>6</kbd></span></p>
+    <div class="taxpick" id="taxpick"></div>
+  </div>
+
+  <div class="panel" id="writepanel" hidden>
+    <h2 id="writetitle">Write everything you remember</h2>
+    <p class="hint" id="writehint" style="margin-top:-6px;margin-bottom:12px"></p>
+    <textarea id="input" rows="12" spellcheck="false"
+      placeholder="One term per line (commas work too). Don't look anything up."></textarea>
+    <p style="margin:14px 0 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <button class="primary" id="submit">Submit &nbsp;<kbd>Ctrl</kbd>+<kbd>Enter</kbd></button>
+      <span class="hint" id="counter"></span>
+      <span class="spacer" style="flex:1"></span>
+      <span class="hint mono" id="timer"></span>
+    </p>
+  </div>
+
+  <div id="result" hidden>
+    <div class="panel">
+      <div class="scoreline">
+        <span class="big" id="score"></span>
+        <span class="muted" id="scoresub"></span>
+      </div>
+      <div id="prevbest" class="hint"></div>
+    </div>
+
+    <div class="panel">
+      <h2 id="okhead">Recalled</h2>
+      <ul class="termlist ok" id="okterms"></ul>
+    </div>
+
+    <div class="panel">
+      <h2 id="nohead">Missed</h2>
+      <ul class="termlist no" id="noterms"></ul>
+    </div>
+
+    <div class="panel" id="invpanel">
+      <h2 id="invhead">Invented</h2>
+      <ul class="termlist inv" id="invterms"></ul>
+    </div>
+
+    <div class="panel">
+      <p style="margin:0;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="primary" id="retry">Try this list again</button>
+        <button id="another">Different list</button>
+        <a class="btn" href="/">Dashboard</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/js/blank.js"></script>

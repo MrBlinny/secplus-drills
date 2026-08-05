@@ -1,0 +1,392 @@
+[
+  {
+    "id": "t2bq1",
+    "objective": "QUESTION 1 OF 30 · Objective 2.1",
+    "question": "A threat actor group penetrates a major defense contractor and silently exfiltrates technical blueprints over 18 months before being detected. Which threat actor category BEST describes this group?",
+    "options": {
+      "A": "Script kiddie",
+      "B": "Hacktivist",
+      "C": "Nation-state / Advanced Persistent Threat (APT)",
+      "D": "Organized crime"
+    },
+    "correct": "C",
+    "explanation": "Nation-state actors / APTs are characterized by: (1) Long dwell time — months or years undetected. (2) Espionage focus — IP theft, intelligence gathering. (3) High sophistication and resources. (4) State-sponsored. Organized crime focuses on financial gain (ransomware, fraud). Hacktivists make noise and seek publicity. Script kiddies use existing tools without sophistication. The 18-month undetected exfiltration of defense blueprints is the classic APT signature — stealth, patience, persistence."
+  },
+  {
+    "id": "t2bq2",
+    "objective": "QUESTION 2 OF 30 · Objective 2.1",
+    "question": "An employee posts negative comments about their employer on social media after being passed over for promotion, then shares confidential client data with a competitor. What threat actor type is this?",
+    "options": {
+      "A": "Malicious insider (disgruntled employee)",
+      "B": "Negligent insider",
+      "C": "Compromised insider",
+      "D": "Shadow IT user"
+    },
+    "correct": "A",
+    "explanation": "Three insider threat types: (1) Malicious = deliberately harms the organization, motivated by revenge, financial gain, or ideology. (2) Negligent = accidental harm through poor practices (leaving laptop unlocked, clicking phishing links). (3) Compromised = external attacker has stolen their credentials. This scenario is clearly malicious — intentional data sharing with a competitor motivated by revenge. The social media posts reveal the revenge motivation. Key indicator: deliberate, intentional action with clear motive."
+  },
+  {
+    "id": "t2bq3",
+    "objective": "QUESTION 3 OF 30 · Objective 2.2",
+    "question": "An attacker registers the domain \"micosoft.com\" hoping users will mistype \"microsoft.com\" and land on their malicious site. What attack technique is this?",
+    "options": {
+      "A": "Pharming",
+      "B": "Typosquatting",
+      "C": "DNS poisoning",
+      "D": "Domain hijacking"
+    },
+    "correct": "B",
+    "explanation": "Typosquatting (also called URL hijacking) registers domains that are common misspellings of legitimate sites, capitalizing on typing errors. Pharming = corrupting DNS resolution so even correct URLs redirect to malicious sites. DNS poisoning = injecting false DNS records into a resolver's cache. Domain hijacking = taking control of the legitimate domain through registrar compromise. Typosquatting purely relies on USER MISTAKES — no DNS manipulation needed."
+  },
+  {
+    "id": "t2bq4",
+    "objective": "QUESTION 4 OF 30 · Objective 2.2",
+    "question": "An attacker calls an employee pretending to be from IT support and says \"We detected a virus on your computer — I need you to install this remote access tool immediately.\" What social engineering technique is being used?",
+    "options": {
+      "A": "Phishing",
+      "B": "Smishing",
+      "C": "Whaling",
+      "D": "Vishing with pretexting"
+    },
+    "correct": "D",
+    "explanation": "Vishing = voice/phone-based social engineering. Pretexting = creating a fabricated scenario (pretext) to manipulate the target — here, the \"IT virus detection\" is the pretext. The attacker combines both techniques: phone call (vishing) + fake IT scenario (pretexting). Phishing = email. Smishing = SMS. Whaling = phishing targeting C-level executives. The key indicators here are the PHONE CALL vector and the FABRICATED SCENARIO (pretext) justifying the request."
+  },
+  {
+    "id": "t2bq5",
+    "objective": "QUESTION 5 OF 30 · Objective 2.2",
+    "question": "Attackers compromise a legitimate website frequently visited by security researchers. When researchers visit the site, malware is silently installed on their systems. What attack type is this?",
+    "options": {
+      "A": "Spear phishing",
+      "B": "Supply chain attack",
+      "C": "Watering hole attack",
+      "D": "Drive-by download"
+    },
+    "correct": "C",
+    "explanation": "Watering hole attack: the attacker identifies websites the TARGET GROUP regularly visits, compromises those sites, and waits for victims to come to them — like a predator waiting at a watering hole. Highly targeted and hard to detect. Drive-by download is similar but less targeted (any visitor gets infected). Supply chain = compromise software/hardware before delivery to victims. Spear phishing = targeted email attack. Key indicators: targeted group + compromised legitimate site they frequent = watering hole."
+  },
+  {
+    "id": "t2bq6",
+    "objective": "QUESTION 6 OF 30 · Objective 2.3",
+    "question": "A developer fails to validate the length of user-supplied input for a username field. An attacker enters a specially crafted username that overwrites adjacent memory and executes arbitrary code. What vulnerability type is this?",
+    "options": {
+      "A": "Buffer overflow",
+      "B": "SQL injection",
+      "C": "Race condition",
+      "D": "Format string attack"
+    },
+    "correct": "A",
+    "explanation": "Buffer overflow occurs when input exceeds the allocated memory buffer, overwriting adjacent memory. Attackers craft input to overwrite the return address on the stack and redirect execution to their shellcode. Root cause: no input length validation. Mitigations: ASLR (Address Space Layout Randomization), DEP/NX (Data Execution Prevention), stack canaries, input validation. SQL injection attacks databases, not memory. Race conditions involve timing issues. Format string attacks exploit printf-style format specifiers."
+  },
+  {
+    "id": "t2bq7",
+    "objective": "QUESTION 7 OF 30 · Objective 2.3",
+    "question": "A web application displays search results by inserting user input directly into SQL queries without sanitization. An attacker enters: ' OR '1'='1 — and retrieves all records in the database. What is this attack?",
+    "options": {
+      "A": "Cross-Site Scripting (XSS)",
+      "B": "SQL Injection (SQLi)",
+      "C": "Command injection",
+      "D": "LDAP injection"
+    },
+    "correct": "B",
+    "explanation": "SQL injection inserts malicious SQL code into input fields that are incorporated into database queries. The ' OR '1'='1 input breaks the query logic so it returns ALL records (1=1 is always true). Prevention: parameterized queries/prepared statements, input validation, least privilege database accounts, stored procedures. XSS injects JavaScript into web pages. Command injection runs OS commands. LDAP injection attacks directory queries. The SQL payload ' OR '1'='1 is the classic SQLi signature."
+  },
+  {
+    "id": "t2bq8",
+    "objective": "QUESTION 8 OF 30 · Objective 2.3",
+    "question": "A researcher discovers a previously unknown vulnerability in a widely used SSL library. No patch exists yet. Security teams are unable to fully protect against exploitation. What is this type of vulnerability called?",
+    "options": {
+      "A": "Legacy vulnerability",
+      "B": "Misconfiguration",
+      "C": "Supply chain vulnerability",
+      "D": "Zero-day vulnerability"
+    },
+    "correct": "D",
+    "explanation": "Zero-day = a vulnerability unknown to the vendor/public, with no patch available. \"Zero days\" of warning for defenders. Exploits targeting zero-days are zero-day exploits. Mitigations when you can't patch: network segmentation, WAF rules, IPS signatures, monitoring, and anomaly detection. Example: Log4Shell (CVE-2021-44228) — days between public disclosure and exploitation were zero. Compare: Legacy vulnerabilities have known patches but unpatched systems. Supply chain = compromised vendor software/hardware."
+  },
+  {
+    "id": "t2bq9",
+    "objective": "QUESTION 9 OF 30 · Objective 2.3",
+    "question": "An attacker exploits a timing flaw where a security check (is user admin?) and the actual privileged action occur in separate steps, and swaps the resource between those two steps. What vulnerability type is this?",
+    "options": {
+      "A": "Buffer overflow",
+      "B": "Race condition (TOCTOU)",
+      "C": "Privilege escalation",
+      "D": "Integer overflow"
+    },
+    "correct": "B",
+    "explanation": "TOCTOU = Time-of-Check to Time-of-Use. The check happens at time T1, the action at time T2, and the attacker modifies the resource during the window between T1 and T2. Example: Check \"is this temp file safe?\" then write to it — attacker replaces the file between check and write. Race conditions are concurrency/timing bugs. Fix: atomic operations (check and act in one indivisible step), locking, transactional file access. Buffer overflow is about memory bounds, not timing."
+  },
+  {
+    "id": "t2bq10",
+    "objective": "QUESTION 10 OF 30 · Objective 2.4",
+    "question": "A system administrator notices the web server is making outbound connections to an IP address in Eastern Europe on port 443, and sending small but regular packets at 3 AM every day. What is the MOST likely explanation?",
+    "options": {
+      "A": "Normal TLS certificate renewal",
+      "B": "Scheduled software update",
+      "C": "C2 (Command and Control) beaconing",
+      "D": "DNS zone transfer"
+    },
+    "correct": "C",
+    "explanation": "C2 (Command and Control) beaconing is malware checking in with its controller. Classic indicators: regular intervals (beaconing), unusual outbound connections, suspicious destination IPs/countries, small packet sizes (just checking for commands), use of common ports like 443 to blend with HTTPS traffic. The 3 AM timing is off-hours to avoid detection. The pattern — regular, small, same destination — is a strong C2 indicator. Certificate renewals don't beacon to foreign IPs; updates don't go to random Eastern European addresses."
+  },
+  {
+    "id": "t2bq11",
+    "objective": "QUESTION 11 OF 30 · Objective 2.4",
+    "question": "A user reports that their files have been renamed with \".locked\" extensions and they see a message demanding cryptocurrency payment for decryption. What type of malware is this?",
+    "options": {
+      "A": "Ransomware",
+      "B": "Rootkit",
+      "C": "Trojan",
+      "D": "Logic bomb"
+    },
+    "correct": "A",
+    "explanation": "Ransomware encrypts victim files and demands payment (usually cryptocurrency) for the decryption key. Indicators: encrypted files with unusual extensions (.locked, .crypt, .encrypted), ransom note, files inaccessible. Examples: WannaCry, NotPetya, REvil, LockBit. Prevention: offline backups (3-2-1 rule), email filtering, patching, network segmentation. Rootkit = hides itself and other malware from the OS. Trojan = disguises as legitimate software. Logic bomb = triggers on specific conditions (date, action)."
+  },
+  {
+    "id": "t2bq12",
+    "objective": "QUESTION 12 OF 30 · Objective 2.4",
+    "question": "Security tools detect that a process is reading all files on a drive and sending them to an external FTP server. The process has a name matching a legitimate Windows system utility. What type of malware behavior is MOST consistent with this?",
+    "options": {
+      "A": "Ransomware encryption phase",
+      "B": "Botnet DDoS participation",
+      "C": "Adware popup injection",
+      "D": "Data exfiltration by a Trojan masquerading as a system process"
+    },
+    "correct": "D",
+    "explanation": "This describes two behaviors: (1) Process masquerading — naming malware after legitimate utilities (svchost.exe, lsass.exe, etc.) to avoid detection. (2) Data exfiltration — reading files and sending to external servers. Trojans disguise themselves as legitimate software. Data exfiltration is a key indicator of compromise (IOC). FIM (File Integrity Monitoring) and EDR tools detect unusual process behaviors. UEBA flags processes doing unusual amounts of file reads. Ransomware would encrypt files, not exfiltrate them; DDoS would send network traffic outward without file reading."
+  },
+  {
+    "id": "t2bq13",
+    "objective": "QUESTION 13 OF 30 · Objective 2.4",
+    "question": "An antivirus tool detects suspicious behavior based on the actions a program takes (reading registry keys, modifying startup entries, making network connections), rather than matching a known signature. What detection method is this?",
+    "options": {
+      "A": "Signature-based detection",
+      "B": "Heuristic scanning only",
+      "C": "Behavior-based (anomaly) detection",
+      "D": "Reputation-based detection"
+    },
+    "correct": "C",
+    "explanation": "Behavior-based (anomaly) detection monitors WHAT a program does, not what it looks like. Effective against zero-days and polymorphic malware that evades signatures. Signature-based = matches hash or byte patterns against known malware database. Heuristic = static analysis of code structure looking for suspicious patterns before execution. Behavior-based = dynamic analysis of runtime actions. Reputation-based = checks file/URL reputation against threat intel feeds. Modern EDR uses all methods but behavior-based is most effective against novel threats."
+  },
+  {
+    "id": "t2bq14",
+    "objective": "QUESTION 14 OF 30 · Objective 2.5",
+    "question": "An organization discovers that an attacker has been on their network for 3 months using stolen credentials. Which mitigation technique would have MOST effectively limited the blast radius of this compromise?",
+    "options": {
+      "A": "Patching all systems",
+      "B": "Network segmentation and least privilege access",
+      "C": "Password complexity requirements",
+      "D": "Antivirus deployment"
+    },
+    "correct": "B",
+    "explanation": "When credentials are stolen, the attacker has legitimate access — AV won't catch them. Patching doesn't help. The best mitigation is limiting what those credentials CAN access: network segmentation (VLANs limit lateral movement between segments) + least privilege (stolen credentials only reach minimum necessary resources). \"Blast radius\" = scope of damage from a breach. Zero trust + micro-segmentation + least privilege = attackers can't easily move laterally even with valid credentials. This is the core defense against APT-style attacks."
+  },
+  {
+    "id": "t2bq15",
+    "objective": "QUESTION 15 OF 30 · Objective 2.5",
+    "question": "A company deploys software that intercepts and analyzes all outbound email and web traffic, blocking employees from sending files containing credit card numbers or Social Security numbers to external destinations. What security tool is this?",
+    "options": {
+      "A": "IDS (Intrusion Detection System)",
+      "B": "SIEM (Security Information and Event Management)",
+      "C": "Firewall",
+      "D": "DLP (Data Loss Prevention)"
+    },
+    "correct": "D",
+    "explanation": "DLP inspects content in motion, at rest, and in use, and enforces policies to prevent sensitive data from leaving the organization. It understands DATA context — credit card patterns (Luhn algorithm), SSN patterns, health records — not just IP addresses or ports. Firewalls work at network layer (ports/IPs), not content. IDS detects attacks but doesn't inspect email content for PII. SIEM aggregates logs. DLP = content-aware data protection = PCI DSS and HIPAA compliance tool."
+  },
+  {
+    "id": "t2bq16",
+    "objective": "QUESTION 16 OF 30 · Objective 2.2",
+    "question": "An attacker inserts a modified USB drive into a target's car. The USB is labeled \"Employee Salary Data Q3.\" An employee finds it in the parking lot and plugs it into their work laptop. What technique is this?",
+    "options": {
+      "A": "Baiting (removable media attack)",
+      "B": "Tailgating",
+      "C": "Spear phishing",
+      "D": "Whaling"
+    },
+    "correct": "A",
+    "explanation": "Baiting exploits curiosity or greed — leaving infected USB drives in public areas where employees will find and insert them. The enticing label (\"Salary Data\") increases the likelihood of plugging it in. This technique was used in real attacks (Stuxnet was spread partially via USB drives). Defense: disable USB autorun/autoplay, block unknown USB devices via endpoint controls, security awareness training. This is a physical/social engineering vector combining removable media + human curiosity."
+  },
+  {
+    "id": "t2bq17",
+    "objective": "QUESTION 17 OF 30 · Objective 2.3",
+    "question": "An organization's web application uses a third-party analytics library loaded from an external CDN. The CDN is compromised and the library is modified to steal user credentials. What vulnerability category does this represent?",
+    "options": {
+      "A": "Zero-day vulnerability",
+      "B": "Cross-site scripting",
+      "C": "Supply chain vulnerability",
+      "D": "Man-in-the-browser attack"
+    },
+    "correct": "C",
+    "explanation": "Supply chain attacks target the software/hardware supply chain — compromising a dependency (library, CDN, update mechanism) that gets distributed to many victims. The application itself is not directly attacked; the attack travels through trusted third-party code. Famous examples: SolarWinds Orion (compromised update mechanism), NotPetya (spread through Ukrainian accounting software), and npm/PyPI package poisoning. Defenses: Subresource Integrity (SRI) hashes for CDN content, SBOM (Software Bill of Materials), vendor risk assessments."
+  },
+  {
+    "id": "t2bq18",
+    "objective": "QUESTION 18 OF 30 · Objective 2.4",
+    "question": "A security analyst observes that a Windows host is running a legitimate-looking process named \"svch0st.exe\" (with a zero, not the letter O). What type of malware technique does this represent?",
+    "options": {
+      "A": "Rootkit installation",
+      "B": "Process masquerading / Living off the land",
+      "C": "Logic bomb trigger",
+      "D": "Cryptojacking"
+    },
+    "correct": "B",
+    "explanation": "Process masquerading names malware after legitimate Windows processes (svchost.exe, lsass.exe, explorer.exe) with subtle modifications (zero for O, double letters). This helps malware blend in with normal process lists. Defense: check process path (real svchost.exe runs from C:\\Windows\\System32, not Desktop), verify digital signature, use process monitoring tools like Process Monitor. \"Living off the land\" specifically uses legitimate OS tools (PowerShell, WMI, certutil) for malicious purposes to avoid AV detection."
+  },
+  {
+    "id": "t2bq19",
+    "objective": "QUESTION 19 OF 30 · Objective 2.4",
+    "question": "Users report their computers are slower than usual and their electricity bills have increased. Security analysis reveals processes consuming 90% CPU continuously. What malware type is MOST likely responsible?",
+    "options": {
+      "A": "Ransomware",
+      "B": "Keylogger",
+      "C": "Spyware",
+      "D": "Cryptojacking (cryptominer)"
+    },
+    "correct": "D",
+    "explanation": "Cryptojacking = malware that hijacks victim's CPU/GPU resources to mine cryptocurrency for the attacker. Key indicators: CPU/GPU maxed out, system slowdowns, overheating, increased electricity bills. The attacker profits from stolen computing resources without encrypting files (ransomware) or stealing data (spyware/keylogger). Detection: process monitoring for high CPU usage, network connections to mining pools. Becoming increasingly common with both malware and malicious JavaScript (browser-based cryptojacking)."
+  },
+  {
+    "id": "t2bq20",
+    "objective": "QUESTION 20 OF 30 · Objective 2.5",
+    "question": "Which mitigation technique involves preventing executables from running in directories where users can write files (like %TEMP% or %AppData%)?",
+    "options": {
+      "A": "Input validation",
+      "B": "Network segmentation",
+      "C": "Application allowlisting / Execution prevention",
+      "D": "Data masking"
+    },
+    "correct": "C",
+    "explanation": "Application allowlisting (whitelisting) only permits approved executables to run. AppLocker and Windows Defender Application Control (WDAC) can block execution from user-writable directories — a powerful anti-malware technique since most malware drops into temp directories. This stops fileless malware delivery and prevents users from accidentally running malicious executables. Allowlisting is more secure but harder to manage than blocklisting (blacklisting). This directly mitigates many phishing and drive-by attack chains."
+  },
+  {
+    "id": "t2bq21",
+    "objective": "QUESTION 21 OF 30 · Objective 2.2",
+    "question": "An attacker sends a text message appearing to be from a bank saying \"Suspicious login detected. Click here to verify your account\" with a link to a fake bank website. What attack type is this?",
+    "options": {
+      "A": "Spear phishing",
+      "B": "Smishing",
+      "C": "Vishing",
+      "D": "Pharming"
+    },
+    "correct": "B",
+    "explanation": "Smishing = SMS/text-message phishing. The vector is the text message. Vishing = voice call. Phishing/spear phishing = email. Pharming = DNS manipulation. Quick reference: Phishing (email) → Spear phishing (targeted email) → Whaling (targeted C-suite email) → Smishing (SMS) → Vishing (voice). The key distinguisher is the DELIVERY VECTOR. Any question with \"text message\" or \"SMS\" = smishing. Any question with \"phone call\" = vishing."
+  },
+  {
+    "id": "t2bq22",
+    "objective": "QUESTION 22 OF 30 · Objective 2.3",
+    "question": "A mobile device user installs an application from outside the official app store by enabling a setting that allows installation from unknown sources. What vulnerability risk does this introduce?",
+    "options": {
+      "A": "Jailbreaking",
+      "B": "Rooting",
+      "C": "Bluejacking",
+      "D": "Sideloading"
+    },
+    "correct": "D",
+    "explanation": "Sideloading = installing apps from unofficial sources (outside App Store/Google Play). Apps bypass the store's security review process and could contain malware. Jailbreaking (iOS) / Rooting (Android) = removing OS security restrictions to gain full device control — more extreme than sideloading. Bluejacking = sending unsolicited Bluetooth messages. Sideloading is the specific risk of installing from \"unknown sources.\" MDM (Mobile Device Management) policies typically prohibit sideloading in enterprise environments."
+  },
+  {
+    "id": "t2bq23",
+    "objective": "QUESTION 23 OF 30 · Objective 2.4",
+    "question": "A log shows a user account from accounting successfully authenticated to 47 different servers in 8 minutes — far beyond normal behavior. What type of attack indicator is this MOST consistent with?",
+    "options": {
+      "A": "Ransomware encryption phase",
+      "B": "DDoS attack preparation",
+      "C": "Lateral movement after credential compromise",
+      "D": "Normal system administration activity"
+    },
+    "correct": "C",
+    "explanation": "Lateral movement = an attacker moving through the network using compromised credentials to reach additional systems. Indicators: authentication to many systems in short time, unusual service account access patterns, use of admin tools (PsExec, WMI, RDP) across multiple hosts. An accounting user connecting to 47 servers in 8 minutes is anomalous — legitimate users don't do this. UEBA and SIEM correlation rules are designed to detect exactly this pattern. This is often the post-exploitation phase after initial credential theft."
+  },
+  {
+    "id": "t2bq24",
+    "objective": "QUESTION 24 OF 30 · Objective 2.5",
+    "question": "A company implements endpoint detection and response (EDR) tools on all workstations. EDR is PRIMARILY designed to:",
+    "options": {
+      "A": "Prevent all malware from executing using signature databases",
+      "B": "Monitor, detect, investigate, and respond to threats on endpoints in real time",
+      "C": "Encrypt endpoint storage to prevent data theft",
+      "D": "Block network connections from endpoints"
+    },
+    "correct": "B",
+    "explanation": "EDR goes beyond traditional AV. Key capabilities: continuous monitoring, behavioral detection, threat hunting support, forensic timeline reconstruction, automated response (isolation, kill process). EDR is about VISIBILITY and RESPONSE — not just prevention. Traditional AV = signature-based prevention. EDR = behavior monitoring + investigation + response. Next-generation endpoints combine both (NGAV + EDR). Examples: CrowdStrike Falcon, Carbon Black, SentinelOne, Microsoft Defender for Endpoint. \"Detect, investigate, and respond\" = EDR's core mission."
+  },
+  {
+    "id": "t2bq25",
+    "objective": "QUESTION 25 OF 30 · Objective 2.4",
+    "question": "A malware sample changes its own code and signature every time it replicates to evade signature-based detection. What type of malware is this?",
+    "options": {
+      "A": "Rootkit",
+      "B": "Logic bomb",
+      "C": "Worm",
+      "D": "Polymorphic malware"
+    },
+    "correct": "D",
+    "explanation": "Polymorphic malware changes its code/signature with each infection while maintaining the same malicious function — like changing disguises. This defeats signature-based AV that looks for known byte patterns. Metamorphic malware goes further — rewrites its entire code, not just encrypts it. Detection requires behavior-based analysis. Rootkit = hides in the OS kernel. Logic bomb = triggers on condition. Worm = self-replicates without user action. Polymorphic = \"many forms\" — same payload, different signatures."
+  },
+  {
+    "id": "t2bq26",
+    "objective": "QUESTION 26 OF 30 · Objective 2.5",
+    "question": "Which mitigation technique involves regularly checking systems for known security weaknesses, misconfigurations, and missing patches across the entire IT environment?",
+    "options": {
+      "A": "Penetration testing",
+      "B": "Red team exercise",
+      "C": "Vulnerability scanning",
+      "D": "Security audit"
+    },
+    "correct": "C",
+    "explanation": "Vulnerability scanning = automated, non-invasive checking for known vulnerabilities across many systems. Tools: Nessus, OpenVAS, Qualys, Rapid7. Regular scanning provides ongoing visibility into your attack surface. Penetration testing = actively exploiting vulnerabilities (authorized attack simulation) — deeper but less frequent. Red team = full adversary simulation including social engineering. Security audit = policy/compliance review. Key difference: scanning identifies vulnerabilities; pen testing EXPLOITS them to test impact. Scanning = continuous; pen testing = periodic, manual, deeper."
+  },
+  {
+    "id": "t2bq27",
+    "objective": "QUESTION 27 OF 30 · Objective 2.2",
+    "question": "An attacker sends an email appearing to be from the CEO to the CFO, requesting an urgent wire transfer to a new vendor account. The CEO's name and email style are convincingly replicated. What specific type of phishing is this?",
+    "options": {
+      "A": "Phishing",
+      "B": "Spear phishing",
+      "C": "Smishing",
+      "D": "Business Email Compromise (BEC) / Whaling"
+    },
+    "correct": "D",
+    "explanation": "BEC (Business Email Compromise) specifically targets financial transactions by impersonating executives. The CFO receives what appears to be a CEO request for wire transfer. Whaling = phishing targeting C-suite executives (CEO, CFO, CTO). This is both: the attacker is using the CEO's identity (whaling technique) to attack the CFO, specifically requesting a wire transfer (BEC). BEC is one of the most financially damaging attack types — the FBI estimates billions in losses annually. Prevention: out-of-band verification for wire transfers, email authentication (SPF/DKIM/DMARC)."
+  },
+  {
+    "id": "t2bq28",
+    "objective": "QUESTION 28 OF 30 · Objective 2.3",
+    "question": "A virtual machine on a shared hypervisor exploits a vulnerability and gains access to the hypervisor itself, then can access other VMs on the same physical host. What attack is this?",
+    "options": {
+      "A": "VM escape",
+      "B": "Container escape",
+      "C": "Hypervisor poisoning",
+      "D": "Cloud hopping"
+    },
+    "correct": "A",
+    "explanation": "VM escape = a guest VM breaks out of its sandbox isolation and gains access to the underlying hypervisor. From the hypervisor, the attacker can potentially access or manipulate ALL other VMs on that host. This is the most severe virtualization attack. Container escape is similar but for container environments (Docker, Kubernetes). VM isolation is a fundamental security promise of virtualization — escape attacks break this promise. Prevention: keep hypervisors patched, harden VM configurations, use type-1 hypervisors (bare metal), apply security hardening guides."
+  },
+  {
+    "id": "t2bq29",
+    "objective": "QUESTION 29 OF 30 · Objective 2.5",
+    "question": "After a phishing campaign compromises user credentials, the FIRST mitigation action should be:",
+    "options": {
+      "A": "Reimage all affected workstations",
+      "B": "Notify law enforcement immediately",
+      "C": "Force password reset and enable MFA for all affected accounts",
+      "D": "Deploy new email filtering rules"
+    },
+    "correct": "C",
+    "explanation": "When credentials are compromised, the IMMEDIATE priority is to invalidate the stolen credentials. Force a password reset to revoke attacker access, then enable MFA so that even if the new password is stolen, the attacker still can't log in without the second factor. This is the fastest, most direct mitigation. Reimaging workstations addresses endpoint compromise but not credential theft. New email filters prevent future phishing but don't revoke current stolen access. Law enforcement is appropriate for serious breaches but is not the FIRST action."
+  },
+  {
+    "id": "t2bq30",
+    "objective": "QUESTION 30 OF 30 · Objective 2.4",
+    "question": "A keylogger is discovered on a workstation. This malware captures every keystroke and stores them in an encrypted log file for later retrieval by the attacker. What is the PRIMARY security concern?",
+    "options": {
+      "A": "Credential theft — passwords, PINs, and sensitive data entered by the user are compromised",
+      "B": "System performance degradation",
+      "C": "Encryption of user files",
+      "D": "Network bandwidth consumption"
+    },
+    "correct": "A",
+    "explanation": "Keyloggers capture every keystroke — passwords typed to websites, banking credentials, email contents, documents, commands. Primary risk: credential theft and sensitive data exposure. Keyloggers are often delivered via trojans, phishing attachments, or drive-by downloads. They typically run silently with minimal performance impact (B is wrong). They don't encrypt files (C) — that's ransomware. They send logs but don't consume significant bandwidth (D). Detection: behavioral analysis, process monitoring, network traffic analysis for periodic small uploads."
+  }
+]

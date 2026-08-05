@@ -1,0 +1,11 @@
+# Normalise line endings so a clone on macOS or Linux does not show every file
+# as modified. Text is stored LF in the repo and checked out native.
+* text=auto
+
+# Windows launcher: must keep CRLF or cmd.exe mis-parses it.
+*.cmd text eol=crlf
+
+# Shell scripts must keep LF even when checked out on Windows.
+*.sh text eol=lf
+
+*.pdf binary

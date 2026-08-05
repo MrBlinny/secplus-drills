@@ -1,0 +1,392 @@
+[
+  {
+    "id": "t5q1",
+    "objective": "Question 1 of 30",
+    "question": "An organization publishes a document stating \"All passwords must be at least 12 characters, include uppercase, lowercase, a number, and a special character, and cannot match any of the last 10 passwords.\" What type of document is this?",
+    "options": {
+      "A": "Guideline",
+      "B": "Standard",
+      "C": "Policy",
+      "D": "Procedure"
+    },
+    "correct": "B",
+    "explanation": "A Standard provides specific, measurable, mandatory requirements that implement a higher-level Policy. Password complexity requirements with exact minimums (12 chars, character types, history count) are classic standard content — they're measurable and testable. A Policy (C) would say something like \"All passwords must be strong and protect organizational resources\" — high-level, no specifics. A Procedure (D) would say HOW to change your password step by step. A Guideline (A) would suggest best practices but not mandate them. The key signals for Standard: specific numbers/metrics, mandatory, measurable."
+  },
+  {
+    "id": "t5q2",
+    "objective": "Question 2 of 30",
+    "question": "Before receiving access to company systems, a new employee is required to sign a document that lists what activities are permitted and prohibited when using company IT resources, email, and internet access. What is this document?",
+    "options": {
+      "A": "Acceptable Use Policy (AUP)",
+      "B": "Non-Disclosure Agreement (NDA)",
+      "C": "Information Security Policy",
+      "D": "Master Service Agreement (MSA)"
+    },
+    "correct": "A",
+    "explanation": "The Acceptable Use Policy (AUP) defines what employees can and cannot do with company IT resources. It must be signed before system access is granted. Key signals: \"permitted and prohibited activities,\" \"IT resources, email, internet.\" NDA (B) covers confidentiality of information — it prevents sharing sensitive data but doesn't define IT resource usage rules. The Information Security Policy (C) is a high-level umbrella document; it doesn't list specific permitted/prohibited behaviors for employees. MSA (D) is a vendor/business agreement, not an employee policy."
+  },
+  {
+    "id": "t5q3",
+    "objective": "Question 3 of 30",
+    "question": "A system administrator plans to deploy a critical patch during a maintenance window. The change has been approved. Before implementing, what document must be prepared to ensure the system can be restored if the patch causes unexpected issues?",
+    "options": {
+      "A": "Change Request",
+      "B": "Incident Response Plan",
+      "C": "Backout Plan",
+      "D": "Disaster Recovery Plan"
+    },
+    "correct": "C",
+    "explanation": "A backout plan (also called a rollback plan) is a pre-defined procedure to reverse a change if it causes problems. It must be created BEFORE the change is implemented — not after it fails. In change management, having a backout plan is a required element of any change request. A Change Request (A) is what initiated the process — it doesn't provide the rollback steps. An Incident Response Plan (B) handles security incidents, not failed changes. A DRP (D) is a broader disaster recovery document, not specific to a patch rollback procedure."
+  },
+  {
+    "id": "t5q4",
+    "objective": "Question 4 of 30",
+    "question": "A security policy covers how the organization detects, classifies, contains, eradicates, and recovers from security events. Which policy type is this?",
+    "options": {
+      "A": "Business Continuity Policy",
+      "B": "Incident Response Policy",
+      "C": "Change Management Policy",
+      "D": "Disaster Recovery Policy"
+    },
+    "correct": "B",
+    "explanation": "The Incident Response Policy defines how the organization handles security incidents throughout the full IR lifecycle: detect → classify → contain → eradicate → recover → document. The key signal words are \"security events,\" \"contain,\" \"eradicate.\" Business Continuity Policy (A) focuses on maintaining business operations during disruptions — broader than security incidents. Change Management Policy (C) governs how IT changes are handled. Disaster Recovery Policy (D) focuses on restoring IT systems after a major disaster, not necessarily a security event."
+  },
+  {
+    "id": "t5q5",
+    "objective": "Question 5 of 30",
+    "question": "An employee submits a resignation and their last day is in two weeks. When should the security team disable the employee's accounts?",
+    "options": {
+      "A": "Immediately upon confirmation of departure",
+      "B": "On their last day of employment",
+      "C": "One week after their last day",
+      "D": "When IT receives a ticket from HR"
+    },
+    "correct": "A",
+    "explanation": "Security best practice is to disable accounts immediately upon confirmed departure. The two-week notice period is a significant insider threat window — a disgruntled employee with active access can exfiltrate data, sabotage systems, or create backdoors. While business continuity may require some temporary access for knowledge transfer, the security-correct answer is always \"immediately.\" The exam tests this concept frequently: offboarding account disabling must be immediate, not delayed until last day. HR should notify IT the moment the resignation is confirmed, with a formal offboarding workflow triggered immediately."
+  },
+  {
+    "id": "t5q6",
+    "objective": "Question 6 of 30",
+    "question": "A web server has an asset value of $500,000. A ransomware attack would render 40% of it unrecoverable. What is the Single Loss Expectancy (SLE)?",
+    "options": {
+      "A": "$40,000",
+      "B": "$500,000",
+      "C": "$200,000",
+      "D": "$100,000"
+    },
+    "correct": "C",
+    "explanation": "SLE = Asset Value (AV) × Exposure Factor (EF). AV = $500,000. EF = 40% = 0.40. SLE = $500,000 × 0.40 = $200,000. The Exposure Factor represents what percentage of the asset's value would be lost in a single incident. The full asset value ($500,000) would be AV, not SLE. $40,000 (A) would be $500,000 × 8% — incorrect. $100,000 (D) would be $500,000 × 20%. Always apply SLE = AV × EF, then use SLE to calculate ALE = SLE × ARO."
+  },
+  {
+    "id": "t5q7",
+    "objective": "Question 7 of 30",
+    "question": "The SLE for a server flood event is $50,000. Floods occur on average once every two years. What is the Annual Loss Expectancy (ALE)?",
+    "options": {
+      "A": "$100,000",
+      "B": "$25,000",
+      "C": "$50,000",
+      "D": "$10,000"
+    },
+    "correct": "B",
+    "explanation": "ALE = SLE × ARO. ARO (Annual Rate of Occurrence) = how many times per year the event happens. \"Once every two years\" = ARO of 0.5 (0.5 times per year). ALE = $50,000 × 0.5 = $25,000. \"Once every two years\" is the most common ARO trap — students often confuse it with ARO = 2. Remember: ARO is the annual rate, so once every 2 years = 1/2 = 0.5. $100,000 (A) would be SLE × 2 (wrong — that's twice per year). $50,000 (C) would be ARO = 1 (once per year)."
+  },
+  {
+    "id": "t5q8",
+    "objective": "Question 8 of 30",
+    "question": "A risk analyst uses a heat map with axes for \"Likelihood\" and \"Impact\" and assigns ratings of Low/Medium/High/Critical to risks. Which type of risk analysis is this?",
+    "options": {
+      "A": "Qualitative",
+      "B": "Quantitative",
+      "C": "Continuous",
+      "D": "Ad Hoc"
+    },
+    "correct": "A",
+    "explanation": "Qualitative risk analysis uses descriptive categories (Low/Medium/High/Critical) rather than dollar amounts. A heat map plotting likelihood vs impact is the classic qualitative tool. Quantitative analysis (B) uses numbers — SLE, ALE, ARO, dollar values. The signal words for qualitative: \"heat map,\" \"Low/Medium/High,\" \"subjective ratings,\" \"likelihood and impact matrix.\" Continuous (C) and Ad Hoc (D) describe when assessments are conducted, not the analysis method."
+  },
+  {
+    "id": "t5q9",
+    "objective": "Question 9 of 30",
+    "question": "A company purchases a cyber insurance policy to cover financial losses in the event of a ransomware attack. Which risk management strategy is this?",
+    "options": {
+      "A": "Mitigate",
+      "B": "Avoid",
+      "C": "Accept",
+      "D": "Transfer"
+    },
+    "correct": "D",
+    "explanation": "Risk Transfer shifts the financial consequences of a risk to a third party. Cyber insurance is the textbook example — the insurer pays losses if the event occurs. Key: risk transfer does NOT eliminate the underlying risk. The ransomware can still happen; the company just doesn't bear the full financial impact. Mitigate (A) would mean deploying better endpoint security, backups, etc. to reduce the probability or impact. Avoid (B) would mean stopping the activity that creates the risk (e.g., not storing sensitive data). Accept (C) means acknowledging the risk and deciding to do nothing about it (no insurance, no controls)."
+  },
+  {
+    "id": "t5q10",
+    "objective": "Question 10 of 30",
+    "question": "After a ransomware attack, an organization's critical order-processing system must be restored. The business has determined that this system cannot be offline for more than 4 hours without significant revenue loss. This 4-hour limit is the:",
+    "options": {
+      "A": "RPO",
+      "B": "MTBF",
+      "C": "RTO",
+      "D": "MTTR"
+    },
+    "correct": "C",
+    "explanation": "RTO (Recovery Time Objective) is the maximum acceptable downtime — the longest the system can be offline before business impact becomes unacceptable. \"Cannot be offline for more than 4 hours\" = RTO of 4 hours. RPO (A) would be the maximum data loss — \"we cannot lose more than 1 hour of transactions.\" MTBF (B) is the average time between failures — a reliability metric, not a recovery requirement. MTTR (D) is the average time to repair — a descriptive metric of actual performance, not a target requirement."
+  },
+  {
+    "id": "t5q11",
+    "objective": "Question 11 of 30",
+    "question": "A bank requires that transaction data be backed up frequently enough that no more than 15 minutes of transactions could be lost in a disaster. This 15-minute limit defines the:",
+    "options": {
+      "A": "RTO",
+      "B": "RPO",
+      "C": "MTTR",
+      "D": "MTBF"
+    },
+    "correct": "B",
+    "explanation": "RPO (Recovery Point Objective) defines the maximum acceptable data loss measured in time. \"No more than 15 minutes of transactions could be lost\" = RPO of 15 minutes. This drives the backup frequency — backups must occur at least every 15 minutes. RTO (A) would answer \"how long can the system be down?\" — a time-to-restore question, not a data-loss question. MTTR (C) is the average time taken to repair. MTBF (D) is the average time between failures."
+  },
+  {
+    "id": "t5q12",
+    "objective": "Question 12 of 30",
+    "question": "A startup technology company believes that rapid growth requires taking on more security risk than a traditional enterprise would accept. Their attitude toward risk reflects which risk appetite type?",
+    "options": {
+      "A": "Expansionary",
+      "B": "Neutral",
+      "C": "Conservative",
+      "D": "Mitigative"
+    },
+    "correct": "A",
+    "explanation": "Expansionary risk appetite means the organization actively accepts higher risk to pursue growth and opportunity. Startups and aggressive growth companies typically display expansionary appetites — they prioritize speed to market over cautious security posturing. Conservative (C) describes organizations (banks, healthcare, government) that prefer to avoid or transfer risks and have low tolerance for uncertainty. Neutral (B) describes a balanced approach. Mitigative (D) is not an official risk appetite type — it describes a risk response strategy."
+  },
+  {
+    "id": "t5q13",
+    "objective": "Question 13 of 30",
+    "question": "The security team maintains a document listing all identified risks, their probability ratings, potential impacts, assigned owners, treatment plans, and current status. What is this document?",
+    "options": {
+      "A": "Business Impact Analysis",
+      "B": "Vulnerability Assessment Report",
+      "C": "Risk Register",
+      "D": "Incident Log"
+    },
+    "correct": "C",
+    "explanation": "A Risk Register is the central repository for all identified risks. It tracks: risk description, probability, impact, risk rating (P × I), risk owner, treatment strategy, and status. It's the primary output of the risk identification and analysis process. A BIA (A) focuses specifically on the business impact of system outages — it informs the risk register but isn't the same document. A Vulnerability Assessment Report (B) lists technical vulnerabilities found in systems, not organizational risks broadly. An Incident Log (D) tracks security incidents that have already occurred."
+  },
+  {
+    "id": "t5q14",
+    "objective": "Question 14 of 30",
+    "question": "A cloud provider guarantees 99.9% uptime per month and specifies response times for different severity incidents. Failure to meet these guarantees triggers service credits. This document is BEST described as:",
+    "options": {
+      "A": "MOU",
+      "B": "SLA",
+      "C": "SOW",
+      "D": "MSA"
+    },
+    "correct": "B",
+    "explanation": "A Service Level Agreement (SLA) defines the minimum performance standards a vendor must deliver — uptime percentages, response times, support availability. It includes penalties (service credits, contract termination rights) for failing to meet those standards. The key signals: \"99.9% uptime,\" \"response times,\" \"service credits for failure.\" MOU (A) is non-binding intent — no penalties, no measurable commitments. SOW (C) defines the scope of specific project work — deliverables and tasks, not ongoing service performance. MSA (D) is the umbrella contract framework — it doesn't specify performance metrics itself."
+  },
+  {
+    "id": "t5q15",
+    "objective": "Question 15 of 30",
+    "question": "Two government agencies agree to share threat intelligence data. The agreement describes their general intention to collaborate but does not specify enforceable obligations or penalties. This is BEST described as:",
+    "options": {
+      "A": "SLA",
+      "B": "BPA",
+      "C": "MOU",
+      "D": "MOA"
+    },
+    "correct": "C",
+    "explanation": "A Memorandum of Understanding (MOU) is a non-binding agreement that documents general intent and mutual understanding between parties without enforceable obligations or penalties. Common between government agencies, departments, or early-stage partnerships. Key signals: \"general intention,\" \"no penalties,\" \"non-binding.\" MOA (D) is a formal, legally binding agreement with defined responsibilities — it has enforcement mechanisms. SLA (A) has measurable performance commitments and penalties. BPA (B) defines a business partnership with legal terms."
+  },
+  {
+    "id": "t5q16",
+    "objective": "Question 16 of 30",
+    "question": "A company stores sensitive customer data with a third-party cloud provider. Their contract includes a provision allowing the company to inspect the cloud provider's security controls, policies, and audit logs at any time. This provision is called:",
+    "options": {
+      "A": "Right-to-Audit Clause",
+      "B": "Data Processing Agreement",
+      "C": "Penetration Test Authorization",
+      "D": "SLA Performance Clause"
+    },
+    "correct": "A",
+    "explanation": "A right-to-audit clause gives an organization the contractual right to inspect a vendor's security controls, policies, procedures, and logs. It's an essential vendor management control when a third party handles sensitive data. Without it, you must trust the vendor's self-reported compliance. A DPA (B) specifically governs how personal data is processed under GDPR obligations. A pen test authorization (C) permits active security testing — not auditing controls. An SLA performance clause (D) specifies service metrics — not security audit rights."
+  },
+  {
+    "id": "t5q17",
+    "objective": "Question 17 of 30",
+    "question": "Before sharing proprietary source code with a development contractor, a company requires the contractor to sign an agreement preventing them from disclosing or using the code for any purpose outside the project. This agreement is a:",
+    "options": {
+      "A": "SLA",
+      "B": "MOU",
+      "C": "SOW",
+      "D": "NDA"
+    },
+    "correct": "D",
+    "explanation": "An NDA (Non-Disclosure Agreement) is a legal contract preventing parties from disclosing confidential information shared during a business relationship. Key signals: \"prevent disclosure,\" \"proprietary,\" \"confidentiality.\" NDAs are signed before sharing sensitive information. SLA (A) covers service performance levels. MOU (B) is non-binding intent — wouldn't adequately protect proprietary code. SOW (C) defines the scope of work — it describes what will be built, not what must be kept secret (though NDAs often accompany SOWs)."
+  },
+  {
+    "id": "t5q18",
+    "objective": "Question 18 of 30",
+    "question": "A company discovers that a software component embedded in its product contains a backdoor planted by a sub-vendor during manufacturing. This is BEST categorized as which type of third-party risk?",
+    "options": {
+      "A": "SLA violation",
+      "B": "Supply chain risk",
+      "C": "Insider threat",
+      "D": "Attestation failure"
+    },
+    "correct": "B",
+    "explanation": "Supply chain risk involves security threats introduced through the products, components, or services of third-party vendors and their subcontractors. A backdoor planted by a sub-vendor in a software component is a classic supply chain attack — the organization didn't directly do business with the sub-vendor, but still got compromised through the supply chain. Famous examples: SolarWinds (malicious update from trusted vendor), counterfeit networking hardware. SLA violation (A) is about service performance. Insider threat (C) involves someone inside the organization. Attestation failure (D) is about incorrect compliance declarations."
+  },
+  {
+    "id": "t5q19",
+    "objective": "Question 19 of 30",
+    "question": "A healthcare company in Texas collects patient data and processes it for EU citizens visiting the US. The company must comply with which regulation regarding those EU patients' data?",
+    "options": {
+      "A": "GDPR",
+      "B": "SOX",
+      "C": "PCI DSS",
+      "D": "FISMA"
+    },
+    "correct": "A",
+    "explanation": "GDPR (General Data Protection Regulation) applies to ANY organization that processes the personal data of EU citizens, regardless of where the organization is located. A Texas company processing EU citizen data must comply with GDPR for that data — location of the company doesn't matter; nationality/residency of the data subject does. This is one of GDPR's most important and frequently tested aspects. SOX (B) applies to US publicly traded companies' financial reporting. PCI DSS (C) applies to payment card data, not patient demographics. FISMA (D) applies to US federal agencies and contractors."
+  },
+  {
+    "id": "t5q20",
+    "objective": "Question 20 of 30",
+    "question": "A US hospital transmits electronic patient health records to an insurance company for billing purposes. Both organizations must comply with which regulation?",
+    "options": {
+      "A": "CCPA",
+      "B": "PCI DSS",
+      "C": "HIPAA",
+      "D": "SOX"
+    },
+    "correct": "C",
+    "explanation": "HIPAA (Health Insurance Portability and Accountability Act) applies to covered entities (healthcare providers, health plans, healthcare clearinghouses) and their business associates that handle Protected Health Information (PHI). A hospital and insurance company exchanging patient records for billing are both covered entities under HIPAA. CCPA (A) applies to California businesses and their handling of California residents' personal data broadly. PCI DSS (B) applies to payment card data, not health records. SOX (D) applies to financial reporting controls for publicly traded companies."
+  },
+  {
+    "id": "t5q21",
+    "objective": "Question 21 of 30",
+    "question": "What is the maximum annual HIPAA fine per violation category (e.g., \"willful neglect - corrected\")?",
+    "options": {
+      "A": "$500,000",
+      "B": "$1,919,173",
+      "C": "$5,000,000",
+      "D": "$10,000,000"
+    },
+    "correct": "B",
+    "explanation": "HIPAA fines range from $100 to $50,000 per violation depending on culpability (not knowing, reasonable cause, willful neglect corrected, willful neglect uncorrected). The annual maximum per violation category is approximately $1.9M (adjusted for inflation — commonly cited as $1.5M in older materials). This is distinct from GDPR's €20M/$4% turnover. PCI DSS fines can reach $100K/month from card brands. Knowing HIPAA fine ranges signals exam readiness — the $100-$50K per violation range and ~$1.9M annual cap are the key numbers."
+  },
+  {
+    "id": "t5q22",
+    "objective": "Question 22 of 30",
+    "question": "An EU citizen requests that a company delete all personal data it holds about them. The company must comply with this request under GDPR unless an exception applies. This right is called the:",
+    "options": {
+      "A": "Right of Access",
+      "B": "Right to Portability",
+      "C": "Right to Restriction",
+      "D": "Right to Erasure (Right to be Forgotten)"
+    },
+    "correct": "D",
+    "explanation": "The Right to Erasure (also called the Right to be Forgotten) under GDPR Article 17 gives data subjects the right to request deletion of their personal data. The right applies in most circumstances but has exceptions: legal obligations, public interest, scientific research, freedom of expression. Right of Access (A) = right to request a copy of data held about you. Right to Portability (B) = receive your data in machine-readable format for transfer to another provider. Right to Restriction (C) = limit how your data is processed in certain circumstances, without deletion."
+  },
+  {
+    "id": "t5q23",
+    "objective": "Question 23 of 30",
+    "question": "A company collects customer email addresses and decides to use them for a targeted advertising campaign. The company determines the purpose and means of processing. Under GDPR, what role does this company hold?",
+    "options": {
+      "A": "Data Controller",
+      "B": "Data Processor",
+      "C": "Data Subject",
+      "D": "Data Custodian"
+    },
+    "correct": "A",
+    "explanation": "A data controller is the entity that determines the PURPOSE and MEANS of processing personal data. In this scenario, the company decides to collect emails AND decides to use them for advertising — it's making the \"why\" and \"how\" decisions. That defines a controller. A data processor (B) processes data ON BEHALF of a controller, following the controller's instructions — like a marketing platform sending the emails on behalf of the company. The data subject (C) is the individual whose data is being processed — the customer. Data custodian (D) is an internal operational role that manages and protects data day-to-day."
+  },
+  {
+    "id": "t5q24",
+    "objective": "Question 24 of 30",
+    "question": "An e-commerce company processes Visa and Mastercard transactions. Which compliance framework must they adhere to in order to continue accepting card payments?",
+    "options": {
+      "A": "HIPAA",
+      "B": "GDPR",
+      "C": "PCI DSS",
+      "D": "SOX"
+    },
+    "correct": "C",
+    "explanation": "PCI DSS (Payment Card Industry Data Security Standard) applies to all organizations that store, process, or transmit cardholder data. It is mandated by card brands (Visa, Mastercard, Amex, etc.) and enforced through payment processors. Non-compliance can result in fines and loss of the ability to accept card payments. HIPAA (A) is healthcare-specific. GDPR (B) applies to EU personal data broadly, not specifically payment card security. SOX (D) applies to financial reporting for publicly traded companies."
+  },
+  {
+    "id": "t5q25",
+    "objective": "Question 25 of 30",
+    "question": "A pen tester is hired to test a bank's security. The tester is given NO information about the network, systems, or employees before beginning. The tester must discover everything through their own research and scanning. This is a:",
+    "options": {
+      "A": "White-box test",
+      "B": "Black-box test",
+      "C": "Gray-box test",
+      "D": "Blue team assessment"
+    },
+    "correct": "B",
+    "explanation": "A black-box (unknown environment) test means the pen tester starts with zero knowledge about the target — just like a real external attacker. They must discover everything through reconnaissance and scanning. This most realistically simulates an external threat actor. White-box (A) = full knowledge (network diagrams, source code, credentials). Gray-box (C) = partial knowledge (some documentation or a limited credential). Blue team assessment (D) is the defensive side — monitoring and responding, not attacking."
+  },
+  {
+    "id": "t5q26",
+    "objective": "Question 26 of 30",
+    "question": "A penetration tester is given complete access to network diagrams, source code repositories, architecture documentation, and valid credentials before beginning a test. Which environment type is this?",
+    "options": {
+      "A": "Gray-box",
+      "B": "Black-box",
+      "C": "Red team",
+      "D": "White-box"
+    },
+    "correct": "D",
+    "explanation": "White-box (known environment) testing provides the tester with full transparency — complete documentation, source code, network diagrams, credentials. This enables the most thorough testing because no time is spent on discovery. It simulates an insider or administrator-level threat perspective. Gray-box (A) = partial knowledge — some docs or a standard user account. Black-box (B) = zero knowledge. Red team (C) describes the attacker team role — it's not the same as the knowledge-level classification (a red team exercise can be black-box OR gray-box)."
+  },
+  {
+    "id": "t5q27",
+    "objective": "Question 27 of 30",
+    "question": "A pen tester researches a target company by reviewing its LinkedIn page, job postings, press releases, public DNS records, and WHOIS data. The tester has NOT sent any traffic to the company's systems. This activity is:",
+    "options": {
+      "A": "Passive reconnaissance",
+      "B": "Active reconnaissance",
+      "C": "Vulnerability scanning",
+      "D": "Port scanning"
+    },
+    "correct": "A",
+    "explanation": "Passive reconnaissance gathers information about a target WITHOUT directly interacting with the target's systems. The target cannot detect it because no traffic is sent to their systems. Examples: OSINT (LinkedIn, job postings, press releases), WHOIS lookups, DNS lookups against public DNS servers, reviewing public records and breach databases. Active reconnaissance (B) involves directly sending packets to the target — port scanning, banner grabbing, ping sweeps. These CAN be detected and logged. Vulnerability scanning (C) and port scanning (D) are both forms of active reconnaissance."
+  },
+  {
+    "id": "t5q28",
+    "objective": "Question 28 of 30",
+    "question": "The CFO signs a document declaring that the organization's financial controls are operating effectively and that the annual report accurately represents the company's financial position. This act is called:",
+    "options": {
+      "A": "Internal Audit",
+      "B": "Risk Acceptance",
+      "C": "Attestation",
+      "D": "Penetration Testing"
+    },
+    "correct": "C",
+    "explanation": "Attestation is a formal, often legal declaration by a responsible official that controls are working as intended or that statements are true. A CFO signing off on financial controls under SOX is a classic attestation. Under SOX Section 302, the CEO and CFO must personally attest to the accuracy of financial reports. Security attestations similarly require an authorized official to formally declare compliance. An internal audit (A) is a process of examining controls — not the formal declaration. Risk acceptance (B) is a risk strategy. Pen testing (D) is active security testing."
+  },
+  {
+    "id": "t5q29",
+    "objective": "Question 29 of 30",
+    "question": "The security team sends a fake invoice email to all employees every month. Employees who click the link are automatically redirected to a training page. Click rates have dropped from 28% to 6% over six months. This program is an example of:",
+    "options": {
+      "A": "Baiting campaign",
+      "B": "Phishing simulation campaign",
+      "C": "Insider threat detection",
+      "D": "Vulnerability assessment"
+    },
+    "correct": "B",
+    "explanation": "A phishing simulation campaign sends controlled, fake phishing emails to employees to measure susceptibility and deliver real-time training to those who fall for it. The measurable improvement (28% → 6% click rate) demonstrates program effectiveness — a key metric reported to management. Baiting (A) is a social engineering technique involving physical media (USB drives) or enticing offers, not email campaigns. Insider threat detection (C) identifies malicious employees, not susceptibility to external phishing. Vulnerability assessment (D) tests technical systems, not human behavior."
+  },
+  {
+    "id": "t5q30",
+    "objective": "Question 30 of 30",
+    "question": "An employee who recently received a negative performance review begins accessing servers outside their normal job function, downloads large amounts of sensitive files, and expresses frustration to colleagues about company management. This pattern of behavior MOST likely indicates:",
+    "options": {
+      "A": "Insider threat",
+      "B": "Phishing victim",
+      "C": "External attacker using stolen credentials",
+      "D": "Improper onboarding"
+    },
+    "correct": "A",
+    "explanation": "This scenario describes classic insider threat indicators: disgruntlement (negative review, expressing frustration), unusual access patterns (servers outside normal role), and data exfiltration behavior (large downloads). Insider threats are employees, contractors, or partners who misuse their legitimate access to harm the organization. Training employees to recognize and report these indicators is a key security awareness objective. Phishing victim (B) would show signs of credential compromise or malware, not deliberate anomalous access patterns. External attacker (C) wouldn't have logical access to servers outside their \"normal job function.\" Improper onboarding (D) is unrelated."
+  }
+]

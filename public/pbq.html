@@ -1,0 +1,72 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PBQ — Security+ Tutor</title>
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg">
+
+<div class="wrap">
+  <div class="panel" id="pickpanel">
+    <h2>Performance-based questions</h2>
+    <p class="hint" style="margin-top:-4px">
+      The real exam opens with two to six of these and gives you 60 minutes for up to 60
+      questions. A four-minute PBQ costs four multiple-choice answers, so the clock here
+      is the point as much as the content. Answer the quick ones first, come back to these.
+    </p>
+    <div class="taxpick" id="pick"></div>
+  </div>
+
+  <div id="run" hidden>
+    <div class="panel">
+      <div class="qmeta" id="qmeta"></div>
+      <h2 id="title" style="margin:6px 0 10px"></h2>
+      <p class="stem" id="brief"></p>
+      <p class="rowlabel" id="instruction"></p>
+    </div>
+
+    <div class="panel">
+      <div id="board"></div>
+      <p class="hint" id="boardhint" style="margin:14px 0 0"></p>
+    </div>
+
+    <div class="panel">
+      <p style="margin:0;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <button class="primary" id="submit">Submit &nbsp;<kbd>Ctrl</kbd>+<kbd>Enter</kbd></button>
+        <button id="quit">Back to the list</button>
+        <span class="hint" id="filled"></span>
+        <span class="spacer" style="flex:1"></span>
+        <span class="hint mono" id="timer"></span>
+      </p>
+    </div>
+  </div>
+
+  <div id="result" hidden>
+    <div class="panel">
+      <div class="scoreline">
+        <span class="big" id="score"></span>
+        <span class="muted" id="scoresub"></span>
+      </div>
+      <div class="hint" id="pace"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Cell by cell</h2>
+      <div id="cells"></div>
+    </div>
+
+    <div class="panel" id="notepanel" hidden>
+      <h2>What to take from this</h2>
+      <p class="explanation" id="note"></p>
+    </div>
+
+    <div class="panel">
+      <p style="margin:0;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="primary" id="retry">Run this one again</button>
+        <button id="another">Different PBQ</button>
+        <a class="btn" id="learnlink" href="/learn.html">Read the material</a>
+        <a class="btn" href="/">Dashboard</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/js/pbq.js"></script>

@@ -1,0 +1,392 @@
+[
+  {
+    "id": "t4q1",
+    "objective": "Question 1 of 30",
+    "question": "A security administrator is deploying Ansible playbooks across 500 workstations to enforce password complexity, disable USB storage, and enable host-based firewalls. Which phase of secure baseline management does this represent?",
+    "options": {
+      "A": "Establish",
+      "B": "Deploy",
+      "C": "Maintain",
+      "D": "Audit"
+    },
+    "correct": "B",
+    "explanation": "The three phases of secure baseline management are Establish (define the baseline), Deploy (push it to systems), and Maintain (audit and keep it current). Using Ansible to push configurations across 500 workstations is the Deploy phase — automated tooling distributing the already-defined baseline. Establish (A) would be the activity of writing the playbook and defining the security requirements. Maintain (C) involves ongoing audits after deployment to verify the baseline persists. Audit (D) is part of Maintain, not its own separate phase in this framework."
+  },
+  {
+    "id": "t4q2",
+    "objective": "Question 2 of 30",
+    "question": "An organization discovers that several smart HVAC controllers on their network still use the manufacturer's default username and password. What is the MOST critical first hardening step?",
+    "options": {
+      "A": "Encrypt all traffic between HVAC controllers and the management server",
+      "B": "Change the default passwords immediately",
+      "C": "Apply the latest firmware updates",
+      "D": "Place the HVAC controllers in a separate network segment"
+    },
+    "correct": "B",
+    "explanation": "IoT and embedded device security always starts with changing default credentials — this is the #1 IoT hardening step on the exam. Default passwords are publicly documented by manufacturers and are the first thing attackers try. While all other options (encryption, firmware updates, segmentation) are also valid hardening steps, the MOST CRITICAL and immediate first action is always changing default passwords. Default credentials make the device trivially compromisable in seconds — no sophistication required."
+  },
+  {
+    "id": "t4q3",
+    "objective": "Question 3 of 30",
+    "question": "A company allows employees to use their personal iPhones to access corporate email. The security team installs MDM software that can remotely wipe devices. Which mobile deployment model is this?",
+    "options": {
+      "A": "COPE",
+      "B": "CYOD",
+      "C": "BYOD",
+      "D": "MDM"
+    },
+    "correct": "C",
+    "explanation": "BYOD (Bring Your Own Device) — employees bring personal devices to work and access corporate resources. The company manages the corporate data/apps via MDM but does not own the device. COPE (A) = company buys the device and allows personal use; here the employee owns the iPhone. CYOD (B) = employee picks from a company-approved device list; here the employee chose their own device with no company approval required. MDM (D) is the management technology used within a deployment model, not the deployment model itself."
+  },
+  {
+    "id": "t4q4",
+    "objective": "Question 4 of 30",
+    "question": "A penetration tester runs Burp Suite against a web application and discovers that user input in a search field is executed directly in the database. What vulnerability was identified, and what is the correct input validation best practice to prevent it?",
+    "options": {
+      "A": "XSS; use blacklisting to block known-bad input",
+      "B": "SQL injection; use whitelisting to accept only known-good input",
+      "C": "Buffer overflow; use static code analysis",
+      "D": "SQL injection; use blacklisting to block SQL keywords"
+    },
+    "correct": "B",
+    "explanation": "User input executed directly in a database is SQL injection. The correct prevention is whitelisting — accepting only known-good input formats (numbers only, alphanumeric, specific character sets), not blacklisting. Blacklisting (blocking known-bad like \"DROP TABLE\" or \"SELECT *\") is easily bypassed with encoding tricks, case variations, or new SQL syntax. Whitelisting is fundamentally stronger because everything not explicitly allowed is blocked. Option D describes SQL injection correctly but specifies the wrong control. XSS (A) is JavaScript injection into web pages, not database queries. Buffer overflow (C) is a memory management issue, not user input to a database."
+  },
+  {
+    "id": "t4q5",
+    "objective": "Question 5 of 30",
+    "question": "A vulnerability scanner reports a CVE with a Base Score of 9.8, Temporal Score of 8.1 (patch available), and Environmental Score of 6.2 (affected system is isolated with no internet access). Which score should the security team use to prioritize remediation?",
+    "options": {
+      "A": "Base Score 9.8 — always use base score for prioritization",
+      "B": "Temporal Score 8.1 — the patch availability reduces urgency",
+      "C": "Environmental Score 6.2 — it reflects the actual risk in their specific context",
+      "D": "Average of all three scores"
+    },
+    "correct": "C",
+    "explanation": "The Environmental Score is the most meaningful for prioritization because it accounts for the organization's specific context — in this case, the system is isolated with no internet access, which significantly reduces exploitability. The Base Score (A) reflects intrinsic characteristics without considering your environment. The Temporal Score (B) adjusts for current exploit availability but still ignores your specific environment. CVSS was designed so that environmental scoring gives the most actionable risk rating for your organization. A critical CVE on an isolated system that handles non-sensitive data is much lower priority than a medium CVE on an internet-facing payment system."
+  },
+  {
+    "id": "t4q6",
+    "objective": "Question 6 of 30",
+    "question": "A security team's vulnerability scanner flags a library as \"End of Life with known critical CVE\" on a web server. Upon investigation, the library is not loaded by any active code path. This is BEST described as:",
+    "options": {
+      "A": "False negative — the scanner missed a real vulnerability",
+      "B": "True positive — the library is present and should be removed",
+      "C": "False positive — the scanner flagged a non-exploitable condition",
+      "D": "Exception — the risk should be accepted and documented"
+    },
+    "correct": "B",
+    "explanation": "This is a true positive — the library IS present, IS end-of-life, and DOES have a critical CVE. The scanner correctly identified a real condition. The fact that no active code path currently loads it does not make it a false positive — the library still exists on the system and could be called in the future, or exploited directly if an attacker gains access to the filesystem. The correct action is to remove the library (or update it). A false positive (C) would mean the vulnerability doesn't actually exist. A false negative (A) would mean the scanner missed an existing vulnerability. An exception (D) requires formal risk acceptance documentation — even then, the finding is still real, so B remains the most accurate description of what the scanner found."
+  },
+  {
+    "id": "t4q7",
+    "objective": "Question 7 of 30",
+    "question": "Which tool would BEST provide a visual real-time overview of network traffic volume, top talkers, and sudden traffic spikes that could indicate a DDoS attack?",
+    "options": {
+      "A": "Nessus",
+      "B": "NetFlow analyzer (e.g., SolarWinds)",
+      "C": "SIEM",
+      "D": "DLP"
+    },
+    "correct": "B",
+    "explanation": "NetFlow is specifically designed to collect and analyze network traffic flow data — volume, direction, top talkers, protocol breakdown. It's ideal for detecting DDoS (sudden traffic spikes from many sources) and data exfiltration (large outbound transfers). Nessus (A) is a vulnerability scanner — it scans for weaknesses, not traffic patterns. SIEM (C) aggregates logs and correlates events — it could receive NetFlow data as an input, but the question asks for the tool providing that real-time traffic visualization. DLP (D) prevents sensitive data from leaving — not traffic volume analysis. NetFlow is the specific technology for network traffic analytics and pattern detection."
+  },
+  {
+    "id": "t4q8",
+    "objective": "Question 8 of 30",
+    "question": "An organization wants to ensure that only Windows workstations with up-to-date antivirus signatures and full-disk encryption enabled can connect to the corporate network. Which technology enforces this?",
+    "options": {
+      "A": "EDR",
+      "B": "DLP",
+      "C": "NAC",
+      "D": "FIM"
+    },
+    "correct": "C",
+    "explanation": "Network Access Control (NAC) checks device posture (health) before allowing network access. It enforces conditions like: AV signatures must be current, disk encryption must be enabled, OS must have required patches. Devices that fail posture checks are quarantined or denied access. EDR (A) monitors and responds to threats on already-connected endpoints — it doesn't control whether a device can join the network. DLP (B) prevents data from leaving the network — not a connection control mechanism. FIM (D) monitors file and config changes — not network admission. The keyword \"connect to the corporate network\" + \"condition-based\" = NAC."
+  },
+  {
+    "id": "t4q9",
+    "objective": "Question 9 of 30",
+    "question": "A company's email logs show that their domain is being used to send phishing emails from IP addresses not owned by the company. Which email authentication record specifies which IP addresses are authorized to send email for the domain?",
+    "options": {
+      "A": "DKIM",
+      "B": "DMARC",
+      "C": "SPF",
+      "D": "SMTP relay"
+    },
+    "correct": "C",
+    "explanation": "SPF (Sender Policy Framework) is a DNS TXT record that lists the authorized IP addresses and mail servers allowed to send email on behalf of the domain. When a receiving mail server gets an email, it checks the sending IP against the domain's SPF record — if the IP isn't listed, the email fails SPF. This directly addresses the scenario: unauthorized IPs sending email for your domain. DKIM (A) validates message integrity with a cryptographic signature — it doesn't list authorized IPs. DMARC (B) is the policy layer that tells receivers what to do when SPF/DKIM fail — it depends on SPF and DKIM being configured first. SMTP relay (D) is a mail server configuration term, not an authentication standard."
+  },
+  {
+    "id": "t4q10",
+    "objective": "Question 10 of 30",
+    "question": "Analysts receive 800+ alerts per day from the SIEM, and real threats are being missed because analysts are overwhelmed. Which action BEST addresses this problem?",
+    "options": {
+      "A": "Deploy additional SIEM instances",
+      "B": "Implement alert tuning to reduce false positives",
+      "C": "Disable low-priority alert categories entirely",
+      "D": "Add more security analysts"
+    },
+    "correct": "B",
+    "explanation": "Alert tuning (adjusting detection thresholds and correlation rules to reduce false positives) directly addresses alert fatigue — the condition where too many low-quality alerts cause analysts to miss real threats. By refining what triggers alerts, the signal-to-noise ratio improves without disabling monitoring entirely. Adding SIEM instances (A) adds capacity but doesn't fix alert quality — you'd still get 800+ alerts per day. Disabling alert categories (C) is dangerous — you might disable detection of a real attack vector. Adding analysts (D) treats the symptom but not the cause — the better answer is to fix the alert quality first. Alert tuning is the correct operational response to alert fatigue."
+  },
+  {
+    "id": "t4q11",
+    "objective": "Question 11 of 30",
+    "question": "An organization places its public web server in a network zone separated from both the internet and the internal corporate LAN. What is this zone called?",
+    "options": {
+      "A": "VLAN",
+      "B": "Air gap",
+      "C": "Screened subnet / DMZ",
+      "D": "Honeynet"
+    },
+    "correct": "C",
+    "explanation": "A screened subnet (also called a DMZ — demilitarized zone) sits between the external network (internet) and the internal network. Public-facing services (web servers, mail servers, DNS) are placed here so external users can access them without ever reaching the internal LAN. If the web server is compromised, the attacker is contained in the DMZ. A VLAN (A) is a logical network segmentation within a LAN — it doesn't specifically describe this three-zone topology. An air gap (B) is a complete physical separation with no network connectivity at all. A honeynet (D) is a network of honeypot systems designed to detect and study attackers — not for hosting production services."
+  },
+  {
+    "id": "t4q12",
+    "objective": "Question 12 of 30",
+    "question": "Which access control model is being used when a Linux administrator configures SELinux security contexts to prevent a compromised Apache web server process from accessing /etc/passwd even if it's running as root?",
+    "options": {
+      "A": "DAC — Discretionary Access Control",
+      "B": "RBAC — Role-Based Access Control",
+      "C": "MAC — Mandatory Access Control",
+      "D": "ABAC — Attribute-Based Access Control"
+    },
+    "correct": "C",
+    "explanation": "SELinux enforces Mandatory Access Control — the system (kernel) enforces security policy that users and processes cannot override, even root. MAC uses labels/contexts to determine access. The Apache process has a specific SELinux context that doesn't include permission to read /etc/passwd, regardless of file owner permissions or the process running as root. This is MAC's defining characteristic: the OS enforces policy that overrides user/process discretion. DAC (A) would be standard Linux permissions where root CAN access anything. RBAC (B) assigns permissions based on job roles, not OS-level process contexts. ABAC (D) uses attribute-based policies — more complex and not how SELinux primarily operates."
+  },
+  {
+    "id": "t4q13",
+    "objective": "Question 13 of 30",
+    "question": "A financial institution uses a system where an analyst must request admin rights for a 2-hour maintenance window. The rights are granted automatically and revoked at the end of the window without any additional action. This is an example of:",
+    "options": {
+      "A": "Ephemeral credentials",
+      "B": "Password vaulting",
+      "C": "Just-in-Time permissions",
+      "D": "Role-Based Access Control"
+    },
+    "correct": "C",
+    "explanation": "Just-in-Time (JIT) permissions grant temporary elevated access for a defined window and automatically revoke it when the window expires. Key indicators: time-limited, auto-revoked, requested on-demand. This is JIT. Ephemeral credentials (A) are auto-generated temporary credentials (like AWS short-lived tokens) — they are temporary like JIT, but the distinguishing factor is they're typically generated per-session for automated systems, not human-requested maintenance windows. Password vaulting (B) is securely storing privileged credentials in an encrypted vault — not the same as time-limiting access. RBAC (D) is role-based permissions — it doesn't inherently involve time limits or auto-revocation."
+  },
+  {
+    "id": "t4q14",
+    "objective": "Question 14 of 30",
+    "question": "During an incident, a security analyst isolates a compromised workstation from the network while preserving its state for investigation. What IR phase does this action belong to, and what is the specific action called?",
+    "options": {
+      "A": "Eradication phase; patching",
+      "B": "Containment phase; quarantine",
+      "C": "Detection phase; alert tuning",
+      "D": "Recovery phase; restoration"
+    },
+    "correct": "B",
+    "explanation": "Containment is the IR phase focused on stopping the spread of an incident — limiting blast radius without destroying evidence. Quarantine is the specific action of isolating a system from the network (removing its ability to communicate) while keeping it powered on for forensic analysis. Key: \"preserving its state\" means this is not eradication (which removes the threat) and not recovery (which restores normal operations). Containment = stop the bleeding. Quarantine = the specific isolation mechanism. Eradication (A) comes after containment — it removes the malware/threat from the system. Detection (C) is earlier in the cycle — identifying that an incident occurred. Recovery (D) is after eradication — restoring systems to normal operation."
+  },
+  {
+    "id": "t4q15",
+    "objective": "Question 15 of 30",
+    "question": "A security team conducts a meeting where they walk through a hypothetical ransomware attack scenario, discussing what each team member would do at each stage. No systems are touched. What type of exercise is this?",
+    "options": {
+      "A": "Red team exercise",
+      "B": "Simulation",
+      "C": "Tabletop exercise",
+      "D": "Penetration test"
+    },
+    "correct": "C",
+    "explanation": "A tabletop exercise is a discussion-based exercise where participants talk through a hypothetical scenario without touching any actual systems. Low cost, low disruption, reveals gaps in plans and communication. The key indicators here: meeting/discussion format, hypothetical scenario, no systems touched. A simulation (B) involves active, real-time exercises with actual system interactions — more complex and resource-intensive. Red team (A) exercises involve actual attacks against real systems by a team simulating adversaries. Penetration testing (D) is technical testing of specific systems for vulnerabilities, not an IR exercise. The \"no systems touched\" and \"discussion\" elements are the defining characteristics of a tabletop."
+  },
+  {
+    "id": "t4q16",
+    "objective": "Question 16 of 30",
+    "question": "A forensics investigator creates a SHA-256 hash of a hard drive image immediately after acquisition. The same hash is verified at every step of the investigation. What does this protect?",
+    "options": {
+      "A": "Chain of custody documentation",
+      "C": "Data confidentiality via encryption",
+      "B": "Evidence integrity / preservation",
+      "D": "Legal hold compliance"
+    },
+    "correct": "C",
+    "explanation": "Hashing (SHA-256, MD5) creates a fingerprint of data. If any bit changes — even a single character — the hash changes completely. By hashing the forensic image at acquisition and verifying the same hash at every subsequent step, investigators prove the evidence was not modified (preserved). This is the preservation principle in digital forensics. Chain of custody (A) documents who handled evidence and when — hashing proves the evidence wasn't altered, chain of custody proves who had it. These are different but complementary. Encryption (B) protects confidentiality — hashing doesn't encrypt. Legal hold (D) is the directive to preserve data before investigation begins — the hashing happens during the investigation process."
+  },
+  {
+    "id": "t4q17",
+    "objective": "Question 17 of 30",
+    "question": "A threat hunter notices that a process on a workstation is making outbound connections to an external IP address every 4 hours, sending small amounts of data. Traditional AV has not flagged anything. What is this MOST likely indicating?",
+    "options": {
+      "A": "Normal Windows Update traffic",
+      "B": "Command-and-control (C2) beaconing",
+      "C": "DNS amplification attack",
+      "D": "SNMP trap communication"
+    },
+    "correct": "B",
+    "explanation": "Regular, periodic outbound connections to an external IP sending small amounts of data is the classic signature of Command-and-Control (C2) beaconing — malware \"checking in\" with its control server at regular intervals to receive instructions or exfiltrate data. The fact that AV didn't detect it suggests this may be a fileless malware, an obfuscated payload, or a novel variant that doesn't match known signatures. This is exactly what threat hunting is designed to catch — threats that evade automated detection. Windows Update (A) connects to Microsoft servers (known domains), not arbitrary external IPs, and not on precise 4-hour intervals. DNS amplification (C) is an outbound attack using DNS, not regular small-data check-ins. SNMP traps (D) are internal network monitoring messages, not external connections."
+  },
+  {
+    "id": "t4q18",
+    "objective": "Question 18 of 30",
+    "question": "What is the PRIMARY difference between EDR and XDR?",
+    "options": {
+      "A": "EDR is more expensive than XDR",
+      "B": "XDR integrates endpoint, network, and cloud data into one platform; EDR focuses only on endpoints",
+      "C": "EDR uses AI; XDR uses signature-based detection",
+      "D": "XDR replaces SIEM; EDR replaces antivirus"
+    },
+    "correct": "B",
+    "explanation": "EDR (Endpoint Detection and Response) focuses on monitoring, detecting, and responding to threats specifically on endpoints (workstations, servers, mobile devices). XDR (Extended Detection and Response) extends that scope by integrating data from endpoints + network + cloud + email + identity systems into a unified platform. XDR provides broader visibility and can correlate an attack across multiple vectors simultaneously — an EDR alone might see suspicious endpoint behavior but miss the network traffic context that reveals the full attack chain. XDR doesn't replace SIEM (D) — they serve different functions. Cost (A) is not the defining difference. Both EDR and XDR use behavioral analytics and AI (C)."
+  },
+  {
+    "id": "t4q19",
+    "objective": "Question 19 of 30",
+    "question": "A company's security policy requires that an employee's access rights be revoked automatically within minutes of their termination being processed in HR. Which automation use case addresses this?",
+    "options": {
+      "A": "Guard rails",
+      "B": "Continuous integration",
+      "C": "Ticket creation",
+      "D": "Enabling/disabling services and access"
+    },
+    "correct": "D",
+    "explanation": "Automatically enabling or disabling user access based on status changes (hired, terminated, role change) is the automation use case of enabling/disabling services and access. When HR processes a termination, this triggers an automated workflow that disables Active Directory accounts, revokes VPN certificates, removes email access, and deactivates badge credentials — all within minutes. Guard rails (A) are automated controls that prevent misconfiguration (e.g., can't create an unencrypted S3 bucket). Continuous integration (B) automates code testing in development pipelines. Ticket creation (C) auto-generates incident tickets — it might create a ticket as part of the offboarding, but the actual access revocation is enabling/disabling access."
+  },
+  {
+    "id": "t4q20",
+    "objective": "Question 20 of 30",
+    "question": "What is the CORRECT order of the incident response lifecycle phases?",
+    "options": {
+      "A": "Detection → Preparation → Analysis → Containment → Recovery → Eradication → Lessons Learned",
+      "B": "Preparation → Detection → Analysis → Containment → Eradication → Recovery → Lessons Learned",
+      "C": "Preparation → Detection → Containment → Analysis → Eradication → Recovery → Lessons Learned",
+      "D": "Preparation → Analysis → Detection → Containment → Recovery → Eradication → Lessons Learned"
+    },
+    "correct": "B",
+    "explanation": "This is the NIST SP 800-61 incident response lifecycle — memorize this sequence: P-D-A-C-E-R-L. Preparation comes first (build the plan before incidents happen). Detection identifies the incident. Analysis investigates scope and cause. Containment stops the spread. Eradication removes the threat completely. Recovery restores normal operations. Lessons Learned documents improvements. Common exam traps: swapping Containment and Analysis (you must analyze enough to contain effectively, but they are sequential); swapping Eradication and Recovery (you must fully remove the threat BEFORE restoring systems — otherwise you restore malware too)."
+  },
+  {
+    "id": "t4q21",
+    "objective": "Question 21 of 30",
+    "question": "A security engineer is configuring wireless security for a hospital network that handles ePHI. WPA2 is currently deployed. What should the engineer upgrade to, and why?",
+    "options": {
+      "A": "WEP — it's the oldest and most battle-tested standard",
+      "B": "WPA — it offers better compatibility with legacy devices",
+      "C": "WPA3 — it uses 192-bit encryption and provides forward secrecy",
+      "D": "Stay on WPA2 — it meets all regulatory requirements for healthcare"
+    },
+    "correct": "C",
+    "explanation": "WPA3 is the current recommended wireless security standard. It provides: 192-bit encryption (vs WPA2's 128-bit), forward secrecy (past traffic stays secure even if current session key is compromised), and protection against offline dictionary attacks (the KRACK vulnerability that affected WPA2). For a healthcare environment handling ePHI with HIPAA compliance requirements, WPA3 is the correct choice. WEP (A) is completely broken and has been deprecated for over a decade — never use WEP. WPA (B) is also outdated with known vulnerabilities. WPA2 (D) is functional but has known weaknesses (KRACK attack) and lacks forward secrecy — the question asks what the engineer SHOULD upgrade to, and WPA3 is the clear answer for a high-security environment."
+  },
+  {
+    "id": "t4q22",
+    "objective": "Question 22 of 30",
+    "question": "Which DMARC policy setting would cause emails that fail both SPF and DKIM checks to be silently dropped before reaching the recipient's inbox?",
+    "options": {
+      "A": "p=none",
+      "B": "p=quarantine",
+      "C": "p=reject",
+      "D": "p=monitor"
+    },
+    "correct": "C",
+    "explanation": "DMARC has three policy values: p=none (monitor only — emails still delivered, reports sent), p=quarantine (failed emails go to spam folder), p=reject (failed emails are blocked/dropped entirely before reaching inbox). For emails to be \"silently dropped before reaching the recipient's inbox,\" p=reject is the correct policy. Organizations typically start with p=none to monitor impact, move to p=quarantine, then p=reject once they're confident all legitimate mail passes authentication. p=monitor (D) is not a valid DMARC policy value — it doesn't exist in the standard. The monitoring function is served by p=none."
+  },
+  {
+    "id": "t4q23",
+    "objective": "Question 23 of 30",
+    "question": "A company must decommission 200 old laptops that contained confidential customer data. The IT team wants to reuse the hard drives in new equipment. Which is the MOST appropriate disposal method?",
+    "options": {
+      "A": "Physical destruction (shredding)",
+      "B": "Quick format of each drive",
+      "C": "Sanitization using DoD 5220.22-M or NIST 800-88",
+      "D": "Store in a locked room until further notice"
+    },
+    "correct": "C",
+    "explanation": "Sanitization (secure data wiping) is the correct method when drives will be REUSED. It overwrites all data using standards like DoD 5220.22-M (multi-pass overwrite) or NIST 800-88 (includes purge and clear methods) — making original data unrecoverable through conventional forensic means. Physical destruction (A) is correct when drives are being retired entirely — you can't reuse a shredded drive. Quick format (B) only removes the file allocation table — data is trivially recoverable with free tools. Storing drives (D) doesn't address the data security concern at all. The key differentiator: reuse = sanitization; end-of-life = destruction."
+  },
+  {
+    "id": "t4q24",
+    "objective": "Question 24 of 30",
+    "question": "An IDS detects anomalous traffic that turns out to be a legitimate network management tool performing a routine scan. This is BEST described as:",
+    "options": {
+      "A": "True positive",
+      "B": "False negative",
+      "C": "False positive",
+      "D": "True negative"
+    },
+    "correct": "C",
+    "explanation": "A false positive is when the security system raises an alert for something that is NOT actually a threat. Here: the IDS flagged legitimate network management traffic as suspicious — the alert fired (positive detection) but there was no real threat (false). True positive (A) = alert fires AND it's a real threat. False negative (B) = alert doesn't fire but there IS a real threat (the most dangerous situation). True negative (D) = no alert fires and there's no real threat (correct non-detection). Memory aid: True/False refers to whether the detection was accurate. Positive/Negative refers to whether an alert was raised."
+  },
+  {
+    "id": "t4q25",
+    "objective": "Question 25 of 30",
+    "question": "Which authentication factor category does a YubiKey hardware security key belong to?",
+    "options": {
+      "A": "Something you know",
+      "B": "Something you have",
+      "C": "Something you are",
+      "D": "Somewhere you are"
+    },
+    "correct": "B",
+    "explanation": "A YubiKey is a physical hardware security key — it's a device you physically possess. It falls under \"something you have\" (possession-based authentication). To authenticate, you must physically have the device and insert it or tap it. Something you know (A) = password, PIN, passphrase — knowledge-based. Something you are (C) = biometrics (fingerprint, iris, face) — inherence-based. Somewhere you are (D) = geolocation, IP address — location-based. YubiKey uses FIDO2/U2F standards and public-key cryptography, but the factor category is determined by what it IS (a physical device you possess), not how it works internally."
+  },
+  {
+    "id": "t4q26",
+    "objective": "Question 26 of 30",
+    "question": "A security team discovers that a critical production server running a legacy application cannot be patched because the vendor no longer supports it, and updating the OS breaks the application. What is the BEST vulnerability response strategy?",
+    "options": {
+      "A": "Accept the risk without any additional controls",
+      "B": "Implement compensating controls — network segmentation, enhanced monitoring, and WAF",
+      "C": "Shut down the server immediately",
+      "D": "Replace the server hardware with newer equipment"
+    },
+    "correct": "B",
+    "explanation": "When the primary control (patching) cannot be implemented due to technical or business constraints, compensating controls provide alternative risk reduction. For a legacy unpatched server: network segmentation (isolate it so attackers can't reach it directly), enhanced monitoring (detect exploitation attempts faster), and WAF or application firewall (filter malicious traffic before it hits the vulnerable service) all reduce risk without requiring a patch. Simply accepting risk (A) without additional controls is not a responsible answer when compensating controls are available. Shutting down (C) ignores the \"critical production\" requirement — the business can't function without it. Replacing hardware (D) doesn't fix the software vulnerability — the OS/application remains unpatched regardless of hardware."
+  },
+  {
+    "id": "t4q27",
+    "objective": "Question 27 of 30",
+    "question": "During a forensic investigation, a lawyer issues a directive requiring all email, chat logs, and documents related to a specific project to be preserved and not deleted. What is this called?",
+    "options": {
+      "A": "Chain of custody",
+      "B": "E-discovery",
+      "C": "Legal hold",
+      "D": "Data retention policy"
+    },
+    "correct": "C",
+    "explanation": "A legal hold (also called a litigation hold) is a directive issued when litigation is anticipated or in progress, requiring the organization to preserve all potentially relevant electronically stored information (ESI). It overrides normal data retention/deletion schedules. Chain of custody (A) documents evidence handling during an investigation — it's about tracking who touched evidence, not about the initial preservation directive. E-discovery (B) is the process of searching, collecting, and producing ESI in response to a legal request — it comes after legal hold is issued. Data retention policy (D) is a standing organizational policy about how long data is kept — not a specific legal directive triggered by litigation."
+  },
+  {
+    "id": "t4q28",
+    "objective": "Question 28 of 30",
+    "question": "An organization implements a policy that users in the Finance department can only access financial records, and users in HR can only access HR records, with no cross-department access. This MOST closely describes which access control model?",
+    "options": {
+      "A": "MAC — Mandatory Access Control",
+      "B": "RBAC — Role-Based Access Control",
+      "C": "DAC — Discretionary Access Control",
+      "D": "ABAC — Attribute-Based Access Control"
+    },
+    "correct": "B",
+    "explanation": "Role-Based Access Control assigns permissions based on job role/function rather than individual identity. Finance role → Finance records access. HR role → HR records access. Access is managed at the role level — add a user to a role and they inherit all permissions for that role. This is RBAC's defining characteristic: role membership determines access. MAC (A) uses system-enforced labels and is more restrictive — users can't change their own access. DAC (C) lets resource owners grant access to whomever they choose — more flexible and user-controlled. ABAC (D) uses multiple attributes (role + location + time + resource classification) simultaneously — more complex and granular than simple role-based. The scenario describes exactly what RBAC is designed for: organizing permissions around job functions."
+  },
+  {
+    "id": "t4q29",
+    "objective": "Question 29 of 30",
+    "question": "An ICS/SCADA system at a power plant cannot be taken offline for patching due to 24/7 operational requirements. The system runs on an outdated OS with known vulnerabilities. Which is the MOST appropriate security control?",
+    "options": {
+      "A": "Immediately apply all available patches during a scheduled weekend",
+      "B": "Network segmentation combined with strict access controls and monitoring",
+      "C": "Replace the SCADA system with a cloud-hosted solution",
+      "D": "Connect the system to the internet so vendors can provide remote patches"
+    },
+    "correct": "B",
+    "explanation": "ICS/SCADA systems present a classic security dilemma: they run critical infrastructure that cannot be taken offline, but they often run legacy OS and can't be patched easily. The recognized best practice is defense-in-depth through network segmentation (isolate the SCADA network from corporate IT and internet), strict access controls (limit who can communicate with SCADA systems), and enhanced monitoring (detect any breach quickly). These are compensating controls when patching is not feasible. Patching during a weekend (A) ignores the \"24/7 operational requirements\" — power plants don't get weekends off. Cloud-hosted SCADA (C) introduces new attack vectors and latency concerns for real-time control systems. Internet connectivity (D) would dramatically increase the attack surface — SCADA systems should never be directly internet-accessible."
+  },
+  {
+    "id": "t4q30",
+    "objective": "Question 30 of 30",
+    "question": "When collecting digital evidence from a compromised server, a forensic investigator captures RAM contents before powering off the system. Why is RAM captured BEFORE disk imaging?",
+    "options": {
+      "A": "Disk imaging takes longer and should be started first",
+      "B": "RAM is more volatile — it's lost when the system powers off",
+      "C": "RAM is more storage-efficient to capture",
+      "D": "Disk data gets corrupted when RAM is captured after shutdown"
+    },
+    "correct": "B",
+    "explanation": "The order of evidence collection follows the order of volatility — most volatile first. RAM (system memory) is completely lost the instant the system powers off. It contains running processes, network connections, decrypted data, encryption keys, malware that exists only in memory (fileless malware), user credentials, and command history. Once the power goes off, all of this is gone forever. Disk storage persists after power-off and can be captured later. This is why forensic investigators always capture RAM (memory dump) before disk imaging whenever possible. The other answers are incorrect: disk imaging speed (A) is irrelevant to the collection order. RAM capture doesn't affect disk integrity (D). RAM files can be very large — gigabytes — so C is also incorrect."
+  }
+]

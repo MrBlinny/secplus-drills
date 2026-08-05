@@ -1,0 +1,51 @@
+{
+ "schema_version": 2,
+ "note": "Nine rules for reading SY0-701 scenario questions, all grounded in CompTIA's own vocabulary and in how the objectives document is written. These are NOT induced from a logged miss history — no Sec+ practice exam has been sat in this repo yet — so they are stated as reading heuristics rather than as a diagnosis. Rule 1 is the highest-value one and is deliberately first. If a rule ever contradicts an item's credited answer, the objectives document wins and the rule is the thing that gets edited.",
+ "rules": [
+  {
+   "n": 1,
+   "when": "Two answers both look right",
+   "then": "Pick the one whose words appear in the objectives document. CompTIA writes distractors from adjacent real-world vocabulary, so the true-but-broader everyday term is usually the trap and the exact objective-list term is the credited answer."
+  },
+  {
+   "n": 2,
+   "when": "The stem uses a capitalised qualifier — BEST, MOST likely, FIRST, GREATEST",
+   "then": "More than one option is genuinely correct and the qualifier is doing the work. FIRST wants the earliest step not yet taken, BEST wants the one that addresses the stated cause rather than a symptom. Answering as if the qualifier were absent is how a practitioner loses a question they knew."
+  },
+  {
+   "n": 3,
+   "when": "The stem names an incident already in progress",
+   "then": "Answer from the incident response process in order: preparation, detection, analysis, containment, eradication, recovery, lessons learned. Do not skip ahead to the permanent fix — containment precedes eradication, and 'patch the vulnerability' is the wrong answer while the attacker still has a session open."
+  },
+  {
+   "n": 4,
+   "when": "The question asks which control to add and the scenario already has a control that was bypassed",
+   "then": "The answer is usually a different CLASS of control, not more of the same. 'More logging, stricter password rules, more training, another scan' are the manufactured distractors."
+  },
+  {
+   "n": 5,
+   "when": "A contract, regulation, or legal obligation is named in the stem",
+   "then": "The credited answer is the governance artifact — the right-to-audit clause, the agreement type, the retention requirement — not the technical fix that a practitioner would reach for first. Domain 5 is 20% of the exam and this is most of why."
+  },
+  {
+   "n": 6,
+   "when": "The stem gives you numbers: asset value, an exposure percentage, incidents per year",
+   "then": "It wants the quantitative formula, not judgement. SLE = asset value × exposure factor; ALE = SLE × ARO. If a question hands you figures and one option is a computed number, the qualitative answer is the distractor."
+  },
+  {
+   "n": 7,
+   "when": "The requirement is proving WHO did something, rather than protecting the contents",
+   "then": "That is non-repudiation, and the mechanism is a digital signature. Reaching for encryption is the classic upgrade error: encryption protects confidentiality, hashing proves integrity, only a signature binds an identity to the act."
+  },
+  {
+   "n": 8,
+   "when": "An option describes a sensible thing to do that is nowhere in the objectives",
+   "then": "Treat it as a distractor. This is rule 1 in its most dangerous form — the option reads as good practice and a practitioner will pick it precisely because it is what they would really do."
+  },
+  {
+   "n": 9,
+   "when": "The scenario is about a third party — a vendor, an MSP, a supplier",
+   "then": "Check whether the question is about assessing them before signing (5.3 vendor assessment and selection), binding them by contract (5.3 agreement types), or watching them afterwards (vendor monitoring). Those are three different credited answers to what sounds like one question."
+  }
+ ]
+}

@@ -1,0 +1,392 @@
+[
+  {
+    "id": "t4bq1",
+    "objective": "QUESTION 1 OF 30 · Objective 4.1",
+    "question": "A system administrator is hardening a new web server. Which action BEST reduces the server's attack surface?",
+    "options": {
+      "A": "Install all available software to ensure functionality",
+      "B": "Enable all service accounts with full admin privileges",
+      "C": "Remove unnecessary services, disable unused ports, and apply the principle of least privilege",
+      "D": "Connect the server directly to the internet for performance"
+    },
+    "correct": "C",
+    "explanation": "Attack surface reduction is the core of system hardening. Every service running, port open, or application installed is a potential entry point. Best practices: disable/uninstall unnecessary services, close unused ports, rename or disable default accounts, apply least privilege, enable logging, remove sample files, apply security baselines (CIS Benchmarks, DISA STIGs). The fewer entry points, the fewer vulnerabilities an attacker can exploit. \"Minimum viable configuration\" = hardening mindset."
+  },
+  {
+    "id": "t4bq2",
+    "objective": "QUESTION 2 OF 30 · Objective 4.1",
+    "question": "A security policy requires that all servers be configured according to documented security baselines before production deployment. What is the PRIMARY benefit of using security baselines?",
+    "options": {
+      "A": "Ensures consistent, secure configurations across all systems and provides a reference for detecting drift",
+      "B": "Eliminates the need for ongoing patching",
+      "C": "Automatically encrypts all data at rest",
+      "D": "Prevents all zero-day attacks"
+    },
+    "correct": "A",
+    "explanation": "Security baselines define the minimum secure state for a system type. Benefits: (1) Consistency — every server of the same type is identically hardened. (2) Drift detection — compare current config to baseline to find unauthorized changes. (3) Compliance — CIS Benchmarks and STIG baselines satisfy regulatory requirements. (4) Speed — new servers can be deployed from pre-hardened images. Baselines don't eliminate patching (B) — they define what to patch. They don't provide encryption or zero-day protection. SCAP (Security Content Automation Protocol) automates baseline compliance checking."
+  },
+  {
+    "id": "t4bq3",
+    "objective": "QUESTION 3 OF 30 · Objective 4.3",
+    "question": "A vulnerability scanner reports a critical vulnerability in a production web server. The vendor has released a patch, but the web application team needs 30 days to test compatibility. What should the security team implement immediately?",
+    "options": {
+      "A": "Ignore it until the patch is ready",
+      "B": "Shut down the web server",
+      "C": "Apply the patch immediately without testing",
+      "D": "Apply compensating controls (WAF rules, network restrictions) while the patch is being tested"
+    },
+    "correct": "D",
+    "explanation": "When you cannot patch immediately (compatibility testing required), apply compensating controls to reduce risk: WAF rules to block exploit patterns, IP allowlisting to restrict access, enhanced monitoring for exploitation attempts, network segmentation. This follows the vulnerability management lifecycle: identify → prioritize → remediate (or mitigate) → verify. Applying unvetted patches (C) to production can cause outages. Ignoring (A) is unacceptable for critical vulnerabilities. Shutting down (B) may be worse than controlled mitigation. Compensating controls bridge the gap."
+  },
+  {
+    "id": "t4bq4",
+    "objective": "QUESTION 4 OF 30 · Objective 4.3",
+    "question": "CVSS (Common Vulnerability Scoring System) scores range from 0 to 10. Which score range indicates a CRITICAL severity vulnerability?",
+    "options": {
+      "A": "1.0 – 3.9",
+      "B": "4.0 – 6.9",
+      "C": "9.0 – 10.0",
+      "D": "7.0 – 8.9"
+    },
+    "correct": "C",
+    "explanation": "CVSS severity scale: None = 0.0, Low = 0.1-3.9, Medium = 4.0-6.9, High = 7.0-8.9, Critical = 9.0-10.0. A perfect 10.0 = network-exploitable, no authentication, no user interaction, maximum impact. Famous examples: Log4Shell (CVSS 10.0), Heartbleed (CVSS 7.5). CVSS considers: Attack Vector, Attack Complexity, Privileges Required, User Interaction, Scope, and three impact scores (Confidentiality, Integrity, Availability). Critical vulns typically require immediate remediation (within 24-72 hours per most SLAs). High = within 30 days typically."
+  },
+  {
+    "id": "t4bq5",
+    "objective": "QUESTION 5 OF 30 · Objective 4.6",
+    "question": "A company implements a PAM (Privileged Access Management) solution. What is the PRIMARY purpose of PAM?",
+    "options": {
+      "A": "Manage end-user password resets",
+      "B": "Control, monitor, and audit access for accounts with elevated privileges (admin, root, service accounts)",
+      "C": "Provide SSO for all corporate applications",
+      "D": "Encrypt all administrative communications"
+    },
+    "correct": "B",
+    "explanation": "PAM specifically manages privileged accounts (admin, root, service accounts, shared credentials). Features: password vaulting (check out credentials when needed, auto-rotate after), session recording of privileged sessions, just-in-time access (grant privileges only when needed), least privilege enforcement. Why critical: 80%+ of data breaches involve privileged credential abuse. PAM limits the \"blast radius\" of a privileged compromise. Examples: CyberArk, BeyondTrust, Thycotic. IAM = manages all user identities. PAM = the high-security subset managing privileged accounts specifically."
+  },
+  {
+    "id": "t4bq6",
+    "objective": "QUESTION 6 OF 30 · Objective 4.6",
+    "question": "An employee changes roles from HR to Finance. What access management process must be performed to ensure the principle of least privilege is maintained?",
+    "options": {
+      "A": "Provision new Finance access and leave HR access in place",
+      "B": "Delete the account and create a new one",
+      "C": "De-provision HR access AND provision Finance access (role change process)",
+      "D": "No action needed — access is managed automatically"
+    },
+    "correct": "C",
+    "explanation": "Access creep (privilege creep) = accumulation of access rights over time, especially through role changes. If only new access is added (A), the employee retains unnecessary HR access they no longer need — violating least privilege. The correct process: revoke all HR permissions AND grant Finance permissions. This should be part of a formal offboarding/onboarding process triggered by HR system changes. Regular access reviews (recertification campaigns) catch accumulated access. User Lifecycle Management in IAM systems automates this through HRIS integration with provisioning systems."
+  },
+  {
+    "id": "t4bq7",
+    "objective": "QUESTION 7 OF 30 · Objective 4.7",
+    "question": "During incident response, the security team discovers an attacker has a foothold on a web server. Before removing the malware, they capture a forensic image of the server's RAM. Why is this important?",
+    "options": {
+      "A": "RAM contains volatile data (running processes, network connections, decryption keys) that is lost on shutdown",
+      "B": "RAM images are required by law enforcement",
+      "C": "RAM stores more data than disk",
+      "D": "RAM images are smaller and easier to analyze than disk images"
+    },
+    "correct": "A",
+    "explanation": "Order of volatility (most to least volatile): CPU registers/cache → RAM → Network connections/processes → Disk storage → Remote logs → Backups/archives. RAM captures: currently running processes (including fileless malware that only exists in memory), active network connections, open files, decryption keys (encryption keys in memory can be extracted), plaintext passwords. Once power is lost, RAM is erased. Digital forensics principle: collect most volatile evidence first. Tools: Volatility Framework for RAM analysis, FTK/dd for disk imaging. Chain of custody must be maintained."
+  },
+  {
+    "id": "t4bq8",
+    "objective": "QUESTION 8 OF 30 · Objective 4.7",
+    "question": "After containing a ransomware incident, the security team begins the \"lessons learned\" activity. When in the IR process does this occur?",
+    "options": {
+      "A": "Preparation phase",
+      "B": "Detection and Analysis phase",
+      "C": "Containment phase",
+      "D": "Post-Incident Activity (Post-Mortem) phase"
+    },
+    "correct": "D",
+    "explanation": "NIST SP 800-61 IR Phases: (1) Preparation — plans, tools, training. (2) Detection & Analysis — identify, analyze, prioritize. (3) Containment, Eradication, Recovery — stop spread, remove malware, restore. (4) Post-Incident Activity — lessons learned meeting, update policies/playbooks, report. \"Lessons learned\" = post-mortem = after the incident is fully resolved. Key output: incident report documenting timeline, root cause, impact, and improvements. This prevents the same incident from recurring. The lessons learned report should happen within 2 weeks of incident closure."
+  },
+  {
+    "id": "t4bq9",
+    "objective": "QUESTION 9 OF 30 · Objective 4.8",
+    "question": "A forensic investigator discovers that file timestamps on a hard drive appear to have been modified to make recently created files appear older. What type of anti-forensic technique is this?",
+    "options": {
+      "A": "Steganography",
+      "B": "Timestomping",
+      "C": "Log deletion",
+      "D": "Data wiping"
+    },
+    "correct": "B",
+    "explanation": "Timestomping = modifying file metadata (created, modified, accessed timestamps) to manipulate the forensic timeline. Attackers use it to hide when malicious files were placed on a system. Detection: MFT ($MFT) records on NTFS maintain multiple timestamps — some tools compare $STANDARD_INFORMATION (easily modified) vs. $FILE_NAME timestamps (harder to modify). Discrepancies indicate timestomping. Steganography = hiding data in files. Log deletion = removing event logs to hide activity. Data wiping = destroying evidence. Timestomping = manipulating WHEN evidence appears to have been created."
+  },
+  {
+    "id": "t4bq10",
+    "objective": "QUESTION 10 OF 30 · Objective 4.4",
+    "question": "A SIEM system is deployed in the SOC. What is the PRIMARY function of a SIEM?",
+    "options": {
+      "A": "Prevent malware execution on endpoints",
+      "B": "Encrypt sensitive data in the database",
+      "C": "Aggregate, correlate, and analyze security logs from across the environment to detect incidents",
+      "D": "Block network intrusions in real time"
+    },
+    "correct": "C",
+    "explanation": "SIEM (Security Information and Event Management): collects logs from firewalls, endpoints, servers, applications, IDS/IPS, cloud platforms — normalizes them to a common format, correlates events across sources, applies detection rules, generates alerts. Key capabilities: log aggregation + long-term retention, real-time correlation, threat intelligence integration, compliance reporting, dashboards. Does NOT block (IPS does that) or prevent malware (AV/EDR does that). SIEM = visibility + detection + investigation. Modern SIEM + SOAR = automated detection AND response."
+  },
+  {
+    "id": "t4bq11",
+    "objective": "QUESTION 11 OF 30 · Objective 4.4",
+    "question": "A security analyst is reviewing SIEM alerts and notices that 80% of alerts are false positives from a misconfigured rule. What should the analyst do to reduce noise while maintaining security coverage?",
+    "options": {
+      "A": "Disable the detection rule entirely",
+      "B": "Tune the detection rule to reduce false positives while maintaining true positive detection",
+      "C": "Ignore all alerts from that rule going forward",
+      "D": "Increase the rule's sensitivity to catch more events"
+    },
+    "correct": "B",
+    "explanation": "Alert fatigue = analysts stop paying attention because too many false positives = REAL alerts get missed. The solution is TUNING: adjust rule thresholds, add exceptions for known-good behavior, correlate with more context. Disabling (A) removes coverage. Ignoring (C) = alert fatigue problem continues. Increasing sensitivity (D) would generate MORE alerts, worsening the problem. A well-tuned SIEM generates high-fidelity alerts where most alerts are true positives. Security metrics include FP rate and true positive rate — both must be optimized. Regular rule reviews are part of SIEM maintenance."
+  },
+  {
+    "id": "t4bq12",
+    "objective": "QUESTION 12 OF 30 · Objective 4.5",
+    "question": "A web application firewall (WAF) is deployed in front of the company's e-commerce site. What attacks is a WAF specifically designed to protect against?",
+    "options": {
+      "A": "OWASP Top 10 application attacks (SQLi, XSS, CSRF, etc.)",
+      "B": "Network layer DDoS attacks",
+      "C": "Ransomware infections on endpoints",
+      "D": "Wireless network eavesdropping"
+    },
+    "correct": "A",
+    "explanation": "WAF operates at Layer 7 (application layer) and specifically protects web applications from: SQL injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), LFI/RFI (Local/Remote File Inclusion), path traversal, and other OWASP Top 10 attacks. WAFs inspect HTTP/HTTPS request/response content. WAF ≠ network firewall. Network firewall = Layer 3/4 (IP, ports). WAF = Layer 7 (HTTP content). DDoS protection requires specialized DDoS mitigation services. Endpoint protection requires EDR/AV. WAFs can operate in blocklist or allowlist mode; ModSecurity is an open-source WAF engine."
+  },
+  {
+    "id": "t4bq13",
+    "objective": "QUESTION 13 OF 30 · Objective 4.2",
+    "question": "A company implements a wireless network for employees. The IT team deploys a system that continuously monitors for unauthorized wireless access points. What is this type of unauthorized AP called?",
+    "options": {
+      "A": "Evil twin",
+      "B": "Deauthentication point",
+      "C": "Rogue access point",
+      "D": "War driving target"
+    },
+    "correct": "C",
+    "explanation": "Rogue AP = unauthorized wireless AP connected to the corporate network (typically plugged into a network jack by an employee wanting better coverage, or by an attacker). Bypasses network security controls. Evil twin = attacker-controlled AP with the same SSID as the legitimate network, designed to lure victims to connect (performs MITM). Rogue APs are detected by WIDS (Wireless Intrusion Detection Systems) that monitor for unauthorized SSIDs and MAC addresses. War driving = scanning for wireless networks from a vehicle. The question asks about an unauthorized AP — rogue AP is the specific term."
+  },
+  {
+    "id": "t4bq14",
+    "objective": "QUESTION 14 OF 30 · Objective 4.6",
+    "question": "Which authentication protocol is used by most enterprise networks to authenticate users to network devices like switches and VPNs, supporting both CHAP and PAP, and encrypts only the password?",
+    "options": {
+      "A": "RADIUS",
+      "B": "TACACS+",
+      "C": "LDAP",
+      "D": "Kerberos"
+    },
+    "correct": "A",
+    "explanation": "RADIUS vs TACACS+ comparison: RADIUS = encrypts only the password, uses UDP 1812/1813, combines Authentication + Authorization, good for network access (VPNs, 802.1X, WiFi). TACACS+ = encrypts the ENTIRE packet, uses TCP 49, separates AAA (Authentication, Authorization, Accounting) — better for device administration (managing routers/switches). Key exam differentiator: RADIUS = password-only encryption, UDP. TACACS+ = full encryption, TCP, AAA separation. For \"network access\" (users connecting to VPN or WiFi) = RADIUS. For \"network device administration\" = TACACS+."
+  },
+  {
+    "id": "t4bq15",
+    "objective": "QUESTION 15 OF 30 · Objective 4.7",
+    "question": "During incident containment, the security team isolates the compromised system from the network. What is the NEXT step in the NIST IR process after containment?",
+    "options": {
+      "A": "Preparation",
+      "B": "Post-incident review",
+      "C": "Eradication",
+      "D": "Detection"
+    },
+    "correct": "C",
+    "explanation": "NIST IR Phases in order: (1) Preparation → (2) Detection & Analysis → (3) Containment → (4) Eradication → (5) Recovery → (6) Post-Incident Activity. After containing the incident (stopping spread), eradication removes the root cause: delete malware, close backdoors, revoke compromised credentials, patch exploited vulnerability. Then recovery restores systems to operation. Then post-incident review. Note: containment and eradication often overlap — you may eradicate while still containing. But the sequence is: stop it first (contain), then remove it (eradicate), then restore (recover)."
+  },
+  {
+    "id": "t4bq16",
+    "objective": "QUESTION 16 OF 30 · Objective 4.8",
+    "question": "A forensic investigator copies a hard drive to preserve evidence. They compute a SHA-256 hash of the original and the copy. The hashes match. What does this prove?",
+    "options": {
+      "A": "The drive contains no malware",
+      "B": "The copy is an exact, unaltered bit-for-bit image of the original — integrity is verified",
+      "C": "The copy was made using legal procedures",
+      "D": "The investigator has proper authorization"
+    },
+    "correct": "B",
+    "explanation": "Hashing verifies INTEGRITY of forensic images. Matching hashes = the copy is bit-for-bit identical to the original — no data was added, removed, or modified during imaging. This is critical for evidence admissibility in court — it proves the forensic image hasn't been tampered with. The hash should be documented in the chain of custody record. All forensic analysis is performed on the COPY, never the original. Write blockers prevent accidental modification of the original drive during imaging. SHA-256 (preferred) or MD5 are both used, but SHA-256 is stronger."
+  },
+  {
+    "id": "t4bq17",
+    "objective": "QUESTION 17 OF 30 · Objective 4.9",
+    "question": "What is the purpose of a SOAR (Security Orchestration, Automation, and Response) platform?",
+    "options": {
+      "A": "Store and analyze long-term security logs",
+      "B": "Scan systems for vulnerabilities automatically",
+      "C": "Manage user identities and access requests",
+      "D": "Automate security workflows and incident response playbooks across multiple security tools"
+    },
+    "correct": "D",
+    "explanation": "SOAR extends SIEM by adding automation: when SIEM detects an alert, SOAR automatically executes a response playbook. Example: SIEM detects malware → SOAR automatically isolates the endpoint (API to EDR), blocks the IP (API to firewall), creates a ticket, notifies the analyst. SOAR reduces MTTR (Mean Time to Respond) dramatically. SIEM = detect + alert. SOAR = automated response. Together = modern SOC efficiency. SOAR platforms: Splunk SOAR (Phantom), Palo Alto XSOAR, IBM Resilient. Key benefit: handles repetitive, low-level tasks (phishing triage, IOC blocking) automatically."
+  },
+  {
+    "id": "t4bq18",
+    "objective": "QUESTION 18 OF 30 · Objective 4.5",
+    "question": "Which technology intercepts DNS queries and compares requested domains against threat intelligence feeds, blocking connections to known malicious domains before they can establish?",
+    "options": {
+      "A": "WAF",
+      "B": "IPS",
+      "C": "DNS sinkhole / DNS filtering",
+      "D": "NAC"
+    },
+    "correct": "C",
+    "explanation": "DNS sinkhole: when a device tries to resolve a malicious domain (e.g., C2 server), the DNS sinkhole returns a fake response (internal sinkhole IP) instead of the real IP, preventing the connection. Also used to redirect attempted malware C2 calls so they can be analyzed. DNS filtering (Cisco Umbrella, Cloudflare Gateway) blocks malicious/inappropriate domains at the DNS layer — before any TCP connection is established. Very effective against: C2 communication, phishing, malware distribution. Operates at Layer 7 (DNS protocol) earlier in the attack chain than IP-based blocking. WAF protects web apps; IPS blocks attack traffic; NAC controls device access."
+  },
+  {
+    "id": "t4bq19",
+    "objective": "QUESTION 19 OF 30 · Objective 4.6",
+    "question": "A company implements federated identity management using SAML. An employee logs into their corporate account and can immediately access Salesforce, Workday, and Box without additional logins. What is this experience called?",
+    "options": {
+      "A": "Single Sign-On (SSO)",
+      "B": "Multi-factor authentication",
+      "C": "Just-in-time access",
+      "D": "Directory synchronization"
+    },
+    "correct": "A",
+    "explanation": "SSO = one authentication grants access to multiple applications. SAML 2.0 is the protocol enabling SSO for web apps — the Identity Provider (IdP, e.g., Azure AD, Okta) issues assertions to Service Providers (Salesforce, Workday). Benefits: fewer passwords (less password fatigue), centralized access control, faster deprovisioning (disable one account = all access revoked). Risk: SSO is a single point of failure — if the IdP is down or account is compromised, ALL services are affected. MFA should protect the SSO login. SAML = enterprise SSO. OAuth/OIDC = modern API-oriented federation."
+  },
+  {
+    "id": "t4bq20",
+    "objective": "QUESTION 20 OF 30 · Objective 4.3",
+    "question": "An authenticated scan discovers a vulnerability on a server that an unauthenticated scan missed. What is the PRIMARY advantage of authenticated scanning over unauthenticated scanning?",
+    "options": {
+      "A": "Authenticated scans are faster",
+      "B": "Authenticated scans provide deeper visibility — checking installed software versions, registry keys, configurations that external scanners can't see",
+      "C": "Authenticated scans don't require network access",
+      "D": "Authenticated scans can fix vulnerabilities automatically"
+    },
+    "correct": "B",
+    "explanation": "Unauthenticated scan = external view — sees only what's visible from the network (open ports, service banners). Misses: unpatched software versions, registry misconfigurations, locally installed vulnerable apps, OS patch levels. Authenticated scan = logs in with credentials and inspects the system from the inside — sees installed software versions, missing patches, config file contents, registry values, local user accounts. Much more complete and accurate. Risk: scanner credentials must be secured (if compromised, attacker has privileged access to all scanned systems). Credentialed scans are best practice for internal vulnerability management."
+  },
+  {
+    "id": "t4bq21",
+    "objective": "QUESTION 21 OF 30 · Objective 4.5",
+    "question": "An email security gateway detects a phishing email, quarantines it, creates an alert, and updates the firewall to block the phishing domain — all without analyst intervention. This is an example of:",
+    "options": {
+      "A": "Manual incident response",
+      "B": "Signature-based detection",
+      "C": "Security automation and orchestration",
+      "D": "Threat hunting"
+    },
+    "correct": "C",
+    "explanation": "Security automation = automated response actions without human intervention. Orchestration = coordinating multiple security tools through APIs (email gateway + firewall + ticketing system acting together). This is the core value of SOAR — a single detection triggers a multi-step response across multiple tools. Benefits: speed (seconds vs. minutes for human response), consistency (no missed steps), analyst focus on complex cases. The exam distinguishes: automation (single-system, rule-based actions) vs. orchestration (coordinating multiple systems). Both are part of the SOAR concept and modern Zero Trust architectures."
+  },
+  {
+    "id": "t4bq22",
+    "objective": "QUESTION 22 OF 30 · Objective 4.4",
+    "question": "NetFlow data from a router shows a server exporting 50GB of data to an external IP at 2 AM. No scheduled transfers are known for this time. What type of monitoring data is NetFlow?",
+    "options": {
+      "A": "Full packet capture (PCAP)",
+      "B": "Network flow data (metadata about connections: IP, port, duration, bytes)",
+      "C": "Application logs",
+      "D": "Endpoint telemetry"
+    },
+    "correct": "B",
+    "explanation": "NetFlow = network traffic metadata: source/destination IP, ports, protocol, bytes transferred, duration, packet count. Does NOT contain the actual packet payload (that's PCAP/full packet capture). Benefits: lightweight (metadata only), stored long-term for trend analysis, reveals who talked to whom and how much data moved. Detects: data exfiltration (large unusual transfers), lateral movement, beaconing (regular small connections). PCAP captures full content — more detail but requires much more storage. NetFlow is the foundation of network behavior analysis (NBA). SIEM ingests NetFlow for correlation."
+  },
+  {
+    "id": "t4bq23",
+    "objective": "QUESTION 23 OF 30 · Objective 4.1",
+    "question": "An organization wants to ensure that only applications from the company's approved software list can execute on employee workstations. Which control best achieves this?",
+    "options": {
+      "A": "Antivirus with signature updates",
+      "B": "Host-based firewall",
+      "C": "Group Policy password requirements",
+      "D": "Application allowlisting (AppLocker / WDAC)"
+    },
+    "correct": "D",
+    "explanation": "Application allowlisting = only approved applications can run, anything else is blocked by default. Opposite of blocklisting (blacklisting) which blocks known-bad and allows everything else. Allowlisting: hardest to bypass (attacker can't run any unapproved tool), prevents zero-day malware, prevents Shadow IT. Drawback: administrative overhead (must approve new apps). Windows: AppLocker (Windows 7+) and WDAC (Windows Defender Application Control). AV (A) catches known signatures. Host firewall (B) controls network connections. Password policy (C) is authentication control. Allowlisting = execution control = strongest endpoint hardening measure."
+  },
+  {
+    "id": "t4bq24",
+    "objective": "QUESTION 24 OF 30 · Objective 4.2",
+    "question": "An asset inventory scan discovers a server in the data center that is not in the CMDB (Configuration Management Database). This is known as:",
+    "options": {
+      "A": "A rogue or shadow asset — unknown/unmanaged device on the network",
+      "B": "A honeypot",
+      "C": "A decommissioned server",
+      "D": "A hot standby server"
+    },
+    "correct": "A",
+    "explanation": "An unmanaged device on the network is a shadow/rogue asset — IT doesn't know it exists, so it's not patched, monitored, or configured securely. Common causes: developers provisioning test servers, cloud VMs spun up without IT involvement, forgotten legacy systems. Risk: unpatched, unmonitored, potential entry point for attackers. Asset management is foundational — you can't protect what you don't know about (CIS Control #1 is Hardware Inventory, #2 is Software Inventory). CMDB = authoritative asset register. Discovered assets not in CMDB must be investigated, documented, or remediated."
+  },
+  {
+    "id": "t4bq25",
+    "objective": "QUESTION 25 OF 30 · Objective 4.6",
+    "question": "An employee on a business trip connects to a public WiFi hotspot at an airport and then establishes a VPN connection to the corporate network. What is the PRIMARY security purpose of the VPN?",
+    "options": {
+      "A": "Block the employee from visiting non-work websites",
+      "B": "Allow the employee to access higher bandwidth",
+      "C": "Create an encrypted tunnel that protects data from eavesdropping on the untrusted public network",
+      "D": "Provide two-factor authentication"
+    },
+    "correct": "C",
+    "explanation": "VPN (Virtual Private Network) creates an encrypted tunnel over an untrusted network (public WiFi, internet). All traffic is encrypted before leaving the device, travels through the tunnel, and is decrypted at the corporate gateway. Protects against: eavesdropping (WiFi sniffing), MITM attacks on public networks. VPN protocols: IPsec (site-to-site common), SSL/TLS VPN (clientless web-based), OpenVPN, WireGuard. Always-on VPN with split tunneling: decides which traffic goes through the tunnel. VPN = confidentiality over untrusted networks. Not authentication (MFA) or content filtering (proxy)."
+  },
+  {
+    "id": "t4bq26",
+    "objective": "QUESTION 26 OF 30 · Objective 4.8",
+    "question": "A chain of custody document for digital evidence must record which of the following information?",
+    "options": {
+      "A": "The attacker's identity",
+      "B": "The cost of the incident",
+      "C": "The source code of the malware",
+      "D": "Who collected evidence, when, where, what was collected, and every person who had custody"
+    },
+    "correct": "D",
+    "explanation": "Chain of custody documents the complete handling history of evidence: who collected it, when and where, what was collected (description, serial numbers, hashes), and EVERY person who subsequently had access/custody. This is critical for legal admissibility — courts must be convinced the evidence wasn't tampered with. A break in the chain of custody can invalidate evidence. Chain of custody = integrity + accountability for evidence. Digital evidence requires hash verification at each transfer to prove integrity. Physical evidence requires sealed containers with tamper-evident tape and signatures."
+  },
+  {
+    "id": "t4bq27",
+    "objective": "QUESTION 27 OF 30 · Objective 4.7",
+    "question": "A security team proactively searches through network logs and endpoint telemetry for evidence of threats that may have evaded automated detection. What is this practice called?",
+    "options": {
+      "A": "Vulnerability scanning",
+      "B": "Threat hunting",
+      "C": "Penetration testing",
+      "D": "Incident response"
+    },
+    "correct": "B",
+    "explanation": "Threat hunting = proactive, human-led search for threats that automated tools didn't detect. Hunters use hypotheses based on threat intelligence: \"If an APT used technique X, what evidence would we see?\" Then they search EDR/SIEM data for those indicators. Different from: Vulnerability scanning (finds weaknesses, not active threats). Penetration testing (authorized simulated attack). Incident response (reactive to known incidents). Threat hunting is PROACTIVE before an alert fires. Requires skilled analysts, threat intelligence, and good data sources. Assumption of breach: \"they're already in, let's find them.\""
+  },
+  {
+    "id": "t4bq28",
+    "objective": "QUESTION 28 OF 30 · Objective 4.3",
+    "question": "A vulnerability report shows that a critical server has a CVSS 9.8 vulnerability, but the server has no network connectivity and is physically locked in a secure room. How should this vulnerability be prioritized?",
+    "options": {
+      "A": "Patch immediately — all CVSS 9.8 vulnerabilities are critical priority",
+      "B": "Ignore it — the server is old and will be replaced",
+      "C": "Lower priority — environmental controls (no network, physical security) reduce actual risk",
+      "D": "Immediately take the server offline"
+    },
+    "correct": "C",
+    "explanation": "Risk = Likelihood × Impact. CVSS measures inherent severity, but RISK considers the specific environment. If the server has: no network connectivity (can't be exploited remotely), physical access controls (no unauthorized physical access), compensating controls — the actual exploitability is very low despite the high CVSS score. Risk-based vulnerability prioritization uses CVSS as a starting point but adjusts for: asset criticality, exploitability in your environment, existing compensating controls. A CVSS 7.0 on a public-facing web server may be higher RISK than a CVSS 9.8 on an air-gapped system."
+  },
+  {
+    "id": "t4bq29",
+    "objective": "QUESTION 29 OF 30 · Objective 4.6",
+    "question": "A company wants all employee mobile devices to automatically receive a security policy, have encryption enabled, and be remotely wipeable if lost. What solution enables this?",
+    "options": {
+      "A": "MDM (Mobile Device Management)",
+      "B": "NAC",
+      "C": "PAM",
+      "D": "DLP"
+    },
+    "correct": "A",
+    "explanation": "MDM enrolls and manages mobile devices (iOS, Android, Windows). Capabilities: push security policies (PIN requirements, encryption, app restrictions), remote wipe (selective or full wipe), app distribution, inventory, compliance monitoring, geolocation. Remote wipe is a critical feature for lost/stolen devices. MAM (Mobile Application Management) manages only apps without full device control. EMM (Enterprise Mobility Management) = MDM + MAM + identity management. Examples: Microsoft Intune, Jamf, VMware Workspace ONE. BYOD programs often use MAM for personal devices, MDM for corporate devices."
+  },
+  {
+    "id": "t4bq30",
+    "objective": "QUESTION 30 OF 30 · Objective 4.4",
+    "question": "A SOC receives threat intelligence indicating that an IP address has been actively used for C2 communication by a known APT. The threat intel includes IOCs (Indicators of Compromise). What should the security team do FIRST?",
+    "options": {
+      "A": "Publish a press release about the threat",
+      "B": "Search historical SIEM/EDR logs for any connections to the IOC, then block the IP and domain",
+      "C": "Wait for the antivirus vendor to update signatures",
+      "D": "Hire a penetration tester to investigate"
+    },
+    "correct": "B",
+    "explanation": "When receiving threat intelligence with IOCs: (1) Search backward — check SIEM/EDR for ANY past connections to that IP/domain — you may already be compromised. (2) Block forward — update firewall rules, DNS sinkhole, and proxy blocklists to prevent future connections. (3) Investigate if historical matches found — initiate IR process. IOC types: IP addresses, domains, file hashes (MD5/SHA-256), mutexes, registry keys, user-agent strings. Threat intel integration into SIEM enables automated IOC searching and alerting. STIX/TAXII = standards for sharing threat intelligence between organizations."
+  }
+]

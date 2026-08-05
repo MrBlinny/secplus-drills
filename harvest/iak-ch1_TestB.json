@@ -1,0 +1,392 @@
+[
+  {
+    "id": "t1bq1",
+    "objective": "QUESTION 1 OF 30 · Objective 1.1",
+    "question": "A company deploys security cameras throughout its facility. Which control category BEST describes this implementation?",
+    "options": {
+      "A": "Technical, Preventive",
+      "B": "Administrative, Detective",
+      "C": "Physical, Detective",
+      "D": "Physical, Preventive"
+    },
+    "correct": "C",
+    "explanation": "Security cameras are physical controls because they exist in the real world (not software/policy). They are detective controls because they RECORD and help identify incidents — they do not prevent entry. A physical preventive control would be a locked door or barrier. A technical control would be software like IDS. Detective = identify/record during or after; Preventive = stop before occurrence."
+  },
+  {
+    "id": "t1bq2",
+    "objective": "QUESTION 2 OF 30 · Objective 1.1",
+    "question": "A security policy states that all employees must complete annual security awareness training. What type of control is this?",
+    "options": {
+      "A": "Technical, Preventive",
+      "B": "Administrative, Directive",
+      "C": "Operational, Corrective",
+      "D": "Physical, Deterrent"
+    },
+    "correct": "B",
+    "explanation": "A policy mandating training is Administrative (policy/procedure-based) and Directive (it directs or mandates employee behavior). Directive controls tell people what they must do. This is different from Preventive (blocks bad things) or Deterrent (discourages). Administrative controls = policies, procedures, training, background checks — they manage behavior through governance, not technology or physical measures."
+  },
+  {
+    "id": "t1bq3",
+    "objective": "QUESTION 3 OF 30 · Objective 1.1",
+    "question": "After a ransomware attack encrypts critical files, the security team restores them from an offline backup. What control type does the backup system represent?",
+    "options": {
+      "A": "Preventive",
+      "B": "Detective",
+      "C": "Compensating",
+      "D": "Corrective"
+    },
+    "correct": "D",
+    "explanation": "Corrective controls are used AFTER an incident to restore normal operations. Restoring from backup is the textbook corrective action — it corrects the damage caused by the attack. Preventive would have stopped the ransomware. Detective would have identified the ransomware. Compensating controls fill gaps when preferred controls aren't feasible. Backups used for recovery = Corrective."
+  },
+  {
+    "id": "t1bq4",
+    "objective": "QUESTION 4 OF 30 · Objective 1.2",
+    "question": "A financial institution requires that no single employee can both initiate AND approve a wire transfer. Which security principle does this BEST illustrate?",
+    "options": {
+      "A": "Separation of duties",
+      "B": "Least privilege",
+      "C": "Need to know",
+      "D": "Dual control"
+    },
+    "correct": "A",
+    "explanation": "Separation of duties (SoD) ensures no single person can complete a high-risk transaction from start to finish — preventing fraud and errors. One person initiates, another approves. Dual control (D) is similar but requires TWO people to simultaneously perform one action (like two-person launch codes) rather than splitting sequential steps. Least privilege limits permissions; need-to-know limits information access. SoD = split the task."
+  },
+  {
+    "id": "t1bq5",
+    "objective": "QUESTION 5 OF 30 · Objective 1.2",
+    "question": "The CIA triad component that ensures data has NOT been altered or tampered with is BEST described as:",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Integrity",
+      "C": "Availability",
+      "D": "Non-repudiation"
+    },
+    "correct": "B",
+    "explanation": "Integrity ensures data is accurate, complete, and not altered without authorization. Hash functions (MD5, SHA-256) verify integrity — if the hash changes, data was modified. Confidentiality = only authorized parties can access data. Availability = data is accessible when needed. Non-repudiation = proof that an action occurred (digital signatures). The exam often tests these definitions — Integrity = not tampered with."
+  },
+  {
+    "id": "t1bq6",
+    "objective": "QUESTION 6 OF 30 · Objective 1.2",
+    "question": "An attacker floods a web server with millions of requests, making it unavailable to legitimate users. Which CIA triad component is being violated?",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Integrity",
+      "C": "Availability",
+      "D": "Authentication"
+    },
+    "correct": "C",
+    "explanation": "A DDoS (Distributed Denial of Service) attack targets Availability — the server can't respond to legitimate users. The data isn't stolen (Confidentiality) or modified (Integrity) — it's simply unavailable. Availability controls include load balancers, redundancy, DDoS mitigation services (like Cloudflare), and rate limiting. Any time a system is \"taken down\" or made unreachable, think Availability violation."
+  },
+  {
+    "id": "t1bq7",
+    "objective": "QUESTION 7 OF 30 · Objective 1.2",
+    "question": "Which authentication factor type does a fingerprint scan represent?",
+    "options": {
+      "A": "Something you know",
+      "B": "Something you have",
+      "C": "Something you are",
+      "D": "Somewhere you are"
+    },
+    "correct": "C",
+    "explanation": "Biometrics (fingerprint, iris scan, facial recognition, voice recognition) are \"Something you are\" — they are inherent physical characteristics. Something you know = passwords, PINs, security questions. Something you have = smart card, hardware token, phone (OTP). Somewhere you are = GPS location, IP address-based access. MFA requires at least two DIFFERENT factor types — two passwords is not MFA."
+  },
+  {
+    "id": "t1bq8",
+    "objective": "QUESTION 8 OF 30 · Objective 1.2",
+    "question": "A user's account shows login attempts from both New York and Tokyo within the same 5-minute window. What authentication concept would flag this as suspicious?",
+    "options": {
+      "A": "Time-based OTP",
+      "B": "Certificate-based authentication",
+      "C": "Kerberos ticketing",
+      "D": "Impossible travel / Context-aware authentication"
+    },
+    "correct": "D",
+    "explanation": "Context-aware (adaptive) authentication analyzes location, time, device, and behavior patterns. \"Impossible travel\" is a specific detection — it's physically impossible to be in New York and Tokyo simultaneously. Modern UEBA (User and Entity Behavior Analytics) and CASB tools flag this. This is also an indicator of credential compromise. The answer ties to location-based (\"somewhere you are\") and behavioral authentication factors."
+  },
+  {
+    "id": "t1bq9",
+    "objective": "QUESTION 9 OF 30 · Objective 1.3",
+    "question": "A change management board approves switching a production database server. A technician begins work but discovers a dependent application would break. What should the technician do FIRST?",
+    "options": {
+      "A": "Halt the change and escalate to the change board",
+      "B": "Proceed — the board already approved it",
+      "C": "Fix the dependent application first, then proceed",
+      "D": "Rollback the change immediately"
+    },
+    "correct": "A",
+    "explanation": "Change management exists to prevent unauthorized or unplanned modifications. If unexpected impacts are discovered MID-change, the technician must stop and escalate — not improvise. The change board needs to reassess. Every change requires documented backout/rollback procedures for exactly this reason. \"Proceed because it was approved\" (B) ignores the new risk. \"Fix the app first\" (C) introduces additional unauthorized changes. Escalation is always the correct first step when unexpected issues arise."
+  },
+  {
+    "id": "t1bq10",
+    "objective": "QUESTION 10 OF 30 · Objective 1.3",
+    "question": "Which change management document provides a step-by-step plan for returning a system to its previous state if a change fails?",
+    "options": {
+      "A": "Change Advisory Board (CAB) minutes",
+      "B": "Rollback plan / Backout procedure",
+      "C": "Standard operating procedure (SOP)",
+      "D": "Risk register"
+    },
+    "correct": "B",
+    "explanation": "Every approved change must include a rollback/backout plan — documented steps to undo the change if it causes problems. This is a core change management requirement. CAB minutes document decisions and approvals. SOPs are general operational procedures. A risk register logs and tracks risks. Only the rollback/backout plan specifically addresses \"how to undo this change if it breaks something.\""
+  },
+  {
+    "id": "t1bq11",
+    "objective": "QUESTION 11 OF 30 · Objective 1.3",
+    "question": "What is the PRIMARY purpose of version control in a change management program?",
+    "options": {
+      "A": "Encrypt source code repositories",
+      "B": "Speed up software deployment pipelines",
+      "C": "Track and manage changes to configuration and code over time",
+      "D": "Automate vulnerability scanning during builds"
+    },
+    "correct": "C",
+    "explanation": "Version control (Git, SVN) tracks every change to code or configuration — who changed what, when, and why. This is critical for change management: it creates an audit trail, enables rollback to previous versions, identifies who introduced a bug, and supports accountability. On the Security+ exam, version control is tied to change management and configuration management baselines. It supports integrity and accountability, not encryption or vulnerability scanning."
+  },
+  {
+    "id": "t1bq12",
+    "objective": "QUESTION 12 OF 30 · Objective 1.4",
+    "question": "Which encryption algorithm is considered BROKEN and should NOT be used for securing sensitive data?",
+    "options": {
+      "A": "DES (56-bit)",
+      "B": "AES-256",
+      "C": "ChaCha20",
+      "D": "AES-128"
+    },
+    "correct": "A",
+    "explanation": "DES (Data Encryption Standard) uses only 56-bit keys, which can be brute-forced by modern hardware in hours. It was cracked publicly in 1998. DES was replaced by 3DES (which is also being deprecated) and then AES. AES-128 and AES-256 are current standards — AES-256 is used by the NSA for Top Secret data. ChaCha20 is a modern stream cipher used in TLS 1.3. Any question asking about \"broken\" symmetric encryption → DES or RC4."
+  },
+  {
+    "id": "t1bq13",
+    "objective": "QUESTION 13 OF 30 · Objective 1.4",
+    "question": "A developer needs to verify that a downloaded file has not been corrupted or tampered with during transfer. Which cryptographic technique should be used?",
+    "options": {
+      "A": "Symmetric encryption (AES)",
+      "B": "Cryptographic hash function (SHA-256)",
+      "C": "Asymmetric encryption (RSA)",
+      "D": "Digital certificate"
+    },
+    "correct": "B",
+    "explanation": "Hash functions produce a fixed-length digest (\"fingerprint\") of a file. The developer computes the hash of the downloaded file and compares it to the published hash. If they match, the file is intact. Encryption (symmetric or asymmetric) provides confidentiality, not integrity verification. Digital certificates authenticate identities. Hash functions = integrity checking. Common exam scenario: software vendors publish SHA-256 hashes alongside downloads so users can verify integrity."
+  },
+  {
+    "id": "t1bq14",
+    "objective": "QUESTION 14 OF 30 · Objective 1.4",
+    "question": "Which key exchange protocol provides Perfect Forward Secrecy (PFS), ensuring that session keys cannot be compromised even if the server's private key is later stolen?",
+    "options": {
+      "A": "RSA key exchange",
+      "B": "DH (static Diffie-Hellman)",
+      "C": "ECDHE (Ephemeral ECDH)",
+      "D": "AES-256-GCM"
+    },
+    "correct": "C",
+    "explanation": "Perfect Forward Secrecy requires ephemeral (temporary) key exchange — a NEW session key is generated for each session and discarded afterward. Even if the server's long-term private key is stolen, past sessions can't be decrypted. ECDHE and DHE (Ephemeral Diffie-Hellman) provide PFS. Static RSA and static DH do NOT provide PFS because the same key material can decrypt recorded past sessions. TLS 1.3 mandates PFS — it only allows ECDHE and DHE cipher suites."
+  },
+  {
+    "id": "t1bq15",
+    "objective": "QUESTION 15 OF 30 · Objective 1.4",
+    "question": "What is the purpose of a Certificate Revocation List (CRL) in a PKI environment?",
+    "options": {
+      "A": "List all certificates issued by a CA",
+      "B": "Encrypt traffic between clients and servers",
+      "C": "Sign new certificate requests",
+      "D": "Publish a list of certificates that have been revoked before expiration"
+    },
+    "correct": "D",
+    "explanation": "CRL (Certificate Revocation List) is a list maintained by the CA of certificates that were revoked BEFORE their expiration date — due to compromise, employee departure, policy change, etc. Clients check the CRL to verify a certificate hasn't been revoked. OCSP (Online Certificate Status Protocol) is the modern, real-time alternative to CRL. Remember: certificates expire naturally OR can be revoked early. CRL = list of early revocations. OCSP = real-time status check."
+  },
+  {
+    "id": "t1bq16",
+    "objective": "QUESTION 16 OF 30 · Objective 1.4",
+    "question": "A company uses HSMs to protect cryptographic keys. What is the PRIMARY advantage of using an HSM over software key storage?",
+    "options": {
+      "A": "Keys never leave the hardware in plaintext, providing tamper-resistant protection",
+      "B": "HSMs are faster than software encryption",
+      "C": "HSMs support more cipher algorithms",
+      "D": "HSMs replace the need for certificates"
+    },
+    "correct": "A",
+    "explanation": "HSM (Hardware Security Module) is purpose-built hardware that stores and uses keys inside tamper-resistant hardware. The private key NEVER leaves the HSM in plaintext — even if the server is compromised, the attacker cannot extract the key. All cryptographic operations happen inside the HSM. If tampered with, HSMs self-destruct (zeroize) their keys. Used by banks, CAs, and governments. TPM chips in laptops serve a similar but more limited function for consumer devices."
+  },
+  {
+    "id": "t1bq17",
+    "objective": "QUESTION 17 OF 30 · Objective 1.4",
+    "question": "A web server's TLS certificate chains up through an Intermediate CA to a Root CA. Why are intermediate CAs used instead of having the Root CA sign all certificates directly?",
+    "options": {
+      "A": "Root CAs cannot process HTTPS traffic",
+      "B": "To keep the Root CA offline and protected; if an intermediate is compromised, only its certificates need revocation",
+      "C": "Intermediate CAs use stronger encryption than Root CAs",
+      "D": "This is required by HTTPS protocol standards"
+    },
+    "correct": "B",
+    "explanation": "Root CAs are kept OFFLINE (air-gapped) in maximum security vaults. If a Root CA is compromised, ALL trust collapses — every certificate signed by it becomes untrustworthy, affecting millions of websites. By using intermediates, the Root CA only signs a handful of intermediate certificates. If one intermediate is compromised, only its certificates need revocation. The Root stays protected. This is the chain of trust model — Root → Intermediate → End-Entity certificate."
+  },
+  {
+    "id": "t1bq18",
+    "objective": "QUESTION 18 OF 30 · Objective 1.4",
+    "question": "Which type of digital certificate is issued to a single, specific domain name (e.g., only \"www.example.com\")?",
+    "options": {
+      "A": "Domain Validation (DV) certificate",
+      "B": "Wildcard certificate",
+      "C": "Extended Validation (EV) certificate",
+      "D": "Subject Alternative Name (SAN) certificate"
+    },
+    "correct": "A",
+    "explanation": "Certificate types by scope: DV = single domain, quick validation (just proves domain ownership). Wildcard (*.example.com) = covers all immediate subdomains. SAN = multiple different domains/subdomains in one cert. EV = extended identity verification, shows organization name (green bar in old browsers). Certificate types by validation level: DV → OV (Organization Validation) → EV. The question asks about a SINGLE specific domain = DV or standard single-domain cert."
+  },
+  {
+    "id": "t1bq19",
+    "objective": "QUESTION 19 OF 30 · Objective 1.2",
+    "question": "What does the security concept of \"non-repudiation\" ensure?",
+    "options": {
+      "A": "Only authorized users can access sensitive data",
+      "B": "Data cannot be altered during transmission",
+      "C": "A party cannot deny performing an action they took",
+      "D": "Systems remain available even during attacks"
+    },
+    "correct": "C",
+    "explanation": "Non-repudiation provides proof that a specific party performed a specific action. Digital signatures provide non-repudiation — when Alice signs an email with her private key, she cannot later deny sending it (only she has that key). Audit logs also support non-repudiation. This is critical in legal and financial contexts. Compare: Confidentiality (A), Integrity (B), Availability (D) are the CIA triad components. Non-repudiation sits outside the triad but is equally important."
+  },
+  {
+    "id": "t1bq20",
+    "objective": "QUESTION 20 OF 30 · Objective 1.2",
+    "question": "An organization implements a policy where users are assigned only the permissions they need for their specific job role — and no more. Which principle does this reflect?",
+    "options": {
+      "A": "Least privilege",
+      "B": "Separation of duties",
+      "C": "Defense in depth",
+      "D": "Zero trust"
+    },
+    "correct": "A",
+    "explanation": "Least privilege = minimum permissions required to perform job duties, and nothing more. A marketing intern should not have database admin rights. Separation of duties = split high-risk tasks between multiple people. Defense in depth = multiple layered security controls. Zero trust = \"never trust, always verify\" — no implicit trust based on network location. The key phrase in the question is \"only the permissions they need for their specific job\" — that's the definition of least privilege."
+  },
+  {
+    "id": "t1bq21",
+    "objective": "QUESTION 21 OF 30 · Objective 1.4",
+    "question": "A system stores passwords using MD5 hashing without any salt. Why is this considered insecure?",
+    "options": {
+      "A": "MD5 is too slow for password storage",
+      "B": "MD5 is cryptographically broken and vulnerable to rainbow table attacks without salting",
+      "C": "MD5 requires more storage space than modern algorithms",
+      "D": "MD5 cannot hash passwords longer than 16 characters"
+    },
+    "correct": "B",
+    "explanation": "Two problems here: (1) MD5 is cryptographically broken — collision attacks exist where different inputs produce the same hash. (2) Without salting, rainbow table attacks precompute hashes for common passwords and simply look up the hash. A \"salt\" is random data added to the password before hashing, making every hash unique even for identical passwords. Modern password storage should use bcrypt, scrypt, or Argon2 — which are deliberately slow and include built-in salting."
+  },
+  {
+    "id": "t1bq22",
+    "objective": "QUESTION 22 OF 30 · Objective 1.2",
+    "question": "Which access control model uses security LABELS (e.g., Top Secret, Secret, Confidential) assigned to both subjects and objects?",
+    "options": {
+      "A": "Role-Based Access Control (RBAC)",
+      "B": "Discretionary Access Control (DAC)",
+      "C": "Rule-Based Access Control",
+      "D": "Mandatory Access Control (MAC)"
+    },
+    "correct": "D",
+    "explanation": "MAC uses security LABELS/classifications — both users (clearance level) and data (classification level) have labels. Access is only granted when clearance ≥ classification. Used by government/military. DAC = resource owner sets permissions (Windows NTFS). RBAC = permissions assigned to job roles. Rule-based = access based on rules (like firewall rules, time-of-day restrictions). Key word \"labels\" → MAC. Key word \"roles\" → RBAC. Key word \"owner controls\" → DAC."
+  },
+  {
+    "id": "t1bq23",
+    "objective": "QUESTION 23 OF 30 · Objective 1.3",
+    "question": "During a software deployment, which change management concept validates that the software running in production EXACTLY matches the approved tested version?",
+    "options": {
+      "A": "Change Advisory Board review",
+      "B": "Emergency change procedure",
+      "C": "Configuration baseline and integrity monitoring",
+      "D": "Standard operating procedure"
+    },
+    "correct": "C",
+    "explanation": "A configuration baseline documents the approved, tested, secure state of a system. Integrity monitoring (using hashes) verifies the running system matches the baseline — if any file changes, an alert fires. Tools like Tripwire, AIDE, and FIM (File Integrity Monitoring) implement this. This is how you detect unauthorized changes to production systems. CAB review approves changes; emergency change handles urgent fixes; SOP provides procedures — none of these verify the current running state matches what was approved."
+  },
+  {
+    "id": "t1bq24",
+    "objective": "QUESTION 24 OF 30 · Objective 1.4",
+    "question": "Steganography is BEST described as which of the following?",
+    "options": {
+      "A": "Encrypting data with a symmetric key algorithm",
+      "B": "Hiding secret data within ordinary, non-secret files (images, audio, video)",
+      "C": "Hashing data to verify file integrity",
+      "D": "Digitally signing documents to ensure non-repudiation"
+    },
+    "correct": "B",
+    "explanation": "Steganography = hiding secret information within innocent-looking carrier files. A text message can be hidden in an image by slightly modifying pixel values — invisible to the naked eye. Unlike encryption (which hides the CONTENT), steganography hides the EXISTENCE of the message. Attackers use steganography to exfiltrate data undetected (e.g., hiding stolen credentials in uploaded images). DLP tools may scan for steganographic content in outbound data."
+  },
+  {
+    "id": "t1bq25",
+    "objective": "QUESTION 25 OF 30 · Objective 1.2",
+    "question": "A company implements a zero-trust architecture. Which statement BEST describes the core principle of zero trust?",
+    "options": {
+      "A": "Trust all internal network traffic; verify only external connections",
+      "B": "Allow access once authenticated from a corporate device",
+      "C": "Block all external traffic and rely on perimeter firewalls",
+      "D": "Never trust, always verify — every access request is authenticated and authorized regardless of location"
+    },
+    "correct": "D",
+    "explanation": "Zero trust abandons the \"castle and moat\" model where internal network = trusted. With cloud apps, remote workers, and mobile devices, there IS no clear perimeter. Zero trust says: every request must be authenticated, authorized, and continuously verified — regardless of where it comes from (inside or outside the network). Key zero trust components: identity verification, device health checks, least privilege, micro-segmentation, and continuous monitoring. The perimeter is now the identity, not the network."
+  },
+  {
+    "id": "t1bq26",
+    "objective": "QUESTION 26 OF 30 · Objective 1.4",
+    "question": "Which cryptographic concept describes an algorithm where the same key is used for both encryption AND decryption?",
+    "options": {
+      "A": "Symmetric encryption",
+      "B": "Asymmetric encryption",
+      "C": "Hashing",
+      "D": "Digital signature"
+    },
+    "correct": "A",
+    "explanation": "Symmetric encryption uses ONE shared key for both encryption and decryption. Examples: AES, DES, 3DES, RC4, Blowfish, ChaCha20. Fast and efficient for large data. Problem: secure key distribution (how do you share the key securely?). Asymmetric (public key) uses a KEY PAIR — public key encrypts, private key decrypts. Hashing is one-way (no decryption). Digital signatures use asymmetric keys. Symmetric = same key both ways = fast but key distribution challenge."
+  },
+  {
+    "id": "t1bq27",
+    "objective": "QUESTION 27 OF 30 · Objective 1.4",
+    "question": "A secure email system uses the RECIPIENT'S public key to encrypt a message. Only the recipient can decrypt it. Which concept does this demonstrate?",
+    "options": {
+      "A": "Digital signature for authentication",
+      "B": "Asymmetric encryption for confidentiality",
+      "C": "Symmetric key for performance",
+      "D": "Hash function for integrity"
+    },
+    "correct": "B",
+    "explanation": "Asymmetric encryption for confidentiality: encrypt with the RECIPIENT's PUBLIC key → only the recipient's PRIVATE key can decrypt. This is how PGP/GPG email encryption works. Compare with digital signatures: sign with YOUR OWN PRIVATE key → anyone with your public key can verify the signature. Memory trick: \"Lock with public key (anyone can lock), unlock with private key (only you can open)\" = confidentiality. \"Sign with private key, verify with public key\" = authentication/non-repudiation."
+  },
+  {
+    "id": "t1bq28",
+    "objective": "QUESTION 28 OF 30 · Objective 1.2",
+    "question": "A hospital implements role-based access control where doctors can view and modify patient records, nurses can view records, and billing staff can only see billing information. What additional principle is BEST demonstrated here?",
+    "options": {
+      "A": "Separation of duties",
+      "B": "Dual control",
+      "C": "Need-to-know",
+      "D": "Defense in depth"
+    },
+    "correct": "C",
+    "explanation": "Need-to-know = employees only access information essential for their specific job function. Billing staff have no medical reason to see clinical records, so they don't get access — even if they have the appropriate security clearance. This is subtly different from least privilege (which limits technical permissions to minimum required). Need-to-know is an informational principle — you're qualified but you don't need this particular information for your role. HIPAA compliance requires need-to-know for protected health information (PHI)."
+  },
+  {
+    "id": "t1bq29",
+    "objective": "QUESTION 29 OF 30 · Objective 1.4",
+    "question": "Which protocol provides real-time certificate status checking as an alternative to downloading the full Certificate Revocation List (CRL)?",
+    "options": {
+      "A": "LDAPS",
+      "B": "OCSP (Online Certificate Status Protocol)",
+      "C": "RADIUS",
+      "D": "Kerberos"
+    },
+    "correct": "B",
+    "explanation": "OCSP provides real-time, on-demand certificate status checking. Instead of downloading the entire CRL (which can be huge and outdated), a client sends the certificate's serial number to the CA's OCSP responder and gets back \"valid,\" \"revoked,\" or \"unknown.\" OCSP stapling improves performance — the web server caches the OCSP response and attaches (\"staples\") it to the TLS handshake. LDAPS = LDAP over SSL. RADIUS = network authentication. Kerberos = enterprise authentication protocol."
+  },
+  {
+    "id": "t1bq30",
+    "objective": "QUESTION 30 OF 30 · Objective 1.4",
+    "question": "A company uses TLS 1.3 for all web traffic. Compared to TLS 1.2, what is the PRIMARY security improvement in TLS 1.3?",
+    "options": {
+      "A": "Supports longer RSA key sizes",
+      "B": "Adds support for SHA-1 hashing",
+      "C": "Increases maximum session duration",
+      "D": "Removed weak cipher suites and mandates Perfect Forward Secrecy"
+    },
+    "correct": "D",
+    "explanation": "TLS 1.3 major improvements over 1.2: (1) Removed all weak cipher suites (RC4, DES, 3DES, MD5, SHA-1, RSA key exchange, static DH). (2) Mandates Perfect Forward Secrecy — ONLY ECDHE/DHE key exchange allowed. (3) Faster handshake (1-RTT vs 2-RTT, with 0-RTT resumption). (4) Encrypted more of the handshake. PFS means session keys are ephemeral — even future private key theft can't decrypt past sessions. TLS 1.3 = more secure + faster. SHA-1 (B) was already deprecated in TLS 1.2."
+  }
+]
