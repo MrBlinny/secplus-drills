@@ -2,8 +2,7 @@
 
 A local study app for **CompTIA Security+ SY0-701**. Runs on your own machine locally.
 
-1,069 practice questions, 138 confusion-pair drills, 12 performance-based questions, a 90-question exam simulator at true blueprint weights — and a coverage audit that proves **every one of the 610 examinable terms in CompTIA's objectives is the credited answer of at least one question.**
-
+1,069 practice questions, 138 confusion-pair drills, 12 performance-based questions, a 90-question exam simulator at true blueprint weights.
 Built for my friends taking their exam soon.
 
 ---
