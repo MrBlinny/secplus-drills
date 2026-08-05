@@ -1,6 +1,9 @@
-# Normalise line endings so a clone on macOS or Linux does not show every file
-# as modified. Text is stored LF in the repo and checked out native.
-* text=auto
+# Normalise line endings. LF everywhere, on every platform.
+#
+# Checked out as LF on Windows too, deliberately: the generators in tools/ write
+# LF, so a native-CRLF checkout makes `npm run build-bank` report every
+# generated file as modified when nothing has actually changed.
+* text=auto eol=lf
 
 # Windows launcher: must keep CRLF or cmd.exe mis-parses it.
 *.cmd text eol=crlf
