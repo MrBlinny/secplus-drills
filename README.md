@@ -1,16 +1,16 @@
 # Security+ Tutor
 
-A local study app for **CompTIA Security+ SY0-701**. Runs on your own machine, works offline, no accounts, no telemetry, nothing leaves your computer.
+A local study app for **CompTIA Security+ SY0-701**. Runs on your own machine locally.
 
 1,069 practice questions, 138 confusion-pair drills, 12 performance-based questions, a 90-question exam simulator at true blueprint weights — and a coverage audit that proves **every one of the 610 examinable terms in CompTIA's objectives is the credited answer of at least one question.**
 
-> Built by someone who used the same machinery to go from a 65.9% cold baseline to a pass in one day on a different CompTIA exam. The design premise is in `CLAUDE.md` and it is worth two minutes before you start.
+Built for my friends taking their exam soon.
 
 ---
 
 ## Getting started
 
-**Windows — double-click `START.cmd`.** It checks for Node, installs dependencies the first time, starts the app and opens your browser. That's it.
+**Windows — double-click `START.cmd`.** It checks for Node, installs dependencies the first time, starts the app and opens your browser.
 
 **Everything else, or if you prefer a terminal:**
 
@@ -18,12 +18,12 @@ A local study app for **CompTIA Security+ SY0-701**. Runs on your own machine, w
 git clone https://github.com/<user>/secplus-tutor.git
 cd secplus-tutor
 npm install
-npm start          # opens http://127.0.0.1:5050
+npm start          # opens at http://127.0.0.1:5050
 ```
 
-The only prerequisite is **Node.js 20 or newer** — [nodejs.org](https://nodejs.org/en/download), take the LTS installer. Nothing else to configure.
+The only prerequisite is **Node.js 20 or newer** — [nodejs.org](https://nodejs.org/en/download), if uncertain just use the LTS installer.
 
-If `npm install` complains about `better-sqlite3`, ignore it. That's an optional index the app never reads from; it will run fine without it and tell you so at startup.
+If `npm install` complains about `better-sqlite3`, ignore it. It will run fine without it and tell you so at startup. Something something warnings aren't errors something.
 
 <details>
 <summary>Other commands</summary>
@@ -62,19 +62,19 @@ PBQ: `↑` `↓` move between rows · `1`–`9` (`0`+digit past 9) picks from th
 Exam: `1`–`4` answer · `N` / `P` or arrows navigate · `F` flags · grid jumps.
 </details>
 
-## Your data stays yours
+## How your statistics data is stored
 
-Every answer appends one line to `data/attempts.jsonl` on your disk. Nothing is uploaded — the server binds to `127.0.0.1` and makes no outbound requests.
+Every answer appends to `data/attempts.jsonl` on your disk.
 
-That file is the point of running this locally rather than using a website. It is plain JSONL, so you can hand it to Claude or any other LLM and ask it to tutor you against **what you actually got wrong**, instead of guessing. `CLAUDE.md` in this repo is written to be read by exactly that.
+It is plain JSONL, so you can hand it to any LLM and ask it questions about what you are doing well and not well, what you should work on, your best options for moving forward etc.. `CLAUDE.md` in this repo is written to be used by an ai to help you diagnose your progress.
 
-It is **append-only** — corrections are new lines, never edits. Back it up; don't rewrite it. The SQLite file is only an index over it and can be deleted or rebuilt at any time.
+It is **append-only**. Corrections are new lines. The SQLite file is only an index over it and can be deleted or rebuilt at any time.
 
 `.gitignore` excludes your answer log, review queue and progress report, so forking and pushing won't publish your study history.
 
 ## Coverage, and why it is measured this way
 
-The audit's test is **not** "does this objective have questions". It is **is each enumerated term the credited answer of at least one authored item**. The predecessor project learned this the hard way: its dashboard read "blueprint covered 100%" while twenty objective terms had never once been a credited answer.
+The audit's test is **not** "does this objective have questions". It is **is each enumerated term the credited answer of at least one authored item**.
 
 ```bash
 npm run coverage                      # summary per objective
@@ -142,7 +142,7 @@ tools/
 Questions are welcome, with two hard rules:
 
 1. **Never hand-edit `data/item-bank*.json`.** They are generated. Add to `tools/authored/*.mjs` and run `npm run build-bank`, which validates and will refuse a broken item.
-2. **Distractors must be adjacent objective-list terms**, and every explanation must name the *discriminator* — the binary test that separates the credited term from the one people reach for instead. A question whose distractors are implausible teaches nothing.
+2. **Distractors must be adjacent objective-list terms**, and every explanation must name the *discriminator* — the binary test that separates the credited term from the one people reach for instead. I have found a question whose distractors are implausible does not help nearly as much as giving real reasonable answers.
 
 ## Licence
 
