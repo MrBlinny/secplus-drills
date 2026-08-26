@@ -13,7 +13,8 @@
     "rebuild-db": "node server/rebuild-db.js",
     "import-harvest": "node tools/import-harvest.mjs",
     "build-bank": "node tools/build-bank.mjs && node tools/build-bank.mjs --coverage",
-    "coverage": "node tools/coverage-audit.mjs"
+    "coverage": "node tools/coverage-audit.mjs",
+    "build-cram": "node tools/build-cram.mjs"
   },
   "dependencies": {
     "express": "^4.21.2"

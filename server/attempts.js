@@ -13,7 +13,7 @@ export const CONTRACT_FIELDS = [
 ];
 
 const MODES = new Set([
-  'drill', 'pairs', 'blank', 'exam', 'weak', 'coverage', 'pbq',
+  'drill', 'pairs', 'blank', 'exam', 'weak', 'coverage', 'pbq', 'cram',
   'baseline', 'practice-test',
 ]);
 

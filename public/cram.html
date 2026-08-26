@@ -1,0 +1,71 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cram — Security+ Tutor</title>
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg">
+
+<div class="wrap">
+  <div id="setup" class="panel">
+    <h2>Cram — acronyms and ports</h2>
+    <p class="hint" style="margin-top:-6px">
+      High-volume fact recall. Type the answer, <kbd>Enter</kbd> grades it instantly.
+      These are the facts scenario questions assume you already know — worth an
+      hour the night before in a way that reading objectives is not.
+    </p>
+
+    <div id="decks" class="grid" style="gap:10px;margin-top:16px"></div>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:16px">
+      <select id="count">
+        <option value="25">25 cards</option>
+        <option value="50" selected>50 cards</option>
+        <option value="100">100 cards</option>
+        <option value="500">everything</option>
+      </select>
+      <button class="primary" id="go">Start &nbsp;<kbd>Enter</kbd></button>
+    </div>
+  </div>
+
+  <div id="run" hidden>
+    <div class="progressbar"><i id="prog" style="width:0"></i></div>
+    <div class="panel">
+      <div class="qmeta" id="cmeta"></div>
+      <p class="stem" id="cue"></p>
+
+      <div id="answerbox">
+        <input type="text" id="typed" autocomplete="off" autocapitalize="off"
+               spellcheck="false" style="width:100%;font-size:19px;padding:11px 13px">
+        <p class="hint" id="hint" style="margin-top:9px"></p>
+      </div>
+
+      <div id="reveal" hidden style="margin-top:18px">
+        <p class="rowlabel">Answer</p>
+        <p style="margin:0;font-size:22px;font-weight:600" class="good" id="ans"></p>
+        <p style="margin:9px 0 0;font-size:15px" id="detail"></p>
+        <p style="margin:7px 0 0;font-size:15px" class="dim" id="secure"></p>
+
+        <div id="yourswas" class="hint" style="margin-top:14px"></div>
+
+        <p class="rowlabel" style="margin-top:16px">Count it as</p>
+        <div class="choices">
+          <button id="got"><kbd>Y</kbd> Right</button>
+          <button id="miss"><kbd>N</kbd> Wrong</button>
+        </div>
+      </div>
+
+      <p class="hint" id="keys" style="margin-top:16px"></p>
+    </div>
+  </div>
+
+  <div id="done" hidden class="panel">
+    <h2>Deck complete</h2>
+    <div class="stat" id="summary"></div>
+    <div id="missed" style="margin-top:18px"></div>
+    <p style="margin-top:18px;display:flex;gap:8px">
+      <button class="primary" id="again">Another deck</button>
+      <a class="btn" href="/">Dashboard</a>
+    </p>
+  </div>
+</div>
+
+<script type="module" src="/js/cram.js"></script>

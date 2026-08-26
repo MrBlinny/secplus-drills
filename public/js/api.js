@@ -25,6 +25,8 @@ export const api = {
   tag: (body) => post('/api/tag', body),
   pairs: (q = '') => get(`/api/pairs${q}`),
   pairAnswer: (body) => post('/api/pair-answer', body),
+  cram: (q = '') => get(`/api/cram${q}`),
+  cramAnswer: (body) => post('/api/cram-answer', body),
   taxonomies: () => get('/api/taxonomies'),
   lists: () => get('/api/lists'),
   blank: (body) => post('/api/blank', body),

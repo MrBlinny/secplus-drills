@@ -20,6 +20,7 @@ import { learnIndex, learnTopic } from './learn.js';
 import { coverage } from './report.js';
 import { listsWithRecall, listsMarkdown, SECTIONS } from './lists.js';
 import { loadPbqBank, pbqById, toPbq, gradePbq } from './pbq.js';
+import { DECKS, deckCards, cardById, grade as gradeCram, CRAM_COUNT } from './cram.js';
 
 const PORT = Number(process.env.PORT ?? 5050);
 const app = express();
@@ -92,7 +93,8 @@ app.get('/api/bootstrap', (_req, res) => {
       domain: t.domain, count: t.terms.length,
       source: t.source, supplementary: !!t.supplementary,
     })),
-    counts: { items: loadItemBank().length, pairs: PAIRS.length },
+    counts: { items: loadItemBank().length, pairs: PAIRS.length, cram: CRAM_COUNT },
+    cramDecks: DECKS,
     examQuota: blueprintQuota(EXAM_QUESTIONS),
     examQuestions: EXAM_QUESTIONS,
     examMinutes: EXAM_MINUTES,
@@ -280,6 +282,72 @@ app.post('/api/tag', (req, res) => {
       supersedes: attempt_id,
     });
     res.json({ ok: true, attempt_id: rec.id, supersedes: attempt_id });
+  } catch (e) { fail(res, e); }
+});
+
+/* ------------------------------------------------------------------ */
+/* cram decks (acronyms, ports)                                        */
+/* ------------------------------------------------------------------ */
+
+app.get('/api/cram', (req, res) => {
+  try {
+    const deck = String(req.query.deck ?? '');
+    const limit = Math.min(Number(req.query.limit ?? 25) || 25, 500);
+    const pool = deckCards(deck);
+    if (!pool.length) throw new Error(`unknown deck "${deck}"`);
+
+    // Due first, then never-seen, then everything else. Same ordering as pairs:
+    // the point of a cram session is to close gaps, not to re-show wins.
+    const dueIds = new Set(due({ kind: 'cram' }).map((e) => e.id));
+    const seen = new Set(readAttempts().filter((a) => a.mode === 'cram').map((a) => a.item_id));
+    const rank = (c) => (dueIds.has(c.id) ? 0 : seen.has(c.id) ? 2 : 1);
+
+    const shuffled = [...pool].sort(() => Math.random() - 0.5).sort((a, b) => rank(a) - rank(b));
+
+    res.json({
+      mode: 'cram',
+      deck,
+      total: pool.length,
+      cards: shuffled.slice(0, limit).map((c) => ({ id: c.id, cue: c.cue, hint: c.hint ?? null })),
+    });
+  } catch (e) { fail(res, e); }
+});
+
+/**
+ * Two-step like pairs, but graded automatically: the reveal carries the verdict
+ * so the UI can show right/wrong immediately, and only the second call logs.
+ * A `close` verdict is a typo - the UI offers it rather than crediting it, so
+ * the learner still decides.
+ */
+app.post('/api/cram-answer', (req, res) => {
+  try {
+    const { id, typed = '', correct, ms_to_answer = null } = req.body ?? {};
+    const card = cardById(id);
+    if (!card) throw new Error(`unknown cram card "${id}"`);
+
+    if (correct === undefined) {
+      const { verdict } = gradeCram(card, typed);
+      return res.json({
+        reveal: true, verdict,
+        answer: card.answer,
+        detail: card.detail ?? null,
+        secure: card.secure ?? null,
+        accept: card.accept ?? [],
+      });
+    }
+
+    const rec = log({
+      item_id: id, mode: 'cram',
+      domain: null, objective: card.deck === 'ports' ? 'Ports and protocols' : 'Acronyms',
+      chosen: null, correct: null, is_correct: Boolean(correct),
+      ms_to_answer: ms_to_answer === null ? null : Number(ms_to_answer),
+      note: String(typed ?? '').slice(0, 200),
+      self_grade: Boolean(correct),
+      correct_term: card.answer,
+      cue: card.cue,
+    });
+    review(id, { kind: 'cram', correct: Boolean(correct) });
+    res.json({ ok: true, attempt_id: rec.id });
   } catch (e) { fail(res, e); }
 });
 

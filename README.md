@@ -2,7 +2,7 @@
 
 A local study app for **CompTIA Security+ SY0-701**. Runs on your own machine, works offline, no accounts, no telemetry, nothing leaves your computer.
 
-1,069 practice questions, 138 confusion-pair drills, 12 performance-based questions, a 90-question exam simulator at true blueprint weights — and a coverage audit that proves **every one of the 610 examinable terms in CompTIA's objectives is the credited answer of at least one question.**
+1,069 practice questions, 138 confusion-pair drills, 413 acronym and port cram cards, 12 performance-based questions, a 90-question exam simulator at true blueprint weights — and a coverage audit that proves **every one of the 610 examinable terms in CompTIA's objectives is the credited answer of at least one question.**
 
 > Built by someone who used the same machinery to go from a 65.9% cold baseline to a pass in one day on a different CompTIA exam. The design premise is in `CLAUDE.md` and it is worth two minutes before you start.
 
@@ -32,6 +32,7 @@ If `npm install` complains about `better-sqlite3`, ignore it. That's an optional
 npm run report     # regenerate data/PROGRESS.md from your answer log
 npm run coverage   # term-by-term coverage audit
 npm run build-bank # rebuild the authored banks from tools/authored*/
+npm run build-cram # rebuild the acronym and port cram decks
 npm run rebuild-db # rebuild the optional SQLite index from the answer log
 ```
 </details>
@@ -44,6 +45,7 @@ npm run rebuild-db # rebuild the optional SQLite index from the answer log
 | — | **Lists** | Every enumerable list in the syllabus in one place, for writing out by hand — derived from `objectives.md` at load, so it cannot drift from what the app grades. **Hide the terms** (`H`) turns each list into numbered ruled blanks, and it prints that way. |
 | **B** | **Blank paper** | Pick a taxonomy, type everything you remember, get a recalled / missed / invented diff. Invented terms are checked against every *other* taxonomy, so writing "recovery" under control types tells you it belongs to the 4.8 incident response process instead. Highest-signal exercise here. |
 | **D** | **Drill** | Bank questions by domain or objective. |
+| **C** | **Cram** | Two free-recall decks of the facts scenario questions assume you already know: **321 acronyms** (from CompTIA's own published list, so they cannot drift from the objectives) and **92 port cards**, drilled in both directions — protocol to number and number to protocol. Graded automatically, so the loop runs at a card every few seconds. Typos are forgiven; answering *HTTP* for port 443 is not. |
 | **P** | **Confusion pairs** | Free recall against 138 cue → term pairs. Type the term, reveal, self-grade. The main weapon against reaching for the adjacent word. |
 | **W** | **Weak areas** | Auto-selects your five weakest objectives, blending previously-missed with never-seen. |
 | **Q** | **PBQ** | Performance-based questions: classify control types, sequence the incident response process, choose the right agreement, place the Zero Trust components, complete a quantitative risk assessment. Partial credit per cell, each with the discriminator that separates the credited term from the one usually reached for. |
@@ -56,6 +58,7 @@ From the dashboard those letters jump straight to each mode.
 
 Drill and weak areas: `1`–`4` pick · `Enter` advances.
 Pairs: type, `Enter` reveals, `Y` / `N` self-grades.
+Cram: type, `Enter` checks and then accepts the auto-grade, `Y` / `N` overrides it.
 Blank paper: `1`–`6` pick a list, `Ctrl`+`Enter` submits.
 Lists: `H` hides or shows the terms, `P` prints.
 PBQ: `↑` `↓` move between rows · `1`–`9` (`0`+digit past 9) picks from the pool · `Space` toggles a selection · `Shift`+`↑`/`↓` reorders · `Ctrl`+`Enter` submits.
@@ -117,6 +120,7 @@ NOTICE.md              attribution and third-party content
 content/
   objectives.md        official exam objectives + acronym list — the dictionary
   confusion-pairs.json 138 cue → correct term → trap → discriminator
+  cram-decks.json      321 acronym + 92 port cram cards   (generated)
   scenario-rules.json  9 reading heuristics for scenario questions
   curriculum.md        the cram sheet, one section per objective
   deep-dives.md        ports, crypto, wireless, log sources, frameworks — supplementary
@@ -133,6 +137,7 @@ tools/
   authored/            source for item-bank.json — edit these, not the JSON
   authored-coverage/   source for item-bank-coverage.json
   build-bank.mjs       builds and validates both authored banks
+  build-cram.mjs       builds the cram decks; cram-ports.mjs holds the port facts
   coverage-audit.mjs   term-by-term coverage audit
   import-harvest.mjs   normalises harvest/ into item-bank-practice.json
 ```

@@ -81,6 +81,7 @@ export function mountBar(current, right = '') {
     ['/blank.html', 'Blank paper'],
     ['/drill.html', 'Drill'],
     ['/pairs.html', 'Pairs'],
+    ['/cram.html', 'Cram'],
     ['/weak.html', 'Weak areas'],
     ['/pbq.html', 'PBQ'],
     ['/exam.html', 'Exam sim'],

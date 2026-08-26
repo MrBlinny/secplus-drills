@@ -128,10 +128,13 @@ function render(d, taxonomies, pbqs) {
         el('div', { class: 'l', text: 'items due' })),
       el('div', {}, el('div', { class: 'v', text: String(d.due.pairs) }),
         el('div', { class: 'l', text: 'pairs due' })),
+      d.due.cram ? el('div', {}, el('div', { class: 'v', text: String(d.due.cram) }),
+        el('div', { class: 'l', text: 'cram cards due' })) : null,
     ),
     el('p', { style: 'margin:12px 0 0;display:flex;gap:8px;flex-wrap:wrap' },
       d.due.items ? el('a', { class: 'btn', href: '/drill.html?auto=1', text: 'Drill what is due' }) : null,
       d.due.pairs ? el('a', { class: 'btn', href: '/pairs.html?auto=1', text: 'Review pairs' }) : null,
+      d.due.cram ? el('a', { class: 'btn', href: '/cram.html?auto=1', text: 'Review cram cards' }) : null,
     ));
   }
 
@@ -225,7 +228,7 @@ document.addEventListener('keydown', (ev) => {
   if (ev.ctrlKey || ev.metaKey || ev.altKey) return;
   const map = {
     d: '/drill.html', b: '/blank.html', p: '/pairs.html',
-    w: '/weak.html', e: '/exam.html', q: '/pbq.html',
+    w: '/weak.html', e: '/exam.html', q: '/pbq.html', c: '/cram.html',
   };
   if (map[ev.key.toLowerCase()]) location.href = map[ev.key.toLowerCase()];
 });

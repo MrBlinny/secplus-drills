@@ -1,0 +1,3675 @@
+{
+  "generated": "2026-08-26T15:02:14.011Z",
+  "source": "built by tools/build-cram.mjs - do not hand-edit",
+  "decks": {
+    "acronyms": {
+      "label": "Acronyms",
+      "blurb": "Every acronym on CompTIA's published SY0-701 list. Type the expansion.",
+      "cards": [
+        {
+          "id": "ACR-AAA",
+          "deck": "acronyms",
+          "cue": "AAA",
+          "answer": "Authentication, Authorization, and Accounting",
+          "accept": [
+            "Authentication Authorization and Accounting",
+            "Authentication, Authorization Accounting",
+            "Authentication, Authorisation, and Accounting"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-ACL",
+          "deck": "acronyms",
+          "cue": "ACL",
+          "answer": "Access Control List",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-AES",
+          "deck": "acronyms",
+          "cue": "AES",
+          "answer": "Advanced Encryption Standard",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-AES256",
+          "deck": "acronyms",
+          "cue": "AES-256",
+          "answer": "Advanced Encryption Standards 256-bit",
+          "accept": [
+            "Advanced Encryption Standards 256 bit"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-AH",
+          "deck": "acronyms",
+          "cue": "AH",
+          "answer": "Authentication Header",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-AI",
+          "deck": "acronyms",
+          "cue": "AI",
+          "answer": "Artificial Intelligence",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-AIS",
+          "deck": "acronyms",
+          "cue": "AIS",
+          "answer": "Automated Indicator Sharing",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ALE",
+          "deck": "acronyms",
+          "cue": "ALE",
+          "answer": "Annualized Loss Expectancy",
+          "accept": [
+            "Annualised Loss Expectancy"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-AP",
+          "deck": "acronyms",
+          "cue": "AP",
+          "answer": "Access Point",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-API",
+          "deck": "acronyms",
+          "cue": "API",
+          "answer": "Application Programming Interface",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-APT",
+          "deck": "acronyms",
+          "cue": "APT",
+          "answer": "Advanced Persistent Threat",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ARO",
+          "deck": "acronyms",
+          "cue": "ARO",
+          "answer": "Annualized Rate of Occurrence",
+          "accept": [
+            "Annualised Rate of Occurrence"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-ARP",
+          "deck": "acronyms",
+          "cue": "ARP",
+          "answer": "Address Resolution Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ASLR",
+          "deck": "acronyms",
+          "cue": "ASLR",
+          "answer": "Address Space Layout Randomization",
+          "accept": [
+            "Address Space Layout Randomisation"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-ATTCK",
+          "deck": "acronyms",
+          "cue": "ATT&CK",
+          "answer": "Adversarial Tactics, Techniques, and Common Knowledge",
+          "accept": [
+            "Adversarial Tactics Techniques and Common Knowledge",
+            "Adversarial Tactics, Techniques Common Knowledge"
+          ],
+          "hint": "6 words"
+        },
+        {
+          "id": "ACR-AUP",
+          "deck": "acronyms",
+          "cue": "AUP",
+          "answer": "Acceptable Use Policy",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-AV",
+          "deck": "acronyms",
+          "cue": "AV",
+          "answer": "Antivirus",
+          "accept": [],
+          "hint": "1 words"
+        },
+        {
+          "id": "ACR-BASH",
+          "deck": "acronyms",
+          "cue": "BASH",
+          "answer": "Bourne Again Shell",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-BCP",
+          "deck": "acronyms",
+          "cue": "BCP",
+          "answer": "Business Continuity Planning",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-BGP",
+          "deck": "acronyms",
+          "cue": "BGP",
+          "answer": "Border Gateway Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-BIA",
+          "deck": "acronyms",
+          "cue": "BIA",
+          "answer": "Business Impact Analysis",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-BIOS",
+          "deck": "acronyms",
+          "cue": "BIOS",
+          "answer": "Basic Input/Output System",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-BPA",
+          "deck": "acronyms",
+          "cue": "BPA",
+          "answer": "Business Partners Agreement",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-BPDU",
+          "deck": "acronyms",
+          "cue": "BPDU",
+          "answer": "Bridge Protocol Data Unit",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-BYOD",
+          "deck": "acronyms",
+          "cue": "BYOD",
+          "answer": "Bring Your Own Device",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-CA",
+          "deck": "acronyms",
+          "cue": "CA",
+          "answer": "Certificate Authority",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-CAPTCHA",
+          "deck": "acronyms",
+          "cue": "CAPTCHA",
+          "answer": "Completely Automated Public Turing Test to Tell Computers and Humans Apart",
+          "accept": [
+            "Completely Automated Public Turing Test to Tell Computers Humans Apart"
+          ],
+          "hint": "11 words"
+        },
+        {
+          "id": "ACR-CAR",
+          "deck": "acronyms",
+          "cue": "CAR",
+          "answer": "Corrective Action Report",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CASB",
+          "deck": "acronyms",
+          "cue": "CASB",
+          "answer": "Cloud Access Security Broker",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-CBC",
+          "deck": "acronyms",
+          "cue": "CBC",
+          "answer": "Cipher Block Chaining",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CCMP",
+          "deck": "acronyms",
+          "cue": "CCMP",
+          "answer": "Counter Mode/CBC-MAC Protocol",
+          "accept": [
+            "Counter Mode/CBC MAC Protocol"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CCTV",
+          "deck": "acronyms",
+          "cue": "CCTV",
+          "answer": "Closed-circuit Television",
+          "accept": [
+            "Closed circuit Television"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-CERT",
+          "deck": "acronyms",
+          "cue": "CERT",
+          "answer": "Computer Emergency Response Team",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-CFB",
+          "deck": "acronyms",
+          "cue": "CFB",
+          "answer": "Cipher Feedback",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-CHAP",
+          "deck": "acronyms",
+          "cue": "CHAP",
+          "answer": "Challenge Handshake Authentication Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-CIA",
+          "deck": "acronyms",
+          "cue": "CIA",
+          "answer": "Confidentiality, Integrity, Availability",
+          "accept": [
+            "Confidentiality Integrity Availability"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CIO",
+          "deck": "acronyms",
+          "cue": "CIO",
+          "answer": "Chief Information Officer",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CIRT",
+          "deck": "acronyms",
+          "cue": "CIRT",
+          "answer": "Computer Incident Response Team",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-CMS",
+          "deck": "acronyms",
+          "cue": "CMS",
+          "answer": "Content Management System",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-COOP",
+          "deck": "acronyms",
+          "cue": "COOP",
+          "answer": "Continuity of Operation Planning",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-COPE",
+          "deck": "acronyms",
+          "cue": "COPE",
+          "answer": "Corporate Owned, Personally Enabled",
+          "accept": [
+            "Corporate Owned Personally Enabled"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-CP",
+          "deck": "acronyms",
+          "cue": "CP",
+          "answer": "Contingency Planning",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-CRC",
+          "deck": "acronyms",
+          "cue": "CRC",
+          "answer": "Cyclical Redundancy Check",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CRL",
+          "deck": "acronyms",
+          "cue": "CRL",
+          "answer": "Certificate Revocation List",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CSO",
+          "deck": "acronyms",
+          "cue": "CSO",
+          "answer": "Chief Security Officer",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CSP",
+          "deck": "acronyms",
+          "cue": "CSP",
+          "answer": "Cloud Service Provider",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CSR",
+          "deck": "acronyms",
+          "cue": "CSR",
+          "answer": "Certificate Signing Request",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CSRF",
+          "deck": "acronyms",
+          "cue": "CSRF",
+          "answer": "Cross-site Request Forgery",
+          "accept": [
+            "Cross site Request Forgery"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CSU",
+          "deck": "acronyms",
+          "cue": "CSU",
+          "answer": "Channel Service Unit",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CTM",
+          "deck": "acronyms",
+          "cue": "CTM",
+          "answer": "Counter Mode",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-CTO",
+          "deck": "acronyms",
+          "cue": "CTO",
+          "answer": "Chief Technology Officer",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CVE",
+          "deck": "acronyms",
+          "cue": "CVE",
+          "answer": "Common Vulnerability Enumeration",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-CVSS",
+          "deck": "acronyms",
+          "cue": "CVSS",
+          "answer": "Common Vulnerability Scoring System",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-CYOD",
+          "deck": "acronyms",
+          "cue": "CYOD",
+          "answer": "Choose Your Own Device",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-DAC",
+          "deck": "acronyms",
+          "cue": "DAC",
+          "answer": "Discretionary Access Control",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DBA",
+          "deck": "acronyms",
+          "cue": "DBA",
+          "answer": "Database Administrator",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-DDoS",
+          "deck": "acronyms",
+          "cue": "DDoS",
+          "answer": "Distributed Denial of Service",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-DEP",
+          "deck": "acronyms",
+          "cue": "DEP",
+          "answer": "Data Execution Prevention",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DES",
+          "deck": "acronyms",
+          "cue": "DES",
+          "answer": "Digital Encryption Standard",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DHCP",
+          "deck": "acronyms",
+          "cue": "DHCP",
+          "answer": "Dynamic Host Configuration Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-DHE",
+          "deck": "acronyms",
+          "cue": "DHE",
+          "answer": "Diffie-Hellman Ephemeral",
+          "accept": [
+            "Diffie Hellman Ephemeral"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-DKIM",
+          "deck": "acronyms",
+          "cue": "DKIM",
+          "answer": "DomainKeys Identified Mail",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DLL",
+          "deck": "acronyms",
+          "cue": "DLL",
+          "answer": "Dynamic Link Library",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DLP",
+          "deck": "acronyms",
+          "cue": "DLP",
+          "answer": "Data Loss Prevention",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DMARC",
+          "deck": "acronyms",
+          "cue": "DMARC",
+          "answer": "Domain Message Authentication Reporting and Conformance",
+          "accept": [
+            "Domain Message Authentication Reporting Conformance"
+          ],
+          "hint": "6 words"
+        },
+        {
+          "id": "ACR-DNAT",
+          "deck": "acronyms",
+          "cue": "DNAT",
+          "answer": "Destination Network Address Translation",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-DNS",
+          "deck": "acronyms",
+          "cue": "DNS",
+          "answer": "Domain Name System",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DoS",
+          "deck": "acronyms",
+          "cue": "DoS",
+          "answer": "Denial of Service",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DPO",
+          "deck": "acronyms",
+          "cue": "DPO",
+          "answer": "Data Privacy Officer",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DRP",
+          "deck": "acronyms",
+          "cue": "DRP",
+          "answer": "Disaster Recovery Plan",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DSA",
+          "deck": "acronyms",
+          "cue": "DSA",
+          "answer": "Digital Signature Algorithm",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-DSL",
+          "deck": "acronyms",
+          "cue": "DSL",
+          "answer": "Digital Subscriber Line",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-EAP",
+          "deck": "acronyms",
+          "cue": "EAP",
+          "answer": "Extensible Authentication Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ECB",
+          "deck": "acronyms",
+          "cue": "ECB",
+          "answer": "Electronic Code Book",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ECC",
+          "deck": "acronyms",
+          "cue": "ECC",
+          "answer": "Elliptic Curve Cryptography",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ECDHE",
+          "deck": "acronyms",
+          "cue": "ECDHE",
+          "answer": "Elliptic Curve Diffie-Hellman Ephemeral",
+          "accept": [
+            "Elliptic Curve Diffie Hellman Ephemeral"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-ECDSA",
+          "deck": "acronyms",
+          "cue": "ECDSA",
+          "answer": "Elliptic Curve Digital Signature Algorithm",
+          "accept": [],
+          "hint": "5 words"
+        },
+        {
+          "id": "ACR-EDR",
+          "deck": "acronyms",
+          "cue": "EDR",
+          "answer": "Endpoint Detection and Response",
+          "accept": [
+            "Endpoint Detection Response"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-EFS",
+          "deck": "acronyms",
+          "cue": "EFS",
+          "answer": "Encrypted File System",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ERP",
+          "deck": "acronyms",
+          "cue": "ERP",
+          "answer": "Enterprise Resource Planning",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ESN",
+          "deck": "acronyms",
+          "cue": "ESN",
+          "answer": "Electronic Serial Number",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ESP",
+          "deck": "acronyms",
+          "cue": "ESP",
+          "answer": "Encapsulated Security Payload",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-FACL",
+          "deck": "acronyms",
+          "cue": "FACL",
+          "answer": "File System Access Control List",
+          "accept": [],
+          "hint": "5 words"
+        },
+        {
+          "id": "ACR-FDE",
+          "deck": "acronyms",
+          "cue": "FDE",
+          "answer": "Full Disk Encryption",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-FIM",
+          "deck": "acronyms",
+          "cue": "FIM",
+          "answer": "File Integrity Management",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-FPGA",
+          "deck": "acronyms",
+          "cue": "FPGA",
+          "answer": "Field Programmable Gate Array",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-FRR",
+          "deck": "acronyms",
+          "cue": "FRR",
+          "answer": "False Rejection Rate",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-FTP",
+          "deck": "acronyms",
+          "cue": "FTP",
+          "answer": "File Transfer Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-FTPS",
+          "deck": "acronyms",
+          "cue": "FTPS",
+          "answer": "Secured File Transfer Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-GCM",
+          "deck": "acronyms",
+          "cue": "GCM",
+          "answer": "Galois Counter Mode",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-GDPR",
+          "deck": "acronyms",
+          "cue": "GDPR",
+          "answer": "General Data Protection Regulation",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-GPG",
+          "deck": "acronyms",
+          "cue": "GPG",
+          "answer": "Gnu Privacy Guard",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-GPO",
+          "deck": "acronyms",
+          "cue": "GPO",
+          "answer": "Group Policy Object",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-GPS",
+          "deck": "acronyms",
+          "cue": "GPS",
+          "answer": "Global Positioning System",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-GPU",
+          "deck": "acronyms",
+          "cue": "GPU",
+          "answer": "Graphics Processing Unit",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-GRE",
+          "deck": "acronyms",
+          "cue": "GRE",
+          "answer": "Generic Routing Encapsulation",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-HA",
+          "deck": "acronyms",
+          "cue": "HA",
+          "answer": "High Availability",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-HDD",
+          "deck": "acronyms",
+          "cue": "HDD",
+          "answer": "Hard Disk Drive",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-HIDS",
+          "deck": "acronyms",
+          "cue": "HIDS",
+          "answer": "Host-based Intrusion Detection System",
+          "accept": [
+            "Host based Intrusion Detection System"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-HIPS",
+          "deck": "acronyms",
+          "cue": "HIPS",
+          "answer": "Host-based Intrusion Prevention System",
+          "accept": [
+            "Host based Intrusion Prevention System"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-HMAC",
+          "deck": "acronyms",
+          "cue": "HMAC",
+          "answer": "Hashed Message Authentication Code",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-HOTP",
+          "deck": "acronyms",
+          "cue": "HOTP",
+          "answer": "HMAC-based One-time Password",
+          "accept": [
+            "HMAC based One time Password"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-HSM",
+          "deck": "acronyms",
+          "cue": "HSM",
+          "answer": "Hardware Security Module",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-HTML",
+          "deck": "acronyms",
+          "cue": "HTML",
+          "answer": "Hypertext Markup Language",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-HTTP",
+          "deck": "acronyms",
+          "cue": "HTTP",
+          "answer": "Hypertext Transfer Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-HTTPS",
+          "deck": "acronyms",
+          "cue": "HTTPS",
+          "answer": "Hypertext Transfer Protocol Secure",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-HVAC",
+          "deck": "acronyms",
+          "cue": "HVAC",
+          "answer": "Heating, Ventilation Air Conditioning",
+          "accept": [
+            "Heating Ventilation Air Conditioning"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-IaaS",
+          "deck": "acronyms",
+          "cue": "IaaS",
+          "answer": "Infrastructure as a Service",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-IaC",
+          "deck": "acronyms",
+          "cue": "IaC",
+          "answer": "Infrastructure as Code",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IAM",
+          "deck": "acronyms",
+          "cue": "IAM",
+          "answer": "Identity and Access Management",
+          "accept": [
+            "Identity Access Management"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-ICMP",
+          "deck": "acronyms",
+          "cue": "ICMP",
+          "answer": "Internet Control Message Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-ICS",
+          "deck": "acronyms",
+          "cue": "ICS",
+          "answer": "Industrial Control Systems",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IDEA",
+          "deck": "acronyms",
+          "cue": "IDEA",
+          "answer": "International Data Encryption Algorithm",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-IDF",
+          "deck": "acronyms",
+          "cue": "IDF",
+          "answer": "Intermediate Distribution Frame",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IdP",
+          "deck": "acronyms",
+          "cue": "IdP",
+          "answer": "Identity Provider",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-IDS",
+          "deck": "acronyms",
+          "cue": "IDS",
+          "answer": "Intrusion Detection System",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IEEE",
+          "deck": "acronyms",
+          "cue": "IEEE",
+          "answer": "Institute of Electrical and Electronics Engineers",
+          "accept": [
+            "Institute of Electrical Electronics Engineers"
+          ],
+          "hint": "6 words"
+        },
+        {
+          "id": "ACR-IKE",
+          "deck": "acronyms",
+          "cue": "IKE",
+          "answer": "Internet Key Exchange",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IM",
+          "deck": "acronyms",
+          "cue": "IM",
+          "answer": "Instant Messaging",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-IMAP",
+          "deck": "acronyms",
+          "cue": "IMAP",
+          "answer": "Internet Message Access Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-IoC",
+          "deck": "acronyms",
+          "cue": "IoC",
+          "answer": "Indicators of Compromise",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IoT",
+          "deck": "acronyms",
+          "cue": "IoT",
+          "answer": "Internet of Things",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IP",
+          "deck": "acronyms",
+          "cue": "IP",
+          "answer": "Internet Protocol",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-IPS",
+          "deck": "acronyms",
+          "cue": "IPS",
+          "answer": "Intrusion Prevention System",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IPSec",
+          "deck": "acronyms",
+          "cue": "IPSec",
+          "answer": "Internet Protocol Security",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IR",
+          "deck": "acronyms",
+          "cue": "IR",
+          "answer": "Incident Response",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-IRC",
+          "deck": "acronyms",
+          "cue": "IRC",
+          "answer": "Internet Relay Chat",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-IRP",
+          "deck": "acronyms",
+          "cue": "IRP",
+          "answer": "Incident Response Plan",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ISO",
+          "deck": "acronyms",
+          "cue": "ISO",
+          "answer": "International Standards Organization",
+          "accept": [
+            "International Standards Organisation"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ISP",
+          "deck": "acronyms",
+          "cue": "ISP",
+          "answer": "Internet Service Provider",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-ISSO",
+          "deck": "acronyms",
+          "cue": "ISSO",
+          "answer": "Information Systems Security Officer",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-IV",
+          "deck": "acronyms",
+          "cue": "IV",
+          "answer": "Initialization Vector",
+          "accept": [
+            "Initialisation Vector"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-KDC",
+          "deck": "acronyms",
+          "cue": "KDC",
+          "answer": "Key Distribution Center",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-KEK",
+          "deck": "acronyms",
+          "cue": "KEK",
+          "answer": "Key Encryption Key",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-L2TP",
+          "deck": "acronyms",
+          "cue": "L2TP",
+          "answer": "Layer 2 Tunneling Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-LAN",
+          "deck": "acronyms",
+          "cue": "LAN",
+          "answer": "Local Area Network",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-LDAP",
+          "deck": "acronyms",
+          "cue": "LDAP",
+          "answer": "Lightweight Directory Access Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-LEAP",
+          "deck": "acronyms",
+          "cue": "LEAP",
+          "answer": "Lightweight Extensible Authentication Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-MaaS",
+          "deck": "acronyms",
+          "cue": "MaaS",
+          "answer": "Monitoring as a Service",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-MAC",
+          "deck": "acronyms",
+          "cue": "MAC",
+          "answer": "Mandatory Access Control",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MAN",
+          "deck": "acronyms",
+          "cue": "MAN",
+          "answer": "Metropolitan Area Network",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MBR",
+          "deck": "acronyms",
+          "cue": "MBR",
+          "answer": "Master Boot Record",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MD5",
+          "deck": "acronyms",
+          "cue": "MD5",
+          "answer": "Message Digest 5",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MDF",
+          "deck": "acronyms",
+          "cue": "MDF",
+          "answer": "Main Distribution Frame",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MDM",
+          "deck": "acronyms",
+          "cue": "MDM",
+          "answer": "Mobile Device Management",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MFA",
+          "deck": "acronyms",
+          "cue": "MFA",
+          "answer": "Multifactor Authentication",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-MFD",
+          "deck": "acronyms",
+          "cue": "MFD",
+          "answer": "Multifunction Device",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-MFP",
+          "deck": "acronyms",
+          "cue": "MFP",
+          "answer": "Multifunction Printer",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-ML",
+          "deck": "acronyms",
+          "cue": "ML",
+          "answer": "Machine Learning",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-MMS",
+          "deck": "acronyms",
+          "cue": "MMS",
+          "answer": "Multimedia Message Service",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MOA",
+          "deck": "acronyms",
+          "cue": "MOA",
+          "answer": "Memorandum of Agreement",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MOU",
+          "deck": "acronyms",
+          "cue": "MOU",
+          "answer": "Memorandum of Understanding",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MPLS",
+          "deck": "acronyms",
+          "cue": "MPLS",
+          "answer": "Multi-protocol Label Switching",
+          "accept": [
+            "Multi protocol Label Switching"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MSA",
+          "deck": "acronyms",
+          "cue": "MSA",
+          "answer": "Master Service Agreement",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MSCHAP",
+          "deck": "acronyms",
+          "cue": "MSCHAP",
+          "answer": "Microsoft Challenge Handshake Authentication Protocol",
+          "accept": [],
+          "hint": "5 words"
+        },
+        {
+          "id": "ACR-MSP",
+          "deck": "acronyms",
+          "cue": "MSP",
+          "answer": "Managed Service Provider",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-MSSP",
+          "deck": "acronyms",
+          "cue": "MSSP",
+          "answer": "Managed Security Service Provider",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-MTBF",
+          "deck": "acronyms",
+          "cue": "MTBF",
+          "answer": "Mean Time Between Failures",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-MTTF",
+          "deck": "acronyms",
+          "cue": "MTTF",
+          "answer": "Mean Time to Failure",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-MTTR",
+          "deck": "acronyms",
+          "cue": "MTTR",
+          "answer": "Mean Time to Recover",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-MTU",
+          "deck": "acronyms",
+          "cue": "MTU",
+          "answer": "Maximum Transmission Unit",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-NAC",
+          "deck": "acronyms",
+          "cue": "NAC",
+          "answer": "Network Access Control",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-NAT",
+          "deck": "acronyms",
+          "cue": "NAT",
+          "answer": "Network Address Translation",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-NDA",
+          "deck": "acronyms",
+          "cue": "NDA",
+          "answer": "Non-disclosure Agreement",
+          "accept": [
+            "Non disclosure Agreement"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-NFC",
+          "deck": "acronyms",
+          "cue": "NFC",
+          "answer": "Near Field Communication",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-NGFW",
+          "deck": "acronyms",
+          "cue": "NGFW",
+          "answer": "Next-generation Firewall",
+          "accept": [
+            "Next generation Firewall"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-NIDS",
+          "deck": "acronyms",
+          "cue": "NIDS",
+          "answer": "Network-based Intrusion Detection System",
+          "accept": [
+            "Network based Intrusion Detection System"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-NIPS",
+          "deck": "acronyms",
+          "cue": "NIPS",
+          "answer": "Network-based Intrusion Prevention System",
+          "accept": [
+            "Network based Intrusion Prevention System"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-NIST",
+          "deck": "acronyms",
+          "cue": "NIST",
+          "answer": "National Institute of Standards & Technology",
+          "accept": [],
+          "hint": "6 words"
+        },
+        {
+          "id": "ACR-NTFS",
+          "deck": "acronyms",
+          "cue": "NTFS",
+          "answer": "New Technology File System",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-NTLM",
+          "deck": "acronyms",
+          "cue": "NTLM",
+          "answer": "New Technology LAN Manager",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-NTP",
+          "deck": "acronyms",
+          "cue": "NTP",
+          "answer": "Network Time Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-OAUTH",
+          "deck": "acronyms",
+          "cue": "OAUTH",
+          "answer": "Open Authorization",
+          "accept": [
+            "Open Authorisation"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-OCSP",
+          "deck": "acronyms",
+          "cue": "OCSP",
+          "answer": "Online Certificate Status Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-OID",
+          "deck": "acronyms",
+          "cue": "OID",
+          "answer": "Object Identifier",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-OS",
+          "deck": "acronyms",
+          "cue": "OS",
+          "answer": "Operating System",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-OSINT",
+          "deck": "acronyms",
+          "cue": "OSINT",
+          "answer": "Open-source Intelligence",
+          "accept": [
+            "Open source Intelligence"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-OSPF",
+          "deck": "acronyms",
+          "cue": "OSPF",
+          "answer": "Open Shortest Path First",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-OT",
+          "deck": "acronyms",
+          "cue": "OT",
+          "answer": "Operational Technology",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-OTA",
+          "deck": "acronyms",
+          "cue": "OTA",
+          "answer": "Over the Air",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-OVAL",
+          "deck": "acronyms",
+          "cue": "OVAL",
+          "answer": "Open Vulnerability Assessment Language",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-P12",
+          "deck": "acronyms",
+          "cue": "P12",
+          "answer": "PKCS #12",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-P2P",
+          "deck": "acronyms",
+          "cue": "P2P",
+          "answer": "Peer to Peer",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PaaS",
+          "deck": "acronyms",
+          "cue": "PaaS",
+          "answer": "Platform as a Service",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-PAC",
+          "deck": "acronyms",
+          "cue": "PAC",
+          "answer": "Proxy Auto Configuration",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PAM",
+          "deck": "acronyms",
+          "cue": "PAM",
+          "answer": "Privileged Access Management",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PAP",
+          "deck": "acronyms",
+          "cue": "PAP",
+          "answer": "Password Authentication Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PAT",
+          "deck": "acronyms",
+          "cue": "PAT",
+          "answer": "Port Address Translation",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PBKDF2",
+          "deck": "acronyms",
+          "cue": "PBKDF2",
+          "answer": "Password-based Key Derivation Function 2",
+          "accept": [
+            "Password based Key Derivation Function 2"
+          ],
+          "hint": "5 words"
+        },
+        {
+          "id": "ACR-PBX",
+          "deck": "acronyms",
+          "cue": "PBX",
+          "answer": "Private Branch Exchange",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PCAP",
+          "deck": "acronyms",
+          "cue": "PCAP",
+          "answer": "Packet Capture",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-PCIDSS",
+          "deck": "acronyms",
+          "cue": "PCI DSS",
+          "answer": "Payment Card Industry Data Security Standard",
+          "accept": [],
+          "hint": "6 words"
+        },
+        {
+          "id": "ACR-PDU",
+          "deck": "acronyms",
+          "cue": "PDU",
+          "answer": "Power Distribution Unit",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PEAP",
+          "deck": "acronyms",
+          "cue": "PEAP",
+          "answer": "Protected Extensible Authentication Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-PED",
+          "deck": "acronyms",
+          "cue": "PED",
+          "answer": "Personal Electronic Device",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PEM",
+          "deck": "acronyms",
+          "cue": "PEM",
+          "answer": "Privacy Enhanced Mail",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PFS",
+          "deck": "acronyms",
+          "cue": "PFS",
+          "answer": "Perfect Forward Secrecy",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PGP",
+          "deck": "acronyms",
+          "cue": "PGP",
+          "answer": "Pretty Good Privacy",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PHI",
+          "deck": "acronyms",
+          "cue": "PHI",
+          "answer": "Personal Health Information",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PII",
+          "deck": "acronyms",
+          "cue": "PII",
+          "answer": "Personally Identifiable Information",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PIV",
+          "deck": "acronyms",
+          "cue": "PIV",
+          "answer": "Personal Identity Verification",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PKCS",
+          "deck": "acronyms",
+          "cue": "PKCS",
+          "answer": "Public Key Cryptography Standards",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-PKI",
+          "deck": "acronyms",
+          "cue": "PKI",
+          "answer": "Public Key Infrastructure",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-POP",
+          "deck": "acronyms",
+          "cue": "POP",
+          "answer": "Post Office Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-POTS",
+          "deck": "acronyms",
+          "cue": "POTS",
+          "answer": "Plain Old Telephone Service",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-PPP",
+          "deck": "acronyms",
+          "cue": "PPP",
+          "answer": "Point-to-Point Protocol",
+          "accept": [
+            "Point to Point Protocol"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-PPTP",
+          "deck": "acronyms",
+          "cue": "PPTP",
+          "answer": "Point-to-Point Tunneling Protocol",
+          "accept": [
+            "Point to Point Tunneling Protocol"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-PSK",
+          "deck": "acronyms",
+          "cue": "PSK",
+          "answer": "Pre-shared Key",
+          "accept": [
+            "Pre shared Key"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-PTZ",
+          "deck": "acronyms",
+          "cue": "PTZ",
+          "answer": "Pan-tilt-zoom",
+          "accept": [
+            "Pan tilt zoom",
+            "Pan-tilt-soom"
+          ],
+          "hint": "1 words"
+        },
+        {
+          "id": "ACR-PUP",
+          "deck": "acronyms",
+          "cue": "PUP",
+          "answer": "Potentially Unwanted Program",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RA",
+          "deck": "acronyms",
+          "cue": "RA",
+          "answer": "Recovery Agent",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-RACE",
+          "deck": "acronyms",
+          "cue": "RACE",
+          "answer": "Research and Development in Advanced Communications Technologies in Europe",
+          "accept": [
+            "Research Development in Advanced Communications Technologies in Europe"
+          ],
+          "hint": "9 words"
+        },
+        {
+          "id": "ACR-RAD",
+          "deck": "acronyms",
+          "cue": "RAD",
+          "answer": "Rapid Application Development",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RADIUS",
+          "deck": "acronyms",
+          "cue": "RADIUS",
+          "answer": "Remote Authentication Dial-in User Service",
+          "accept": [
+            "Remote Authentication Dial in User Service"
+          ],
+          "hint": "5 words"
+        },
+        {
+          "id": "ACR-RAID",
+          "deck": "acronyms",
+          "cue": "RAID",
+          "answer": "Redundant Array of Inexpensive Disks",
+          "accept": [],
+          "hint": "5 words"
+        },
+        {
+          "id": "ACR-RAS",
+          "deck": "acronyms",
+          "cue": "RAS",
+          "answer": "Remote Access Server",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RAT",
+          "deck": "acronyms",
+          "cue": "RAT",
+          "answer": "Remote Access Trojan",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RBAC",
+          "deck": "acronyms",
+          "cue": "RBAC",
+          "answer": "Role-based Access Control",
+          "accept": [
+            "Role based Access Control"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RC4",
+          "deck": "acronyms",
+          "cue": "RC4",
+          "answer": "Rivest Cipher version 4",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-RDP",
+          "deck": "acronyms",
+          "cue": "RDP",
+          "answer": "Remote Desktop Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RFID",
+          "deck": "acronyms",
+          "cue": "RFID",
+          "answer": "Radio Frequency Identifier",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RIPEMD",
+          "deck": "acronyms",
+          "cue": "RIPEMD",
+          "answer": "RACE Integrity Primitives Evaluation Message Digest",
+          "accept": [],
+          "hint": "6 words"
+        },
+        {
+          "id": "ACR-ROI",
+          "deck": "acronyms",
+          "cue": "ROI",
+          "answer": "Return on Investment",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RPO",
+          "deck": "acronyms",
+          "cue": "RPO",
+          "answer": "Recovery Point Objective",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RSA",
+          "deck": "acronyms",
+          "cue": "RSA",
+          "answer": "Rivest, Shamir, & Adleman",
+          "accept": [
+            "Rivest Shamir & Adleman"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-RTBH",
+          "deck": "acronyms",
+          "cue": "RTBH",
+          "answer": "Remotely Triggered Black Hole",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-RTO",
+          "deck": "acronyms",
+          "cue": "RTO",
+          "answer": "Recovery Time Objective",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RTOS",
+          "deck": "acronyms",
+          "cue": "RTOS",
+          "answer": "Real-time Operating System",
+          "accept": [
+            "Real time Operating System"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-RTP",
+          "deck": "acronyms",
+          "cue": "RTP",
+          "answer": "Real-time Transport Protocol",
+          "accept": [
+            "Real time Transport Protocol"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SMIME",
+          "deck": "acronyms",
+          "cue": "S/MIME",
+          "answer": "Secure/Multipurpose Internet Mail Extensions",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SaaS",
+          "deck": "acronyms",
+          "cue": "SaaS",
+          "answer": "Software as a Service",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SAE",
+          "deck": "acronyms",
+          "cue": "SAE",
+          "answer": "Simultaneous Authentication of Equals",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SAML",
+          "deck": "acronyms",
+          "cue": "SAML",
+          "answer": "Security Assertions Markup Language",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SAN",
+          "deck": "acronyms",
+          "cue": "SAN",
+          "answer": "Storage Area Network",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SASE",
+          "deck": "acronyms",
+          "cue": "SASE",
+          "answer": "Secure Access Service Edge",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SCADA",
+          "deck": "acronyms",
+          "cue": "SCADA",
+          "answer": "Supervisory Control and Data Acquisition",
+          "accept": [
+            "Supervisory Control Data Acquisition"
+          ],
+          "hint": "5 words"
+        },
+        {
+          "id": "ACR-SCAP",
+          "deck": "acronyms",
+          "cue": "SCAP",
+          "answer": "Security Content Automation Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SCEP",
+          "deck": "acronyms",
+          "cue": "SCEP",
+          "answer": "Simple Certificate Enrollment Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SDWAN",
+          "deck": "acronyms",
+          "cue": "SD-WAN",
+          "answer": "Software-defined Wide Area Network",
+          "accept": [
+            "Software defined Wide Area Network"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SDK",
+          "deck": "acronyms",
+          "cue": "SDK",
+          "answer": "Software Development Kit",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SDLC",
+          "deck": "acronyms",
+          "cue": "SDLC",
+          "answer": "Software Development Lifecycle",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SDLM",
+          "deck": "acronyms",
+          "cue": "SDLM",
+          "answer": "Software Development Lifecycle Methodology",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SDN",
+          "deck": "acronyms",
+          "cue": "SDN",
+          "answer": "Software-defined Networking",
+          "accept": [
+            "Software defined Networking"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-SELinux",
+          "deck": "acronyms",
+          "cue": "SE Linux",
+          "answer": "Security-enhanced Linux",
+          "accept": [
+            "Security enhanced Linux"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-SED",
+          "deck": "acronyms",
+          "cue": "SED",
+          "answer": "Self-encrypting Drives",
+          "accept": [
+            "Self encrypting Drives"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-SEH",
+          "deck": "acronyms",
+          "cue": "SEH",
+          "answer": "Structured Exception Handler",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SFTP",
+          "deck": "acronyms",
+          "cue": "SFTP",
+          "answer": "Secured File Transfer Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SHA",
+          "deck": "acronyms",
+          "cue": "SHA",
+          "answer": "Secure Hashing Algorithm",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SHTTP",
+          "deck": "acronyms",
+          "cue": "SHTTP",
+          "answer": "Secure Hypertext Transfer Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SIEM",
+          "deck": "acronyms",
+          "cue": "SIEM",
+          "answer": "Security Information and Event Management",
+          "accept": [
+            "Security Information Event Management"
+          ],
+          "hint": "5 words"
+        },
+        {
+          "id": "ACR-SIM",
+          "deck": "acronyms",
+          "cue": "SIM",
+          "answer": "Subscriber Identity Module",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SLA",
+          "deck": "acronyms",
+          "cue": "SLA",
+          "answer": "Service-level Agreement",
+          "accept": [
+            "Service level Agreement"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-SLE",
+          "deck": "acronyms",
+          "cue": "SLE",
+          "answer": "Single Loss Expectancy",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SMS",
+          "deck": "acronyms",
+          "cue": "SMS",
+          "answer": "Short Message Service",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SMTP",
+          "deck": "acronyms",
+          "cue": "SMTP",
+          "answer": "Simple Mail Transfer Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SMTPS",
+          "deck": "acronyms",
+          "cue": "SMTPS",
+          "answer": "Simple Mail Transfer Protocol Secure",
+          "accept": [],
+          "hint": "5 words"
+        },
+        {
+          "id": "ACR-SNMP",
+          "deck": "acronyms",
+          "cue": "SNMP",
+          "answer": "Simple Network Management Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SOAP",
+          "deck": "acronyms",
+          "cue": "SOAP",
+          "answer": "Simple Object Access Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SOAR",
+          "deck": "acronyms",
+          "cue": "SOAR",
+          "answer": "Security Orchestration, Automation, Response",
+          "accept": [
+            "Security Orchestration Automation Response"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SoC",
+          "deck": "acronyms",
+          "cue": "SoC",
+          "answer": "System on Chip",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SOC",
+          "deck": "acronyms",
+          "cue": "SOC",
+          "answer": "Security Operations Center",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SOW",
+          "deck": "acronyms",
+          "cue": "SOW",
+          "answer": "Statement of Work",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SPF",
+          "deck": "acronyms",
+          "cue": "SPF",
+          "answer": "Sender Policy Framework",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SPIM",
+          "deck": "acronyms",
+          "cue": "SPIM",
+          "answer": "Spam over Internet Messaging",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SQL",
+          "deck": "acronyms",
+          "cue": "SQL",
+          "answer": "Structured Query Language",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SQLi",
+          "deck": "acronyms",
+          "cue": "SQLi",
+          "answer": "SQL Injection",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-SRTP",
+          "deck": "acronyms",
+          "cue": "SRTP",
+          "answer": "Secure Real-Time Protocol",
+          "accept": [
+            "Secure Real Time Protocol"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SSD",
+          "deck": "acronyms",
+          "cue": "SSD",
+          "answer": "Solid State Drive",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SSH",
+          "deck": "acronyms",
+          "cue": "SSH",
+          "answer": "Secure Shell",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-SSL",
+          "deck": "acronyms",
+          "cue": "SSL",
+          "answer": "Secure Sockets Layer",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-SSO",
+          "deck": "acronyms",
+          "cue": "SSO",
+          "answer": "Single Sign-on",
+          "accept": [
+            "Single Sign on"
+          ],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-STIX",
+          "deck": "acronyms",
+          "cue": "STIX",
+          "answer": "Structured Threat Information eXchange",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-SWG",
+          "deck": "acronyms",
+          "cue": "SWG",
+          "answer": "Secure Web Gateway",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-TACACS",
+          "deck": "acronyms",
+          "cue": "TACACS+",
+          "answer": "Terminal Access Controller Access Control System",
+          "accept": [],
+          "hint": "6 words"
+        },
+        {
+          "id": "ACR-TAXII",
+          "deck": "acronyms",
+          "cue": "TAXII",
+          "answer": "Trusted Automated eXchange of Indicator Information",
+          "accept": [],
+          "hint": "6 words"
+        },
+        {
+          "id": "ACR-TCPIP",
+          "deck": "acronyms",
+          "cue": "TCP/IP",
+          "answer": "Transmission Control Protocol/Internet Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-TGT",
+          "deck": "acronyms",
+          "cue": "TGT",
+          "answer": "Ticket Granting Ticket",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-TKIP",
+          "deck": "acronyms",
+          "cue": "TKIP",
+          "answer": "Temporal Key Integrity Protocol",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-TLS",
+          "deck": "acronyms",
+          "cue": "TLS",
+          "answer": "Transport Layer Security",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-TOC",
+          "deck": "acronyms",
+          "cue": "TOC",
+          "answer": "Time-of-check",
+          "accept": [
+            "Time of check"
+          ],
+          "hint": "1 words"
+        },
+        {
+          "id": "ACR-TOTP",
+          "deck": "acronyms",
+          "cue": "TOTP",
+          "answer": "Time-based One-time Password",
+          "accept": [
+            "Time based One time Password"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-TOU",
+          "deck": "acronyms",
+          "cue": "TOU",
+          "answer": "Time-of-use",
+          "accept": [
+            "Time of use"
+          ],
+          "hint": "1 words"
+        },
+        {
+          "id": "ACR-TPM",
+          "deck": "acronyms",
+          "cue": "TPM",
+          "answer": "Trusted Platform Module",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-TTP",
+          "deck": "acronyms",
+          "cue": "TTP",
+          "answer": "Tactics, Techniques, and Procedures",
+          "accept": [
+            "Tactics Techniques and Procedures",
+            "Tactics, Techniques Procedures"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-TSIG",
+          "deck": "acronyms",
+          "cue": "TSIG",
+          "answer": "Transaction Signature",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-UAT",
+          "deck": "acronyms",
+          "cue": "UAT",
+          "answer": "User Acceptance Testing",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-UAV",
+          "deck": "acronyms",
+          "cue": "UAV",
+          "answer": "Unmanned Aerial Vehicle",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-UDP",
+          "deck": "acronyms",
+          "cue": "UDP",
+          "answer": "User Datagram Protocol",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-UEFI",
+          "deck": "acronyms",
+          "cue": "UEFI",
+          "answer": "Unified Extensible Firmware Interface",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-UEM",
+          "deck": "acronyms",
+          "cue": "UEM",
+          "answer": "Unified Endpoint Management",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-UPS",
+          "deck": "acronyms",
+          "cue": "UPS",
+          "answer": "Uninterruptable Power Supply",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-URI",
+          "deck": "acronyms",
+          "cue": "URI",
+          "answer": "Uniform Resource Identifier",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-URL",
+          "deck": "acronyms",
+          "cue": "URL",
+          "answer": "Universal Resource Locator",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-USB",
+          "deck": "acronyms",
+          "cue": "USB",
+          "answer": "Universal Serial Bus",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-USBOTG",
+          "deck": "acronyms",
+          "cue": "USB OTG",
+          "answer": "USB On the Go",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-UTM",
+          "deck": "acronyms",
+          "cue": "UTM",
+          "answer": "Unified Threat Management",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-UTP",
+          "deck": "acronyms",
+          "cue": "UTP",
+          "answer": "Unshielded Twisted Pair",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-VBA",
+          "deck": "acronyms",
+          "cue": "VBA",
+          "answer": "Visual Basic",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-VDE",
+          "deck": "acronyms",
+          "cue": "VDE",
+          "answer": "Virtual Desktop Environment",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-VDI",
+          "deck": "acronyms",
+          "cue": "VDI",
+          "answer": "Virtual Desktop Infrastructure",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-VLAN",
+          "deck": "acronyms",
+          "cue": "VLAN",
+          "answer": "Virtual Local Area Network",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-VLSM",
+          "deck": "acronyms",
+          "cue": "VLSM",
+          "answer": "Variable Length Subnet Masking",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-VM",
+          "deck": "acronyms",
+          "cue": "VM",
+          "answer": "Virtual Machine",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-VoIP",
+          "deck": "acronyms",
+          "cue": "VoIP",
+          "answer": "Voice over IP",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-VPC",
+          "deck": "acronyms",
+          "cue": "VPC",
+          "answer": "Virtual Private Cloud",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-VPN",
+          "deck": "acronyms",
+          "cue": "VPN",
+          "answer": "Virtual Private Network",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-VTC",
+          "deck": "acronyms",
+          "cue": "VTC",
+          "answer": "Video Teleconferencing",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-WAF",
+          "deck": "acronyms",
+          "cue": "WAF",
+          "answer": "Web Application Firewall",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-WAP",
+          "deck": "acronyms",
+          "cue": "WAP",
+          "answer": "Wireless Access Point",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-WEP",
+          "deck": "acronyms",
+          "cue": "WEP",
+          "answer": "Wired Equivalent Privacy",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-WIDS",
+          "deck": "acronyms",
+          "cue": "WIDS",
+          "answer": "Wireless Intrusion Detection System",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-WIPS",
+          "deck": "acronyms",
+          "cue": "WIPS",
+          "answer": "Wireless Intrusion Prevention System",
+          "accept": [],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-WO",
+          "deck": "acronyms",
+          "cue": "WO",
+          "answer": "Work Order",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-WPA",
+          "deck": "acronyms",
+          "cue": "WPA",
+          "answer": "Wi-Fi Protected Access",
+          "accept": [
+            "Wi Fi Protected Access"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-WPS",
+          "deck": "acronyms",
+          "cue": "WPS",
+          "answer": "Wi-Fi Protected Setup",
+          "accept": [
+            "Wi Fi Protected Setup"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-WTLS",
+          "deck": "acronyms",
+          "cue": "WTLS",
+          "answer": "Wireless TLS",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-XDR",
+          "deck": "acronyms",
+          "cue": "XDR",
+          "answer": "Extended Detection and Response",
+          "accept": [
+            "Extended Detection Response"
+          ],
+          "hint": "4 words"
+        },
+        {
+          "id": "ACR-XML",
+          "deck": "acronyms",
+          "cue": "XML",
+          "answer": "Extensible Markup Language",
+          "accept": [],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-XOR",
+          "deck": "acronyms",
+          "cue": "XOR",
+          "answer": "Exclusive Or",
+          "accept": [],
+          "hint": "2 words"
+        },
+        {
+          "id": "ACR-XSRF",
+          "deck": "acronyms",
+          "cue": "XSRF",
+          "answer": "Cross-site Request Forgery",
+          "accept": [
+            "Cross site Request Forgery"
+          ],
+          "hint": "3 words"
+        },
+        {
+          "id": "ACR-XSS",
+          "deck": "acronyms",
+          "cue": "XSS",
+          "answer": "Cross-site Scripting",
+          "accept": [
+            "Cross site Scripting"
+          ],
+          "hint": "2 words"
+        }
+      ]
+    },
+    "ports": {
+      "label": "Ports and protocols",
+      "blurb": "Both directions: protocol to port number, and port number to protocol.",
+      "cards": [
+        {
+          "id": "PORT-P-20-FTPdata",
+          "deck": "ports",
+          "cue": "Which port does FTP (data) use?",
+          "answer": "20",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Carries the file contents on an FTP transfer.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-20-FTPdata",
+          "deck": "ports",
+          "cue": "Port 20 — what runs on it?",
+          "answer": "FTP (data)",
+          "accept": [
+            "FTP",
+            "FTP data"
+          ],
+          "hint": "TCP, not encrypted",
+          "detail": "Carries the file contents on an FTP transfer.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-21-FTPcontrol",
+          "deck": "ports",
+          "cue": "Which port does FTP (control) use?",
+          "answer": "21",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Carries the FTP commands. Credentials cross in cleartext.",
+          "secure": "989-990 (FTPS)"
+        },
+        {
+          "id": "PORT-N-21-FTPcontrol",
+          "deck": "ports",
+          "cue": "Port 21 — what runs on it?",
+          "answer": "FTP (control)",
+          "accept": [
+            "FTP",
+            "FTP control"
+          ],
+          "hint": "TCP, not encrypted",
+          "detail": "Carries the FTP commands. Credentials cross in cleartext.",
+          "secure": "989-990 (FTPS)"
+        },
+        {
+          "id": "PORT-P-22-SSH",
+          "deck": "ports",
+          "cue": "Which port does SSH use?",
+          "answer": "22",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Encrypted remote shell. SFTP and SCP tunnel over this same port.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-22-SSH",
+          "deck": "ports",
+          "cue": "Port 22 — what runs on it?",
+          "answer": "SSH",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Encrypted remote shell. SFTP and SCP tunnel over this same port.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-22-SFTP",
+          "deck": "ports",
+          "cue": "Which port does SFTP use?",
+          "answer": "22",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "File transfer inside an SSH tunnel. Not the same protocol as FTPS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-22-SFTP",
+          "deck": "ports",
+          "cue": "Port 22 — what runs on it?",
+          "answer": "SFTP",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "File transfer inside an SSH tunnel. Not the same protocol as FTPS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-22-SCP",
+          "deck": "ports",
+          "cue": "Which port does SCP use?",
+          "answer": "22",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Command-line file copy inside an SSH tunnel.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-22-SCP",
+          "deck": "ports",
+          "cue": "Port 22 — what runs on it?",
+          "answer": "SCP",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Command-line file copy inside an SSH tunnel.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-23-Telnet",
+          "deck": "ports",
+          "cue": "Which port does Telnet use?",
+          "answer": "23",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Cleartext remote shell. The answer whenever a question wants SSH instead.",
+          "secure": "22 (SSH)"
+        },
+        {
+          "id": "PORT-N-23-Telnet",
+          "deck": "ports",
+          "cue": "Port 23 — what runs on it?",
+          "answer": "Telnet",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Cleartext remote shell. The answer whenever a question wants SSH instead.",
+          "secure": "22 (SSH)"
+        },
+        {
+          "id": "PORT-P-25-SMTP",
+          "deck": "ports",
+          "cue": "Which port does SMTP use?",
+          "answer": "25",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Mail sent between mail servers.",
+          "secure": "587 (SMTPS / submission)"
+        },
+        {
+          "id": "PORT-N-25-SMTP",
+          "deck": "ports",
+          "cue": "Port 25 — what runs on it?",
+          "answer": "SMTP",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Mail sent between mail servers.",
+          "secure": "587 (SMTPS / submission)"
+        },
+        {
+          "id": "PORT-P-49-TACACS",
+          "deck": "ports",
+          "cue": "Which port does TACACS+ use?",
+          "answer": "49",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Administrator login to network devices. Encrypts the whole payload and separates authentication from authorization.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-49-TACACS",
+          "deck": "ports",
+          "cue": "Port 49 — what runs on it?",
+          "answer": "TACACS+",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Administrator login to network devices. Encrypts the whole payload and separates authentication from authorization.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-53-DNS",
+          "deck": "ports",
+          "cue": "Which port does DNS use?",
+          "answer": "53",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Name resolution. UDP for queries, TCP for zone transfers and large responses.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-53-DNS",
+          "deck": "ports",
+          "cue": "Port 53 — what runs on it?",
+          "answer": "DNS",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Name resolution. UDP for queries, TCP for zone transfers and large responses.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-67-DHCPserver",
+          "deck": "ports",
+          "cue": "Which port does DHCP (server) use?",
+          "answer": "67",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Server side of dynamic address assignment.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-67-DHCPserver",
+          "deck": "ports",
+          "cue": "Port 67 — what runs on it?",
+          "answer": "DHCP (server)",
+          "accept": [
+            "DHCP",
+            "DHCP server"
+          ],
+          "hint": "UDP, not encrypted",
+          "detail": "Server side of dynamic address assignment.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-68-DHCPclient",
+          "deck": "ports",
+          "cue": "Which port does DHCP (client) use?",
+          "answer": "68",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Client side of dynamic address assignment.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-68-DHCPclient",
+          "deck": "ports",
+          "cue": "Port 68 — what runs on it?",
+          "answer": "DHCP (client)",
+          "accept": [
+            "DHCP",
+            "DHCP client"
+          ],
+          "hint": "UDP, not encrypted",
+          "detail": "Client side of dynamic address assignment.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-69-TFTP",
+          "deck": "ports",
+          "cue": "Which port does TFTP use?",
+          "answer": "69",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Trivial file transfer, no authentication. Often used to load device configs and firmware.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-69-TFTP",
+          "deck": "ports",
+          "cue": "Port 69 — what runs on it?",
+          "answer": "TFTP",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Trivial file transfer, no authentication. Often used to load device configs and firmware.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-80-HTTP",
+          "deck": "ports",
+          "cue": "Which port does HTTP use?",
+          "answer": "80",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Unencrypted web traffic.",
+          "secure": "443 (HTTPS)"
+        },
+        {
+          "id": "PORT-N-80-HTTP",
+          "deck": "ports",
+          "cue": "Port 80 — what runs on it?",
+          "answer": "HTTP",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Unencrypted web traffic.",
+          "secure": "443 (HTTPS)"
+        },
+        {
+          "id": "PORT-P-88-Kerberos",
+          "deck": "ports",
+          "cue": "Which port does Kerberos use?",
+          "answer": "88",
+          "accept": [],
+          "hint": "both TCP and UDP, encrypted",
+          "detail": "Ticket-based domain authentication. The port behind Windows/AD single sign-on.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-88-Kerberos",
+          "deck": "ports",
+          "cue": "Port 88 — what runs on it?",
+          "answer": "Kerberos",
+          "accept": [],
+          "hint": "both TCP and UDP, encrypted",
+          "detail": "Ticket-based domain authentication. The port behind Windows/AD single sign-on.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-110-POP3",
+          "deck": "ports",
+          "cue": "Which port does POP3 use?",
+          "answer": "110",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Retrieves mail and by default removes it from the server.",
+          "secure": "995 (POP3S)"
+        },
+        {
+          "id": "PORT-N-110-POP3",
+          "deck": "ports",
+          "cue": "Port 110 — what runs on it?",
+          "answer": "POP3",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Retrieves mail and by default removes it from the server.",
+          "secure": "995 (POP3S)"
+        },
+        {
+          "id": "PORT-P-123-NTP",
+          "deck": "ports",
+          "cue": "Which port does NTP use?",
+          "answer": "123",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Clock synchronisation. Skewed clocks break Kerberos and log correlation.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-123-NTP",
+          "deck": "ports",
+          "cue": "Port 123 — what runs on it?",
+          "answer": "NTP",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Clock synchronisation. Skewed clocks break Kerberos and log correlation.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-135-MSRPC",
+          "deck": "ports",
+          "cue": "Which port does MSRPC use?",
+          "answer": "135",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Microsoft remote procedure call endpoint mapper.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-135-MSRPC",
+          "deck": "ports",
+          "cue": "Port 135 — what runs on it?",
+          "answer": "MSRPC",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Microsoft remote procedure call endpoint mapper.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-137-NetBIOSnameservice",
+          "deck": "ports",
+          "cue": "Which port does NetBIOS name service use?",
+          "answer": "137",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Legacy Microsoft name-to-IP resolution.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-137-NetBIOSnameservice",
+          "deck": "ports",
+          "cue": "Port 137 — what runs on it?",
+          "answer": "NetBIOS name service",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Legacy Microsoft name-to-IP resolution.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-138-NetBIOSdatagramservice",
+          "deck": "ports",
+          "cue": "Which port does NetBIOS datagram service use?",
+          "answer": "138",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Legacy Microsoft connectionless LAN messaging.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-138-NetBIOSdatagramservice",
+          "deck": "ports",
+          "cue": "Port 138 — what runs on it?",
+          "answer": "NetBIOS datagram service",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Legacy Microsoft connectionless LAN messaging.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-139-NetBIOSsessionservice",
+          "deck": "ports",
+          "cue": "Which port does NetBIOS session service use?",
+          "answer": "139",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Legacy Microsoft connection-oriented file sharing.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-139-NetBIOSsessionservice",
+          "deck": "ports",
+          "cue": "Port 139 — what runs on it?",
+          "answer": "NetBIOS session service",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Legacy Microsoft connection-oriented file sharing.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-143-IMAP",
+          "deck": "ports",
+          "cue": "Which port does IMAP use?",
+          "answer": "143",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Retrieves mail and leaves it on the server, syncing across devices.",
+          "secure": "993 (IMAPS)"
+        },
+        {
+          "id": "PORT-N-143-IMAP",
+          "deck": "ports",
+          "cue": "Port 143 — what runs on it?",
+          "answer": "IMAP",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Retrieves mail and leaves it on the server, syncing across devices.",
+          "secure": "993 (IMAPS)"
+        },
+        {
+          "id": "PORT-P-161-SNMP",
+          "deck": "ports",
+          "cue": "Which port does SNMP use?",
+          "answer": "161",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Polls network devices for status. v1/v2c send the community string in cleartext; v3 adds authentication and encryption.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-161-SNMP",
+          "deck": "ports",
+          "cue": "Port 161 — what runs on it?",
+          "answer": "SNMP",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Polls network devices for status. v1/v2c send the community string in cleartext; v3 adds authentication and encryption.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-162-SNMPtrap",
+          "deck": "ports",
+          "cue": "Which port does SNMP trap use?",
+          "answer": "162",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Unsolicited alert pushed FROM the device TO the manager. The discriminator against 161 is direction.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-162-SNMPtrap",
+          "deck": "ports",
+          "cue": "Port 162 — what runs on it?",
+          "answer": "SNMP trap",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Unsolicited alert pushed FROM the device TO the manager. The discriminator against 161 is direction.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-389-LDAP",
+          "deck": "ports",
+          "cue": "Which port does LDAP use?",
+          "answer": "389",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Directory lookups, unencrypted.",
+          "secure": "636 (LDAPS)"
+        },
+        {
+          "id": "PORT-N-389-LDAP",
+          "deck": "ports",
+          "cue": "Port 389 — what runs on it?",
+          "answer": "LDAP",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Directory lookups, unencrypted.",
+          "secure": "636 (LDAPS)"
+        },
+        {
+          "id": "PORT-P-443-HTTPS",
+          "deck": "ports",
+          "cue": "Which port does HTTPS use?",
+          "answer": "443",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Web traffic over TLS. HTTP/3 carries it over QUIC on UDP.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-443-HTTPS",
+          "deck": "ports",
+          "cue": "Port 443 — what runs on it?",
+          "answer": "HTTPS",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Web traffic over TLS. HTTP/3 carries it over QUIC on UDP.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-445-SMB",
+          "deck": "ports",
+          "cue": "Which port does SMB use?",
+          "answer": "445",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Windows file and printer sharing. The port ransomware worms move across.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-445-SMB",
+          "deck": "ports",
+          "cue": "Port 445 — what runs on it?",
+          "answer": "SMB",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Windows file and printer sharing. The port ransomware worms move across.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-500-IKEISAKMP",
+          "deck": "ports",
+          "cue": "Which port does IKE / ISAKMP use?",
+          "answer": "500",
+          "accept": [],
+          "hint": "UDP, encrypted",
+          "detail": "Negotiates the keys for an IPsec tunnel. Not the tunnel itself.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-500-IKEISAKMP",
+          "deck": "ports",
+          "cue": "Port 500 — what runs on it?",
+          "answer": "IKE / ISAKMP",
+          "accept": [
+            "IKE ISAKMP",
+            "IKE",
+            "ISAKMP"
+          ],
+          "hint": "UDP, encrypted",
+          "detail": "Negotiates the keys for an IPsec tunnel. Not the tunnel itself.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-514-Syslog",
+          "deck": "ports",
+          "cue": "Which port does Syslog use?",
+          "answer": "514",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Ships log events to a central collector, unencrypted and unacknowledged.",
+          "secure": "6514 (syslog over TLS)"
+        },
+        {
+          "id": "PORT-N-514-Syslog",
+          "deck": "ports",
+          "cue": "Port 514 — what runs on it?",
+          "answer": "Syslog",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Ships log events to a central collector, unencrypted and unacknowledged.",
+          "secure": "6514 (syslog over TLS)"
+        },
+        {
+          "id": "PORT-P-554-RTSP",
+          "deck": "ports",
+          "cue": "Which port does RTSP use?",
+          "answer": "554",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Controls a streaming media session - play, pause, seek.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-554-RTSP",
+          "deck": "ports",
+          "cue": "Port 554 — what runs on it?",
+          "answer": "RTSP",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Controls a streaming media session - play, pause, seek.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-587-SMTPSsubmission",
+          "deck": "ports",
+          "cue": "Which port does SMTPS / submission use?",
+          "answer": "587",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Authenticated mail submission from a client, over TLS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-587-SMTPSsubmission",
+          "deck": "ports",
+          "cue": "Port 587 — what runs on it?",
+          "answer": "SMTPS / submission",
+          "accept": [
+            "SMTPS submission",
+            "SMTPS",
+            "submission"
+          ],
+          "hint": "TCP, encrypted",
+          "detail": "Authenticated mail submission from a client, over TLS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-636-LDAPS",
+          "deck": "ports",
+          "cue": "Which port does LDAPS use?",
+          "answer": "636",
+          "accept": [],
+          "hint": "both TCP and UDP, encrypted",
+          "detail": "Directory lookups over TLS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-636-LDAPS",
+          "deck": "ports",
+          "cue": "Port 636 — what runs on it?",
+          "answer": "LDAPS",
+          "accept": [],
+          "hint": "both TCP and UDP, encrypted",
+          "detail": "Directory lookups over TLS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-989-990-FTPS",
+          "deck": "ports",
+          "cue": "Which port does FTPS use?",
+          "answer": "989-990",
+          "accept": [
+            "989 990",
+            "989",
+            "990"
+          ],
+          "hint": "TCP, encrypted",
+          "detail": "FTP wrapped in TLS. Distinct from SFTP, which is SSH on 22.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-989-990-FTPS",
+          "deck": "ports",
+          "cue": "Port 989-990 — what runs on it?",
+          "answer": "FTPS",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "FTP wrapped in TLS. Distinct from SFTP, which is SSH on 22.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-993-IMAPS",
+          "deck": "ports",
+          "cue": "Which port does IMAPS use?",
+          "answer": "993",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "IMAP over TLS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-993-IMAPS",
+          "deck": "ports",
+          "cue": "Port 993 — what runs on it?",
+          "answer": "IMAPS",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "IMAP over TLS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-995-POP3S",
+          "deck": "ports",
+          "cue": "Which port does POP3S use?",
+          "answer": "995",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "POP3 over TLS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-995-POP3S",
+          "deck": "ports",
+          "cue": "Port 995 — what runs on it?",
+          "answer": "POP3S",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "POP3 over TLS.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-1433-MSSQL",
+          "deck": "ports",
+          "cue": "Which port does MS SQL use?",
+          "answer": "1433",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Microsoft SQL Server. Should never be reachable from the internet.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-1433-MSSQL",
+          "deck": "ports",
+          "cue": "Port 1433 — what runs on it?",
+          "answer": "MS SQL",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Microsoft SQL Server. Should never be reachable from the internet.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-1701-L2TP",
+          "deck": "ports",
+          "cue": "Which port does L2TP use?",
+          "answer": "1701",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "VPN tunnelling with no encryption of its own - it is paired with IPsec to get any.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-1701-L2TP",
+          "deck": "ports",
+          "cue": "Port 1701 — what runs on it?",
+          "answer": "L2TP",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "VPN tunnelling with no encryption of its own - it is paired with IPsec to get any.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-1723-PPTP",
+          "deck": "ports",
+          "cue": "Which port does PPTP use?",
+          "answer": "1723",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Legacy Microsoft VPN tunnel. Considered broken; the answer when a question wants it replaced.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-1723-PPTP",
+          "deck": "ports",
+          "cue": "Port 1723 — what runs on it?",
+          "answer": "PPTP",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Legacy Microsoft VPN tunnel. Considered broken; the answer when a question wants it replaced.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-1812-RADIUSauthentication",
+          "deck": "ports",
+          "cue": "Which port does RADIUS (authentication) use?",
+          "answer": "1812",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Authenticates VPN and wireless users. Encrypts only the password field, not the whole payload - the discriminator against TACACS+.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-1812-RADIUSauthentication",
+          "deck": "ports",
+          "cue": "Port 1812 — what runs on it?",
+          "answer": "RADIUS (authentication)",
+          "accept": [
+            "RADIUS",
+            "RADIUS authentication"
+          ],
+          "hint": "UDP, not encrypted",
+          "detail": "Authenticates VPN and wireless users. Encrypts only the password field, not the whole payload - the discriminator against TACACS+.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-1813-RADIUSaccounting",
+          "deck": "ports",
+          "cue": "Which port does RADIUS (accounting) use?",
+          "answer": "1813",
+          "accept": [],
+          "hint": "UDP, not encrypted",
+          "detail": "Session accounting records, separate from the auth port.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-1813-RADIUSaccounting",
+          "deck": "ports",
+          "cue": "Port 1813 — what runs on it?",
+          "answer": "RADIUS (accounting)",
+          "accept": [
+            "RADIUS",
+            "RADIUS accounting"
+          ],
+          "hint": "UDP, not encrypted",
+          "detail": "Session accounting records, separate from the auth port.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-2427/2727-MGCP",
+          "deck": "ports",
+          "cue": "Which port does MGCP use?",
+          "answer": "2427/2727",
+          "accept": [
+            "2427 2727",
+            "2427",
+            "2727"
+          ],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Controls VoIP media gateways.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-2427/2727-MGCP",
+          "deck": "ports",
+          "cue": "Port 2427/2727 — what runs on it?",
+          "answer": "MGCP",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Controls VoIP media gateways.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-3389-RDP",
+          "deck": "ports",
+          "cue": "Which port does RDP use?",
+          "answer": "3389",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Windows graphical remote desktop. Heavily targeted; belongs behind a VPN or jump server.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-3389-RDP",
+          "deck": "ports",
+          "cue": "Port 3389 — what runs on it?",
+          "answer": "RDP",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Windows graphical remote desktop. Heavily targeted; belongs behind a VPN or jump server.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-5004-5005-RTPRTCP",
+          "deck": "ports",
+          "cue": "Which port does RTP / RTCP use?",
+          "answer": "5004-5005",
+          "accept": [
+            "5004 5005",
+            "5004",
+            "5005"
+          ],
+          "hint": "UDP, not encrypted",
+          "detail": "Carries the actual VoIP audio and video stream and its timing control.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-5004-5005-RTPRTCP",
+          "deck": "ports",
+          "cue": "Port 5004-5005 — what runs on it?",
+          "answer": "RTP / RTCP",
+          "accept": [
+            "RTP RTCP",
+            "RTP",
+            "RTCP"
+          ],
+          "hint": "UDP, not encrypted",
+          "detail": "Carries the actual VoIP audio and video stream and its timing control.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-5060-SIP",
+          "deck": "ports",
+          "cue": "Which port does SIP use?",
+          "answer": "5060",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Sets up and tears down a VoIP call. Unencrypted.",
+          "secure": "5061 (SIP over TLS)"
+        },
+        {
+          "id": "PORT-N-5060-SIP",
+          "deck": "ports",
+          "cue": "Port 5060 — what runs on it?",
+          "answer": "SIP",
+          "accept": [],
+          "hint": "both TCP and UDP, not encrypted",
+          "detail": "Sets up and tears down a VoIP call. Unencrypted.",
+          "secure": "5061 (SIP over TLS)"
+        },
+        {
+          "id": "PORT-P-5061-SIPoverTLS",
+          "deck": "ports",
+          "cue": "Which port does SIP over TLS use?",
+          "answer": "5061",
+          "accept": [],
+          "hint": "both TCP and UDP, encrypted",
+          "detail": "Encrypted VoIP call signalling.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-5061-SIPoverTLS",
+          "deck": "ports",
+          "cue": "Port 5061 — what runs on it?",
+          "answer": "SIP over TLS",
+          "accept": [],
+          "hint": "both TCP and UDP, encrypted",
+          "detail": "Encrypted VoIP call signalling.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-5900-VNC",
+          "deck": "ports",
+          "cue": "Which port does VNC use?",
+          "answer": "5900",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Cross-platform graphical remote access. Unlike RDP it has no encryption by default.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-5900-VNC",
+          "deck": "ports",
+          "cue": "Port 5900 — what runs on it?",
+          "answer": "VNC",
+          "accept": [],
+          "hint": "TCP, not encrypted",
+          "detail": "Cross-platform graphical remote access. Unlike RDP it has no encryption by default.",
+          "secure": null
+        },
+        {
+          "id": "PORT-P-6514-SyslogoverTLS",
+          "deck": "ports",
+          "cue": "Which port does Syslog over TLS use?",
+          "answer": "6514",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Encrypted, acknowledged log shipping.",
+          "secure": null
+        },
+        {
+          "id": "PORT-N-6514-SyslogoverTLS",
+          "deck": "ports",
+          "cue": "Port 6514 — what runs on it?",
+          "answer": "Syslog over TLS",
+          "accept": [],
+          "hint": "TCP, encrypted",
+          "detail": "Encrypted, acknowledged log shipping.",
+          "secure": null
+        }
+      ]
+    }
+  }
+}

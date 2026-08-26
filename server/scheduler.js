@@ -105,6 +105,7 @@ export function dueCounts(at = now()) {
   return {
     items: q.filter((e) => e.kind === 'item' && isDue(e)).length,
     pairs: q.filter((e) => e.kind === 'pair' && isDue(e)).length,
+    cram: q.filter((e) => e.kind === 'cram' && isDue(e)).length,
     total: q.filter(isDue).length,
     tracked: q.length,
   };

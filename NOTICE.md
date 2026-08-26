@@ -29,6 +29,16 @@ Both are MIT-licensed and are used under that licence. Their raw downloads are k
 
 One file from the first source, `harvest/iak-finalExam.json` (100 questions), ships with an **empty answer key** and is deliberately not imported. See `CLAUDE.md` for the reasoning.
 
+## A course pack that was offered and mostly refused
+
+A shared drive of SY0-701 class material was reviewed for import in August 2026. Recording what happened to it, because "we looked and said no" is only useful if it is written down.
+
+**Refused — roughly 505 multiple-choice questions.** Every file in its `Practice Exams/Multiple Choice/` folder is a scrape of **ExamTopics**: the questions carry that site's `Question #N Topic N` numbering, and the 200-question file still has a live hyperlink back to `examtopics.com/exams/comptia/sy0-701/view/N/` on each item. That is exactly the category CompTIA revokes certifications over. Not imported, not committed, not kept.
+
+**Also not redistributed.** The pack's CompTIA lesson PowerPoints and its commercial "Last Minute Guide" acronym PDF are somebody's copyrighted work and are not this repo's to publish.
+
+**Taken instead — nothing, in the end.** The cram decks that came out of that review are built from sources this repo already had the right to use: the acronym deck is parsed from `content/objectives.md`, which is CompTIA's own freely published list, and the port deck is IANA port assignments with usage notes written here. The pack prompted the feature; none of it is in the feature.
+
 ## Software dependencies
 
 | Package | Licence |
