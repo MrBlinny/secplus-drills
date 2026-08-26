@@ -13,7 +13,7 @@
 
 import fs from 'node:fs';
 import { OBJECTIVES_FILE } from './paths.js';
-import { TAXONOMIES, DOMAIN_LABELS } from './content.js';
+import { TAXONOMIES, DOMAIN_LABELS, DOMAIN_WEIGHTS } from './content.js';
 import { readAttempts } from './attempts.js';
 import { recallKey } from './grade.js';
 
@@ -293,11 +293,20 @@ export function buildLists() {
   return cache;
 }
 
+/**
+ * Page sections, DERIVED from the blueprint rather than restated.
+ *
+ * This list used to be hand-written, and carried the previous exam's four
+ * domains at 17/40/24/19 - which meant the Lists page not only showed the wrong
+ * weights but omitted 5.0 Security Program Management entirely, a fifth of
+ * SY0-701. Deriving it means a weight can only ever be wrong in one place.
+ */
 export const SECTIONS = [
-  { domain: '1.0', title: `1.0 ${DOMAIN_LABELS['1.0']}`, weight: '17%' },
-  { domain: '2.0', title: `2.0 ${DOMAIN_LABELS['2.0']}`, weight: '40%' },
-  { domain: '3.0', title: `3.0 ${DOMAIN_LABELS['3.0']}`, weight: '24%' },
-  { domain: '4.0', title: `4.0 ${DOMAIN_LABELS['4.0']}`, weight: '19%' },
+  ...Object.keys(DOMAIN_WEIGHTS).sort().map((d) => ({
+    domain: d,
+    title: `${d} ${DOMAIN_LABELS[d]}`,
+    weight: `${Math.round(DOMAIN_WEIGHTS[d] * 100)}%`,
+  })),
   { domain: 'sup', title: 'Framework detail', weight: null },
 ];
 
