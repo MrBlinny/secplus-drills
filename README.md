@@ -76,7 +76,7 @@ It is **append-only**. Corrections are new lines. The SQLite file is only an ind
 
 ## Coverage, and why it is measured this way
 
-The audit's test is **not** "does this objective have questions". It is **is each enumerated term the credited answer of at least one authored item**.
+The audit's test is **not** "does this objective have questions". It is **"is each enumerated term the credited answer of at least one authored item"**.
 
 ```bash
 npm run coverage                      # summary per objective
@@ -89,15 +89,16 @@ Only the **authored** banks count toward coverage. A harvested item may happen t
 
 ## Where the questions come from
 
-**Authored (618).** Written for this repo. Every distractor is an adjacent objective-list term or a true-but-broader real-world word; every explanation names the discriminator rather than restating the definition. Generated from `tools/authored*/` by a builder that refuses items with out-of-range answers, duplicate options, duplicate stems, unknown objective codes, or explanations too short to contain a discriminator.
+**Authored (618).** Written for this repo. These questions will have an adjacent objective-list term or a true-but-broader real-world word. This is because I noticed a lot of questions I would get wrong when practicing were because I didn't use Comptias vocabulary in my answer. Every explanation names the discriminator rather than restating the definition. Generated from `tools/authored*/` by a builder that refuses items with out-of-range answers, duplicate options, duplicate stems, unknown objective codes, or explanations too short to contain a discriminator.
+*Note:* This will make the questions a little more annoying but help for the actual test
 
-**Harvested (451).** Community-written practice questions from two MIT-licensed GitHub repositories — [`iakhator/comptia-security-plus-701`](https://github.com/iakhator/comptia-security-plus-701) and [`cloudanimal/security-plus-prep`](https://github.com/cloudanimal/security-plus-prep). Kept in a separate file and labelled `practice` on reveal, because they are not the same kind of thing: the authored questions have distractors built from adjacent objective-list terms, these have whatever the original author wrote. Neither upstream documents where its questions came from — treat them as drill volume, not authority.
+**Harvested (451).** Community-written practice questions from two MIT-licensed GitHub repositories — [`iakhator/comptia-security-plus-701`](https://github.com/iakhator/comptia-security-plus-701) and [`cloudanimal/security-plus-prep`](https://github.com/cloudanimal/security-plus-prep). Kept in a separate file and labelled `practice` on reveal, because they are not the same kind of thing: the authored questions have intentional distractors built from adjacent objective-list terms, these have whatever the original author wrote.
 
 Their objective codes are **inferred, not given.** One source tags questions "Objective 3.5" and "Objective 3.6", which do not exist in SY0-701 — those are book chapter numbers. Rather than trust them, each question is scored against the literal bullet terms of every objective in `objectives.md`, weighting the credited answer highest and discounting terms several objectives share. 227 got a confident objective; the other 224 keep their domain and land in `x.x General`, still drillable by domain. A wrong objective is worse than none — it would misroute drill and corrupt the weakest-five ranking.
 
 **Refused.** One harvested file of 100 questions ships with an empty answer key and is not imported; the elimination heuristic that appears to recover it gets AAA wrong, and a bank that teaches wrong answers is worse than a smaller bank.
 
-**Braindump sites are not used at all, and pull requests containing them will be refused.** CompTIA's own objectives document states that candidates using unauthorised "real exam questions" material have their certifications **revoked** and are suspended from future testing. Not worth it. See `NOTICE.md`.
+**Braindump sites are not used at all.** CompTIA's objectives document states that candidates using unauthorised "real exam questions" material have their certifications **revoked** and are suspended from future testing. Not worth it. See `NOTICE.md`.
 
 ## Scoring
 
@@ -143,7 +144,9 @@ tools/
 
 ## Contributing
 
-Questions are welcome, with two hard rules:
+Questions are welcome
+
+Disclamer:
 
 1. **Never hand-edit `data/item-bank*.json`.** They are generated. Add to `tools/authored/*.mjs` and run `npm run build-bank`, which validates and will refuse a broken item.
 2. **Distractors must be adjacent objective-list terms**, and every explanation must name the *discriminator* — the binary test that separates the credited term from the one people reach for instead. I have found a question whose distractors are implausible does not help nearly as much as giving real reasonable answers.
