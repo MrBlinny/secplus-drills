@@ -14,7 +14,7 @@ Built for my friends taking their exam soon.
 **Everything else, or if you prefer a terminal:**
 
 ```bash
-git clone https://github.com/<user>/secplus-tutor.git
+git clone https://github.com/MrBlinny/secplus-tutor.git
 cd secplus-tutor
 npm install
 npm start          # opens at http://127.0.0.1:5050
